@@ -57,26 +57,43 @@
 		            </div> <!-- /.modal-header -->
 
 		            <div class="modal-body">
-		                <form role="form">
+			            <!-- show the error here, sana katulad din sa buhay ko -->
+			            <?php if (isset($error)) : ?>
+							<div class="col-md-12">
+								<div class="alert alert-danger" role="alert">
+									<?= $error ?>
+								</div>
+							</div>
+						<?php endif; ?>
+		                <?php if (validation_errors()) : ?>
+							<div class="col-md-12">
+								<div class="alert alert-danger" role="alert">
+									<?= validation_errors() ?>
+								</div>
+							</div>
+						<?php endif; ?>
+
+		                <form id="ipasa">
 		                    <div class="form-group">
 		                        <div class="input-group">
-		                            <input type="text" class="form-control" id="uLogin" placeholder="Username">
+		                            <input name="idNumber" type="text" class="form-control" id="uLogin" placeholder="ID Number" >
 		                            <label for="uLogin" class="input-group-addon glyphicon glyphicon-user"></label>
 		                        </div>
 		                    </div> <!-- /.form-group -->
 
 		                    <div class="form-group">
 		                        <div class="input-group">
-		                            <input type="password" class="form-control" id="uPassword" placeholder="Password">
+		                            <input name="password" type="password" class="form-control" id="uPassword" placeholder="Password" >
 		                            <label for="uPassword" class="input-group-addon glyphicon glyphicon-lock"></label>
 		                        </div> <!-- /.input-group -->
 		                    </div> <!-- /.form-group -->
-		                </form>
+		                
 
 		            </div> <!-- /.modal-body -->
 
 		            <div class="modal-footer">
-		                <button class="form-control btn btn-primary">Log me in!</button>
+		                <button class="form-control btn btn-primary" type="submit">Log me in!</button>
+		        		</form>
 
 		                <div class="progress">
 		                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="100" style="width: 0%;">
