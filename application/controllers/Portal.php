@@ -64,8 +64,6 @@ class Portal extends CI_Controller{
 	//login page
 	public function login()
 	{	
-		$data = new stdClass();
-
 		// load form helper and validation library
 		$this->load->helper('form');
 		$this->load->library('form_validation');
@@ -75,7 +73,7 @@ class Portal extends CI_Controller{
 		$this->form_validation->set_rules('password','Password','required');
 		
 		//chinecheck if nirun ang form function library
-		if ($this->form_validation->run()===FALSE){
+		if ($this->form_validation->run()==FALSE){
 		
 			$this->load->view('portal/templates/header');
 			$this->load->view('portal/login');
@@ -91,19 +89,20 @@ class Portal extends CI_Controller{
 				//setting the variables para sa mga sessions
 				$fname = $this->user_model->get_name_from_id_number($idNumber);	
 
-				$this->load->view('header');
-				$this->load->view('user/login/login_success', $data);
-				$this->load->view('footer');
+				$this->load->view('portal/templates/header');
+				$this->load->view('portal/login_success');
+				$this->load->view('portal/templates/footer');
 	
 			}else{
 
 				//palpak ang login
-				$data->error = 'Wrong ID number and password';
+				$error='Wrong ID number and password';
+				$data['error']=$error;
 
 				//sinend kung alin ang kapalpakan, parang buhay ko
-				$this->load->view('header');
-				$this->load->view('user/login/login', $data);
-				$this->load->view('footer');
+				$this->load->view('portal/templates/header');
+				$this->load->view('portal/login', $data);
+				$this->load->view('portal/templates/footer');
 
 			}
 

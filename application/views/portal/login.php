@@ -36,77 +36,67 @@
 
         <!-- main content text -->
         <div class="main-text">
-        	<center  style="z-index: -1;" >
-	            <img src="<?= base_url('assets/images/login-portal/Untitled-1.png') ?>" style="z-index: -1;" class="img-responsive" >
-	        </center>
+   <!--      	<center  style="z-index: -1;" >
+	            <img src="<?//= base_url('assets/images/login-portal/Untitled-1.png') ?>" style="z-index: -1;" class="img-responsive" >
+	        </center> -->
+
+	         
+
+			<div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <div class="card imahe">
+            		<img id="profile-img" class="img-responsive" src="<?= base_url('assets/images/login-portal/logo.png')?>" /> 
+            </div>
+            <p id="profile-name" class="profile-name-card"></p>
+
+            <div class="form-signin">
+              
+               <!-- show the error here, sana katulad din sa buhay ko -->
+	            <?php if (isset($error)) : ?>
+					<div class="col-md-12">
+						<div class="alert alert-danger" role="alert">
+							<?= $error; ?>
+						</div>
+					</div>
+				<?php endif; ?>
+
+				<!-- temporary parang buhay ko lang -->
+				<?php if (isset($success)):?>
+					<div class="col-md-12">
+						<div class="aler alert-success" role="alert">
+							<?= $success;?>
+						</div>
+					</div>
+				<?php endif;?>
+
+                <?php if (validation_errors()) : ?>
+					<div class="col-md-12">
+						<div class="alert alert-danger" role="alert">
+							<?= validation_errors() ?>
+						</div>
+					</div>
+				<?php endif; ?>
+
+            		<?= form_open();?>
+		                <span id="reauth-email" class="reauth-email"></span>
+		                <input type="text" name="idNumber" id="inputEmail" class="form-control" placeholder="ID Number" required autofocus>
+		                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+		                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+		            </form><!-- /form -->
+            </div>
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+<!-- 
         	<div class="text-center">
         	    <div class="">
                     <a class="btn btn-clear btn-sm btn-min-block" data-toggle="modal"  onClick="$('#myModal').modal()">Login</a>
                     <a class="btn btn-clear btn-sm btn-min-block" href="..">Home</a>
-                </div>
+                </div> -->
+
 			</div>
 		</div>
-
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		    <div class="modal-dialog">
-		        <div class="modal-content">
-
-		            <div class="modal-header">
-		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-		                <h4 class="modal-title" id="myModalLabel">Log in</h4>
-		            </div> <!-- /.modal-header -->
-
-		            <div class="modal-body">
-			            <!-- show the error here, sana katulad din sa buhay ko -->
-			            <?php if (isset($error)) : ?>
-							<div class="col-md-12">
-								<div class="alert alert-danger" role="alert">
-									<?= $error ?>
-								</div>
-							</div>
-						<?php endif; ?>
-		                <?php if (validation_errors()) : ?>
-							<div class="col-md-12">
-								<div class="alert alert-danger" role="alert">
-									<?= validation_errors() ?>
-								</div>
-							</div>
-						<?php endif; ?>
-
-		                <form id="ipasa">
-		                    <div class="form-group">
-		                        <div class="input-group">
-		                            <input name="idNumber" type="text" class="form-control" id="uLogin" placeholder="ID Number" >
-		                            <label for="uLogin" class="input-group-addon glyphicon glyphicon-user"></label>
-		                        </div>
-		                    </div> <!-- /.form-group -->
-
-		                    <div class="form-group">
-		                        <div class="input-group">
-		                            <input name="password" type="password" class="form-control" id="uPassword" placeholder="Password" >
-		                            <label for="uPassword" class="input-group-addon glyphicon glyphicon-lock"></label>
-		                        </div> <!-- /.input-group -->
-		                    </div> <!-- /.form-group -->
-		                
-
-		            </div> <!-- /.modal-body -->
-
-		            <div class="modal-footer">
-		                <button class="form-control btn btn-primary" type="submit">Log me in!</button>
-		        		</form>
-
-		                <div class="progress">
-		                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="100" style="width: 0%;">
-		                        <span class="sr-only">progress</span>
-		                    </div>
-		                </div>
-		            </div> <!-- /.modal-footer -->
-		        </div><!-- /.modal-content -->
-		    </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-
-
-    </div>
+	</div>
 </div>
 
 

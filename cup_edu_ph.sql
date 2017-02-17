@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2017 at 07:53 PM
+-- Generation Time: Feb 17, 2017 at 06:41 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.6
 
@@ -81,7 +81,15 @@ INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('1mokekj0ra7okhr54oai67cb68mrg1lf', '::1', 1487269027, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438373236393032373b),
 ('o7uavp9vgcrkaghau18fnpv14pura1rd', '::1', 1487269553, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438373236393535333b),
 ('qsle7fl610926keb5d0vt5v10tq2q4di', '::1', 1487269985, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438373236393938353b),
-('8pugq8o37u6m7e9qmda59nm72t7hdjdc', '::1', 1487270211, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438373236393938353b);
+('8pugq8o37u6m7e9qmda59nm72t7hdjdc', '::1', 1487270211, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438373236393938353b),
+('igakpkegj567ihqep6kg1ebjqncf4mfp', '::1', 1487307269, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438373330373236393b),
+('um0vkge8sksl5q9qqp0v9kg61idj5f89', '::1', 1487307638, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438373330373633383b),
+('a1gclro8u7fu5v3sho8br4nv4ak9u4jj', '::1', 1487307980, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438373330373938303b),
+('e5q7t3ds1ubbg3ffqnpugite0v8gmljo', '::1', 1487308295, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438373330383239353b),
+('rmqq91mnkd02ti9olc0s0o10d083vpbn', '::1', 1487308665, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438373330383636353b),
+('3h03o5fft5se1137d0ng02ut24hgrcdp', '::1', 1487308995, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438373330383939353b),
+('nhi9polmbq53cfk8nmn02kjeoq5pgq3n', '::1', 1487309652, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438373330393635323b),
+('bmepbsftlleso22esjtvaq091kb5io8p', '::1', 1487309947, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438373330393635323b);
 
 -- --------------------------------------------------------
 
@@ -98,15 +106,6 @@ CREATE TABLE `user_students` (
   `Course` varchar(20) NOT NULL,
   `Year` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user_students`
---
-
-INSERT INTO `user_students` (`studentID`, `password`, `FirstName`, `MiddleName`, `LastName`, `Course`, `Year`) VALUES
-(123, '$2y$10$5JIDjpF8nc.PgIIOgihRHOIKiGom.lYjT', '123', '123', '123', '123', '123'),
-(201300167, '$2y$10$qLnMMwWgT8VZ7jFQAA7ZKuxRQk2S2h6zG', 'Harry Angelo', 'Lareza', 'Soer', 'B.S.-I.T.', '4th'),
-(201300168, '$2y$10$376HoSr0pcuZE4h3cYP6bOPnX7Nv8pU8I', 'Kuposky Morriss', 'G', 'Esguerra', 'B.S.-I.T.', '4th');
 
 --
 -- Indexes for dumped tables
