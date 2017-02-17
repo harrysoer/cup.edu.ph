@@ -55,10 +55,20 @@
 	            <?php if (isset($error)) : ?>
 					<div class="col-md-12">
 						<div class="alert alert-danger" role="alert">
-							<?= $error ?>
+							<?= $error; ?>
 						</div>
 					</div>
 				<?php endif; ?>
+
+				<!-- temporary parang buhay ko lang -->
+				<?php if (isset($success)):?>
+					<div class="col-md-12">
+						<div class="aler alert-success" role="alert">
+							<?= $success;?>
+						</div>
+					</div>
+				<?php endif;?>
+
                 <?php if (validation_errors()) : ?>
 					<div class="col-md-12">
 						<div class="alert alert-danger" role="alert">

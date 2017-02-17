@@ -90,7 +90,7 @@ class Portal extends CI_Controller{
 				$fname = $this->user_model->get_name_from_id_number($idNumber);	
 
 				$this->load->view('portal/templates/header');
-				$this->load->view('portal/login_success', $data);
+				$this->load->view('portal/login_success');
 				$this->load->view('portal/templates/footer');
 	
 			}else{
