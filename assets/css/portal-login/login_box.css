@@ -4,6 +4,7 @@
     height: 450px;
     width:  350px;
     padding: 40px 40px;
+    opacity: 0.90;
 }
 
 .btn {
@@ -19,7 +20,8 @@
  * Card component
  */
 .card {
-    opacity: 90%;
+    opacity: 1%;
+
     background-color: #F7F7F7;
     /* just in case there no content*/
     padding: 20px 25px 30px;
@@ -35,13 +37,13 @@
 }
 
 .imahe {
-    width: 20px;
-    height: 20px;
-    /*margin: 0 auto 10px;*/
-    /*display: block;*/
-/*    -moz-border-radius: 50%;
+     width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    border-radius: 50%;*/
+    border-radius: 50%;
 }
 
 /*

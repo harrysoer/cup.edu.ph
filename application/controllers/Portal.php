@@ -87,8 +87,9 @@ class Portal extends CI_Controller{
 			if ($this->portal_student_model->resolve_user_login($idNumber, $password)){
 
 				//setting the variables para sa mga sessions
-				$fname = $this->user_model->get_name_from_id_number($idNumber);	
+				//$fname = $this->user_model->get_name_from_id_number($idNumber);	
 
+				//success ang pag pasok
 				$this->load->view('portal/templates/header');
 				$this->load->view('portal/login_success');
 				$this->load->view('portal/templates/footer');
@@ -98,6 +99,8 @@ class Portal extends CI_Controller{
 				//palpak ang login
 				$error='Wrong ID number and password';
 				$data['error']=$error;
+				$data['idNumber']=$idNumber;
+				$data['password']=$password;
 
 				//sinend kung alin ang kapalpakan, parang buhay ko
 				$this->load->view('portal/templates/header');
