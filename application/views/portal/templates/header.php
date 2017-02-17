@@ -13,6 +13,8 @@
 	<!-- css  -->
 	<link href="<?= base_url('assets/bootstrap-3.3.7/css/bootstrap.min.css') ?>" rel="stylesheet">
 	<link href="<?= base_url('assets/css/portal-login/carousel.css') ?>" rel="stylesheet">
+	<link href="<?= base_url('assets/css/portal-login/login_box.css') ?>" rel="stylesheet">
+
 
 </head>
 <body>

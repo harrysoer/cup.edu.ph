@@ -30,7 +30,7 @@ class portal_student_model extends CI_Model
 	}
 
 
-	public function resolve_user_login($username, $password) {
+	public function resolve_user_login($idNumber, $password) {
 		
 		$this->db->select('password');
 		$this->db->from('user_students');
