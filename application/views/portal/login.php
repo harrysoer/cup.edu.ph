@@ -52,8 +52,8 @@
 					<div class="col-md-12">
 						<div class="alert alert-danger" role="alert">
 							<?= $error; ?>
-							<?= $idNumber;?>
-							<?= $password;?>
+							<?//= $idNumber;?>
+							<?//= $password;?>
 						</div>
 					</div>
 				<?php endif; ?>
