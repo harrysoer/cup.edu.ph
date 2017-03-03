@@ -11,9 +11,9 @@
 	<meta name="authors" content="John Cedric Castillio, Harry Angelo L. Soer, & Kuposky Morriss G. Esguerra">
 
 	<!-- css  -->
-	<link href="<?= base_url('assets/bootstrap-3.3.7/css/bootstrap.min.css') ?>" rel="stylesheet">
-	<link href="<?= base_url('assets/css/portal-login/carousel.css') ?>" rel="stylesheet">
-	<link href="<?= base_url('assets/css/portal-login/login_box.css') ?>" rel="stylesheet">
+	<link href="<?= base_url('assets/for_portal/bootstrap-3.3.7/css/bootstrap.min.css') ?>" rel="stylesheet">
+	<link href="<?= base_url('assets/for_portal/css/portal-login/carousel.css') ?>" rel="stylesheet">
+	<link href="<?= base_url('assets/for_portal/css/portal-login/login_box.css') ?>" rel="stylesheet">
 
 
 </head>
