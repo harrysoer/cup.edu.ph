@@ -35,13 +35,13 @@ class Portal extends CI_Controller{
 			$this->load->view('portal/register');
 			$this->load->view('portal/templates/footer');
 		}else{
-			$idNumber =  $this->input->post('idNumber');
-			$password = $this->input->post('password');
-			$firstName = $this->input->post('firstName');
+			$idNumber 	=  $this->input->post('idNumber');
+			$password 	= $this->input->post('password');
+			$firstName 	= $this->input->post('firstName');
 			$middleName = $this->input->post('middleName');
-			$lastName = $this->input->post('lastName');
-			$course = $this->input->post('course');
-			$year = $this->input->post('year');
+			$lastName 	= $this->input->post('lastName');
+			$course 	= $this->input->post('course');
+			$year 		= $this->input->post('year');
 
 			if ($this->portal_student_model->addStudent($idNumber, $password, $firstName, $middleName, $lastName, $course, $year)){
 				$this->load->view('portal/templates/header');
