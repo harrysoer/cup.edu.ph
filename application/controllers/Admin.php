@@ -37,7 +37,7 @@ class Admin extends CI_Controller {
 		else
 		{
 			 $this->admin_model->setNews();
-			 $this->load->view('CupWebsite/index');
+			 $this->load->view('admin/index');
 		}
 	}
 

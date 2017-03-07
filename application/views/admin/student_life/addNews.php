@@ -8,7 +8,7 @@
         <div class="container">
 
             <!-- Page-Title -->
-            <div class="row">
+<!--             <div class="row">
                 <div class="col-sm-12">
                     <h4 class="pull-left page-title">News</h4>
                     <ol class="breadcrumb pull-right">
@@ -17,7 +17,7 @@
                         <li class="active">Editors</li>
                     </ol>
                 </div>
-            </div>
+            </div> -->
 
 
             <div class="row">
@@ -27,7 +27,7 @@
                         <div class="panel-body"> 
                             <?=form_open('admin/addNews')?>
                             <h4>Title</h4>
-                                <input type="text" class="form-control" placeholder="Title" name="title">        
+                                <input type="text" class="form-control" placeholder="Title" name="title" required>        
                                 <br>
                                 <h4>Content</h4>
                                     <textarea class="summernote" name="content" ></textarea>
