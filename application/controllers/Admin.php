@@ -37,11 +37,15 @@ class Admin extends CI_Controller {
 		else
 		{
 			 $this->admin_model->setNews();
-			 $this->load->view('admin/index');
+			 $this->load->view('admin');
 		}
 	}
 
-	public function dataTableNews(){
-
+	public function listNews(){
+		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/navbar');		
+		$this->load->view('admin/student_life/listNews');
+		$this->load->view('admin/templates/footer');
+		$this->load->view('admin/student_life/listNewsFooter');
 	}
 }

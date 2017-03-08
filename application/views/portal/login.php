@@ -11,19 +11,19 @@
 	        </ol>
 	        <div class="carousel-inner">
 	            <div class="item active">
-	                <img src="<?= base_url('assets/images/login-portal/carousel1.jpg')?>" class="img-responsive" alt="First slide">
+	                <img src="<?= base_url('assets/for_portal/images/login-portal/carousel1.jpg')?>" class="img-responsive" alt="First slide">
 	                <div class="carousel-caption">
 	                    <p> Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 	                </div>
 	            </div>
 	            <div class="item">
-	                <img src="<?= base_url('assets/images/login-portal/image3.jpg')?>" class="img-responsive" alt="Second slide">
+	                <img src="<?= base_url('assets/for_portal/images/login-portal/image3.jpg')?>" class="img-responsive" alt="Second slide">
 	                <div class="carousel-caption">
 	                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 	                </div>
 	            </div>
 	            <div class="item">
-	                <img src="<?= base_url('assets/images/login-portal/image1.jpg')?>" class="img-responsive" alt="Third slide">
+	                <img src="<?= base_url('assets/for_portal/images/login-portal/image1.jpg')?>" class="img-responsive" alt="Third slide">
 	                <div class="carousel-caption">	
 	                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 	                </div>

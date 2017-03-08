@@ -54,7 +54,7 @@ $route['default_controller']='CupWebsite/index';
 
 $route['admin/index'] = 'admin/index';
 $route['admin/news/create'] = 'admin/addNews';
-
+$route['admin/news/list'] = 'admin/listNews';
 
 $route['portal']='portal/login';
 $route['register']='portal/register';

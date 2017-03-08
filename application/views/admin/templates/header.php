@@ -28,6 +28,11 @@
         <link rel="stylesheet" type="text/css" href="<?=base_url('assets/for_admin/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css')?>" />
         <link href="<?=base_url('assets/for_admin/assets/summernote/summernote.css')?>" rel="stylesheet" />
 
+
+        <!-- Plugin Css for datatable-->
+        <link rel="stylesheet" href="<?=base_url('assets/for_admin/assets/magnific-popup/magnific-popup.css')?>" />
+        <link rel="stylesheet" href="<?=base_url('assets/for_admin/assets/jquery-datatables-editable/datatables.css')?>" />
+
         <!-- Custom Files -->
         <link href="<?=base_url('assets/for_admin/css/helper.css')?>" rel="stylesheet" type="text/css" />
         <link href="<?=base_url('assets/for_admin/css/style.css')?>" rel="stylesheet" type="text/css" />

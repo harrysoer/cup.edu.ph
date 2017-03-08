@@ -35,7 +35,7 @@
                                     <li class="has_sub">
                                         <a href="javascript:void(0);" class="waves-effect"><span>News</span><span class="pull-right"><i class="md md-add"></i></span></a>
                                         <ul style="">
-                                            <li><a href="news/create"><span>Create</span></a></li>
+                                            <li><a href="<?=site_url('admin/news/create')?>"><span>Create</span></a></li>
                                             <li><a href="javascript:void(0);"><span>View</span></a></li>
                                         </ul>
                                     </li>
