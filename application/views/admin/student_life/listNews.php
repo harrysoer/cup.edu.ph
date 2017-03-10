@@ -1,209 +1,157 @@
-<!-- ============================================================== -->
-<!-- Start right Content here -->
-<!-- ============================================================== -->                      
-<div class="content-page">
-    <!-- Start content -->
-    <div class="content">
-        <div class="container">
+<!DOCTYPE html>
+<html>
+    <head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ajax CRUD with Bootstrap modals and Datatables</title>
+    <link href="<?php echo base_url('assets/for_admin/data-table/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/for_admin/data-table/datatables/css/dataTables.bootstrap.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/for_admin/data-table/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')?>" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    </head> 
+<body>
+    <div class="container">
 
-            <!-- Page-Title -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <h4 class="pull-left page-title">Editable Table</h4>
-                    <ol class="breadcrumb pull-right">
-                        <li><a href="#">Moltran</a></li>
-                        <li><a href="#">Tables</a></li>
-                        <li class="active">Editable Table</li>
-                    </ol>
-                </div>
-            </div>
+        <h3>News Data</h3>
+        <br />
+        <button class="btn btn-success" onclick="add_person()"><i class="glyphicon glyphicon-plus"></i> Add News</button>
+        <button class="btn btn-default" onclick="reload_table()"><i class="glyphicon glyphicon-refresh"></i> Reload</button>
+        <br />
+        <br />
+        <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th style="width:125px;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
 
-
-            <div class="panel">
-                
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="m-b-30">
-                                <button id="addToTable" class="btn btn-success waves-effect waves-light">Add <i class="fa fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <table class="table table-bordered table-striped" id="datatable-editable">
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Content</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="gradeC">
-                                <td>pogi daw si gelo</td>
-                                <td>balitang balita sa radyong sira, napaka pogi daw ni gelo</td>
-                                <td class="actions">
-                                    <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
-                                    <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a>
-                                    <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
-                                    <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- end: page -->
-
-            </div> <!-- end Panel -->
-
-        </div> <!-- container -->
-                       
-    </div> <!-- content -->
-
-    <footer class="footer text-right">
-        2015 © Moltran.
-    </footer>
-
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Right content here -->
-    <!-- ============================================================== -->
-
-
-    <!-- Right Sidebar -->
-    <div class="side-bar right-bar nicescroll">
-        <h4 class="text-center">Chat</h4>
-        <div class="contact-list nicescroll">
-            <ul class="list-group contacts-list">
-                <li class="list-group-item">
-                    <a href="#">
-                        <div class="avatar">
-                            <img src="images/users/avatar-1.jpg" alt="">
-                        </div>
-                        <span class="name">Chadengle</span>
-                        <i class="fa fa-circle online"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="#">
-                        <div class="avatar">
-                            <img src="images/users/avatar-2.jpg" alt="">
-                        </div>
-                        <span class="name">Tomaslau</span>
-                        <i class="fa fa-circle online"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="#">
-                        <div class="avatar">
-                            <img src="images/users/avatar-3.jpg" alt="">
-                        </div>
-                        <span class="name">Stillnotdavid</span>
-                        <i class="fa fa-circle online"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="#">
-                        <div class="avatar">
-                            <img src="images/users/avatar-4.jpg" alt="">
-                        </div>
-                        <span class="name">Kurafire</span>
-                        <i class="fa fa-circle online"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="#">
-                        <div class="avatar">
-                            <img src="images/users/avatar-5.jpg" alt="">
-                        </div>
-                        <span class="name">Shahedk</span>
-                        <i class="fa fa-circle away"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="#">
-                        <div class="avatar">
-                            <img src="images/users/avatar-6.jpg" alt="">
-                        </div>
-                        <span class="name">Adhamdannaway</span>
-                        <i class="fa fa-circle away"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="#">
-                        <div class="avatar">
-                            <img src="images/users/avatar-7.jpg" alt="">
-                        </div>
-                        <span class="name">Ok</span>
-                        <i class="fa fa-circle away"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="#">
-                        <div class="avatar">
-                            <img src="images/users/avatar-8.jpg" alt="">
-                        </div>
-                        <span class="name">Arashasghari</span>
-                        <i class="fa fa-circle offline"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="#">
-                        <div class="avatar">
-                            <img src="images/users/avatar-9.jpg" alt="">
-                        </div>
-                        <span class="name">Joshaustin</span>
-                        <i class="fa fa-circle offline"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="#">
-                        <div class="avatar">
-                            <img src="images/users/avatar-10.jpg" alt="">
-                        </div>
-                        <span class="name">Sortino</span>
-                        <i class="fa fa-circle offline"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-            </ul>  
-        </div>
-    </div>
-    <!-- /Right-bar -->
-
-    <!-- MODAL -->
-    <div id="dialog" class="modal-block mfp-hide">
-        <section class="panel panel-info panel-color">
-            <header class="panel-heading">
-                <h2 class="panel-title">Are you sure?</h2>
-            </header>
-            <div class="panel-body">
-                <div class="modal-wrapper">
-                    <div class="modal-text">
-                        <p>Are you sure that you want to delete this row?</p>
-                    </div>
-                </div>
-
-                <div class="row m-t-20">
-                    <div class="col-md-12 text-right">
-                        <button id="dialogConfirm" class="btn btn-primary">Confirm</button>
-                        <button id="dialogCancel" class="btn btn-default">Cancel</button>
-                    </div>
-                </div>
-            </div>
-            
-        </section>
+            <tfoot>
+                <tr>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th style="width:125px;">Action</th>
+                </tr>
+            </tfoot>
+        </table>
     </div>
 
+<script src="<?php echo base_url('assets/for_admin/data-table/jquery/jquery-2.1.4.min.js')?>"></script>
+<script src="<?php echo base_url('assets/for_admin/data-table/bootstrap/js/bootstrap.min.js')?>"></script>
+<script src="<?php echo base_url('assets/for_admin/data-table/datatables/js/jquery.dataTables.min.js')?>"></script>
+<script src="<?php echo base_url('assets/for_admin/data-table/datatables/js/dataTables.bootstrap.js')?>"></script>
+<script src="<?php echo base_url('assets/for_admin/data-table/bootstrap-datepicker/js/bootstrap-datepicker.min.js')?>"></script>
 
 
-</div>
-<!-- END wrapper -->
+<script type="text/javascript">
+
+var save_method; //for save method string
+var table;
+
+$(document).ready(function() {
+
+    //datatables
+    table = $('#table').DataTable({ 
+
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "<?php echo site_url('admin/news/callList')?>",
+            "type": "POST"
+        },
+
+        //Set column definition initialisation properties.
+        "columnDefs": [
+        { 
+            "targets": [ -1 ], //last column
+            "orderable": false, //set not orderable
+        },
+        ],
+
+    });
+
+    //datepicker
+    $('.datepicker').datepicker({
+        autoclose: true,
+        format: "yyyy-mm-dd",
+        todayHighlight: true,
+        orientation: "top auto",
+        todayBtn: true,
+        todayHighlight: true,  
+    });
+
+    //set input/textarea/select event when change value, remove class error and remove text help block 
+    $("input").change(function(){
+        $(this).parent().parent().removeClass('has-error');
+        $(this).next().empty();
+    });
+    $("textarea").change(function(){
+        $(this).parent().parent().removeClass('has-error');
+        $(this).next().empty();
+    });
+    $("select").change(function(){
+        $(this).parent().parent().removeClass('has-error');
+        $(this).next().empty();
+    });
+
+    console.log(table.ajax);
+});
+
+
+
+function add_person()
+{
+    save_method = 'add';
+    $('#form')[0].reset(); // reset form on modals
+    $('.form-group').removeClass('has-error'); // clear error class
+    $('.help-block').empty(); // clear error string
+    $('#modal_form').modal('show'); // show bootstrap modal
+    $('.modal-title').text('Add Person'); // Set Title to Bootstrap modal title
+}
+
+function reload_table()
+{
+    table.ajax.reload(null,false); //reload datatable ajax 
+}
+
+
+function delete_person(id)
+{
+    if(confirm('Are you sure delete this data?'))
+    {
+        // ajax delete data to database
+        $.ajax({
+            url : "<?php echo site_url('admin/ajax_delete')?>/"+id,
+            type: "POST",
+            dataType: "JSON",
+            success: function(data)
+            {
+                //if success reload ajax table
+                $('#modal_form').modal('hide');
+                reload_table();
+            },
+            error: function (jqXHR, textStatus, errorThrown)
+            {
+                alert('Error deleting data');
+            }
+        });
+
+    }
+}
+
+</script>
+
+</body>
+</html>
