@@ -1,55 +1,115 @@
-<!DOCTYPE html>
-<html>
-    <head> 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ajax CRUD with Bootstrap modals and Datatables</title>
-    <link href="<?php echo base_url('assets/for_admin/data-table/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/for_admin/data-table/datatables/css/dataTables.bootstrap.css')?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/for_admin/data-table/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')?>" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    </head> 
-<body>
-    <div class="container">
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->                      
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container">
 
-        <h3>News Data</h3>
-        <br />
-        <button class="btn btn-success" onclick="add_person()"><i class="glyphicon glyphicon-plus"></i> Add News</button>
-        <button class="btn btn-default" onclick="reload_table()"><i class="glyphicon glyphicon-refresh"></i> Reload</button>
-        <br />
-        <br />
-        <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Content</th>
-                    <th style="width:125px;">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
+                        <!-- Page-Title -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4 class="pull-left page-title">News Data</h4>
+                                <ol class="breadcrumb pull-right">
+                                    <li><a href="<?=site_url('admin/news/list')?>">News</a></li>
+                                </ol>
+                            </div>
+                        </div>
 
-            <tfoot>
-                <tr>
-                    <th>Title</th>
-                    <th>Content</th>
-                    <th style="width:125px;">Action</th>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
 
-<script src="<?php echo base_url('assets/for_admin/data-table/jquery/jquery-2.1.4.min.js')?>"></script>
-<script src="<?php echo base_url('assets/for_admin/data-table/bootstrap/js/bootstrap.min.js')?>"></script>
-<script src="<?php echo base_url('assets/for_admin/data-table/datatables/js/jquery.dataTables.min.js')?>"></script>
-<script src="<?php echo base_url('assets/for_admin/data-table/datatables/js/dataTables.bootstrap.js')?>"></script>
-<script src="<?php echo base_url('assets/for_admin/data-table/bootstrap-datepicker/js/bootstrap-datepicker.min.js')?>"></script>
+                        <div class="panel">
+                            
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="m-b-30">
+                                            <a href="<?=site_url('admin/news/create')?>"><button id="addToTable"  class="btn btn-success waves-effect waves-light">Add <i class="fa fa-plus"></i></button></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="table table-bordered table-striped" id="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Title</th>
+                                            <th style="width:125px;">Author</th>
+                                            <th>Content</th>
+                                            <th style="width:125px;">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table> 
+                            </div>
+                            <!-- end: page -->
+
+                        </div> <!-- end Panel -->
+
+                    </div> <!-- container -->
+                               
+                </div> <!-- content -->
+
+                <footer class="footer text-right">
+                    2015 © Moltran.
+                </footer>
+
+            </div>
+
+            <!-- MODAL -->
+            <div id="dialog" class="modal-block mfp-hide">
+                <section class="panel panel-info panel-color">
+                    <header class="panel-heading">
+                        <h2 class="panel-title">Are you sure?</h2>
+                    </header>
+                    <div class="panel-body">
+                        <div class="modal-wrapper">
+                            <div class="modal-text">
+                                <p>Are you sure that you want to delete this row?</p>
+                            </div>
+                        </div>
+
+                        <div class="row m-t-20">
+                            <div class="col-md-12 text-right">
+                                <button id="dialogConfirm" class="btn btn-primary">Confirm</button>
+                                <button id="dialogCancel" class="btn btn-default">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+            </div>
+
+
+
+        </div>
+        <!-- END wrapper -->
+        
+        <script>
+            var resizefunc = [];
+        </script>
+         <!-- jQuery  -->
+        <script src="<?=base_url('assets/for_admin/js/jquery.min.js')?>"></script>
+        <script src="<?=base_url('assets/for_admin/js/bootstrap.min.js')?>"></script>
+        <script src="<?=base_url('assets/for_admin/js/waves.js')?>"></script>
+        <script src="<?=base_url('assets/for_admin/js/wow.min.js')?>"></script>
+        <script src="<?=base_url('assets/for_admin/js/jquery.nicescroll.js')?>" type="text/javascript"></script>
+        <script src="<?=base_url('assets/for_admin/js/jquery.scrollTo.min.js')?>"></script>
+        <script src="<?=base_url('assets/for_admin/assets/jquery-detectmobile/detect.js')?>"></script>
+        <script src="<?=base_url('assets/for_admin/assets/fastclick/fastclick.js')?>"></script>
+        <script src="<?=base_url('assets/for_admin/assets/jquery-slimscroll/jquery.slimscroll.js')?>"></script>
+        <script src="<?=base_url('assets/for_admin/assets/jquery-blockui/jquery.blockUI.js')?>"></script>
+
+
+        <!-- CUSTOM JS -->
+        <script src="<?=base_url('assets/for_admin/js/jquery.app.js')?>"></script>
+        
+        <!-- Examples -->
+        <script src="<?=base_url('assets/for_admin/assets/magnific-popup/magnific-popup.js')?>"></script>
+        
+
+        <script src="<?php //echo base_url('assets/for_admin/data-table/jquery/jquery-2.1.4.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/for_admin/data-table/datatables/js/jquery.dataTables.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/for_admin/data-table/datatables/js/dataTables.bootstrap.js')?>"></script>
 
 
 <script type="text/javascript">
@@ -80,16 +140,6 @@ $(document).ready(function() {
         },
         ],
 
-    });
-
-    //datepicker
-    $('.datepicker').datepicker({
-        autoclose: true,
-        format: "yyyy-mm-dd",
-        todayHighlight: true,
-        orientation: "top auto",
-        todayBtn: true,
-        todayHighlight: true,  
     });
 
     //set input/textarea/select event when change value, remove class error and remove text help block 
@@ -129,6 +179,7 @@ function reload_table()
 
 function delete_person(id)
 {
+    
     if(confirm('Are you sure delete this data?'))
     {
         // ajax delete data to database
@@ -153,5 +204,6 @@ function delete_person(id)
 
 </script>
 
-</body>
+      
+    </body>
 </html>

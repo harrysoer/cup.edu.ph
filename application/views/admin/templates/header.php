@@ -28,10 +28,10 @@
         <link rel="stylesheet" type="text/css" href="<?=base_url('assets/for_admin/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css')?>" />
         <link href="<?=base_url('assets/for_admin/assets/summernote/summernote.css')?>" rel="stylesheet" />
 
-
         <!-- Plugin Css for datatable-->
         <link rel="stylesheet" href="<?=base_url('assets/for_admin/assets/magnific-popup/magnific-popup.css')?>" />
-        <link rel="stylesheet" href="<?=base_url('assets/for_admin/assets/jquery-datatables-editable/datatables.css')?>" />
+        <!-- <link rel="stylesheet" href="<?//=base_url('assets/jquery-datatables-editable/datatables.css')?>" />  -->
+        <link href="<?php echo base_url('assets/for_admin/data-table/datatables/css/dataTables.bootstrap.css')?>" rel="stylesheet">
 
         <!-- Custom Files -->
         <link href="<?=base_url('assets/for_admin/css/helper.css')?>" rel="stylesheet" type="text/css" />
@@ -70,30 +70,12 @@
                             </button>
                             <span class="clearfix"></span>
                         </div>
-                        <form class="navbar-form pull-left" role="search">
-                            <div class="form-group">
-                                <input type="text" class="form-control search-bar" placeholder="Type here for search...">
-                            </div>
-                            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
-                        </form>
-
+                        
                         <ul class="nav navbar-nav navbar-right pull-right">
                             <li class="dropdown hidden-xs">
                             </li>
                             <li class="hidden-xs">
                                 <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="md md-crop-free"></i></a>
-                            </li>
-                            <li class="hidden-xs">
-                                <a href="#" class="right-bar-toggle waves-effect waves-light"><i class="md md-chat"></i></a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="<?=base_url('images/avatar-1.jpg')?>" alt="user-img" class="img-circle"> </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile</a></li>
-                                    <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
-                                    <li><a href="javascript:void(0)"><i class="md md-lock"></i> Lock screen</a></li>
-                                    <li><a href="javascript:void(0)"><i class="md md-settings-power"></i> Logout</a></li>
-                                </ul>
                             </li>
                         </ul>
                     </div>

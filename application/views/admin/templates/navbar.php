@@ -1,16 +1,14 @@
-
-
     <!-- ========== Left Sidebar Start ========== -->
 
     <div class="left side-menu">
         <div class="sidebar-inner slimscrollleft">
             <div class="user-details">
                 <div class="pull-left">
-                    <img src="images/users/avatar-1.jpg" alt="" class="thumb-md img-circle">
+                    <!-- <img src="images/users/avatar-1.jpg" alt="" class="thumb-md img-circle"> -->
                 </div>
                 <div class="user-info">
                     <div class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">John Doe <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">VPAA Dr. Eustuche<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile<div class="ripple-wrapper"></div></a></li>
                             <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
@@ -36,7 +34,7 @@
                                         <a href="javascript:void(0);" class="waves-effect"><span>News</span><span class="pull-right"><i class="md md-add"></i></span></a>
                                         <ul style="">
                                             <li><a href="<?=site_url('admin/news/create')?>"><span>Create</span></a></li>
-                                            <li><a href="javascript:void(0);"><span>View</span></a></li>
+                                            <li><a href="<?=site_url('admin/news/list')?>"><span>View</span></a></li>
                                         </ul>
                                     </li>
                                     

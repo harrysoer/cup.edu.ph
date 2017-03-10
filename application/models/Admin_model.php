@@ -19,8 +19,9 @@ class admin_model extends CI_Model
 
         $data = array(
             'title' => $this->input->post('title'),
-            'slug' => $slug,
-            'text' => $this->input->post('content')
+            'author'=> $this->input->post('author'),
+            'slug' 	=> $slug,
+            'text' 	=> $this->input->post('content')
         );
 
         return $this->db->insert('news', $data);
@@ -28,8 +29,8 @@ class admin_model extends CI_Model
 
 
 	var $table = 'news';
-	var $column_order = array('title', null ,null); //set column field database for datatable orderable
-	var $column_search = array('title','text'); //set column field database for datatable searchable just firstname , lastname , address are searchable
+	var $column_order = array('title', 'author ',  null ,null); //set column field database for datatable orderable
+	var $column_search = array('title','author','text'); //set column field database for datatable searchable just firstname , lastname , address are searchable
 	var $order = array('id' => 'desc'); // default order 
 
 	private function _get_datatables_query()
@@ -71,6 +72,7 @@ class admin_model extends CI_Model
 		}
 	}
 
+	//for ajax
 	function get_datatablesNews()
 	{
 		$this->_get_datatables_query();
@@ -93,4 +95,45 @@ class admin_model extends CI_Model
 		return $this->db->count_all_results();
 	}
 
+
+    public function get_news_by_id($id = 0)
+    {
+        if ($id === 0)
+        {
+            $query = $this->db->get('news');
+            return $query->result_array();
+        }
+ 
+        $query = $this->db->get_where('news', array('id' => $id));
+        return $query->row_array();
+    }
+
+	public function set_newsUpdate($id = 0)
+    {
+ 
+        $slug = url_title($this->input->post('title'), 'dash', TRUE);
+ 
+        $data = array(
+            'title' => $this->input->post('title'),
+            'author'=> $this->input->post('author'),
+            'slug' 	=> $slug,
+            'text' 	=> $this->input->post('content')
+        );
+
+        $this->db->where('id', $id);
+        return $this->db->update('news', $data);
+        
+    }
+
+	public function delete_by_id($id)
+	{
+		$this->db->where('id', $id);
+		$this->db->delete($this->table);
+	}
+
+	public function get_news($slug = FALSE)
+    {
+        $query = $this->db->get_where('news', array('slug' => $slug));
+        return $query->row_array();
+    }
 }
