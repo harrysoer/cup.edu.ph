@@ -11,20 +11,20 @@
 	        </ol>
 	        <div class="carousel-inner">
 	            <div class="item active">
-	                <img src="<?= base_url('assets/images/login-portal/carousel1.jpg')?>" class="img-responsive" alt="First slide">
+	                <img src="<?= base_url('assets/for_portal/images/login-portal/carousel1.jpg')?>" class="img-responsive" alt="First slide">
 	                <div class="carousel-caption">
 	                    <p> Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 	                </div>
 	            </div>
 	            <div class="item">
-	                <img src="<?= base_url('assets/images/login-portal/image3.jpg')?>" class="img-responsive" alt="Second slide">
+	                <img src="<?= base_url('assets/for_portal/images/login-portal/image3.jpg')?>" class="img-responsive" alt="Second slide">
 	                <div class="carousel-caption">
 	                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 	                </div>
 	            </div>
 	            <div class="item">
-	                <img src="<?= base_url('assets/images/login-portal/image1.jpg')?>" class="img-responsive" alt="Third slide">
-	                <div class="carousel-caption">
+	                <img src="<?= base_url('assets/for_portal/images/login-portal/image1.jpg')?>" class="img-responsive" alt="Third slide">
+	                <div class="carousel-caption">	
 	                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 	                </div>
 	            </div>
@@ -39,23 +39,21 @@
    <!--      	<center  style="z-index: -1;" >
 	            <img src="<?//= base_url('assets/images/login-portal/Untitled-1.png') ?>" style="z-index: -1;" class="img-responsive" >
 	        </center> -->
+			
 
-	         
+	      	<div class="card card-container">
+			<!-- <img id="profile-img"  style="z-index:-1;"  src="<//?= base_url('assets/images/login-portal/logo.png')?>" /> -->
 
-			<div class="card card-container">
-            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
-            <div class="card imahe">
-            		<img id="profile-img" class="img-responsive" src="<?= base_url('assets/images/login-portal/logo.png')?>" /> 
-            </div>
             <p id="profile-name" class="profile-name-card"></p>
 
-            <div class="form-signin">
-              
+            <div class="form-signin" style="opacity:1">
                <!-- show the error here, sana katulad din sa buhay ko -->
 	            <?php if (isset($error)) : ?>
 					<div class="col-md-12">
 						<div class="alert alert-danger" role="alert">
 							<?= $error; ?>
+							<?//= $idNumber;?>
+							<?//= $password;?>
 						</div>
 					</div>
 				<?php endif; ?>
@@ -78,10 +76,12 @@
 				<?php endif; ?>
 
             		<?= form_open();?>
+            		<div style="margin-top:30px; position:relative;">
 		                <span id="reauth-email" class="reauth-email"></span>
-		                <input type="text" name="idNumber" id="inputEmail" class="form-control" placeholder="ID Number" required autofocus>
+		                <input type="text" name="idNumber" id="inputEmail" class="form-control" placeholder="ID Number" required autofocus >
 		                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 		                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+		            </div>
 		            </form><!-- /form -->
             </div>
             <a href="#" class="forgot-password">

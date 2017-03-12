@@ -49,6 +49,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+$route['default_controller']='CupWebsite/index';
+$route['about']='CupWebsite/about';
+$route['academic']='CupWebsite/academic';
+
+
+
+$route['admin/index'] 			= 'admin/index';
+$route['admin/news/create'] 	= 'admin/addNews';
+$route['admin/news/edit/(:any)']= 'admin/editNews/$1';
+$route['admin/news/list'] 		= 'admin/listNews';
+$route['admin/news/read/(:any)']= 'admin/readMore/$1';
+$route['admin/news/callList']	= 'admin/ajax_listNews';
+
 $route['portal']='portal/login';
 $route['register']='portal/register';
 //$route['default_controller'] = 'welcome';
