@@ -57,7 +57,7 @@
             <!-- LOGO -->
             <div class="topbar-left">
                 <div class="text-center">
-                    <a href="index.html" class="logo"><i class="md md-terrain"></i> <span>Admin Panel</span></a>
+                    <a href="<?=site_url('admin/')?>" class="logo"><i class="md md-terrain"></i> <span>Admin Panel</span></a>
                 </div>
             </div>
             <!-- Button mobile view to collapse sidebar menu -->

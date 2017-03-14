@@ -17,5 +17,3 @@
 
         <!-- CUSTOM JS -->
         <script src="<?=base_url('assets/for_admin/js/jquery.app.js')?>"></script>
-	</body>
-</html>

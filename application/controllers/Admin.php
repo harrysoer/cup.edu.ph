@@ -14,13 +14,31 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/templates/header');
 		$this->load->view('admin/templates/navbar');		
 		$this->load->view('admin/index');
-		$this->load->view('admin/templates/footer');
+		$this->load->view('admin/templates/scripts');
+		$this->load->view('admin/templates/closer');
 	}
 
 
-	// Add, Delete, Edit, and View News
+	//Add, Delete, Update, and View Downloadable Forms
+	public function uploadView(){
+		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/navbar');		
+		$this->load->view('admin/admission/uploadForm');
+		$this->load->view('admin/templates/scripts');
+		$this->load->view('admin/templates/closer');
+	}
 
-	//ui for addnews and add news
+	public function listForms(){
+		
+	}
+	//
+
+	//==================end for forms=====================
+
+
+
+	// Add, Delete, Edit, and View News
+	//Views for addnews and add news
 	public function addNews(){
 
         $this->form_validation->set_rules('title', 'Title', 'required');
@@ -30,10 +48,11 @@ class Admin extends CI_Controller {
         if ($this->form_validation->run() === FALSE)
         {
 			$this->load->view('admin/templates/header');
-			$this->load->view('admin/templates/navbar');		
+			$this->load->view('admin/templates/navbar');	
 			$this->load->view('admin/student_life/addNews');
-			$this->load->view('admin/templates/footer');
+			$this->load->view('admin/templates/scripts');	
 			$this->load->view('admin/student_life/addNewsFooter');
+			$this->load->view('admin/templates/closer');
 		}
 		else
 		{
@@ -44,7 +63,8 @@ class Admin extends CI_Controller {
 
 	public function listNews(){
 		$this->load->view('admin/templates/header');
-		$this->load->view('admin/templates/navbar');		
+		$this->load->view('admin/templates/navbar');
+		$this->load->view('admin/templates/scripts');
 		$this->load->view('admin/student_life/listNews');
 	}
 
