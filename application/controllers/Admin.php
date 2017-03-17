@@ -7,6 +7,7 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('admin_model', 'admin');
+		$this->load->model('adminForms_model', 'form');
 
 	}
 
@@ -20,6 +21,47 @@ class Admin extends CI_Controller {
 
 
 	//Add, Delete, Update, and View Downloadable Forms
+	public function listForms(){
+		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/navbar');
+		$this->load->view('admin/templates/scripts');
+		$this->load->view('admin/admission/listForm');
+	}
+
+	public function ajax_listForms()
+	{	
+
+		$list = $this->form->get_datatablesForms();
+		$data = array();
+		$no = $_POST['start'];
+
+		foreach ($list as $forms) {
+			$no++;
+			$row = array();
+			$row[] = $forms->file_name;
+			$row[] = $forms->file_description;
+
+
+			$link = site_url('admin/form/revise-upload'.$forms->id); 
+
+			//add html for action
+			$row[] = '<a class="btn btn-sm btn-primary" href="'.$link.'" title="Edit")">
+					<i class="glyphicon glyphicon-pencil"></i> Edit</a>
+				  <a class="btn btn-sm btn-danger " href="javascript:void(0)" title="Hapus" onclick="delete_person('."'".$forms->id."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
+		
+			$data[] = $row;
+		}
+
+		$output = array(
+						"draw" => $_POST['draw'],
+						"recordsTotal" => $this->form->count_allForms(),
+						"recordsFiltered" => $this->form->count_filteredForms(),
+						"data" => $data,
+				);
+		//output to json format
+		echo json_encode($output);
+	}
+
 	public function uploadView(){
 		$this->load->view('admin/templates/header');
 		$this->load->view('admin/templates/navbar');		
@@ -28,9 +70,8 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/templates/closer');
 	}
 
-	public function listForms(){
-		
-	}
+
+	
 	//
 
 	//==================end for forms=====================
@@ -138,7 +179,7 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/templates/header');
 			$this->load->view('admin/templates/navbar');	
             $this->load->view('admin/student_life/editNews', $data);
-			$this->load->view('admin/templates/footer');
+			$this->load->view('admin/templates/');
 			$this->load->view('admin/student_life/addNewsFooter');
  
         }

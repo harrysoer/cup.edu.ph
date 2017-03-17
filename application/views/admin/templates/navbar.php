@@ -34,10 +34,10 @@
                             </li>
                             
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><span>Admission Page</span><i class="md md-add"></i> <span class="pull-right"></span></a>
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0);" class="waves-effect"><span>Downloadable <span style="padding-left:15px;">Forms</span></span><span class="pull-right"></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><span>Admission Page</span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                                <ul style=" ">
+                                    <li href="">
+                                        <a href="<?=site_url('admin/admission/forms/list')?>" class="waves-effect"><span>Downloadable <span style="padding-left:15px;">Forms</span></span><span class="pull-right"></span></a>
                                     </li>
                                 </ul>
                             </li>

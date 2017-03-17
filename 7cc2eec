@@ -1,0 +1,143 @@
+[33mcommit 7cc2eecfdddea8a58322d56d7d020451851775f2[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Wed Mar 15 00:30:28 2017 +0800
+
+    add admission cms view
+
+[33mcommit b296514f13bc86e25272ed312c75360b6023cca2[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Sun Mar 12 15:48:08 2017 +0800
+
+    exported database
+
+[33mcommit f1c79225e4012a51b30eee760ab3c7f4d5907da9[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Sun Mar 12 15:13:21 2017 +0800
+
+    installed io_auth for login
+
+[33mcommit d60ab15fd12afe5848179c85b142d2c2f6dc134a[m
+Merge: 6e89bdd f43f573
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Sun Mar 12 12:05:25 2017 +0800
+
+    Merge pull request #4 from oakleg/development
+    
+    Merge pull request #3 from oakleg/master
+
+[33mcommit 6e89bddf94651326da9e2bb38eac10721b7cef0c[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Sat Mar 11 09:25:04 2017 +0800
+
+    export database
+
+[33mcommit 1a070b776f38adc176938ad5c4934eae3a5a4252[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Sat Mar 11 09:21:57 2017 +0800
+
+    adds about and academic page
+
+[33mcommit 5c9ec8ab9eead821080128b1f414ff091b73e287[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Sat Mar 11 07:31:42 2017 +0800
+
+    add CRUD functionality in News
+
+[33mcommit 3d8cdbfa14c1d93a35847b41d2e80e9905dbf0df[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Fri Mar 10 12:05:44 2017 +0800
+
+    add data-table for listNews page
+
+[33mcommit 6cb1a7facc85554b00ac5264ecf175d3532ab0dc[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Wed Mar 8 22:26:58 2017 +0800
+
+    add listNews page
+
+[33mcommit 4db949b9a5751047bedbc5799986f39a38fbb783[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Wed Mar 8 00:08:08 2017 +0800
+
+    exported database
+
+[33mcommit 638f9c7bbe4f43fc852554135dc9f82316919109[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Tue Mar 7 23:43:41 2017 +0800
+
+    add routing for create News
+
+[33mcommit fdda387298b984623bdb5c772903835934a05366[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Tue Mar 7 23:04:55 2017 +0800
+
+    add create news
+
+[33mcommit 1f1d42ade4b368cc2f2c679a84a974443ff30bb0[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Fri Mar 3 23:26:28 2017 +0800
+
+    add index ui for admin
+
+[33mcommit 555f72f1334888dcaf3eb6e88c9fc0a5e2051b5a[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Sat Feb 18 10:51:32 2017 +0800
+
+    add homepage
+
+[33mcommit 0cd40425fd5fe4e7e4ff23efd3deb1e46577a9a9[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Sat Feb 18 01:37:06 2017 +0800
+
+    temporary fix for login, please resolve for the verify_password
+
+[33mcommit f43f57396c1b82099053ee75ad9cd5e28b7ecd80[m
+Merge: 7a534f5 22cc96a
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Fri Feb 17 17:34:01 2017 +0800
+
+    Merge pull request #3 from oakleg/master
+    
+    merge master and development
+
+[33mcommit 22cc96ade5e07c57d958535b65944763d0712d85[m
+Merge: 1e04625 7a534f5
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Fri Feb 17 17:31:41 2017 +0800
+
+    Merge pull request #2 from oakleg/development
+    
+    Merge pull request #1 from oakleg/master
+
+[33mcommit 1e046250c03304d1670aa07ee4ea7f776582eafb[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Fri Feb 17 13:42:03 2017 +0800
+
+    replaced modal with normal login form
+
+[33mcommit c8cd2292610713578272e6d5d090325c2b17ae7f[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Fri Feb 17 13:28:01 2017 +0800
+
+    replaced modal with normal login form
+
+[33mcommit 7a534f55aadc3626651ccf30a5f26f1a692ef18d[m
+Merge: ef76170 0bf5080
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Fri Feb 17 10:29:37 2017 +0800
+
+    Merge pull request #1 from oakleg/master
+    
+    trying to refix the login because of modal errors
+
+[33mcommit 0bf5080647cbfb516b74339e7eddb20e86fcda62[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Fri Feb 17 02:55:31 2017 +0800
+
+    trying to refix the login because of modal errors
+
+[33mcommit ef761707f224dc31b2db4360c5a4858ec9efe77d[m
+Author: oakleg <gelosoer1216@gmail.com>
+Date:   Thu Feb 16 00:29:44 2017 +0800
+
+    first commit

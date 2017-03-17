@@ -38,7 +38,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <input class="btn btn-sm btn-primary" style="margin-top:1rem;" type="submit" name="submit" value="Submit" />
+                                <input class="btn btn-sm btn-primary" style="margin-top:1rem;" type="submit" name="submit" value="submit" />
                             </form>
                         </div>
                     </div>

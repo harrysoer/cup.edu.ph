@@ -30,7 +30,7 @@ class admin_model extends CI_Model
 
 	var $table = 'news';
 	var $column_order = array('title', 'author ',  null ,null); //set column field database for datatable orderable
-	var $column_search = array('title','author','text'); //set column field database for datatable searchable just firstname , lastname , address are searchable
+	var $column_search = array('title','author','text'); //set column field database for datatable searchable
 	var $order = array('id' => 'desc'); // default order 
 
 	private function _get_datatables_query()
@@ -74,7 +74,7 @@ class admin_model extends CI_Model
 
 	//for ajax
 	function get_datatablesNews()
-	{
+	{	
 		$this->_get_datatables_query();
 		if($_POST['length'] != -1)
 		$this->db->limit($_POST['length'], $_POST['start']);
