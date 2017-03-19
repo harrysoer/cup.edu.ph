@@ -64,6 +64,7 @@ $route['admin/news/callList']	= 'admin/ajax_listNews';
 
 $route['admin/admission/forms/list']     = 'admin/listForms';
 $route['admin/admission/forms/upload'] 	 = 'admin/uploadView';
+$route['admin/admission/forms/submit']	 = 'admin/uploadForm';
 $route['admin/admission/forms/callList'] = 'admin/ajax_listForms';
 
 

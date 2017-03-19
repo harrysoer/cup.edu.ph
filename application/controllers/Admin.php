@@ -6,7 +6,7 @@ class Admin extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('admin_model', 'admin');
+		$this->load->model('adminNews_model', 'news');
 		$this->load->model('adminForms_model', 'form');
 
 	}
@@ -42,7 +42,7 @@ class Admin extends CI_Controller {
 			$row[] = $forms->file_description;
 
 
-			$link = site_url('admin/form/revise-upload'.$forms->id); 
+			$link = NULL;#site_url('admin/form/revise-upload'.$forms->id); 
 
 			//add html for action
 			$row[] = '<a class="btn btn-sm btn-primary" href="'.$link.'" title="Edit")">
@@ -65,13 +65,42 @@ class Admin extends CI_Controller {
 	public function uploadView(){
 		$this->load->view('admin/templates/header');
 		$this->load->view('admin/templates/navbar');		
-		$this->load->view('admin/admission/uploadForm');
+		$this->load->view('admin/admission/uploadForm', array('error' => NULL));
 		$this->load->view('admin/templates/scripts');
 		$this->load->view('admin/templates/closer');
 	}
 
+	public function uploadForm(){
+		$config['upload_path'] 		= './uploads/forms/';
+		$config['allowed_types']	= 'pdf';
 
-	
+		$this->upload->initialize($config);
+
+		if (!$this->upload->do_upload('userFile'))
+		{		
+            $data = array('error' => $this->upload->display_errors());
+
+			$this->load->view('admin/templates/header');
+			$this->load->view('admin/templates/navbar');		
+			$this->load->view('admin/admission/uploadForm', $data);
+			$this->load->view('admin/templates/scripts');
+			$this->load->view('admin/templates/closer');
+		}
+		else
+		{
+			$file_name = $this->upload->data('file_name');
+
+			$this->form->setForm($file_name);
+			redirect(site_url('admin/admission/forms/list'));
+		}
+	}
+
+	//delete news
+	public function ajax_deleteForm($id)
+	{
+		$this->form->deleteForm_by_id($id);
+		echo json_encode(array("status" => TRUE));
+	}
 	//
 
 	//==================end for forms=====================
@@ -97,7 +126,7 @@ class Admin extends CI_Controller {
 		}
 		else
 		{
-			 $this->admin->setNews();
+			 $this->news->setNews();
 			 redirect( site_url('admin/news/list')) ;		 
 		}
 	}
@@ -111,7 +140,7 @@ class Admin extends CI_Controller {
 
 	public function ajax_listNews()
 	{
-		$list = $this->admin->get_datatablesNews();
+		$list = $this->news->get_datatablesNews();
 		$data = array();
 		$no = $_POST['start'];
 		foreach ($list as $news) {
@@ -148,8 +177,8 @@ class Admin extends CI_Controller {
 
 		$output = array(
 						"draw" => $_POST['draw'],
-						"recordsTotal" => $this->admin->count_all(),
-						"recordsFiltered" => $this->admin->count_filtered(),
+						"recordsTotal" => $this->news->count_all(),
+						"recordsFiltered" => $this->news->count_filtered(),
 						"data" => $data,
 				);
 		//output to json format
@@ -167,7 +196,7 @@ class Admin extends CI_Controller {
             show_404();
         }
          
-        $data['news_item'] = $this->admin->get_news_by_id($id);
+        $data['news_item'] = $this->news->get_news_by_id($id);
         
         $this->form_validation->set_rules('title', 'Title', 'required');
         $this->form_validation->set_rules('author', 'Author', 'required');
@@ -179,13 +208,14 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/templates/header');
 			$this->load->view('admin/templates/navbar');	
             $this->load->view('admin/student_life/editNews', $data);
-			$this->load->view('admin/templates/');
+			$this->load->view('admin/templates/scripts');
 			$this->load->view('admin/student_life/addNewsFooter');
+			$this->load->view('admin/templates/scripts');
  
         }
         else
         {
-            $this->admin->set_newsUpdate($id);
+            $this->news->set_newsUpdate($id);
             redirect(site_url('admin/news/list')) ;
         }
 
@@ -194,14 +224,14 @@ class Admin extends CI_Controller {
 	//delete news
 	public function ajax_delete($id)
 	{
-		$this->admin->delete_by_id($id);
+		$this->news->delete_by_id($id);
 		echo json_encode(array("status" => TRUE));
 	}
 
 	//view more//read news
 	public function readMore($slug = NULL)
 	{
-		$data['news_item'] = $this->admin->get_news($slug);
+		$data['news_item'] = $this->news->get_news($slug);
         
         if (empty($data['news_item']))
         {

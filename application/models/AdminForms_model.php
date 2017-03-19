@@ -12,6 +12,14 @@ class adminForms_model extends CI_Model
 
 	//======forms======
 
+	public function setForm($file_name){
+		$data=array(
+				'file_name' 		=> $file_name,
+				'file_description'	=> $this->input->post('file_description'),
+			);
+
+		return $this->db->insert('files', $data);
+	}
 
 	var $table = 'files';
 	var $column_order = array('file_name', 'file_description',  null ); //set column field database for datatable orderable
@@ -80,5 +88,22 @@ class adminForms_model extends CI_Model
 		$this->db->from($this->table);
 		return $this->db->count_all_results();
 	}
+
+	public function deleteForm_by_id($id)
+	{	
+		// $test='./uploads/forms/(OnePunchMan-OST)_Sadness.pdf';
+		$query = $this->db->query("SELECT file_name from files where id = $id;");
+		$row = $query->row(); 
+		if (isset($row)){
+			$file_name = $row->file_name;
+		}
+
+		$path='./uploads/forms/'.$file_name;
+		$this->db->where('id', $id);
+		$this->db->delete($this->table);
+		unlink($path);	
+	}
+
+
 
 }
