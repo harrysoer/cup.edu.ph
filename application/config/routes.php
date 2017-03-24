@@ -55,18 +55,20 @@ $route['academic']='CupWebsite/academic';
 
 
 
-$route['admin/index'] 			= 'admin/index';
-$route['admin/news/create'] 	= 'admin/addNews';
-$route['admin/news/edit/(:any)']= 'admin/editNews/$1';
-$route['admin/news/list'] 		= 'admin/listNews';
-$route['admin/news/read/(:any)']= 'admin/readMore/$1';
-$route['admin/news/callList']	= 'admin/ajax_listNews';
+$route['admin/index'] 			 = 'admin/index';
+$route['admin/news/create'] 	 = 'admin/addNews';
+$route['admin/news/edit/(:any)'] = 'admin/editNews/$1';
+$route['admin/news/list'] 		 = 'admin/listNews';
+$route['admin/news/read/(:any)'] = 'admin/readMore/$1';
+$route['admin/news/callList']	 = 'admin/ajax_listNews';
 
 $route['admin/admission/forms/list']     = 'admin/listForms';
 $route['admin/admission/forms/upload'] 	 = 'admin/uploadView';
 $route['admin/admission/forms/submit']	 = 'admin/uploadForm';
 $route['admin/admission/forms/callList'] = 'admin/ajax_listForms';
 
+$route['admin/gallery/albums/list']     = 'admin/listAlbums';
+$route['admin/gallery/albums/(:any)'] = 'admin/ajax_listImages/$1';
 
 $route['portal']='portal/login';
 $route['register']='portal/register';

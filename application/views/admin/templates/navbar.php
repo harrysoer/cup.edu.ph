@@ -33,6 +33,10 @@
                                 <a href="<?=site_url('admin/news/list')?>" class="waves-effect"><span>News Page</span><span class="pull-right"></span></a>
                             </li>
                             
+                            <li>
+                                <a href="<?=site_url('admin/gallery/albums/list')?>" class="waves-effect"><span>Gallery Page</span><span class="pull-right"></span></a>
+                            </li>
+
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><span>Admission Page</span> <span class="pull-right"><i class="md md-add"></i></span></a>
                                 <ul style=" ">

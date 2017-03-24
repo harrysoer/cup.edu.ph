@@ -8,7 +8,8 @@ class Admin extends CI_Controller {
 		parent::__construct();
 		$this->load->model('adminNews_model', 'news');
 		$this->load->model('adminForms_model', 'form');
-
+		$this->load->model('adminImageGallery_model', 'gallery');
+		$this->load->model('adminAlbum_model', 'album');
 	}
 
 	public function index(){
@@ -19,6 +20,101 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/templates/closer');
 	}
 
+	//Add, Delete, Update, and View Gallery
+
+	public function listAlbums(){
+		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/navbar');
+		$this->load->view('admin/templates/scripts');
+		$this->load->view('admin/admission/listAlbums');
+	}
+
+	public function listImages(){
+		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/navbar');
+		$this->load->view('admin/templates/scripts');
+		$this->load->view('admin/admission/listImages');
+	}
+
+	//listing the album name
+	public function ajax_listAlbum()
+	{	
+
+		$list = $this->gallery->get_datatablesAlbum();
+		$data = array();
+		$no = $_POST['start'];
+
+		foreach ($list as $album_name) {
+			$no++;
+			$row = array();
+			$row[] = $album_name->album_name;
+			//$row[] = $images->album_name;
+
+
+			$link = NULL;#site_url('admin/form/revise-upload'.$forms->id); 
+
+			//add html for action
+			$row[] = '<a class="btn btn-sm btn-primary" href="'.$link.'" title="Edit")">
+					<i class="glyphicon"></i>View</a>';
+		
+			$data[] = $row;
+		}
+
+		$output = array(
+						"draw" => $_POST['draw'],
+						"recordsTotal" => $this->gallery->count_allAlbums(),
+						"recordsFiltered" => $this->gallery->count_filteredAlbums(),
+						"data" => $data,
+				);
+		//output to json format
+		echo json_encode($output);
+	}
+
+	//list images in album
+	public function ajax_listImages($album_name)
+	{	
+
+		$list = $this->gallery->get_datatablesImages($album_name);
+		$data = array();
+		$no = $_POST['start'];
+
+		foreach ($list as $images) {
+			$no++;
+			$row = array();
+			$row[] = $images->file_name;
+			//$row[] = $images->album_name;
+
+
+			$link = NULL;#site_url('admin/form/revise-upload'.$forms->id); 
+
+			//add html for action
+			$row[] = '<a class="btn btn-sm btn-primary" href="'.$link.'" title="Edit")">
+					<i class="glyphicon glyphicon-pencil"></i> Edit</a>
+				  <a class="btn btn-sm btn-danger " href="javascript:void(0)" title="Hapus" onclick="delete_person('."'".$images->id."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
+		
+			$data[] = $row;
+		}
+
+		$output = array(
+						"draw" => $_POST['draw'],
+						"recordsTotal" => $this->gallery->count_allImages(),
+						"recordsFiltered" => $this->gallery->count_filteredImages(),
+						"data" => $data,
+				);
+		//output to json format
+		echo json_encode($output);
+	}
+
+	
+	//delete image
+	public function ajax_deleteImage($id)
+	{
+		$this->form->deleteForm_by_id($id);
+		echo json_encode(array("status" => TRUE));
+	}
+	//
+
+	//==================end for Gallery=====================
 
 	//Add, Delete, Update, and View Downloadable Forms
 	public function listForms(){
@@ -95,7 +191,7 @@ class Admin extends CI_Controller {
 		}
 	}
 
-	//delete news
+	//delete file
 	public function ajax_deleteForm($id)
 	{
 		$this->form->deleteForm_by_id($id);

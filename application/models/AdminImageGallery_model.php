@@ -4,40 +4,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
 * 
 */
-class adminForms_model extends CI_Model
+class adminImageGallery_model extends CI_Model
 {
 	public function __construct(){
 		parent:: __construct();
 	}
 
-	//======forms======
+	//======Image======
 
-	public function setForm($file_name){
+	public function setImage($file_name){
 		$data=array(
-				'file_name' 		=> $file_name,
-				'file_description'	=> $this->input->post('file_description'),
+				'file_name'   => $file_name,
+				'album_name'  => $this->input->post('album_name'),
 			);
 
 		return $this->db->insert('files', $data);
 	}
 
-	var $table = 'files';
-	var $column_order = array('file_name', 'file_description',  null ); //set column field database for datatable orderable
-	var $column_search = array('file_name','file_description'); //set column field database for datatable searchable
+	var $table = 'gallery';
+	var $column_order = array('file_name', 'album_name',  null ); //set column field database for datatable orderable
+	var $column_search = array('file_name','album_name'); //set column field database for datatable searchable
 	var $order = array('id' => 'desc'); // default order 
 
 
 
-	//for ajax datatable
-	public function get_datatablesForms(){
-		$this->_get_datatables_queryForms();
+	//for ajax datatable of album
+	public function get_datatablesImages(){
+		$this->_get_datatables_queryImage();
 		if($_POST['length'] != -1)
 		$this->db->limit($_POST['length'], $_POST['start']);
-		$query = $this->db->get();
+		$query = $this->db->query("SELECT file_name from gallery_image where id = $id;");
 		return $query->result();
 	}
 
-	private function _get_datatables_queryForms()
+	private function _get_datatables_queryImage()
 	{
 		
 		$this->db->from($this->table);
@@ -76,28 +76,28 @@ class adminForms_model extends CI_Model
 		}
 	}
 
-	function count_filteredForms()
+	function count_filteredImages()
 	{
-		$this->_get_datatables_queryForms();
+		$this->_get_datatables_queryImage();
 		$query = $this->db->get();
 		return $query->num_rows();
 	}
 
-	public function count_allForms()
+	public function count_allImages()
 	{
 		$this->db->from($this->table);
 		return $this->db->count_all_results();
 	}
 
-	public function deleteForm_by_id($id)
+	public function deleteImage_by_id($id)
 	{	
-		$query = $this->db->query("SELECT file_name from files where id = $id;");
+		$query = $this->db->query("SELECT file_name from gallery_image where id = $id;");
 		$row = $query->row(); 
 		if (isset($row)){
 			$file_name = $row->file_name;
 		}
 
-		$path='./uploads/forms/'.$file_name;
+		$path='./uploads/gallery/images/'.$file_name;
 		$this->db->where('id', $id);
 		$this->db->delete($this->table);
 		unlink($path);	

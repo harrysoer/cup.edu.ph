@@ -4,40 +4,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
 * 
 */
-class adminForms_model extends CI_Model
+class adminAlbum_model extends CI_Model
 {
 	public function __construct(){
 		parent:: __construct();
 	}
 
-	//======forms======
+	//======Image======
 
-	public function setForm($file_name){
+	public function setAlbumName($album_name){
 		$data=array(
-				'file_name' 		=> $file_name,
-				'file_description'	=> $this->input->post('file_description'),
+				'album_name'  => $this->input->post('album_name'),
 			);
 
-		return $this->db->insert('files', $data);
+		return $this->db->insert('gallery_album', $data);
 	}
 
-	var $table = 'files';
-	var $column_order = array('file_name', 'file_description',  null ); //set column field database for datatable orderable
-	var $column_search = array('file_name','file_description'); //set column field database for datatable searchable
-	var $order = array('id' => 'desc'); // default order 
+	var $table = 'gallery_album';
+	var $column_order = array( 'album_name',  null,null ); //set column field database for datatable orderable
+	var $column_search = array('album_name'); //set column field database for datatable searchable
+	var $order= array('id' => 'desc'); // default order 
 
 
+	//for ajax data table of album
 
-	//for ajax datatable
-	public function get_datatablesForms(){
-		$this->_get_datatables_queryForms();
+	public function get_datatablesAlbums(){
+		$this->_get_datatables_query_Album();
+		if($_POST['length'] != -1)
+		$this->db->limit($_POST['length'], $_POST['start']);
+		$query = $this->db->get();
+		return $query->result();
+	}
+	
+	//for ajax data table of albums
+	public function get_datatablesAlbum($album_name){
+		$this->_get_datatables_queryAlbum();
 		if($_POST['length'] != -1)
 		$this->db->limit($_POST['length'], $_POST['start']);
 		$query = $this->db->get();
 		return $query->result();
 	}
 
-	private function _get_datatables_queryForms()
+	private function _get_datatables_queryAlbum()
 	{
 		
 		$this->db->from($this->table);
@@ -76,33 +84,24 @@ class adminForms_model extends CI_Model
 		}
 	}
 
-	function count_filteredForms()
+	function count_filteredAlbum()
 	{
-		$this->_get_datatables_queryForms();
+		$this->_get_datatables_queryAlbum();
 		$query = $this->db->get();
 		return $query->num_rows();
 	}
 
-	public function count_allForms()
+	public function count_allAlbum()
 	{
 		$this->db->from($this->table);
 		return $this->db->count_all_results();
 	}
 
-	public function deleteForm_by_id($id)
+	public function deleteAlbum_by_id($id)
 	{	
-		$query = $this->db->query("SELECT file_name from files where id = $id;");
-		$row = $query->row(); 
-		if (isset($row)){
-			$file_name = $row->file_name;
-		}
-
-		$path='./uploads/forms/'.$file_name;
 		$this->db->where('id', $id);
 		$this->db->delete($this->table);
-		unlink($path);	
 	}
-
 
 
 }
