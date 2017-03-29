@@ -25,7 +25,8 @@
         <link href="<?=base_url('assets/for_admin/css/waves-effect.css')?>" rel="stylesheet">
 
         <!-- Dropzone css -->
-        <link href="assets/dropzone/dropzone.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/for_admin/assets/dropzone/dropzone.min.css') ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/for_admin/assets/dropzone/basic.min.css') ?>">
 
         <!--bootstrap-wysihtml5-->
         <link rel="stylesheet" type="text/css" href="<?=base_url('assets/for_admin/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css')?>" />

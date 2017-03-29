@@ -12,7 +12,7 @@ class adminImageGallery_model extends CI_Model
 
 	//======Image======
 
-	public function setImage($file_name){
+	public function setImage(){
 		$data=array(
 				'file_name'   => $file_name,
 				'album_name'  => $this->input->post('album_name'),

@@ -9,9 +9,9 @@
                         <!-- Page-Title -->
                         <div class="row">
                             <div class="col-sm-12">
-                                <h4 class="pull-left page-title">News Data</h4>
+                                <h4 class="pull-left page-title">Albums Data</h4>
                                 <ol class="breadcrumb pull-right">
-                                    <li><a href="<?=site_url('admin/news/list')?>">News</a></li>
+                                    <li><a href="<?=site_url('admin/gallery/albums/list')?>">Albums</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -23,7 +23,7 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="m-b-30">
-                                            <a href="<?=site_url('admin/news/create')?>"><button id="addToTable"  class="btn btn-success waves-effect waves-light">Add <i class="fa fa-plus"></i></button></a>
+                                            <a href="<?=site_url('admin/gallery/albums/create')?>"><button  class="btn btn-success waves-effect waves-light">Add <i class="fa fa-plus"></i></button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -31,9 +31,7 @@
                                 <table class="table table-bordered table-striped" id="table">
                                     <thead>
                                         <tr>
-                                            <th>Title</th>
-                                            <th style="width:125px;">Author</th>
-                                            <th>Content</th>
+                                            <th>Albums</th>
                                             <th style="width:125px;">Actions</th>
                                         </tr>
                                     </thead>
@@ -110,14 +108,14 @@ $(document).ready(function() {
 
         // Load data for the table's content from an Ajax source
         "ajax": {
-            "url": "<?php echo site_url('admin/news/callList')?>",
+            "url": "<?php echo site_url('admin/gallery/albums/callList')?>",
             "type": "POST"
         },
 
         //Set column definition initialisation properties.
         "columnDefs": [
         { 
-            "targets": [ -1,-2 ], //last column
+            "targets": [ -1 ], //last column
             "orderable": false, //set not orderable
         },
         ],
@@ -138,6 +136,7 @@ $(document).ready(function() {
         $(this).next().empty();
     });
 
+    console.log(table.ajax);
 });
 
 
@@ -165,7 +164,7 @@ function delete_person(id)
     {
         // ajax delete data to database
         $.ajax({
-            url : "<?php echo site_url('admin/ajax_delete')?>/"+id,
+            url : "<?php echo site_url('admin/ajax_deleteForm')?>/"+id,
             type: "POST",
             dataType: "JSON",
             success: function(data)

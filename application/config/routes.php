@@ -49,11 +49,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller']='CupWebsite/index';
-$route['about']='CupWebsite/about';
-$route['academic']='CupWebsite/academic';
-
-
+$route['default_controller'] ='CupWebsite/index';
+$route['about'] ='CupWebsite/about';
+$route['academic'] ='CupWebsite/academic';
+$route['admission'] ='CupWebsite/admission';
+$route['studentlife'] ='CupWebsite/studentlife';
+$route['gallery'] ='CupWebsite/gallery';
 
 $route['admin/index'] 			 = 'admin/index';
 $route['admin/news/create'] 	 = 'admin/addNews';
@@ -68,7 +69,10 @@ $route['admin/admission/forms/submit']	 = 'admin/uploadForm';
 $route['admin/admission/forms/callList'] = 'admin/ajax_listForms';
 
 $route['admin/gallery/albums/list']     = 'admin/listAlbums';
-$route['admin/gallery/albums/(:any)'] = 'admin/ajax_listImages/$1';
+$route['admin/gallery/albums/callList'] = 'admin/ajax_listAlbums';
+$route['admin/gallery/albums/create']	= 'admin/addAlbum';
+$route['admin/gallery/albums/upload']	= 'admin/uploadAlbum';
+$route['admin/gallery/albums/(:any)'] 	= 'admin/ajax_listImages/$1';
 
 $route['portal']='portal/login';
 $route['register']='portal/register';

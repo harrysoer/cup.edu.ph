@@ -21,26 +21,69 @@ class Admin extends CI_Controller {
 	}
 
 	//Add, Delete, Update, and View Gallery
+	public function addAlbum($data=null){
+
+        $this->form_validation->set_rules('album_name', 'Album Title', 'trim|required');
+
+        if ($this->form_validation->run() === FALSE)
+        {	
+			$this->load->view('admin/templates/header');
+			$this->load->view('admin/templates/navbar');
+			$this->load->view('admin/templates/scripts');
+			$this->load->view('admin/gallery/createAlbum');
+			$this->load->view('admin/templates/closer');
+		}
+		else
+		{
+			$this->album->setAlbumName($data);
+			redirect( site_url('admin/gallery/albums/upload'));
+		}
+	}
+
+	public function uploadAlbum(){
+		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/navbar');
+		$this->load->view('admin/templates/scripts');
+		$this->load->view('admin/gallery/UploadImagesScript');
+		$this->load->view('admin/gallery/createAlbum');
+		$this->load->view('admin/templates/closer');		
+	}
+
+	public function uploadIMages(){
+
+
+		$config['upload_path']   = './uploads/gallery/';
+		$config['allowed_types'] = 'jpg|png';
+		$this->load->library('upload',$config);
+
+		if($this->upload->do_upload('userfile'))
+		{
+			$token=$this->input->post('token');
+			$file_name=$this->upload->data('file_name');
+			$this->db->insert('file',array('file_name'=>$file_name,'token'=>$token));
+		}
+	}
 
 	public function listAlbums(){
 		$this->load->view('admin/templates/header');
 		$this->load->view('admin/templates/navbar');
 		$this->load->view('admin/templates/scripts');
-		$this->load->view('admin/admission/listAlbums');
+		$this->load->view('admin/gallery/listAlbums');
 	}
 
+	//for mini gallery in admin side
 	public function listImages(){
 		$this->load->view('admin/templates/header');
 		$this->load->view('admin/templates/navbar');
 		$this->load->view('admin/templates/scripts');
-		$this->load->view('admin/admission/listImages');
+		$this->load->view('admin/gallery/listImages');
 	}
 
 	//listing the album name
-	public function ajax_listAlbum()
+	public function ajax_listAlbums()
 	{	
 
-		$list = $this->gallery->get_datatablesAlbum();
+		$list = $this->album->get_datatablesAlbums();
 		$data = array();
 		$no = $_POST['start'];
 
@@ -62,48 +105,14 @@ class Admin extends CI_Controller {
 
 		$output = array(
 						"draw" => $_POST['draw'],
-						"recordsTotal" => $this->gallery->count_allAlbums(),
-						"recordsFiltered" => $this->gallery->count_filteredAlbums(),
+						"recordsTotal" => $this->album->count_allAlbums(),
+						"recordsFiltered" => $this->album->count_filteredAlbums(),
 						"data" => $data,
 				);
 		//output to json format
 		echo json_encode($output);
 	}
 
-	//list images in album
-	public function ajax_listImages($album_name)
-	{	
-
-		$list = $this->gallery->get_datatablesImages($album_name);
-		$data = array();
-		$no = $_POST['start'];
-
-		foreach ($list as $images) {
-			$no++;
-			$row = array();
-			$row[] = $images->file_name;
-			//$row[] = $images->album_name;
-
-
-			$link = NULL;#site_url('admin/form/revise-upload'.$forms->id); 
-
-			//add html for action
-			$row[] = '<a class="btn btn-sm btn-primary" href="'.$link.'" title="Edit")">
-					<i class="glyphicon glyphicon-pencil"></i> Edit</a>
-				  <a class="btn btn-sm btn-danger " href="javascript:void(0)" title="Hapus" onclick="delete_person('."'".$images->id."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
-		
-			$data[] = $row;
-		}
-
-		$output = array(
-						"draw" => $_POST['draw'],
-						"recordsTotal" => $this->gallery->count_allImages(),
-						"recordsFiltered" => $this->gallery->count_filteredImages(),
-						"data" => $data,
-				);
-		//output to json format
-		echo json_encode($output);
-	}
 
 	
 	//delete image

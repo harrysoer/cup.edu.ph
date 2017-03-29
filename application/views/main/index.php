@@ -26,7 +26,7 @@
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
                 <li class="active"><a href="<?=site_url();?>">HOME</a></li>
                 <li><a href="<?=site_url('/about');?>">ABOUT US</a></li>
-                <li><a href="#">ADMISSIONS</a></li>
+                <li><a href="<?=site_url('/admission');?>">ADMISSIONS</a></li>
                 <li><a href="<?=site_url('/academic');?>">ACADEMICS</a></li>
                 <li><a href="#">STUDENT LIFE</a></li>                
                 <li><a href="<?=site_url('/portal/login');?>">STUDENT PORTAL</a></li>
@@ -273,7 +273,7 @@
                       <span class="fa fa-desktop"></span>
                     </div>
                     <h3>Facilities</h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <p>We provide quality academic service in terms of people and in programs.</p>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
@@ -281,8 +281,8 @@
                     <div class="whyus_icon">
                       <span class="fa fa-users"></span>
                     </div>
-                    <h3>Best Tutor</h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <h3>Quality Education</h3>
+                    <p>We offer globally competitive education to our students for a successful career.</p>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
@@ -290,8 +290,8 @@
                     <div class="whyus_icon">
                       <span class="fa fa-flask"></span>
                     </div>
-                    <h3>Practical Training</h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <h3>Low Cost</h3>
+                    <p>We provide affordable education to students in Pasay City.</p>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
@@ -299,8 +299,8 @@
                     <div class="whyus_icon">
                       <span class="fa fa-support"></span>
                     </div>
-                    <h3>Support</h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <h3>Good Environment</h3>
+                    <p>We are continually growing and transforming aiming for academic excellence.</p>
                   </div>
                 </div>
               </div>

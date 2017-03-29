@@ -25,9 +25,9 @@
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
                 <li><a href="<?=site_url();?>">HOME</a></li>
                 <li><a href="<?=site_url('/about');?>">ABOUT US</a></li>
-                <li><a href="#">ADMISSIONS</a></li>
+                <li><a href="<?=site_url('/admission');?>">ADMISSIONS</a></li>
                 <li class="active"><a href="<?=site_url('/academic');?>">ACADEMICS</a></li>
-                <li><a href="#">STUDENT LIFE</a></li>                
+                <li><a href="<?=site_url('/studentlife');?>">STUDENT LIFE</a></li>                
                 <li><a href="<?=site_url('/portal/login');?>">STUDENT PORTAL</a></li>
               </ul>           
             </div><!--/.nav-collapse -->

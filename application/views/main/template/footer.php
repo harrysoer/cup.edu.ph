@@ -26,6 +26,18 @@
                 <iframe class="col-xs-12 col-md-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.9586737010322!2d120.99332631439587!3d14.544355989838316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c95db1d54c57%3A0x32954ce2a43d59a3!2sCity+University+Of+Pasay!5e0!3m2!1sen!2sph!4v1487356928166" width="450" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
               </div>
             </div>
+             <div class="col-ld-3  col-md-3 col-sm-3">
+              <div class="single_footer_widget">
+                <h3>Quick Links</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
+                  <li><a href="#">Link 4</a></li>
+                  <li><a href="#">Link 5</a></li>
+                </ul>
+              </div>
+            </div>
             <!-- <div class="col-ld-7 col-md-4 col-sm-12">
               <div class="single_footer_widget">
                 <h3>Social Links</h3>

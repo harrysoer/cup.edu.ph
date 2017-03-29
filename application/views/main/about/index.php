@@ -26,7 +26,7 @@
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
                 <li><a href="<?=site_url();?>">HOME</a></li>
                 <li class="active"><a href="<?=site_url('/about');?>">ABOUT US</a></li>
-                <li><a href="#">ADMISSIONS</a></li>
+                <li><a href="<?=site_url('/admission');?>">ADMISSIONS</a></li>
                 <li><a href="<?=site_url('/academic');?>">ACADEMICS</a></li>
                 <li><a href="#">STUDENT LIFE</a></li>                
                 <li><a href="<?=site_url('/portal/login');?>">STUDENT PORTAL</a></li>
@@ -116,10 +116,72 @@
           <!-- start course archive sidebar -->
           <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="courseArchive_sidebar">
-              <!-- start single sidebar -->
+             <!-- start single sidebar -->
               <div class="single_sidebar">
-                <h2>Daily Calendar <span class="fa fa-angle-double-right"></span></h2>
-              </div>  
+                <ul class="news_tab">
+                  <li>
+                    <div class="media">
+                      <div class="media-left">
+                        <a href="#" class="news_img">
+                          <img alt="img" src="img/news.jpg" class="media-object">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                       <a href="#"><br>Mission | Vision | Goals</a>
+                      </div>
+                    </div>
+                  </li>  
+                  <li>
+                    <div class="media">
+                      <div class="media-left">
+                        <a href="#" class="news_img">
+                          <img alt="img" src="img/news.jpg" class="media-object">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                       <a href="#"><br>C.U.P. Administration</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media">
+                      <div class="media-left">
+                        <a href="#" class="news_img">
+                          <img alt="img" src="img/news.jpg" class="media-object">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                       <a href="#"><br>C.U.P. Offices</a>              
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media">
+                      <div class="media-left">
+                        <a href="#" class="news_img">
+                          <img alt="img" src="img/news.jpg" class="media-object">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                       <a href="<?=site_url('/gallery');?>"><br>C.U.P Gallery</a>
+                      </div>
+                    </div>
+                  </li>  
+                  <li>
+                    <div class="media">
+                      <div class="media-left">
+                        <a href="#" class="news_img">
+                          <img alt="img" src="img/news.jpg" class="media-object">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                       <a href="#"><br>C.U.P. Hymn</a>
+                      </div>
+                    </div>
+                  </li>       
+                </ul>
+              </div>
+              <!-- End single sidebar -->
           </div>
           <!-- start course archive sidebar -->
         </div>

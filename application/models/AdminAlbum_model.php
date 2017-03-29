@@ -10,18 +10,30 @@ class adminAlbum_model extends CI_Model
 		parent:: __construct();
 	}
 
-	//======Image======
+	//======Albums======
 
-	public function setAlbumName($album_name){
+	public function setAlbumName($data){
+		$album_name=$this->input->post('album_name');
+		$slug = url_title($this->input->post('album_name'), 'dash', TRUE);
+
 		$data=array(
-				'album_name'  => $this->input->post('album_name'),
+				'album_name'  => $album_name,
+				'slug'		  => $slug,
 			);
+		
+   		mkdir(FCPATH.'/uploads/gallery/' . $album_name, 0777, TRUE);
+		
+		$this->db->insert('gallery_album', $data);
+		
+		return $data['album_name'];
+	}
 
-		return $this->db->insert('gallery_album', $data);
+	public function uploadImages($id=0){
+
 	}
 
 	var $table = 'gallery_album';
-	var $column_order = array( 'album_name',  null,null ); //set column field database for datatable orderable
+	var $column_order = array( 'album_name',  null ); //set column field database for datatable orderable
 	var $column_search = array('album_name'); //set column field database for datatable searchable
 	var $order= array('id' => 'desc'); // default order 
 
@@ -29,23 +41,15 @@ class adminAlbum_model extends CI_Model
 	//for ajax data table of album
 
 	public function get_datatablesAlbums(){
-		$this->_get_datatables_query_Album();
+		$this->_get_datatables_queryAlbums();
 		if($_POST['length'] != -1)
 		$this->db->limit($_POST['length'], $_POST['start']);
 		$query = $this->db->get();
 		return $query->result();
 	}
 	
-	//for ajax data table of albums
-	public function get_datatablesAlbum($album_name){
-		$this->_get_datatables_queryAlbum();
-		if($_POST['length'] != -1)
-		$this->db->limit($_POST['length'], $_POST['start']);
-		$query = $this->db->get();
-		return $query->result();
-	}
 
-	private function _get_datatables_queryAlbum()
+	private function _get_datatables_queryAlbums()
 	{
 		
 		$this->db->from($this->table);
@@ -84,14 +88,14 @@ class adminAlbum_model extends CI_Model
 		}
 	}
 
-	function count_filteredAlbum()
+	function count_filteredAlbums()
 	{
-		$this->_get_datatables_queryAlbum();
+		$this->_get_datatables_queryAlbums();
 		$query = $this->db->get();
 		return $query->num_rows();
 	}
 
-	public function count_allAlbum()
+	public function count_allAlbums()
 	{
 		$this->db->from($this->table);
 		return $this->db->count_all_results();
