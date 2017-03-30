@@ -33,6 +33,7 @@
                                         <tr>
                                             <th>Title</th>
                                             <th style="width:125px;">Author</th>
+                                            <th>Date Published</th>
                                             <th>Content</th>
                                             <th style="width:125px;">Actions</th>
                                         </tr>

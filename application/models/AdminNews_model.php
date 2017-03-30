@@ -29,7 +29,7 @@ class adminNews_model extends CI_Model
 
 
 	var $table = 'news';
-	var $column_order = array('title', 'author ',  null ,null); //set column field database for datatable orderable
+	var $column_order = array('title', 'author ','date',  null ,null); //set column field database for datatable orderable
 	var $column_search = array('title','author','text'); //set column field database for datatable searchable
 	var $order = array('id' => 'desc'); // default order 
 
