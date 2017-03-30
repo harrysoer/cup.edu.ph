@@ -253,6 +253,7 @@ class Admin extends CI_Controller {
 			$row = array();
 			$row[] = $news->title;
 			$row[] = $news->author;
+			$row[] = $news->date;
 
 			$strip = $news->text;
 
