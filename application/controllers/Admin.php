@@ -10,6 +10,31 @@ class Admin extends CI_Controller {
 		$this->load->model('adminForms_model', 'form');
 		$this->load->model('adminImageGallery_model', 'gallery');
 		$this->load->model('adminAlbum_model', 'album');
+		$this->load->library(array('ion_auth','form_validation'));
+		$this->load->helper(array('url','language'));
+
+		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
+
+		$this->lang->load('auth');
+		if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('admin/login', 'location',301);
+		}
+	}
+
+	public function login_View(){		
+		$this->load->view('admin/login_view');
+	}
+
+	public function _render_page($view, $data=null, $returnhtml=false)//I think this makes more sense
+	{
+
+		$this->viewdata = (empty($data)) ? $this->data: $data;
+
+		$view_html = $this->load->view($view, $this->viewdata, $returnhtml);
+
+		if ($returnhtml) return $view_html;//This will return html on 3rd argument being true
 	}
 
 	public function index(){
@@ -253,7 +278,7 @@ class Admin extends CI_Controller {
 			$row = array();
 			$row[] = $news->title;
 			$row[] = $news->author;
-			$row[] = $news->date;
+			$row[] = $news->dates;
 
 			$strip = $news->text;
 

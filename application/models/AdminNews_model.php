@@ -20,7 +20,7 @@ class adminNews_model extends CI_Model
         $data = array(
             'title' => $this->input->post('title'),
             'author'=> $this->input->post('author'),
-            'date'	=> date('Y-m-d'),
+            'dates'	=> date('Y-m-d'),
             'slug' 	=> $slug,
             'text' 	=> $this->input->post('content')
         );
@@ -30,8 +30,8 @@ class adminNews_model extends CI_Model
 
 
 	var $table = 'news';
-	var $column_order = array('title', 'author ','date',  null ,null); //set column field database for datatable orderable
-	var $column_search = array('title','author','date','text'); //set column field database for datatable searchable
+	var $column_order = array('title', 'author ','dates',  null ,null); //set column field database for datatable orderable
+	var $column_search = array('title','author','dates','text'); //set column field database for datatable searchable
 	var $order = array('id' => 'desc'); // default order 
 
 	private function _get_datatables_query()
