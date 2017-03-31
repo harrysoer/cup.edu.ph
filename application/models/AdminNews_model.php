@@ -20,7 +20,7 @@ class adminNews_model extends CI_Model
         $data = array(
             'title' => $this->input->post('title'),
             'author'=> $this->input->post('author'),
-            'date'	=> date(),
+            'date'	=> date('Y-m-d'),
             'slug' 	=> $slug,
             'text' 	=> $this->input->post('content')
         );
@@ -137,4 +137,6 @@ class adminNews_model extends CI_Model
         $query = $this->db->get_where('news', array('slug' => $slug));
         return $query->row_array();
     }
+
+    
 }
