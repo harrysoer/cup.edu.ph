@@ -54,7 +54,7 @@
 <body class="fixed-left">
 
 <div class="wrapper-page">
-    <div class="panel panel-color panel-primary panel-pages">
+    <div class="panel panel-color panel-primary panel-pages" style="margin-top:-5rem;">
         <div class="panel-heading bg-img"> 
             <div class="bg-overlay"></div>
             <center><img src="<?=base_url('/assets/for_main/img/logo1.png')?>" alt="logo"></center>
@@ -63,21 +63,31 @@
 
 
         <div class="panel-body">
-        <form class="form-horizontal m-t-20" action="index.html">
-            
+        <?=form_open("login/status", 'class="form-horizontal m-t-20"');?>
+<!-- 
+        <div id="infoMessage"><?php echo $message;?></div>
+ -->
+        <?php if (isset($error)) : ?>
+            <div class="col-md-12">
+                <div class="alert alert-danger" role="alert">
+                    <?= $error ?>
+                </div>
+            </div>
+        <?php endif; ?>
+
             <div class="form-group ">
                 <div class="col-xs-12">
-                    <input class="form-control input-lg " type="text" required="" placeholder="Username">
+ 
+                    <input class="form-control input-lg " type="text" name="username" required="" placeholder="Username">
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-xs-12">
-                    <input class="form-control input-lg" type="password" required="" placeholder="Password">
+                    <input class="form-control input-lg" type="password" name="password" required="" placeholder="Password">
                 </div>
             </div>
-
-            <div class="form-group ">
+        <!--     <div class="form-group ">
                 <div class="col-xs-12">
                     <div class="checkbox checkbox-success">
                         <input id="checkbox-signup" type="checkbox">
@@ -87,7 +97,7 @@
                     </div>
                     
                 </div>
-            </div>
+            </div> -->
             
             <div class="form-group text-center m-t-40">
                 <div class="col-xs-12">
@@ -95,12 +105,6 @@
                 </div>
             </div>
 
-            <div class="form-group m-t-30">
-                <div class="col-sm-7">
-                    <a href="recoverpw.html"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a>
-                </div>
-                
-            </div>
         </form> 
         </div>                                 
         

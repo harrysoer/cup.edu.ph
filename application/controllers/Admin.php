@@ -16,26 +16,20 @@ class Admin extends CI_Controller {
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 
 		$this->lang->load('auth');
+
 		if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
-			redirect('admin/login', 'location',301);
+			redirect('login', 'location',301);
 		}
 	}
 
-	public function login_View(){		
-		$this->load->view('admin/login_view');
+	public function logout(){
+		$logout=$this->ion_auth->logout();
+		redirect('login','refresh');
+
 	}
 
-	public function _render_page($view, $data=null, $returnhtml=false)//I think this makes more sense
-	{
-
-		$this->viewdata = (empty($data)) ? $this->data: $data;
-
-		$view_html = $this->load->view($view, $this->viewdata, $returnhtml);
-
-		if ($returnhtml) return $view_html;//This will return html on 3rd argument being true
-	}
 
 	public function index(){
 		$this->load->view('admin/templates/header');

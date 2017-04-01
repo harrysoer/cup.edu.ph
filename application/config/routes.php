@@ -56,8 +56,10 @@ $route['admission'] ='CupWebsite/admission';
 $route['studentlife'] ='CupWebsite/studentlife';
 $route['gallery'] ='CupWebsite/gallery';
 
-$route['admin/login']			 = 'admin/login_View';
-$route['admin/index'] 			 = 'admin/index';
+$route['logout']		  		 = 'admin/logout';
+$route['login']		  			 = 'admin_login/index';
+$route['login/status']			 = 'admin_login/login';
+$route['admin/index']		 	 = 'admin/index';
 $route['admin/news/create'] 	 = 'admin/addNews';
 $route['admin/news/edit/(:any)'] = 'admin/editNews/$1';
 $route['admin/news/list'] 		 = 'admin/listNews';
