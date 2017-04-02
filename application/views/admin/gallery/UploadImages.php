@@ -23,13 +23,13 @@
                     <div class="panel panel-default">
                         <div class="panel-heading"><h3 class="panel-title">Add Album</h3></div>
                         <div class="panel-body"> 
-                                
-                           	<div class="dropzone" ">
+                           	<div class="dropzone"  style="margin-top:-0.5rem;">
 								<div class="dz-message">
-									<h3> Drag and Drop your files here Or Click here to upload</h3>
+                                    <h3> Drag and Drop your files here Or Click here to upload</h3>
+                                    <h3>for <?=$album_name?> album</h3>
 								</div>
 							</div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -44,8 +44,8 @@
 
 		Dropzone.autoDiscover = true;
 		var file= new Dropzone(".dropzone",{
-			url: "<?php echo base_url('Admin/upload_images') ?>",
-			// maxFilesize: 2,  // maximum size to uplaod 
+			url: "http://localhost/cup.edu.ph/index.php/admin/upload_images",
+			maxFilesize: 100000,  // maximum size to uplaod 
 			method:"post",
 			 acceptedFiles:"image/*", // allow only images
 			paramName:"userfile",
@@ -57,10 +57,10 @@
 
 //Upload file onchange 
 
-// file.on("sending",function(a,b,c){
-// 	a.token=Math.random();
-// 	c.append("token",a.token); //Random Token generated for every files 
-// });
+file.on("sending",function(a,b,c){
+    a.album_name = " <?=$album_name?> "; 
+    c.append("album_name",a.album_name);
+});
 
 
 // delete on upload 
@@ -70,7 +70,7 @@ file.on("removedfile",function(a){
 	$.ajax({
 		type:"post",
 		data:{token:token},
-		url:"<?php echo base_url('Admin/delete_uploaded_images') ?>",
+		url: 'http://localhost/cup.edu.ph/index.php/admin/delete_uploaded_images',
 		cache:false,
 		dataType: 'json',
 		success: function(res){

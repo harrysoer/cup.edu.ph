@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
+	public $album_name;
+
 	function __construct()
 	{
 		parent::__construct();
@@ -40,6 +42,7 @@ class Admin extends CI_Controller {
 	}
 
 	//Add, Delete, Update, and View Gallery
+
 	public function addAlbum($data=null){
 
         $this->form_validation->set_rules('album_name', 'Album Title', 'trim|required');
@@ -54,40 +57,69 @@ class Admin extends CI_Controller {
 		}
 		else
 		{
-			$this->album->setAlbumName($data);
-			redirect( site_url('admin/gallery/albums/upload'));
+			$album_name = $this->album->setAlbumName($data);
+			// redirect( site_url('admin/gallery/albums/upload'));
+			$this->uploadAlbum($album_name);
 		}
 	}
 
-	public function uploadAlbum(){
+	public function uploadAlbum($album_name=null){
+		$data=array('album_name'=>$album_name);
 		$this->load->view('admin/templates/header');
 		$this->load->view('admin/templates/navbar');
 		$this->load->view('admin/templates/scripts');
 		$this->load->view('admin/gallery/UploadImagesScript');
-		$this->load->view('admin/gallery/createAlbum');
+		$this->load->view('admin/gallery/UploadImages',$data);
 		$this->load->view('admin/templates/closer');		
 	}
 
-	public function uploadIMages(){
+	//for ajax upload ito
+	public function upload_images(){
 
+		$config['upload_path']   = "./uploads/gallery/";
+		$config['allowed_types'] = 'jpg|png|JPG|PNG';
+		$config['max_size']		 = 10000;
 
-		$config['upload_path']   = './uploads/gallery/';
-		$config['allowed_types'] = 'jpg|png';
-		$this->load->library('upload',$config);
+		$this->load->library('upload');
+
+		$this->upload->initialize($config);
 
 		if($this->upload->do_upload('userfile'))
 		{
-			$token=$this->input->post('token');
+			$album_name=$this->input->post('album_name');
 			$file_name=$this->upload->data('file_name');
-			$this->db->insert('file',array('file_name'=>$file_name,'token'=>$token));
+			$this->db->insert('gallery_images',array('file_name'=>$file_name,'album_name'=>$album_name));
 		}
 	}
 
-	public function listAlbums(){
+	
+	//delete image
+	
+	public function delete_uploaded_images(){
+
+	$album_name=$this->input->post('album_name');		
+	$query=$this->db->get_where('gallery_images',array('token'=>$token));
+
+	if($query->num_rows()>0){
+
+		$data=$query->row();
+		$file_name=$data->file_name;
+
+
+			if(file_exists($file=FCPATH.'/uploads/gallery/'.$album_name.'/'.$file_name)){
+			unlink($file);
+		}
+		}
+	$this->db->delete('gallery_images',array('file_name'=>$file_name));
+	echo json_encode(array('deleted'=>true));
+
+	}
+
+	public function listAlbums($album_name=null){
 		$this->load->view('admin/templates/header');
 		$this->load->view('admin/templates/navbar');
 		$this->load->view('admin/templates/scripts');
-		$this->load->view('admin/gallery/listAlbums');
+		$this->load->view('admin/gallery/listAlbums',$album_name);
 	}
 
 	//for mini gallery in admin side
@@ -133,14 +165,6 @@ class Admin extends CI_Controller {
 	}
 
 
-	
-	//delete image
-	public function ajax_deleteImage($id)
-	{
-		$this->form->deleteForm_by_id($id);
-		echo json_encode(array("status" => TRUE));
-	}
-	//
 
 	//==================end for Gallery=====================
 

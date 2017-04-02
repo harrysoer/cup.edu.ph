@@ -21,16 +21,14 @@ class adminAlbum_model extends CI_Model
 				'slug'		  => $slug,
 			);
 		
-   		mkdir(FCPATH.'/uploads/gallery/' . $album_name, 0777, TRUE);
+   		// mkdir(FCPATH.'/uploads/gallery/' . $album_name, 0777, TRUE);
 		
 		$this->db->insert('gallery_album', $data);
 		
 		return $data['album_name'];
 	}
 
-	public function uploadImages($id=0){
 
-	}
 
 	var $table = 'gallery_album';
 	var $column_order = array( 'album_name',  null ); //set column field database for datatable orderable
