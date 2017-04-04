@@ -50,12 +50,12 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
             <div id="gallerySLide" class="gallery_area">
-              <!--   <a href="img/gallery/img-large1.jpg" title="This is Title">
-                  <img class="gallery_img" src="img/gallery/img-small1.jpg" alt="img" />
+                <!-- <a href="<?=base_url('assets/for_main/img/gallery/img-large1.jpg')?>" title="This is Title">
+                  <img class="gallery_img" src="<?=base_url('assets/for_main/img/gallery/img-large1.jpg')?>" alt="img" />
                 <span class="view_btn">View</span>
                 </a> -->
                 <?php foreach ($get_imgs as $images): ?>
-                  <a href="<?=base_url('uploads/gallery/').$images['file_name']?>" title="This is Title2">
+                  <a href="<?=base_url('uploads/gallery/').$images['file_name']?>" title="<?=$images['album_name']?>">
                     <img class="gallery_img" src="<?=base_url('uploads/gallery/').$images['file_name']?>" alt="img" />
                     <span class="view_btn">View</span>
                   </a>

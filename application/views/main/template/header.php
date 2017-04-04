@@ -36,7 +36,7 @@
     <!-- preloader -->
     <link rel="stylesheet" href="<?= base_url('assets/for_main/css/queryLoader.css');?>" type="text/css" />
     <!-- gallery slider css -->
-    <link type="text/css" media="all" rel="stylesheet" href="<?= base_url('for_main/css/jquery.tosrus.all.css');?>" />    
+    <link type="text/css" media="all" rel="stylesheet" href="<?= base_url('assets/for_main/css/jquery.tosrus.all.css');?>" />    
     <!-- Default Theme css file -->
     <link id="switcher" href="<?= base_url('assets/for_main/css/themes/default-theme.css');?>" rel="stylesheet">
     <!-- Main structure css file -->
