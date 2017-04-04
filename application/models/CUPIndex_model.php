@@ -11,7 +11,7 @@ class CUPIndex_model extends CI_Model
 	}
 
 	public function get_latest_news(){
-        $query = $this->db->query("SELECT title, dates FROM news");
+        $query = $this->db->query("SELECT title, dates FROM news ORDER BY dates DESC LIMIT 4;");
         return $query->result_array();
 	}
 

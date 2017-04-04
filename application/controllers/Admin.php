@@ -78,7 +78,7 @@ class Admin extends CI_Controller {
 
 		$config['upload_path']   = "./uploads/gallery/";
 		$config['allowed_types'] = 'jpg|png|JPG|PNG';
-		$config['max_size']		 = 10000;
+		$config['max_size']		 = 0;
 
 		$this->load->library('upload');
 
@@ -387,7 +387,7 @@ class Admin extends CI_Controller {
             show_404();
         }
  
-        $data['news_item']['title'];
+        $data['news_item'];
  
         $this->load->view('admin/student_life/readNews', $data);
 	}

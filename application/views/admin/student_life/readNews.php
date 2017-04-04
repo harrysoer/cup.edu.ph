@@ -13,7 +13,8 @@
 	<div class="container">
 		<?php
 		echo '<center><h2>'.$news_item['title'].'</h2></center><br>';
-		echo '<center><h2>'.$news_item['date'].'</h2></center>';
+		echo '<center><h2>'.$news_item['author'].'</h2></center><br>';
+		echo '<center><h2>'.$news_item['dates'].'</h2></center>';
 		echo '<center><hr width="50%"></center>';
 		echo $news_item['text'];
 		?>

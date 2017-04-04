@@ -7,17 +7,18 @@ class CupWebsite extends CI_Controller{
 	{
 		parent::__construct();
 		$this->load->model('CUPIndex_model','news');
+		$this->load->model('CUPGallery_model', 'gallery');
 
 	}
 
 	public function index()
 	{	
 		$data['title'] ="Home";
-		$data['news']  =$this->news->get_latest_news();
+		$data['news_item']  = $this->news->get_latest_news();
 
 		$this->load->view('main/template/header',$data);
 		$this->load->view('main/template/js');
-		$this->load->view('main/index');
+		$this->load->view('main/index',$data);
 		$this->load->view('main/template/footer');
 	}
 
@@ -59,10 +60,11 @@ class CupWebsite extends CI_Controller{
 
 	public function gallery()
 	{
-		$data['title']="AboutUs/Gallery";
+		$data['title'] = "AboutUs/Gallery";
+		$data['get_imgs'] = $this->gallery->get_images();
 		$this->load->view('main/template/header',$data);
 		$this->load->view('main/template/js');
-		$this->load->view('main/gallery/index');
+		$this->load->view('main/gallery/index',$data);
 		$this->load->view('main/template/footer');
 	}
 

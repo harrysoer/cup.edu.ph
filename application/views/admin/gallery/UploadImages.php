@@ -46,6 +46,7 @@
 		var file= new Dropzone(".dropzone",{
 			url: "http://localhost/cup.edu.ph/index.php/admin/upload_images",
 			maxFilesize: 100000,  // maximum size to uplaod 
+            dictFileTooBig: "file is too big",
 			method:"post",
 			 acceptedFiles:"image/*", // allow only images
 			paramName:"userfile",

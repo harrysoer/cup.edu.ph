@@ -109,11 +109,11 @@
               <!-- Start news tab content -->
               <div class="tab-pane fade in active" id="news">                
                 <ul class="news_tab">
-                  <li>
+                  <!-- <li>
                     <div class="media">
                       <div class="media-left">
                         <a class="news_img" href="#">
-                          <img class="media-object" src="<?=base_url('assets/for_main/img/news.jpg')?>" alt="img">
+                          <img class="media-object" src="<?//=base_url('assets/for_main/img/news.jpg')?>" alt="img">
                         </a>
                       </div>
                       <div class="media-body">
@@ -121,45 +121,35 @@
                        <span class="feed_date">12.25.16</span>
                       </div>
                     </div>                    
-                  </li>
-                  <li>
-                    <div class="media">
-                      <div class="media-left">
-                        <a class="news_img" href="#">
-                          <img class="media-object" src="<?=base_url('assets/for_main/img/news.jpg')?>" alt="img">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                       <a href="#">Dummy text of the printing and typesetting industry</a>
-                       <span class="feed_date">02.14.17</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media">
-                      <div class="media-left">
-                        <a class="news_img" href="#">
-                          <img class="media-object" src="<?=base_url('assets/for_main/img/news.jpg')?>" alt="img">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                       <a href="#">Dummy text of the printing and typesetting industry</a>
-                       <span class="feed_date">03.05.17</span>
-                      </div>
-                    </div>
-                  </li>
+                  </li> -->
+                  <?php foreach ($news_item as $news): ?>
+                        <li>
+                          <div class="media">
+                            <div class="media-left">
+                              <!-- <a class="news_img" href="#">
+                                <img class="media-object" src="<?//=base_url('assets/for_main/img/news.jpg')?>" alt="img">
+                              </a> -->
+                            </div>
+                            <div class="media-body">
+                             <a href="#"><?= $news['title']?></a>
+                             <span class="feed_date"><?= $news['dates']?></span>
+                            </div>
+                          </div>
+                        </li>
+                  <?php endforeach; ?>
+                  
                 </ul>                
                 <a class="see_all" href="#">See All</a>
               </div>
               <!-- Start notice tab content -->  
-              <div class="tab-pane fade " id="notice">
+              <!-- <div class="tab-pane fade " id="notice">
                 <div class="single_notice_pane">
                   <ul class="news_tab">
                     <li>
                       <div class="media">
                         <div class="media-left">
                           <a class="news_img" href="#">
-                            <img class="media-object" src="<?=base_url('assets/for_main/img/news.jpg')?>" alt="img">
+                            <img class="media-object" src="<?//=base_url('assets/for_main/img/news.jpg')?>" alt="img">
                           </a>
                         </div>
                         <div class="media-body">
@@ -172,7 +162,7 @@
                       <div class="media">
                         <div class="media-left">
                           <a class="news_img" href="#">
-                            <img class="media-object" src="<?=base_url('assets/for_main/img/notice.jpg')?>" alt="img">
+                            <img class="media-object" src="<?//=base_url('assets/for_main/img/notice.jpg')?>" alt="img">
                           </a>
                         </div>
                         <div class="media-body">
@@ -185,7 +175,7 @@
                       <div class="media">
                         <div class="media-left">
                           <a class="news_img" href="#">
-                            <img class="media-object" src="<?=base_url('assets/for_main/img/notice.jpg')?>" alt="img">
+                            <img class="media-object" src="<?//=base_url('assets/for_main/img/notice.jpg')?>" alt="img">
                           </a>
                         </div>
                         <div class="media-body">
@@ -200,7 +190,7 @@
                       <div class="media">
                         <div class="media-left">
                           <a class="news_img" href="#">
-                            <img class="media-object" src="<?=base_url('assets/for_main/img/notice.jpg');?>" alt="img">
+                            <img class="media-object" src="<?//=base_url('assets/for_main/img/notice.jpg');?>" alt="img">
                           </a>
                         </div>
                         <div class="media-body">
@@ -213,7 +203,7 @@
                       <div class="media">
                         <div class="media-left">
                           <a class="news_img" href="#">
-                            <img class="media-object" src="<?=base_url('assets/for_main/img/notice.jpg');?>" alt="img">
+                            <img class="media-object" src="<?//=base_url('assets/for_main/img/notice.jpg');?>" alt="img">
                           </a>
                         </div>
                         <div class="media-body">
@@ -226,7 +216,7 @@
                       <div class="media">
                         <div class="media-left">
                           <a class="news_img" href="#">
-                            <img class="media-object" src="<?=base_url('assets/for_main/img/notice.jpg');?>" alt="img">
+                            <img class="media-object" src="<?//=base_url('assets/for_main/img/notice.jpg');?>" alt="img">
                           </a>
                         </div>
                         <div class="media-body">
@@ -237,7 +227,7 @@
                     </li>                                    
                   </ul>
                 </div>               
-              </div>
+              </div> -->
               <!-- Start events tab content -->
               
             </div>
