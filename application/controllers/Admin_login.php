@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class admin_login extends CI_Controller {
+class Admin_login extends CI_Controller {
 
 	public function __construct()
 	{
@@ -16,10 +16,12 @@ class admin_login extends CI_Controller {
 		if ($this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
-			redirect('admin','refresh');
+			redirect('admin','refresh',301);
 		}
 
 	}
+
+	
 
 	public function index()
 	{

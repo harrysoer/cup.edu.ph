@@ -22,13 +22,13 @@ class Admin extends CI_Controller {
 		if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
-			redirect('login', 'location',301);
+			redirect('login', 'refresh', 301);
 		}
 	}
 
 	public function logout(){
 		$logout=$this->ion_auth->logout();
-		redirect('login','refresh');
+		redirect('login','refresh',301);
 
 	}
 
