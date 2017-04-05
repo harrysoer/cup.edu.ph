@@ -131,7 +131,7 @@
                               </a> -->
                             </div>
                             <div class="media-body">
-                             <a href="#"><?= $news['title']?></a>
+                             <a href="<?=site_url('/news/').$news['slug']?>"><?= $news['title']?></a>
                              <span class="feed_date"><?= $news['dates']?></span>
                             </div>
                           </div>

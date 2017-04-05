@@ -15,4 +15,9 @@ class CUPGallery_model extends CI_Model
 		return $query->result_array();
 	}
 
+	function count_images()
+    {
+      return $this->db->count_all('gallery_images');
+    }
+
 }

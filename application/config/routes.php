@@ -54,7 +54,9 @@ $route['about'] ='CupWebsite/about';
 $route['academic'] ='CupWebsite/academic';
 $route['admission'] ='CupWebsite/admission';
 $route['studentlife'] ='CupWebsite/studentlife';
+
 $route['gallery'] ='CupWebsite/gallery';
+$route['gallery/(:any)'] ='CupWebsite/gallery/$1';
 
 $route['news'] = 'CupWebsite/news';
 $route['news/(:any)'] = 'CupWebsite/read_news/$1';

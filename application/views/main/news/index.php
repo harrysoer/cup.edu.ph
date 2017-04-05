@@ -62,9 +62,9 @@
                           <img alt="img" src="img/blog.jpg">
                         </a>
                       </div> -->
-                      <h2 class="blog_title"><a href="#"><?=$news_item['title']?></a></h2>
+                      <h2 class="blog_title"><a href="<?=site_url('/news/').$news_item['slug']?>"><?=$news_item['title']?></a></h2>
                       <div class="blog_commentbox">
-                        <p><i class="fa fa-calendar"></i>Date: <?=$news_item['dates']?></p>
+                        <p><i class="fa fa-calendar"></i>Date Published: <?=$news_item['dates']?></p>
                         <p><i class="fa fa-user"></i>Author: <?=$news_item['author']?></p>                      
                       </div>
                       <p class="blog_summary">

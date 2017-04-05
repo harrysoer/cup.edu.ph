@@ -60,8 +60,17 @@ class CupWebsite extends CI_Controller{
 
 	public function gallery()
 	{
-		$data['title'] = "AboutUs/Gallery";
-		$data['get_imgs'] = $this->gallery->get_images();
+		$config['base_url'] 	= site_url('gallery');
+		$config['total_rows'] 	= $this->gallery->count_images();
+		$config['per_page'] 	= 10;
+		$config["uri_segment"]  = 2;
+
+		$this->pagination->initialize($config);
+
+		$data['pages'] 		=  $this->pagination->create_links(); 
+		$data['title'] 		=  "AboutUs/Gallery";	
+		$data['get_imgs']	=  $this->gallery->get_images();
+
 		$this->load->view('main/template/header',$data);
 		$this->load->view('main/template/js');
 		$this->load->view('main/gallery/index',$data);
@@ -80,7 +89,7 @@ class CupWebsite extends CI_Controller{
 
 	public function read_news($slug=NULL)
 	{
-		$data['news'] = $this->news->get_news($slug);
+		$data['news_item'] = $this->news->get_news($slug);
 
 		if (empty($data['news_item']))
         {
