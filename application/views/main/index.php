@@ -101,7 +101,7 @@
           <div class="newsfeed_area wow fadeInRight">
             <ul class="nav nav-tabs feed_tabs" id="myTab2">
               <li class="active"><a href="#news" data-toggle="tab">News</a></li>
-              <li><a href="#notice" data-toggle="tab">Events</a></li>      
+              <!-- <li><a href="#notice" data-toggle="tab">Events</a></li>       -->
             </ul>
 
             <!-- Tab panes -->
@@ -139,7 +139,7 @@
                   <?php endforeach; ?>
                   
                 </ul>                
-                <a class="see_all" href="#">See All</a>
+                <a class="see_all" href="<?=site_url('/news')?>">See All</a>
               </div>
               <!-- Start notice tab content -->  
               <!-- <div class="tab-pane fade " id="notice">
