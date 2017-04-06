@@ -54,12 +54,12 @@
                   <img class="gallery_img" src="<?=base_url('assets/for_main/img/gallery/img-large1.jpg')?>" alt="img" />
                 <span class="view_btn">View</span>
                 </a> -->
-                <!-- <?php foreach ($get_imgs as $images): ?>
-                  <a href="<?=base_url('uploads/gallery/').$images['file_name']?>" title="<?=$images['album_name']?>">
-                    <img class="gallery_img" src="<?=base_url('uploads/gallery/').$images['file_name']?>" alt="img" />
+                <?php foreach ($get_imgs as $images): ?>
+                  <a href="<?=base_url('uploads/gallery/').$images->file_name;?>" title="<?= $images->album_name;?>">
+                    <img class="gallery_img" src="<?=base_url('uploads/gallery/').$images->file_name?>" alt="img" />
                     <span class="view_btn">View</span>
                   </a>
-                <?php endforeach?> -->
+                <?php endforeach?>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12"><?=$pages?></div>
           </div>
