@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2017 at 08:24 PM
+-- Generation Time: Apr 06, 2017 at 07:28 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.6
 
@@ -38,26 +38,18 @@ CREATE TABLE `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('ag05597tgr65ei28o7bvcpitur82q39d', '::1', 1491227210, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313232373231303b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931313433333937223b6c6173745f636865636b7c693a313439313232363531333b),
-('lku5vatuh4q7l0bnfq29kku6767j62m6', '::1', 1491228026, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313232383032363b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931313433333937223b6c6173745f636865636b7c693a313439313232363531333b),
-('f52ebbl96687cbrnolcqhia76nmeo4af', '::1', 1491228960, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313232383936303b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323236353133223b6c6173745f636865636b7c693a313439313232383131313b),
-('sskdri17fret1mapa6evrsc26vdsmi22', '::1', 1491229358, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313232393335383b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323236353133223b6c6173745f636865636b7c693a313439313232383131313b),
-('mdkdmnkk2dc0s7sa5q3ct6t20r737vav', '::1', 1491229727, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313232393732373b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323236353133223b6c6173745f636865636b7c693a313439313232383131313b),
-('bd1vii4k4mhg1fb4dqv5pe6emh80dq18', '::1', 1491231288, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313233313238383b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323236353133223b6c6173745f636865636b7c693a313439313232383131313b),
-('88hc5ldrdu61rrclgk126u4elm9hjn4m', '::1', 1491231565, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313233313238383b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323236353133223b6c6173745f636865636b7c693a313439313232383131313b),
-('u92cmj18fhoeile9m1e0nceailqss1lj', '::1', 1491272562, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313237323536323b),
-('tooagemadgsi76v0191c4ohi2vmn2sdq', '::1', 1491323010, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313332333031303b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323238313131223b6c6173745f636865636b7c693a313439313332323631383b),
-('4hge9jbq1p4mqh9596n93anv37c1cjl9', '::1', 1491323345, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313332333334353b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323238313131223b6c6173745f636865636b7c693a313439313332323631383b),
-('jsbh6ihugtl047p93d1sagmj9n78jd5o', '::1', 1491323691, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313332333639313b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323238313131223b6c6173745f636865636b7c693a313439313332323631383b),
-('6kpc2ko5tofrn0rqbch1n69ul3cvhulj', '::1', 1491324060, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313332343036303b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323238313131223b6c6173745f636865636b7c693a313439313332323631383b),
-('jgtfg2uom50s019deumcmcbt482mlh9f', '::1', 1491324963, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313332343936333b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323238313131223b6c6173745f636865636b7c693a313439313332323631383b),
-('pfllgara2nk4cskgdgntra3klhfti9n9', '::1', 1491325269, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313332353236393b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323238313131223b6c6173745f636865636b7c693a313439313332323631383b),
-('169kvljvmm2jqt7g0aajcr8dim5u8dj2', '::1', 1491325935, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313332353933353b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323238313131223b6c6173745f636865636b7c693a313439313332323631383b),
-('dlpodbu3ccnp04qi8p6chqv656hls1cj', '::1', 1491326246, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313332363234363b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323238313131223b6c6173745f636865636b7c693a313439313332323631383b),
-('nkid8pjp3hrleskn79kojutq2dhou89i', '::1', 1491326504, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313332363234363b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931323238313131223b6c6173745f636865636b7c693a313439313332323631383b),
-('9cdp040elqgdh0i1c4pg1r0l1k0sl7oo', '::1', 1491327223, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313332373232333b),
-('u5lkmrgoo5dncq345rgivqqf26qo1lsq', '::1', 1491327533, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313332373533333b),
-('jshhsqv2ene3n81cdimlplukkne8tnoq', '::1', 1491327650, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313332373533333b);
+('k788170lt40n591hvmmjtopsr2c0uu5v', '::1', 1491492852, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313439323835323b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931333935393933223b6c6173745f636865636b7c693a313439313439323834333b),
+('haucpraq3gq098jtruoo5p1msfigf50t', '::1', 1491493160, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313439333136303b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931333935393933223b6c6173745f636865636b7c693a313439313439323834333b),
+('8d8052npf00fci074na1gg90gvrs6b7k', '::1', 1491494428, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313439343432383b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931333935393933223b6c6173745f636865636b7c693a313439313439323834333b),
+('ub89mnijfrjooo005eemn9gf5hprf7vc', '::1', 1491494795, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313439343739353b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931333935393933223b6c6173745f636865636b7c693a313439313439323834333b),
+('lri516jca0r4givll29rcj3ablk0jg7g', '::1', 1491495215, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313439353231353b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931333935393933223b6c6173745f636865636b7c693a313439313439323834333b),
+('a9t0vrfskh8ibpa7i4u6igh1e21ei5tk', '::1', 1491495521, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313439353532313b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931333935393933223b6c6173745f636865636b7c693a313439313439323834333b),
+('keugq510p3s2cafjqrlrsldcgeii1pol', '::1', 1491495842, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313439353834323b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931333935393933223b6c6173745f636865636b7c693a313439313439323834333b),
+('6ipcm5vfcmp7000vdl5r6qcrvcendhtn', '::1', 1491496259, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313439363235393b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931333935393933223b6c6173745f636865636b7c693a313439313439323834333b),
+('rv6nrhsjjsguo20jij24k4catcojq49u', '::1', 1491496567, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313439363536373b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931333935393933223b6c6173745f636865636b7c693a313439313439323834333b),
+('j6glr778tbsj5n33hcag5ek0858pcjbm', '::1', 1491496884, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313439363838343b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931333935393933223b6c6173745f636865636b7c693a313439313439323834333b),
+('24rr9n6kvg553r8bk9lagjc28a2h671c', '::1', 1491499563, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313439393536333b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931333935393933223b6c6173745f636865636b7c693a313439313439323834333b),
+('4f1ctdlsre340tk0n9cbtvdv16seda48', '::1', 1491499648, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439313439393536333b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231343931333935393933223b6c6173745f636865636b7c693a313439313439323834333b);
 
 -- --------------------------------------------------------
 
@@ -132,83 +124,83 @@ CREATE TABLE `gallery_images` (
 --
 
 INSERT INTO `gallery_images` (`id`, `file_name`, `album_name`) VALUES
-(66, '_DSC4953.JPG', ' CUP '),
-(67, '_DSC4958.JPG', ' CUP '),
-(68, '_DSC4965.JPG', ' CUP '),
-(69, '_DSC5067.JPG', ' CUP '),
-(70, '_DSC5277.JPG', ' CUP '),
-(71, '_DSC6429.JPG', ' CUP '),
-(72, '_DSC6433.JPG', ' CUP '),
-(73, '_DSC6436.JPG', ' CUP '),
-(74, '_DSC6438.JPG', ' CUP '),
-(75, '_DSC6439.JPG', ' CUP '),
-(76, '_DSC6443.JPG', ' CUP '),
-(77, '_DSC6444.JPG', ' CUP '),
-(78, '_DSC6445.JPG', ' CUP '),
-(79, '_DSC6446.JPG', ' CUP '),
-(80, '_DSC6447.JPG', ' CUP '),
-(81, '_DSC6448.JPG', ' CUP '),
-(82, '_DSC6452.JPG', ' CUP '),
-(83, '_DSC6453.JPG', ' CUP '),
-(84, '_DSC6456.JPG', ' CUP '),
-(85, '_DSC6458.JPG', ' CUP '),
-(86, '_DSC6463.JPG', ' CUP '),
-(87, '_DSC6466.JPG', ' CUP '),
-(88, '_DSC6467.JPG', ' CUP '),
-(89, '_DSC6471.JPG', ' CUP '),
-(90, '_DSC6475.JPG', ' CUP '),
-(91, '_DSC6494.JPG', ' CUP '),
-(92, '_DSC6500.JPG', ' CUP '),
-(93, '_DSC6503.JPG', ' CUP '),
-(94, '_DSC6505.JPG', ' CUP '),
-(95, '_DSC6521.JPG', ' CUP '),
-(96, '_DSC6529.JPG', ' CUP '),
-(97, '_DSC6535.JPG', ' CUP '),
-(98, '_DSC6536.JPG', ' CUP '),
-(99, '_DSC6541.JPG', ' CUP '),
-(100, '_DSC6547.JPG', ' CUP '),
-(101, '_DSC6548.JPG', ' CUP '),
-(102, '_DSC6551.JPG', ' CUP '),
-(103, '_DSC6552.JPG', ' CUP '),
-(104, '_DSC6555.JPG', ' CUP '),
-(105, '_DSC6556.JPG', ' CUP '),
-(106, '_DSC6557.JPG', ' CUP '),
-(107, '_DSC6560.JPG', ' CUP '),
-(108, '_DSC6561.JPG', ' CUP '),
-(109, '_DSC6562.JPG', ' CUP '),
-(110, '_DSC6563.JPG', ' CUP '),
-(111, '_DSC6564.JPG', ' CUP '),
-(112, '_DSC6565.JPG', ' CUP '),
-(113, '_DSC6566.JPG', ' CUP '),
-(114, '_DSC6567.JPG', ' CUP '),
-(115, '_DSC6570.JPG', ' CUP '),
-(116, '_DSC6576.JPG', ' CUP '),
-(117, '_DSC6580.JPG', ' CUP '),
-(118, '_DSC6581.JPG', ' CUP '),
-(119, '_DSC6582.JPG', ' CUP '),
-(120, '_DSC6583.JPG', ' CUP '),
-(121, '_DSC6586.JPG', ' CUP '),
-(122, '_DSC6587.JPG', ' CUP '),
-(123, '_DSC6588.JPG', ' CUP '),
-(124, '_DSC6589.JPG', ' CUP '),
-(125, '_DSC6590.JPG', ' CUP '),
-(126, '_DSC6647.JPG', ' CUP '),
-(127, '_DSC6757.JPG', ' CUP '),
-(128, '_DSC6806.JPG', ' CUP '),
-(129, '_DSC7023.JPG', ' CUP '),
-(130, '_DSC9186.JPG', ' CUP '),
-(131, 'DSC_0378.JPG', ' CUP '),
-(132, 'DSC_0379.JPG', ' CUP '),
-(133, 'DSC_0380.JPG', ' CUP '),
-(134, 'DSC_0381.JPG', ' CUP '),
-(135, 'DSC_0384.JPG', ' CUP '),
-(136, 'DSC_0386.JPG', ' CUP '),
-(137, 'DSC_0394.JPG', ' CUP '),
-(138, 'DSC_0387.JPG', ' CUP '),
-(139, 'DSC_0395.JPG', ' CUP '),
-(140, 'DSC_0400.JPG', ' CUP '),
-(141, 'DSC6558.JPG', ' CUP '),
-(142, 'DSC6591.JPG', ' CUP ');
+(173, '_DSC49531.JPG', ' CUP '),
+(174, '_DSC49581.JPG', ' CUP '),
+(175, '_DSC49651.JPG', ' CUP '),
+(176, '_DSC50671.JPG', ' CUP '),
+(177, '_DSC52771.JPG', ' CUP '),
+(178, '_DSC64291.JPG', ' CUP '),
+(179, '_DSC64331.JPG', ' CUP '),
+(180, '_DSC64361.JPG', ' CUP '),
+(181, '_DSC64381.JPG', ' CUP '),
+(182, '_DSC64391.JPG', ' CUP '),
+(183, '_DSC64431.JPG', ' CUP '),
+(184, '_DSC64441.JPG', ' CUP '),
+(185, '_DSC64451.JPG', ' CUP '),
+(186, '_DSC64461.JPG', ' CUP '),
+(187, '_DSC64471.JPG', ' CUP '),
+(188, '_DSC64481.JPG', ' CUP '),
+(189, '_DSC64521.JPG', ' CUP '),
+(190, '_DSC64531.JPG', ' CUP '),
+(191, '_DSC64561.JPG', ' CUP '),
+(192, '_DSC64581.JPG', ' CUP '),
+(193, '_DSC64631.JPG', ' CUP '),
+(194, '_DSC64661.JPG', ' CUP '),
+(195, '_DSC64671.JPG', ' CUP '),
+(196, '_DSC64711.JPG', ' CUP '),
+(197, '_DSC64751.JPG', ' CUP '),
+(198, '_DSC64941.JPG', ' CUP '),
+(199, '_DSC65001.JPG', ' CUP '),
+(200, '_DSC65031.JPG', ' CUP '),
+(201, '_DSC65051.JPG', ' CUP '),
+(202, '_DSC65211.JPG', ' CUP '),
+(203, '_DSC6529.JPG', ' CUP '),
+(204, '_DSC6535.JPG', ' CUP '),
+(205, '_DSC6536.JPG', ' CUP '),
+(206, '_DSC6541.JPG', ' CUP '),
+(207, '_DSC6547.JPG', ' CUP '),
+(208, '_DSC6548.JPG', ' CUP '),
+(209, '_DSC6551.JPG', ' CUP '),
+(210, '_DSC6555.JPG', ' CUP '),
+(211, '_DSC6552.JPG', ' CUP '),
+(212, '_DSC6556.JPG', ' CUP '),
+(213, '_DSC6557.JPG', ' CUP '),
+(214, '_DSC6560.JPG', ' CUP '),
+(215, '_DSC6561.JPG', ' CUP '),
+(216, '_DSC6562.JPG', ' CUP '),
+(217, '_DSC6563.JPG', ' CUP '),
+(218, '_DSC6564.JPG', ' CUP '),
+(219, '_DSC6565.JPG', ' CUP '),
+(220, '_DSC6566.JPG', ' CUP '),
+(221, '_DSC6567.JPG', ' CUP '),
+(222, '_DSC6570.JPG', ' CUP '),
+(223, '_DSC6576.JPG', ' CUP '),
+(224, '_DSC6580.JPG', ' CUP '),
+(225, '_DSC6581.JPG', ' CUP '),
+(226, '_DSC6582.JPG', ' CUP '),
+(227, '_DSC6583.JPG', ' CUP '),
+(228, '_DSC6586.JPG', ' CUP '),
+(229, '_DSC6587.JPG', ' CUP '),
+(230, '_DSC6588.JPG', ' CUP '),
+(231, '_DSC6589.JPG', ' CUP '),
+(232, '_DSC6590.JPG', ' CUP '),
+(233, '_DSC6647.JPG', ' CUP '),
+(234, '_DSC6757.JPG', ' CUP '),
+(235, '_DSC6806.JPG', ' CUP '),
+(236, '_DSC7023.JPG', ' CUP '),
+(237, '_DSC9186.JPG', ' CUP '),
+(238, 'DSC_0378.JPG', ' CUP '),
+(239, 'DSC_0379.JPG', ' CUP '),
+(240, 'DSC_0380.JPG', ' CUP '),
+(241, 'DSC_0381.JPG', ' CUP '),
+(242, 'DSC_0384.JPG', ' CUP '),
+(243, 'DSC_0386.JPG', ' CUP '),
+(244, 'DSC_0387.JPG', ' CUP '),
+(245, 'DSC_0394.JPG', ' CUP '),
+(246, 'DSC_0395.JPG', ' CUP '),
+(247, 'DSC_0400.JPG', ' CUP '),
+(248, 'DSC6558.JPG', ' CUP '),
+(249, 'DSC6591.JPG', ' CUP ');
 
 -- --------------------------------------------------------
 
@@ -276,7 +268,7 @@ INSERT INTO `news` (`id`, `title`, `author`, `dates`, `slug`, `text`) VALUES
 (28, 'English Circle showcases Spoken Word Poetry', 'Maria Theresa G. Salera, BSE III-1 English', '2017-04-04', 'english-circle-showcases-spoken-word-poetry', '<p class="MsoNormal" style="text-align: justify; "><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:\r\n11.0pt;line-height:115%;font-family:&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With the theme,\r\nEnglish: The Language of the Global Society, the English Circle initiated the\r\ncelebration of the English Week as they brought a new avenue of performing\r\narts-the Spoken Word Poetry on December 9, 2016 at the CUP Library.<o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal" style="text-align: justify;"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:\r\n11.0pt;line-height:115%;font-family:&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Different students from the College of Education\r\nshowcased their talents in this art as they performed their very own piece. Before\r\nthe said program, the committee requested some professors to choose literary\r\npieces that they will read to the students. These professors gladly agreed and\r\nhappily read their chosen pieces before the audience. They were Dr. Lurida\r\nRamos, Dr. Rosalinda Llamas, Dr. Remedios Bal''Oro, Prof. Melvin Crisostomo,\r\nProf. Eroll Beja and Prof. Emmanuel Luna who showed their love and passion for\r\nthis art presentation.<o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal" style="text-align: justify;"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:\r\n11.0pt;line-height:115%;font-family:&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Spoken Word Society is one of the highlights of the\r\ncelebration which is a contemporary way of expressive poetry performed in\r\ndifferent places like faces, restaurants and even in some schools. Nowadays,\r\nthis new trend inspires teenagers especially college students around Metro\r\nManila to write poems and to express themselves through this stage arts.<o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal" style="text-align: justify; "><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:\r\n11.0pt;line-height:115%;font-family:&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Overall, the event was done successfully with the efforts\r\nof the BSE IV-1 major in English. Dr. Rosalinda Llamas gave her closing remarks\r\nas she motivates each of the students specifically those budding writers to\r\nnever give up their dreams and continue their passion in writing.<o:p></o:p></span></p>'),
 (29, 'Buwan ng Wika 2016 Celebrated', 'Ricarose C. Borromeo, BSE III-1 English', '2017-04-04', 'buwan-ng-wika-2016-celebrated', '<p class="MsoNormal" style="text-align: justify; "><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:\r\n11.0pt;line-height:115%;font-family:&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The City University of\r\nPasay celebrated one of the most anticipated events among the students, the\r\n"Buwan ng Wika" or National Language Month from August 24-26 at the\r\nuniversity ground floor with the theme, <i>"Filipino:\r\nWika ng Karunungan."<o:p></o:p></i></span></p>\r\n\r\n<p class="MsoNormal" style="text-align: justify;"><i><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%;font-family:\r\n&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></i><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%;\r\nfont-family:&quot;Arial&quot;,sans-serif">A mass was held on the first day of the said\r\nevent. It was then followed by the speeches from our beloved professors,\r\nProfessor Eligia T. Lopena the Filipino Adviser and Dr. Ana Marie V. Barbieto,\r\nthe College of Education, Dean. After that, the Filipino major students\r\nperformed a remarkable play of the most significant part of Ibong Adarna, Florante\r\nat Laura, El Filibusterismo and Noli Me Tangere. The second day was quite more\r\nexciting because of the different competitions like <i>Pagsulat ng Sanaysay</i>, <i>Masining\r\nPagkukwento</i> and <i>Sayawit</i>. The\r\nspeakers for that day were Dr. Concepcion C. Libuit -CUP President, Dr. Rosanie\r\nF. Estuche - Associate VP for Academics and Professor Erlinda R. Miranda -\r\nFilipino Professor. The search for Malakas and Maganda was the last event that\r\noccurred on the third day.<o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal"><div style="text-align: justify;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 12pt;">Winners in the respective competitions were announced at\r\nthe latter part of the program.</span></div><span lang="EN-US" style="line-height: 115%;"><div style="text-align: justify;"><span style="font-family: Arial, sans-serif; font-size: 16px;"><br></span></div>\r\n<!--[if !supportLineBreakNewLine]-->\r\n<!--[endif]--><span style="font-family: Arial, sans-serif; font-size: 12pt;"><o:p></o:p></span></span></p>'),
 (30, 'CUP holds 1st Organizational Fair', 'Danielle Joy L. Pugay, BSE III-1 English', '2017-04-04', 'cup-holds-1st-organizational-fair', '<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:\r\n11.0pt;line-height:115%;font-family:&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The City University of\r\nPasay begins another breakthrough as they officially held their very first\r\nOrganization Fair on July 14-15, 2016 which was done at the school grounds.<o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:\r\n11.0pt;line-height:115%;font-family:&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With their hardworking effort and passion to make a\r\nchange, the different organizations within the university cooperatively made\r\nthis event possible. All with one goal: to discover and give each student a\r\nchance to be part of what they love most.<o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:\r\n11.0pt;line-height:115%;font-family:&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; On the first day, July 14, 2016, at exactly 9:00 in the\r\nmorning the event began. The opening message was given by the Associate VPAA\r\nDr. Rosanie F. Estuche followed by the CUP President Dr. Concepcion C. Libuit\r\nfor her inspirational message. After the special messages, the induction of\r\nofficers for every college and every organization was held, followed by the\r\nribbon cutting, then the official opening of each booth presented by the\r\ndifferent organizations. For the rest of the day and the following days (July\r\n15, 2016), all the students of the university were allowed to look into the\r\nbooths and join different organizations they were interested in.<o:p></o:p></span></p>\r\n\r\n<span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:\r\n115%;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:Calibri;mso-fareast-theme-font:\r\nminor-latin;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:\r\nAR-SA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thus, this concludes\r\nthe very first organization fair for the City University of Pasay. What a pleasure\r\nit is to witness something new to be written down in the history of the\r\nuniversity.</span>'),
-(31, 'CUP Celebrates CUPASKUHAN', 'Angeline Guerrero, BSE IV-1 English', '2017-04-04', 'cup-celebrates-cupaskuhan', '<p class="MsoNormal" style="text-align: justify; "><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:\r\n11.0pt;line-height:115%;font-family:&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CUPaskuhan 2016, 3rd\r\nEdition, sponsored by the CUP Faculty Association held on December 7 at the\r\nCuneta Astrodome-Pasay, was the source of the great joy and excitement of the\r\nstudents, professors and guests present on the occasion. This significant\r\njoyous event was filled with important messages starting with the welcome\r\nremarks of Prof. Marcos B. Geronga, CUP Faculty Association President, followed\r\nby the message of Dr. Concepcion C. Libuit, CUP President.<o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal" style="text-align: justify; "><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:\r\n11.0pt;line-height:115%;font-family:&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Honorable Antonio G. Calixto, Pasay City Mayor gave an\r\ninspirational message. Ms. Jing del Rosario read the message of Hon. Noel del\r\nRosario, Vice Mayor of Pasay City. The message of Hon. Imelda C. Rubiano, Pasay\r\nCity Congresswoman was read by Mr. Luigi Rubiano. The Christmas message of\r\nCouncilor Mark Anthony Calixto was also read by Ms. Jing del Rosario.\r\nCouncilors Joey Isidro, Ricardo Santos, Edith Manguera, and former Councilor\r\nIan Vendivel representing Councilor Donna Vendivel gave their messages. <o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal" style="text-align: justify;"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:\r\n11.0pt;line-height:115%;font-family:&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The dome was filled with loud cheers as the deans and\r\nprofessors showcased their talents in dancing, singing, and acting. Students\r\ngave their best yells to show support to their respective colleges.<o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal" style="text-align: justify;"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:\r\n11.0pt;line-height:115%;font-family:&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added to the excitement of the students is the raffle\r\ndraw where cash prizes, tablets and cell phones were given. At the end of the\r\ncompetition, financial reward was handed to the winners: COEd Faculty, 3rd place;\r\nCOBA, 2nd place; Champion, the COACT Faculty. Financial reward was also given\r\nto the Chorale Competition winners: COEd, 3rd place; COBA, 2nd place and COACT,\r\n1st place.<o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal" style="text-align: justify; "><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:\r\n11.0pt;line-height:115%;font-family:&quot;Arial&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2016 CUPaskuhan 3rd edition left everyone the true value\r\nof joy and the genuine spirit of Christmas.<o:p></o:p></span></p>');
+(33, 'CUP Celebrates CUPASKUHAN', 'Angeline Guerrero, BSE IV-1 English', '2017-04-06', 'cup-celebrates-cupaskuhan', '<p style="text-align: justify; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-family: Arial, sans-serif; font-size: 16px; text-align: justify;">CUPaskuhan 2016, 3rd Edition, sponsored by the CUP Faculty Association held on December 7 at the Cuneta Astrodome-Pasay, was the source of the great joy and excitement of the students, professors and guests present on the occasion. This significant joyous event was filled with important messages starting with the welcome remarks of Prof. Marcos B. Geronga, CUP Faculty Association President, followed by the message of Dr. Concepcion C. Libuit, CUP President.</span></p><p style="text-align: justify; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-family: Arial, sans-serif; font-size: 16px; text-align: justify;">Honorable Antonio G. Calixto, Pasay City Mayor gave an inspirational message. Ms. Jing del Rosario read the message of Hon. Noel del Rosario, Vice Mayor of Pasay City. The message of Hon. Imelda C. Rubiano, Pasay City Congresswoman was read by Mr. Luigi Rubiano. The Christmas message of Councilor Mark Anthony Calixto was also read by Ms. Jing del Rosario. Councilors Joey Isidro, Ricardo Santos, Edith Manguera, and former Councilor Ian Vendivel representing Councilor Donna Vendivel gave their messages.</span></p><p style="text-align: justify; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-family: Arial, sans-serif; font-size: 16px; text-align: justify;">The dome was filled with loud cheers as the deans and professors showcased their talents in dancing, singing, and acting. Students gave their best yells to show support to their respective colleges.</span></p><p style="text-align: justify; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-family: Arial, sans-serif; font-size: 16px; text-align: justify;">Added to the excitement of the students is the raffle draw where cash prizes, tablets and cell phones were given. At the end of the competition, financial reward was handed to the winners: COEd Faculty, 3rd place; COBA, 2nd place; Champion, the COACT Faculty. Financial reward was also given to the Chorale Competition winners: COEd, 3rd place; COBA, 2nd place and COACT, 1st place.</span></p><p><span style="font-family: Arial, sans-serif; font-size: 16px; text-align: justify;"><div style="text-align: justify;"><span style="font-family: Nunito, sans-serif; font-size: 14px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>2016 CUPaskuhan 3rd edition left everyone the true value of joy and the genuine spirit of Christmas.</div></span></p>');
 
 -- --------------------------------------------------------
 
@@ -309,7 +301,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1491322618, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1491492843, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (2, '::1', 'jack@gmail.com', '$2y$08$UEnOBhXdt0FTgWlEZvzuuODFJq.gVpUCGuZ43p.vfMH9pz7u6mYcG', NULL, 'jack@gmail.com', NULL, NULL, NULL, NULL, 1490968491, NULL, 1, 'ahrry', 'lober', 'compant name', '09123123'),
 (3, '::1', 'asfasdfar', '$2y$08$GJVGIN6rKtd/dmG8tN/9oueyLVj2mWJj.nzNpuFytlic2b1.Kpf52', NULL, 'asfasdfar', NULL, NULL, NULL, NULL, 1490972030, NULL, 1, 'test', 'test', 'test', '12315135');
 
@@ -461,7 +453,7 @@ ALTER TABLE `forum_posts`
 -- AUTO_INCREMENT for table `gallery_images`
 --
 ALTER TABLE `gallery_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=250;
 --
 -- AUTO_INCREMENT for table `groups`
 --
@@ -476,7 +468,7 @@ ALTER TABLE `login_attempts`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 --
 -- AUTO_INCREMENT for table `users`
 --
