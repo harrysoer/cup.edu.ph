@@ -45,23 +45,67 @@
     <!--=========== END COURSE BANNER SECTION ================-->
     
     <!--=========== BEGIN GALLERY SECTION ================-->
-    <section id="gallery">
+    <section id="courseArchive">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
-            <div id="gallerySLide" class="gallery_area">
-                <!-- <a href="<?=base_url('assets/for_main/img/gallery/img-large1.jpg')?>" title="This is Title">
-                  <img class="gallery_img" src="<?=base_url('assets/for_main/img/gallery/img-large1.jpg')?>" alt="img" />
-                <span class="view_btn">View</span>
-                </a> -->
-                <?php foreach ($get_imgs as $images): ?>
-                  <a href="<?=base_url('uploads/gallery/').$images->file_name;?>" title="<?= $images->album_name;?>">
-                    <img class="gallery_img" src="<?=base_url('uploads/gallery/').$images->file_name?>" alt="img" />
-                    <span class="view_btn">View</span>
-                  </a>
-                <?php endforeach?>
+        <!-- start course archive sidebar -->
+        <div class="col-lg-4 col-md-4 col-sm-4">
+         <div class="courseArchive_sidebar">
+          <div class="single_sidebar">
+                <ul class="news_tab">
+                  <li class="active">
+                    <div class="media">
+                      <div class="media-body">
+                       <a href="<?=site_url('/about');?>"><span class="glyphicon glyphicon-book fa-lg" style="padding-right: 13px;"></span>Our History</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media">
+                      <div class="media-body">
+                       <a href="<?=site_url('/mvg');?>"><span class="glyphicon glyphicon-globe fa-lg" style="padding-right: 13px;"></span>Mission | Vision | Goals</a>
+                      </div>
+                    </div>
+                  </li>  
+                  <li>
+                    <div class="media">
+                      <div class="media-body">
+                       <a href="<?=site_url('/adm');?>"><span class="glyphicon glyphicon-user fa-lg" style="padding-right: 13px;"></span>Administrators</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media">
+                      <div class="media-body">
+                       <a href="<?=site_url('/gallery');?>"><span class="glyphicon glyphicon-picture fa-lg" style="padding-right: 13px;"></span>Gallery</a>              
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media">
+                      <div class="media-body">
+                       <a href="<?=site_url('/hymn');?>"><span class="glyphicon glyphicon-music fa-lg" style="padding-right: 13px;"></span>C.U.P Hymn</a>
+                      </div>
+                    </div>
+                  </li>  
+                </ul>
+              </div>
             </div>
-            <div class="col-lg-12 col-md-12 col-sm-12"><?=$pages?></div>
+            </div>
+          
+          <!-- End single sidebar -->
+
+
+          <div class="col-lg-8 col-md-8 col-sm-8">
+            <div id="gallerySLide" class="gallery_area">
+              <?php foreach ($get_imgs as $images): ?>
+                <a href="<?=base_url('uploads/gallery/').$images->file_name;?>" title="<?= $images->album_name;?>">
+                  <img class="gallery_img" src="<?=base_url('uploads/gallery/').$images->file_name?>" alt="img" />
+                  <span class="view_btn">View</span>
+                </a>
+              <?php endforeach?>
+            </div>
+                <div class="col-lg-12 col-md-12 col-sm-12"><?=$pages?></div>  
           </div>
         </div>
       </div>

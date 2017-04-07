@@ -63,7 +63,7 @@ class CupWebsite extends CI_Controller{
 		$config = array();
 		$config['base_url'] 	= site_url('gallery');
 		$config['total_rows'] 	= $this->gallery->count_images();
-		$config['per_page'] 	= 16;
+		$config['per_page'] 	= 15;
 		$config["uri_segment"]  = 2;
 		$config['use_page_numbers'] = TRUE;
 
