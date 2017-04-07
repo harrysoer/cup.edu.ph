@@ -81,14 +81,33 @@ class Admin extends CI_Controller {
 	}
 
 	//for mini gallery in admin side
-	public function listImages(){
-		$slug= $this->uri->segment(4);
-		$data['get_images'] = $this->gallery->get_images($slug);
-		$this->load->view('admin/templates/header');
-		$this->load->view('admin/templates/navbar');
-		$this->load->view('admin/templates/scripts');
-		$this->load->view('admin/gallery/scriptsGallery',$data);
-		$this->load->view('admin/gallery/listImages');
+	public function listImages($id=null){
+		$slug = $this->uri->segment(4);
+		$id = $this->uri->segment(5);
+
+		if ($id==null){	
+			$data['get_images'] = $this->gallery->get_images($slug);
+			$this->load->view('admin/templates/header');
+			$this->load->view('admin/templates/navbar');
+			$this->load->view('admin/templates/scripts');
+			$this->load->view('admin/gallery/scriptsGallery',$data);
+			$this->load->view('admin/gallery/listImages');
+		}
+		elseif(isset($id)){
+	        
+	        if (empty($id))
+	        {
+	            show_404();
+	        }
+	                
+	        // $news_item = $this->news_model->get_news_by_id($id);
+	        
+	        $this->album->delete_Image($id);        
+	        redirect( site_url('admin/gallery/view/'.$slug),'refresh');       
+		}
+		else{
+		   show_404();
+		}	
 	}
 
 	//for ajax upload ito

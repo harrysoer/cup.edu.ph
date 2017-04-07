@@ -31,9 +31,9 @@ class Portal extends CI_Controller{
 
 
 		if ($this->form_validation->run()===false){
-			$this->load->view('portal/templates/header');
+			$this->load->view('portal/templates2/header');
 			$this->load->view('portal/register');
-			$this->load->view('portal/templates/footer');
+			$this->load->view('portal/templates2/footer');
 		}else{
 			$idNumber 	=  $this->input->post('idNumber');
 			$password 	= $this->input->post('password');
@@ -44,9 +44,9 @@ class Portal extends CI_Controller{
 			$year 		= $this->input->post('year');
 
 			if ($this->portal_student_model->addStudent($idNumber, $password, $firstName, $middleName, $lastName, $course, $year)){
-				$this->load->view('portal/templates/header');
+				$this->load->view('portal/templates1/header');
 				$this->load->view('portal/success');
-				$this->load->view('portal/templates/footer');
+				$this->load->view('portal/templates1/footer');
 			}else{
 
 				// user creation failed, this should never happen

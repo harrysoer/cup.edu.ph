@@ -12,8 +12,16 @@ class adminAlbum_model extends CI_Model
 
 	//======Albums======
 	public function delete_Image($id) {
+		$query = $this->db->query("SELECT file_name from gallery_images where id = $id;");
+		$row = $query->row(); 
+		if (isset($row)){
+			$file_name = $row->file_name;
+		}
+
+		$path='./uploads/gallery/'.$file_name;
 		$this->db->where('id', $id);
-        return $this->db->delete('gallery_images');
+		$this->db->delete('gallery_images');
+		unlink($path);	
 	}		
 
 	public function setAlbumName($data){

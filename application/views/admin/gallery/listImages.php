@@ -43,7 +43,7 @@
                                                 <img src="<?=base_url('uploads/gallery/').$images['file_name']?> " class="thumb-img" alt="work-thumbnail">
                                             </a>
                                             <h4><?=$images['file_name']?></h4>
-                                            <a   class="btn btn-danger btn-sm pull-right" style=" margin-top:-3.5rem;" href="<?=site_url('admin/deleteImage/').$images['id']?>"  onClick="return confirm('Are you sure you want to delete?')">Delete</a>
+                                            <a   class="btn btn-danger btn-sm pull-right" style=" margin-top:-3.5rem;" href="<?=site_url('admin/gallery/view/').$images['slug'].'/'.$images['id']?>"  onClick="return confirm('Are you sure you want to delete?')">Delete</a>
                                         </div>
                                     </div>
                                     <img src="">
