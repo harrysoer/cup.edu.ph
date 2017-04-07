@@ -72,6 +72,7 @@ class CupWebsite extends CI_Controller{
 		if($this->uri->segment(2)){
 			$page = ($this->uri->segment(2)) ;
 		}
+
 		else{
 			$page = 1;
 		}

@@ -73,6 +73,24 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/templates/closer');		
 	}
 
+	public function listAlbums($album_name=null){
+		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/navbar');
+		$this->load->view('admin/templates/scripts');
+		$this->load->view('admin/gallery/listAlbums',$album_name);
+	}
+
+	//for mini gallery in admin side
+	public function listImages(){
+		$slug= $this->uri->segment(4);
+		$data['get_images'] = $this->gallery->get_images($slug);
+		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/navbar');
+		$this->load->view('admin/templates/scripts');
+		$this->load->view('admin/gallery/scriptsGallery',$data);
+		$this->load->view('admin/gallery/listImages');
+	}
+
 	//for ajax upload ito
 	public function upload_images(){
 
@@ -87,14 +105,28 @@ class Admin extends CI_Controller {
 		if($this->upload->do_upload('userfile'))
 		{
 			$album_name=$this->input->post('album_name');
+			$slug = url_title( $album_name	, 'dash', TRUE);
 			$file_name=$this->upload->data('file_name');
-			$this->db->insert('gallery_images',array('file_name'=>$file_name,'album_name'=>$album_name));
+			$this->db->insert('gallery_images',array('file_name'=>$file_name,'album_name'=>$album_name,'slug'=>$slug));
 		}
 	}
 
-	
+	//delete ajax
+	public function deleteImage() {
+		$id = $this->uri->segment(3);
+        
+        if (empty($id))
+        {
+            show_404();
+        }
+                
+        // $news_item = $this->news_model->get_news_by_id($id);
+        
+        $this->album->delete_Image($id);        
+        redirect( site_url('admin/gallery/albums/list'),'refresh');       
+    }
+
 	//delete image
-	
 	public function delete_uploaded_images(){
 
 	$album_name=$this->input->post('album_name');		
@@ -115,20 +147,6 @@ class Admin extends CI_Controller {
 
 	}
 
-	public function listAlbums($album_name=null){
-		$this->load->view('admin/templates/header');
-		$this->load->view('admin/templates/navbar');
-		$this->load->view('admin/templates/scripts');
-		$this->load->view('admin/gallery/listAlbums',$album_name);
-	}
-
-	//for mini gallery in admin side
-	public function listImages(){
-		$this->load->view('admin/templates/header');
-		$this->load->view('admin/templates/navbar');
-		$this->load->view('admin/templates/scripts');
-		$this->load->view('admin/gallery/listImages');
-	}
 
 	//listing the album name
 	public function ajax_listAlbums()
@@ -142,10 +160,8 @@ class Admin extends CI_Controller {
 			$no++;
 			$row = array();
 			$row[] = $album_name->album_name;
-			//$row[] = $images->album_name;
 
-
-			$link = NULL;#site_url('admin/form/revise-upload'.$forms->id); 
+			$link = site_url('admin/gallery/view/'.$album_name->slug); 
 
 			//add html for action
 			$row[] = '<a class="btn btn-sm btn-primary" href="'.$link.'" title="Edit")">

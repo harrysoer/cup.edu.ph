@@ -79,8 +79,9 @@ $route['admin/admission/forms/callList'] = 'admin/ajax_listForms';
 $route['admin/gallery/albums/list']     = 'admin/listAlbums';
 $route['admin/gallery/albums/callList'] = 'admin/ajax_listAlbums';
 $route['admin/gallery/albums/create']	= 'admin/addAlbum';
+$route['admin/gallery/delete/(:any)']	= 'admin/deleteImage/$1';
 $route['admin/gallery/albums/upload']	= 'admin/uploadAlbum';
-$route['admin/gallery/albums/(:any)'] 	= 'admin/ajax_listImages/$1';
+$route['admin/gallery/view/(:any)'] 	= 'admin/listImages/$1';
 
 $route['portal']='portal/login';
 $route['register']='portal/register';

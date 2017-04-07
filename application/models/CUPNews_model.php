@@ -13,7 +13,9 @@ class CUPNews_model extends CI_Model
 	public function get_news($slug=FALSE){
 		if ($slug === FALSE)
         {
-            $query = $this->db->query('SELECT * FROM news ORDER	BY	dates DESC;');
+            // $query = $this->db->query('SELECT * FROM news ORDER	BY	dates DESC;');
+            $this->db->order_by('dates', 'DESC');
+            $query=$this->db->get('news');
             return $query->result_array();
         }
 
@@ -27,7 +29,10 @@ class CUPNews_model extends CI_Model
 	}
 
 	public function get_latest_news(){
-        $query = $this->db->query("SELECT title, slug, dates  FROM news ORDER BY dates DESC LIMIT 4;");
+        // $query = $this->db->query("SELECT title, slug, dates  FROM news ORDER BY dates DESC LIMIT 4;");
+		$this->db->select('title, slug, dates');
+		$this->db->order_by('dates', 'DESC');
+		$query=$this->db->get('news',4);
         return $query->result_array();
 	}
 

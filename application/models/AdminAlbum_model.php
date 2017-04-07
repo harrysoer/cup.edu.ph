@@ -11,6 +11,10 @@ class adminAlbum_model extends CI_Model
 	}
 
 	//======Albums======
+	public function delete_Image($id) {
+		$this->db->where('id', $id);
+        return $this->db->delete('gallery_images');
+	}		
 
 	public function setAlbumName($data){
 		$album_name=$this->input->post('album_name');

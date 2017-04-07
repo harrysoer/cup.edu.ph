@@ -13,9 +13,12 @@ class adminImageGallery_model extends CI_Model
 	//======Image======
 
 	public function setImage(){
+		$slug = url_title($this->input->post('album_name'), 'dash', TRUE);
+		
 		$data=array(
 				'file_name'   => $file_name,
 				'album_name'  => $this->input->post('album_name'),
+				'slug'		  => $slug,
 			);
 
 		return $this->db->insert('files', $data);
@@ -103,6 +106,11 @@ class adminImageGallery_model extends CI_Model
 		unlink($path);	
 	}
 
-
+	public function get_images($slug)
+	{
+		$this->db->order_by('id', 'DESC');
+        $query=$this->db->get_where('gallery_images', array('slug' => $slug));
+        return $query->result_array();
+	}
 
 }
