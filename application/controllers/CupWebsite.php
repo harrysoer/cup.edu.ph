@@ -54,7 +54,7 @@ class CupWebsite extends CI_Controller{
 		$data['title']="StudentLife";
 		$this->load->view('main/template/header',$data);
 		$this->load->view('main/template/js');
-		$this->load->view('main/student/index');
+		$this->load->view('main/studentLife/index');
 		$this->load->view('main/template/footer');
 	}
 
