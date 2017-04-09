@@ -4,6 +4,7 @@ Template Design By WpFreeware Team.
 Author URI : http://www.wpfreeware.com/
 ========================================*/
 
+
 .navbar-default .navbar-brand span{
   color: #fdcd3d;
 }
@@ -49,7 +50,10 @@ Author URI : http://www.wpfreeware.com/
 .feed_tabs li a:hover{ 
   background-color: #fdcd3d;
 }
-.news_tab .media-body > a :hover{
+.news_tab .media-body .active > a :hover{
+  color: #fdcd3d;
+}
+.news_tab .media-body .active > a :focus{
   color: #fdcd3d;
 }
 .see_all:hover, .see_all:focus{
@@ -109,22 +113,22 @@ Author URI : http://www.wpfreeware.com/
   border-bottom: 3px solid #78adc9;  
 }
 .blog_title a:hover{
-  color: #78ADC9;
+  color: #fdcd3d;
 }
 .blog_commentbox > p:hover{
-  color: #78ADC9;
+  color: #fdcd3d;
 }
 .blog_commentbox>a:hover{
-  color: #78ADC9;
+  color: #fdcd3d;
 }
 .blog_readmore:hover,.blog_readmore:focus{  
-  color: #78ADC9;
+  color: #fdcd3d;
 }
 .blog_readmore:hover::before,
 .blog_readmore:hover::after,
 .blog_readmore:focus::before,
 .blog_readmore:focus::after {
-  color: #78ADC9; 
+  color: #fdcd3d; 
 }
 .tags_nav li a:hover,.tags_nav li a:focus{  
   background-color: #78ADC9;
@@ -186,8 +190,8 @@ Author URI : http://www.wpfreeware.com/
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
   color: #78adc9 !important;  
 }
-.single_sidebar > h2 {
-  background-color: #78adc9;
+.single_sidebar > h1 {
+  background-color: #003e00;
 }
 .singlecourse_price {  
   color: #78ADC9;

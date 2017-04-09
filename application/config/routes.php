@@ -61,6 +61,23 @@ $route['gallery/(:any)'] ='CupWebsite/gallery/$1';
 $route['news'] = 'CupWebsite/news';
 $route['news/(:any)'] = 'CupWebsite/read_news/$1';
 
+$route['mvg']='CupWebsite/mvg';
+$route['adm']='CupWebsite/adm';
+$route['hymn']='CupWebsite/hymn';
+$route['cba']='CupWebsite/cba';
+$route['coact']='CupWebsite/coact';
+$route['coas']='CupWebsite/coas';
+$route['coe']='CupWebsite/coe';
+$route['conm']='CupWebsite/conm';
+$route['csc']='CupWebsite/csc';
+$route['koh']='CupWebsite/koh';
+$route['mss']='CupWebsite/mss';
+$route['sts']='CupWebsite/sts';
+$route['ec']='CupWebsite/ec';
+$route['kgmaf']='CupWebsite/kgmaf';
+$route['promise']='CupWebsite/promise';
+
+
 $route['logout']		  		 = 'admin/logout';
 $route['login']		  			 = 'admin_login/index';
 $route['login/status']			 = 'admin_login/login';

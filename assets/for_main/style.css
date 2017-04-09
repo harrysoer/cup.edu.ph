@@ -460,6 +460,10 @@ img{
 }
 .single_whyus_top>p{
   font-size: 13px;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+
 }
 .whyus_top{
   color: #fff;
@@ -952,14 +956,63 @@ div[data-dimension] {
 /* COURSE ARCHIVE PAGE */
 /*--------------------*/
 
-#imgBanner {
-  background-image: url("img/banner.jpg");
+
+
+#imgBanner2 {
+  background-image: url("img/banner3.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: inline;
   float: left;
   height: 300px;
-  margin-top: 77px;
+  margin-top: 60px;
+  padding: 118px 0;
+  text-align: center;
+  width: 100%;
+}
+#imgBanner2 h2 {
+  color: #fff;
+  font-size: 72px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#imgBanner1 {
+  background-image: url("img/banner2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline;
+  float: left;
+  height: 300px;
+  margin-top: 60px;
+  padding: 118px 0;
+  text-align: center;
+  width: 100%;
+}
+#imgBanner1 h2 {
+  color: #fff;
+  font-size: 72px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+
+}
+
+#imgBanner {
+  background-image: url("img/banner1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline;
+  float: left;
+  height: 300px;
+  margin-top: 60px;
   padding: 118px 0;
   text-align: center;
   width: 100%;
@@ -1015,13 +1068,13 @@ div[data-dimension] {
   width: 100%;
   margin-bottom: 15px;  
 }
-.single_sidebar > h2 {
+.single_sidebar > h1 {
   color: #fff;
   font-size: 26px;
   padding: 0 5px;
   margin-bottom: 15px;
 }
-.single_sidebar > h2 span{
+.single_sidebar > h1 span{
   font-size: 24px;
 }
 .single_sidebar .news_tab .media-body > a {
@@ -1036,8 +1089,8 @@ div[data-dimension] {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.single_sidebar > ul > li>a:hover,.single_sidebar > ul > li>a:focus{
-  text-decoration: none;
+.single_sidebar > .active > a:hover,.single_sidebar > ul > li> a > span:focus{
+  color: #fdcd3d;
   outline: none;
 }
 
@@ -1137,6 +1190,7 @@ div[data-dimension] {
   padding: 5px;
   text-transform: uppercase;
 }
+
 
 /*--------------------*/
 /* BLOG PAGE */
@@ -1308,9 +1362,14 @@ div[data-dimension] {
 .single_blog .blog_commentbox{
   padding-left: 0px;
 }
-.single_blog p {
+.single_blog p{
+  text-indent: 50px;
   line-height: 25px;
   font-size: 15px;
+}
+.single_blog h4{
+  text-indent: 50px;
+  font-size: 18px;
 }
 .single_blog blockquote{
   border-left: none;
@@ -1427,7 +1486,7 @@ div[data-dimension] {
 #gallery {
   display: inline;
   float: left;
-  padding: 60px 0;
+  padding: 80px 0;
   width: 100%;
 }
 .gallery_area{

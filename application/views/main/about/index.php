@@ -41,7 +41,7 @@
 
 
    <!--=========== BEGIN COURSE BANNER SECTION ================-->
-    <section id="imgBanner">
+    <section id="imgBanner2">
       <h2>About Us</h2>
     </section>
     <!--=========== END COURSE BANNER SECTION ================-->
@@ -59,7 +59,7 @@
                   <li class="active">
                     <div class="media">
                       <div class="media-body">
-                       <a href="<?=site_url('/about');?>" style="color: yellow;"><span class="glyphicon glyphicon-book fa-lg" style="padding-right: 13px;"></span>Our History</a>
+                       <a href="<?=site_url('/about');?>" style="color: #fdcd3d;"><span class="glyphicon glyphicon-book fa-lg" style="padding-right: 13px;"></span>Our History</a>
                       </div>
                     </div>
                   </li>

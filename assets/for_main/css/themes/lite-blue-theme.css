@@ -107,23 +107,26 @@ Author URI : http://www.wpfreeware.com/
 .single_blog_archive {
   border-bottom: 3px solid #37c6f5;  
 }
+.blog_title h2:hover{
+  color: #fdcd3d;
+}
 .blog_title a:hover{
-  color: #37c6f5;
+  color: #fdcd3d;
 }
 .blog_commentbox > p:hover{
-  color: #37c6f5;
+  color: #fdcd3d;
 }
 .blog_commentbox>a:hover{
-  color: #37c6f5;
+  color: #fdcd3d;
 }
 .blog_readmore:hover,.blog_readmore:focus{  
-  color: #37c6f5;
+  color: #fdcd3d;
 }
 .blog_readmore:hover::before,
 .blog_readmore:hover::after,
 .blog_readmore:focus::before,
 .blog_readmore:focus::after {
-  color: #37c6f5; 
+  color: #fdcd3d; 
 }
 .tags_nav li a:hover,.tags_nav li a:focus{  
   background-color: #37c6f5;

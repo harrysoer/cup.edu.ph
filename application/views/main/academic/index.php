@@ -50,110 +50,108 @@
       <div class="container">
         <div class="row">
           <!-- start course content -->
-          <div class="col-lg-8 col-md-8 col-sm-8">
+          <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="courseArchive_content">
               <div class="row">
                 <!-- start single course -->
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                   <div class="single_course wow fadeInUp">
                     <div class="singCourse_imgarea">
                       <img src="<?=base_url('assets/for_main/img/course5.png');?>" />
                       <div class="mask">                         
-                        <a href="course-single.html" class="course_more">View Course</a>
+                        <a href="<?=site_url('/coact');?>" class="course_more">View More</a>
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="course-single.html">College of Office Administration and Computer Technology</a></h3>
+                    <h3 class="singCourse_title"><a href="<?=site_url('/coact');?>">College of Office Administration and Computer Technology</a></h3>
                     <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                     </div>
                   </div>
                 </div>
                 <!-- End single course -->
                 <!-- start single course -->
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                   <div class="single_course wow fadeInUp">
                     <div class="singCourse_imgarea">
                       <img src="<?=base_url('assets/for_main/img/course2.jpg');?>" />
                       <div class="mask">                         
-                        <a href="course-single.html" class="course_more">View Course</a>
+                        <a href="<?=site_url('/cba');?>" class="course_more">View More</a>
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="course-single.html">College of Business Administration</a></h3>
+                    <h3 class="singCourse_title"><a href="<?=site_url('/cba');?>">College of Business Administration</a></h3>
                     <br><p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                     </div>
                   </div>
                 </div>
                 <!-- End single course -->
                 <!-- start single course -->
-                <div class="col-lg-6 col-md-6 col-sm-6" style="margin-left: -389px;">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                   <div class="single_course wow fadeInUp">
                     <div class="singCourse_imgarea">
-                      <img src="<?=base_url('assets/for_main/img/course3.jpg');?>" />
+                      <img src="<?=base_url('assets/for_main/img/course3.jpg');?>">
                       <div class="mask">                         
-                        <a href="course-single.html" class="course_more">View Course</a>
+                        <a href="<?=site_url('/coe');?>" class="course_more">View More</a>
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="course-single.html">College of Education</a></h3><br>
+                    <h3 class="singCourse_title"><a href="<?=site_url('/coe');?>">College of Education</a></h3><br>
                     <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                     </div>
                   </div>
                 </div>
                 <!-- End single course -->
                 <!-- start single course -->
-                <div class="col-lg-6 col-md-6 col-sm-6" style="margin-right: -389px;">
+                <div class="col-lg-4 col-md-4 col-sm-4" style="margin-left: -195px; margin-right: 10px">
                   <div class="single_course wow fadeInUp">
                     <div class="singCourse_imgarea">
                       <img src="<?=base_url('assets/for_main/img/course1.png');?>" />
                       <div class="mask">                         
-                        <a href="course-single.html" class="course_more">View Course</a>
+                        <a href="<?=site_url('/coas');?>" class="course_more">View More</a>
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="course-single.html">College of Arts and Sciences</a></h3><br>
+                    <h3 class="singCourse_title"><a href="<?=site_url('/coas');?>">College of Arts and Sciences</a></h3>
                     <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                     </div>
                   </div>
                 </div>
                 <!-- End single course -->
                 <!-- start single course -->
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                   <div class="single_course wow fadeInUp">
                     <div class="singCourse_imgarea">
                       <img src="<?=base_url('assets/for_main/img/course4.jpg');?>" />                      
                       <div class="mask">                         
-                        <a href="course-single.html" class="course_more">View Course</a>
+                        <a href="<?=site_url('/conm');?>" class="course_more">View More</a>
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="course-single.html">College of Nursing and Midwifery</a></h3>
+                    <h3 class="singCourse_title"><a href="<?=site_url('/conm');?>">College of Nursing and Midwifery</a></h3>
                     <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4" style="margin-left: 393px;">
+                  <div class="single_course wow fadeInUp">
+                    <div class="singCourse_imgarea">
+                      <img src="<?=base_url('assets/for_main/img/calendar.jpg');?>" />                      
+                      <div class="mask">                         
+                        <a href="course-single.html" class="course_more">View Calendar</a>
+                      </div>
+                    </div>
+                    <div class="singCourse_content">
+                    <h3 class="singCourse_title"><a href="#"><center>Academic Calendar</center></a></h3>
                     </div>
                   </div>
                 </div>
                 <!-- End single course -->
                
               </div>
-              <!-- start previous & next button -->
-              <div class="single_blog_prevnext">
-                <a href="#" class="prev_post wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"><i class="fa fa-angle-left"></i>Previous</a>
-                <a href="#" class="next_post wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">Next<i class="fa fa-angle-right"></i></a>
-              </div>
+              
             </div>
           </div>
           <!-- End course content -->
-
-          <!-- start course archive sidebar -->
-          <div class="col-lg-4 col-md-4 col-sm-4">
-            <div class="courseArchive_sidebar">
-              <!-- start single sidebar -->
-              <div class="single_sidebar">
-                <h2>Academic Calendar<span class="fa fa-angle-double-right"></span></h2>
-                
-              </div>
-              <!-- End single sidebar -->
-              
             </div>
           </div>
           <!-- start course archive sidebar -->

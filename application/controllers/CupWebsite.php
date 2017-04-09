@@ -113,4 +113,140 @@ class CupWebsite extends CI_Controller{
 		$this->load->view('main/news/newsone/index',$data);
 		$this->load->view('main/template/footer');
 	}
+
+	
+	public function mvg()
+	{
+		$data['title']="Mission | Vision | Goals";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/about/mvg/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function adm()
+	{
+		$data['title']="Administrators";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/about/adm/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function hymn()
+	{
+		$data['title']="Hymn";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/about/hymn/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function cba()
+	{
+		$data['title']="College of Business Administration";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/academic/cba/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function coact()
+	{
+		$data['title']="College of Office Administration and Computer Technology";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/academic/coact/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function coas()
+	{
+		$data['title']="College of Arts and Sciences";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/academic/coas/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function coe()
+	{
+		$data['title']="College of Education";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/academic/coe/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function conm()
+	{
+		$data['title']="College of Nursing and Midwifery";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/academic/conm/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function csc()
+	{
+		$data['title']="Central Student Council";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/studentlife/csc/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function koh()
+	{
+		$data['title']="Knights of Herodotus";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/studentlife/koh/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function mss()
+	{
+		$data['title']="Math Smart Society";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/studentlife/mss/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function ec()
+	{
+		$data['title']="English Circle";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/studentlife/ec;/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function sts()
+	{
+		$data['title']="Sci - Tech Society";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/studentlife/sts/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function kgmaf()
+	{
+		$data['title']="Kapisanan ng mga Guro at Mag-aaral sa Asignaturang Filipino";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/studentlife/kgmaf/index');
+		$this->load->view('main/template/footer');
+	}
+
+	public function promise()
+	{
+		$data['title']="A Student's Promise";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/studentlife/promise/index');
+		$this->load->view('main/template/footer');
+	}
 }
