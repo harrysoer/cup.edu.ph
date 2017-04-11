@@ -100,7 +100,24 @@ $route['admin/gallery/albums/upload']	= 'admin/uploadAlbum';
 $route['admin/gallery/view/(:any)'] 	= 'admin/listImages/$1';
 $route['admin/gallery/view/(:any)/(:any)'] 	= 'admin/listImages/$1/$id';
 
+$route['admin/portal'] 	= 'admin_portal/index';
+
+$route['admin/portal/school_year'] 	= 'admin_portal/school_year';
+$route['admin/portal/school_year/add'] 	= 'admin_portal/add_school_year';
+
+$route['admin/portal/students']	= 'admin_portal/student';
+
+$route['forum']		  		   =  'forum/index';
+$route['forum/create']		   =  'forum/create_post';
+$route['forum/post/(:any)'] 		   =  'forum/read_post';
+$route['forum/(:any)/(:any)']  =  'admin_portal/student';
+
+
 $route['portal']='portal/login';
+
+$route['portal/forum']='forum/index';
+$route['portal/forum/(:any)']='forum/index';
+
 $route['register']='portal/register';
 //$route['default_controller'] = 'welcome';
 $route['404_override'] = '';

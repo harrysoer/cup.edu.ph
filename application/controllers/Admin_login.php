@@ -39,23 +39,13 @@ class Admin_login extends CI_Controller {
 		$this->form_validation->set_rules($pass, str_replace(':', '', $this->lang->line('login_password_label')), 'required');
 
 		if($this->ion_auth->login($username, $pass, $remember)){
+			$this->ion_auth->get_name($username);
 			redirect('admin/index','refresh');
 		}
 		else{
 			$data['error'] = 'Wrong username or password.';
 			$this->load->view('admin/login_view', $data);
 		}
-	}
-
-	
-	public function _render_page($view, $data=null, $returnhtml=false)//I think this makes more sense
-	{
-
-		$this->viewdata = (empty($data)) ? $this->data: $data;
-
-		$view_html = $this->load->view($view, $this->viewdata, $returnhtml);
-
-		if ($returnhtml) return $view_html;//This will return html on 3rd argument being true
 	}
 
 }

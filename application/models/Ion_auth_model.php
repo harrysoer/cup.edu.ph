@@ -243,6 +243,34 @@ class Ion_auth_model extends CI_Model
 		$this->trigger_events('model_constructor');
 	}
 
+	//setting up the session
+	public function get_name($username){
+		$user = $this->db
+	        ->select("first_name, last_name")
+	        ->where(
+	             [
+	                'email' => $username
+	             ]
+	         )
+	        ->get("users")
+	        ->row();
+
+	   if ($user) {
+	         $logindata = [
+	             'first_name' => $user->first_name,
+	             'last_name'  => $user->last_name,
+	           
+	         ];
+	         $this->session
+	              ->set_userdata($logindata);
+	         return true;
+	   }
+	   else {
+	         return false;
+   }
+
+	}
+
 	/**
 	 * Misc functions
 	 *

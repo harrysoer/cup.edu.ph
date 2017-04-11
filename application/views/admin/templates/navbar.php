@@ -8,7 +8,7 @@
                 </div>
                 <div class="user-info">
                     <div class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">VPAA Dr. Eustuche<span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><?=$this->session->first_name." ".$this->session->last_name?><br><span class="caret"></span></a>
                         <ul class="dropdown-menu">
                            
                             <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>

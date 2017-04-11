@@ -24,6 +24,11 @@ class Admin extends CI_Controller {
 			// redirect them to the login page
 			redirect('login', 'refresh', 301);
 		}
+		if (!$this->ion_auth->is_admin())
+		{
+			$this->session->set_flashdata('message', 'You must be an admin to view this page');
+			redirect('');
+		}
 	}
 
 	public function logout(){
@@ -131,19 +136,19 @@ class Admin extends CI_Controller {
 	}
 
 	//delete ajax
-	public function deleteImage() {
-		$id = $this->uri->segment(3);
+	// public function deleteImage() {
+	// 	$id = $this->uri->segment(3);
         
-        if (empty($id))
-        {
-            show_404();
-        }
+ //        if (empty($id))
+ //        {
+ //            show_404();
+ //        }
                 
-        // $news_item = $this->news_model->get_news_by_id($id);
+ //        // $news_item = $this->news_model->get_news_by_id($id);
         
-        $this->album->delete_Image($id);        
-        redirect( site_url('admin/gallery/albums/list'),'refresh');       
-    }
+ //        $this->album->delete_Image($id);        
+ //        redirect( site_url('admin/gallery/albums/list'),'refresh');       
+ //    }
 
 	//delete image
 	public function delete_uploaded_images(){

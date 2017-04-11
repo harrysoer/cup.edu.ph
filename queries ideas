@@ -1,1 +1,3 @@
 CREATE TABLE `cup.edu.ph`.`$year_sy_students` ( `id_number` INT NOT NULL , `last_name` INT(30) NOT NULL , `first` INT(30) NOT NULL , `course` INT(30) NOT NULL , `year` INT(5) NOT NULL , `section` INT(10) NOT NULL , PRIMARY KEY (`id_number`))
+
+gawa ka ng tables for ever college dept para malist ang students enrolled at professors
