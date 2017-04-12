@@ -113,6 +113,12 @@ $route['forum/post/(:any)'] 		   =  'forum/read_post';
 $route['forum/(:any)/(:any)']  =  'admin_portal/student';
 
 
+$route['do/index']  	=  'portal_do/index';
+$route['do/courses']  	=  'portal_do/courses';
+$route['do/schedules']  =  'portal_do/index';
+$route['do/professors'] =  'portal_do/index';
+$route['do/students']   =  'portal_do/index';
+
 $route['portal']='portal/login';
 
 $route['portal/forum']='forum/index';

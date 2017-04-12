@@ -135,20 +135,6 @@ class Admin extends CI_Controller {
 		}
 	}
 
-	//delete ajax
-	// public function deleteImage() {
-	// 	$id = $this->uri->segment(3);
-        
- //        if (empty($id))
- //        {
- //            show_404();
- //        }
-                
- //        // $news_item = $this->news_model->get_news_by_id($id);
-        
- //        $this->album->delete_Image($id);        
- //        redirect( site_url('admin/gallery/albums/list'),'refresh');       
- //    }
 
 	//delete image
 	public function delete_uploaded_images(){

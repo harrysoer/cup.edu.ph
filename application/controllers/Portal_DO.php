@@ -7,6 +7,7 @@ class Portal_DO extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->library(array('ion_auth','form_validation'));
+		$this->load->model('portal_do_m', 'do');
 		$this->load->helper(array('url','language'));
 
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
@@ -17,7 +18,14 @@ class Portal_DO extends CI_Controller {
 
 	public function index()
 	{
-		
+		$data['get_courses'] = $this->do->get_courses();
+		$this->load->view('portal/do/index', $data);
+	}
+
+	public function courses()
+	{
+		$data['get_courses'] = $this->do->get_courses();
+		$this->load->view('portal/do/courses', $data);
 	}
 
 }
