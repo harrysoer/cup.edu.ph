@@ -27,7 +27,7 @@
 		<tbody>
 			<tr>
 				<td>Bachelor's Science of Information Technology </td>
-				<td><a href="<?=site_url('do/view_curriculum/'.'id')?>">View Curricullum</a></td>
+				<td><a href="<?=site_url('do/view_curriculum/id/1')?>">View Curricullum</a></td>
 			</tr>
 		</tbody>
 	</table>

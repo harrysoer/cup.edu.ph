@@ -14,6 +14,23 @@ class Portal_DO extends CI_Controller {
 
 		$this->lang->load('auth');
 
+		$group='Deans_Office';
+		if (!$this->ion_auth->in_group($group))
+		{
+			$this->session->set_flashdata('message', 'You must be an admin to view this page');
+			echo "false group";
+		}
+		if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('do/login', 'refresh', 301);
+		}
+	}
+
+	public function logout(){
+		$logout=$this->ion_auth->logout();
+		redirect('do/login','refresh',301);
+
 	}
 
 	public function index()
@@ -26,6 +43,12 @@ class Portal_DO extends CI_Controller {
 	{
 		$data['get_courses'] = $this->do->get_courses();
 		$this->load->view('portal/do/courses', $data);
+	}
+
+	public function view_curriculum()
+	{
+		$data['get_curriculum'] = $this->do->get_curriculum();
+		$this->load->view('portal/do/curriculum', $data);
 	}
 
 }
