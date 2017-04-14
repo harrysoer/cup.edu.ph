@@ -17,13 +17,32 @@
 
 	<br>	
 	<br>	
-	<button>	add</button>
 	<br>	
-	<button>Edit Curriculum</button>
+	<a href="<?site_url('do/courses/add')?>">Edit Curriculum</a>
 	<table >
+	<?php foreach ($get_curriculum as $curriculum): ?>
 		<thead>
 			<tr>
-				<th colspan="3">1st Year</th>
+				<th colspan="3"><?php
+					$curriculum['years'] ;
+					switch () {
+						case 1:
+
+							break;
+
+						case 2:
+
+							break;
+
+						case 3:
+
+							break;
+						
+						default:
+							# code...
+							break;
+					}
+				?> Year</th>
 			</tr>
 			<tr>
 				<th>Course Code</th>
@@ -31,6 +50,8 @@
 				<th>Units</th>
 			</tr>
 		</thead>
+	<?php endforeach; ?>
+		<!-- 
 		<tbody>
 			<tr>
 				<td>CS101</td>
@@ -54,7 +75,7 @@
 				<td>Introduction to Programming in C#</td>
 				<td>3</td>
 			</tr>
-		</tbody>
+		</tbody> -->
 	</table>
 
 </body>

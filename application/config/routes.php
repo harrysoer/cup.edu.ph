@@ -118,7 +118,10 @@ $route['do/login']		  			 = 'portal_do_login/index';
 $route['do/logout']		  			 = 'portal_do/logout';
 $route['do/login/status']			 = 'portal_do_login/login';
 $route['do/index']  			=  'portal_do/index';
+
 $route['do/courses']  			=  'portal_do/courses';
+$route['do/courses/add']  			=  'portal_do/addCourse';
+
 $route['do/curriculum']			=  'portal_do/view_curriculum';
 $route['do/curriculum/(:any)']	=  'portal_do/view_curriculum/$1';
 $route['do/schedules'] 		    =  'portal_do/index';

@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Portal_DO extends CI_Controller {
 
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -33,6 +34,28 @@ class Portal_DO extends CI_Controller {
 
 	}
 
+
+	public function addCourse(){
+	
+		//validate form input
+		
+		$this->form_validation->set_rules( 'course', 'Course', 'trim|required|is_unique[portal_courses.course_name]', array('is_unique' => 'This Course Name already exists. Please choose another one.')); 
+		$this->form_validation->set_rules('years', 'Year', 'trim|required|numeric|min_length[1]');
+		$this->form_validation->set_rules('abbrv', 'Abbriviation', 'trim|required'); 
+
+		if($this->form_validation->run() === false){
+			$this->load->view('portal/do/add_course');
+		}
+		else{
+			$course = $this->input->post('course') ;
+			$years = $this->input->post('years') ;
+			$abbrv = $this->input->post('abbrv') ;
+			
+			$this->do->add_course($course, $years ,$abbrv);
+			redirect('do/courses','refresh');
+		}
+	}
+
 	public function index()
 	{
 		$data['get_courses'] = $this->do->get_courses();
@@ -45,9 +68,9 @@ class Portal_DO extends CI_Controller {
 		$this->load->view('portal/do/courses', $data);
 	}
 
-	public function view_curriculum()
+	public function view_curriculum($id=null)
 	{
-		$data['get_curriculum'] = $this->do->get_curriculum();
+		$data['get_curriculum'] = $this->do->get_curriculum($id);
 		$this->load->view('portal/do/curriculum', $data);
 	}
 

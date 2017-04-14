@@ -38,18 +38,36 @@ class Portal_DO_M extends CI_Model {
 
 	
 	public function get_courses(){
-		$college_dept=NULL;
-		$query = $this->db->get_where('portal_courses', array('college_dept' => $college_dept));
-        return $query->row_array();
+		$college_dept = $this->session->college_dept;
+		$query 		  = $this->db->get_where('portal_courses', array('college_dept' => $college_dept));
+        return $query->result_array();
 	}
 	
+	public function add_course($course, $years ,$abbrv){
+		
+		 $data = array(
+            'course_name' => $course,
+            'abbrv'	  	  => $abbrv,
+            'college_dept'=> $this->session->college_dept,
+            'years' 	  => $years,
+           
+        );
 
+		return   $this->db->insert('portal_courses', $data);
+	}
 
+	public function get_curriculum($id=0){
+			
+		$college_dept = $this->session->college_dept;
+		
+		if ($id===0) {
+			$query = $this->db->get_where('portal_curriculums', array('college_dept' => $college_dept));
+	        return $query->result_array();
+		}
 
-	public function get_curriculum(){
-		$college_dept=NULL;
-		$query = $this->db->get_where('portal_curriculums', array('college_dept' => $college_dept));
-        return $query->row_array();
+		$query = $this->db->get_where('portal_curriculums', array('id' => $id,'college_dept'=>$college_dept));
+        return $query->result_array();
+
 	}
 
 }

@@ -17,18 +17,26 @@
 <br>
 <h2>Courses List</h2>
 
+<a href="<?=site_url('do/courses/add')?>">ADD Course</a>
 	<table >
 		<thead>
 			<tr>
 				<th>Courses</th>
+				<th>Abbriviation</th>
+				<th>Years</th>
 				<th>Action</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>Bachelor's Science of Information Technology </td>
-				<td><a href="<?=site_url('do/view_curriculum/id/1')?>">View Curricullum</a></td>
-			</tr>
+
+			<?php foreach ($get_courses as $course): ?>
+				<tr>
+					<th><?=$course['course_name']?></th>
+					<th><?=$course['abbrv']?></th>
+					<th><?=$course['years']?></th>
+					<th><a href="<?=site_url('do/curriculum/').$course['course_id']?>">view curriculum</a></th>
+				</tr>
+			<?php endforeach; ?>
 		</tbody>
 	</table>
 </body>
