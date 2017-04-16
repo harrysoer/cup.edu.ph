@@ -107,6 +107,10 @@ $route['admin/portal/school_year/add'] 	= 'admin_portal/add_school_year';
 
 $route['admin/portal/students']	= 'admin_portal/student';
 
+$route['admin/portal/deans_office']	= 'admin_portal/do';
+$route['admin/portal/do/add']	= 'admin_portal/add_do';
+$route['admin/portal/do/delete/(:any)']	= 'admin_portal/delete_do/$1';
+
 $route['forum']		  		   =  'forum/index';
 $route['forum/create']		   =  'forum/create_post';
 $route['forum/post/(:any)'] 		   =  'forum/read_post';

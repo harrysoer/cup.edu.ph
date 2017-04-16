@@ -20,28 +20,30 @@
 	<br>	
 	<a href="<?site_url('do/courses/add')?>">Edit Curriculum</a>
 	<table >
+
+	
 	<?php foreach ($get_curriculum as $curriculum): ?>
 		<thead>
 			<tr>
 				<th colspan="3"><?php
-					$curriculum['years'] ;
-					switch () {
-						case 1:
+					// $curriculum['years'] ;
+					// switch () {
+					// 	case 1:
+					// 		echo ."st";
+					// 		break;
 
-							break;
+					// 	case 2:
+					// 		echo ."nd";
+					// 		break;
 
-						case 2:
-
-							break;
-
-						case 3:
-
-							break;
+					// 	case 3:
+					// 		echo ."rd";
+					// 		break;
 						
-						default:
-							# code...
-							break;
-					}
+					// 	default:
+					// 		echo ."th";
+					// 		break;
+					// }
 				?> Year</th>
 			</tr>
 			<tr>

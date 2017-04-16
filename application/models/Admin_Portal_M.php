@@ -45,6 +45,33 @@ class Admin_Portal_M extends CI_Model {
 		return $query->result_array();
 	}
 
+	public function get_do(){
+		$query=$this->db->get('do_accounts');
+		return $query->result_array();
+	}
+
+	public function set_do($username=null ,$first_name=null ,$last_name=null  ,$college_dept=null){
+
+        $data = array(
+           'username'    =>$username,
+ 		   'first_name'	 =>$first_name,
+ 		   'last_name'	 =>$last_name,
+ 		   'college_dept'=>$college_dept,
+            
+        );
+
+        return $this->db->insert('do_accounts', $data);
+	}
+
+	public function delete_do($username){
+		$tables = array('do_accounts', 'users');
+
+		$this->db->where('username', $username);
+		$this->db->delete($tables);
+
+
+	}
+
 }
 
 /* End of file admin_Portal_M.php */

@@ -12,6 +12,7 @@ class Admin extends CI_Controller {
 		$this->load->model('adminForms_model', 'form');
 		$this->load->model('adminImageGallery_model', 'gallery');
 		$this->load->model('adminAlbum_model', 'album');
+		$this->load->model('Ion_auth_model');
 		$this->load->library(array('ion_auth','form_validation'));
 		$this->load->helper(array('url','language'));
 

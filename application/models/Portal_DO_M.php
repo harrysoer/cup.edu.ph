@@ -21,10 +21,13 @@ class Portal_DO_M extends CI_Model {
 	        ->row();
 
 	   if ($user) {
+		   	 $query = $this->db->get_where('portal_years', array('active' => 1));
+		   	 $year = $query->result_row();
 	         $logindata = [
 	             'first_name' => $user->first_name,
 	             'last_name' => $user->last_name,
 	             'college_dept' => $user->college_dept,
+	         	  
 	         ];
 	         $this->session
 	              ->set_userdata($logindata);
@@ -65,7 +68,7 @@ class Portal_DO_M extends CI_Model {
 	        return $query->result_array();
 		}
 
-		$query = $this->db->get_where('portal_curriculums', array('id' => $id,'college_dept'=>$college_dept));
+		$query = $this->db->get_where('portal_curriculums', array('course_id' => $id, 'college_dept'=>$college_dept));
         return $query->result_array();
 
 	}
