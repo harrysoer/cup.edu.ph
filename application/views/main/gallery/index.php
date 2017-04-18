@@ -24,9 +24,25 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
                 <li><a href="<?=site_url();?>">HOME</a></li>
-                <li class="active"><a href="<?=site_url('/about');?>">ABOUT US</a></li>
+                <li class="dropdown active"><a href="<?=site_url('/about');?>">ABOUT US</a>
+                  <ul class="dropdown-menu">
+                  <li><a href="<?=site_url('/about');?>">Our History</a></li>
+                  <li><a href="<?=site_url('/mvg');?>">Mission | Vision | Goals</a></li>
+                  <li><a href="<?=site_url('/adm');?>">Administrators</a></li>
+                  <li><a href="<?=site_url('/gallery');?>">Gallery</a></li>
+                  <li><a href="<?=site_url('/hymn');?>">C.U.P. Hymn</a></li>
+                  </ul>
+                </li>
                 <li><a href="<?=site_url('/admission');?>">ADMISSIONS</a></li>
-                <li><a href="<?=site_url('/academic');?>">ACADEMICS</a></li>
+                <li class="dropdown"><a href="<?=site_url('/academic');?>">ACADEMICS</a>
+                  <ul class="dropdown-menu">
+                  <li><a href="<?=site_url('/coact');?>">College of Office Administration and Computer Technology</a></li>
+                  <li><a href="<?=site_url('/cba');?>">College of Business Administration</a></li>
+                  <li><a href="<?=site_url('/coe');?>">College of Education</a></li>
+                  <li><a href="<?=site_url('/coas');?>">College of Arts and Sciences</a></li>
+                  <li><a href="<?=site_url('/conm');?>">College of Nursing and Midwifery</a></li>
+                  </ul>
+                </li>
                 <li><a href="<?=site_url('/studentlife');?>">STUDENT LIFE</a></li>                
                 <li><a href="<?=site_url('/portal/login');?>">STUDENT PORTAL</a></li>
               </ul>           
@@ -39,7 +55,7 @@
     <!--=========== END HEADER SECTION ================--> 
 
     <!--=========== BEGIN COURSE BANNER SECTION ================-->
-    <section id="imgBanner">
+    <section id="imgBanner2">
       <h2>Gallery</h2>
     </section>
     <!--=========== END COURSE BANNER SECTION ================-->
@@ -77,7 +93,7 @@
                   <li>
                     <div class="media">
                       <div class="media-body">
-                       <a href="<?=site_url('/gallery');?>"><span class="glyphicon glyphicon-picture fa-lg" style="padding-right: 13px;"></span>Gallery</a>              
+                       <a href="<?=site_url('/gallery');?>" style="color: #fdcd3d;"><span class="glyphicon glyphicon-picture fa-lg" style="padding-right: 13px;"></span>Gallery</a>              
                       </div>
                     </div>
                   </li>
@@ -99,7 +115,7 @@
           <div class="col-lg-8 col-md-8 col-sm-8">
             <div id="gallerySLide" class="gallery_area">
               <?php foreach ($get_imgs as $images): ?>
-                <a href="<?=base_url('uploads/gallery/').$images->file_name;?>" title="<?= $images->album_name;?>">
+                <a href="<?=base_url('uploads/gallery/').$images->file_name;?>" title="<?= $images->album_name;?>" style="width: 227px;">
                   <img class="gallery_img" src="<?=base_url('uploads/gallery/').$images->file_name?>" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
