@@ -70,7 +70,10 @@ class Portal_DO extends CI_Controller {
 
 	public function view_curriculum($id=null)
 	{
-		$data['get_curriculum'] = $this->do->get_curriculum($id);
+		$data['get_year1'] = $this->do->get_year1();
+		$data['get_year2'] = $this->do->get_year2();
+		$data['get_year3'] = $this->do->get_year3();
+		$data['get_year4'] = $this->do->get_year4();
 		$this->load->view('portal/do/curriculum', $data);
 	}
 

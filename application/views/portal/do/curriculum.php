@@ -18,66 +18,58 @@
 	<br>	
 	<br>	
 	<br>	
-	<a href="<?site_url('do/courses/add')?>">Edit Curriculum</a>
+	<a href="<?=site_url('do/subject/add')?>">Add Courses(Subjects)</a>
 	<table >
 
-	
-	<?php foreach ($get_curriculum as $curriculum): ?>
-		<thead>
+	<thead>
+		<?php foreach ($get_year1 as $year1): ?>
 			<tr>
-				<th colspan="3"><?php
-					// $curriculum['years'] ;
-					// switch () {
-					// 	case 1:
-					// 		echo ."st";
-					// 		break;
-
-					// 	case 2:
-					// 		echo ."nd";
-					// 		break;
-
-					// 	case 3:
-					// 		echo ."rd";
-					// 		break;
-						
-					// 	default:
-					// 		echo ."th";
-					// 		break;
-					// }
-				?> Year</th>
+				<th colspan="3"><?=$year1['year']?>st Year</th>
+			</tr>
+			<?php break;?>
+		<?php endforeach; ?>	
+			<tr>
+				<th>Course Code</th>
+				<th>Description</th>
+				<th>Units</th>
+			</tr>
+	</thead>
+	<tbody>
+		<?php foreach ($get_year1 as $year1): $year1_unit=+$year1['no_units']; ?>
+			<?php $year1_unit=$year1['no_units'];
+				  $year1_unit+=$year1_unit;
+			?>
+			<tr>
+				<td><?=$year1['subj_code']?></td>
+				<td><?=$year1['description']?></td>
+				<td><?=$year1['no_units']?></td>
+			</tr>	
+		<?php endforeach; ?>
+		<tr>
+			<th colspan="2">TOTAL UNITS</th>
+			<th><?=$year1_unit?></th>
+		</tr>
+	</tbody>
+	<!-- <thead>
+		<?php foreach ($get_year2 as $year2): ?>
+			<tr>
+				<th colspan="3"><?=$year2['year']?>st Year</th>
 			</tr>
 			<tr>
 				<th>Course Code</th>
 				<th>Description</th>
 				<th>Units</th>
 			</tr>
-		</thead>
-	<?php endforeach; ?>
-		<!-- 
-		<tbody>
+		<?php endforeach; ?>	
+		<?php foreach ($get_year2 as $year2): ?>
 			<tr>
-				<td>CS101</td>
-				<td>Introduction to computing</td>
-				<td>3</td>
-			</tr>
-		</tbody>
-		<thead>
-			<tr>
-				<th colspan="3">2nd Year</th>
-			</tr>
-			<tr>
-				<th>Course Code</th>
-				<th>Description</th>
-				<th>Units</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>CS102</td>
-				<td>Introduction to Programming in C#</td>
-				<td>3</td>
-			</tr>
-		</tbody> -->
+				<th><?=$year2['subj_code']?></th>
+				<th><?=$year2['description']?></th>
+				<th><?=$year2['no_units']?></th>
+			</tr>			
+		<?php endforeach; ?>
+	</thead> -->
+
 	</table>
 
 </body>

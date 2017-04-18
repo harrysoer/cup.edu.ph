@@ -128,6 +128,9 @@ $route['do/courses/add']  			=  'portal_do/addCourse';
 
 $route['do/curriculum']			=  'portal_do/view_curriculum';
 $route['do/curriculum/(:any)']	=  'portal_do/view_curriculum/$1';
+
+$route['do/subjects/add']		=  'portal_do/subjects_add';
+
 $route['do/schedules'] 		    =  'portal_do/index';
 $route['do/professors']		    =  'portal_do/index';
 $route['do/students']			=  'portal_do/index';
