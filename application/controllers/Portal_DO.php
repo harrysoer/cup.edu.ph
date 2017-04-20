@@ -56,6 +56,39 @@ class Portal_DO extends CI_Controller {
 		}
 	}
 
+	public function addSubjects($id=0){
+	
+		//validate form input
+		
+		$this->form_validation->set_rules( 'subject_id[]', 'Subject ID', 'trim|required|is_unique[portal_subjects.subj_code]', array('is_unique' => 'This Course Name already exists. Please choose another one.')); 
+		$this->form_validation->set_rules('description[]', 'Description', 'trim|required'); 
+		$this->form_validation->set_rules('units[]', 'Number of Units', 'trim|required'); 
+		$this->form_validation->set_rules('sem[]', 'Number of Units', 'trim|required'); 
+		$this->form_validation->set_rules('year[]', 'Year', 'trim|required|numeric|min_length[1]');
+
+		if($this->form_validation->run() == false){
+			$this->load->view('portal/do/add_subject', array('url' => $this->uri->segment(4)));
+		}
+		else{
+			$limit = $this->input->post('count');	
+			$count = 0;
+		
+			do {
+				$subject_id = $this->input->post('subject_id['.$count.']') ;
+				$description = $this->input->post('description['.$count.']') ;
+				$units = $this->input->post('units['.$count.']') ;
+				$sem = $this->input->post('sem['.$count.']') ;
+				$year = $this->input->post('year['.$count.']') ;
+
+				$this->do->add_subjects($subject_id, $description, $units, $sem, $year);
+				$count++;
+
+			} while ($count<$limit);
+			
+			redirect('do/courses','refresh');
+		}
+	}
+
 	public function index()
 	{
 		$data['get_courses'] = $this->do->get_courses();

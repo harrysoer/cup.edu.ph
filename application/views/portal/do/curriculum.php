@@ -18,7 +18,7 @@
 	<br>	
 	<br>	
 	<br>	
-	<a href="<?=site_url('do/subject/add')?>">Add Courses(Subjects)</a>
+	<a href="<?=site_url('do/subjects/add')?>">Add Courses(Subjects)</a>
 	<table >
 
 	<thead>
@@ -26,7 +26,7 @@
 			<tr>
 				<th colspan="3"><?=$year1['year']?>st Year</th>
 			</tr>
-			<?php break;?>
+			<?php  $year1_total = 0; break;?>
 		<?php endforeach; ?>	
 			<tr>
 				<th>Course Code</th>
@@ -36,18 +36,19 @@
 	</thead>
 	<tbody>
 		<?php foreach ($get_year1 as $year1): $year1_unit=+$year1['no_units']; ?>
-			<?php $year1_unit=$year1['no_units'];
-				  $year1_unit+=$year1_unit;
+			<?php 	
+				  $year1_unit = $year1['no_units'];
+				  $year1_total += $year1_unit ;		
 			?>
 			<tr>
 				<td><?=$year1['subj_code']?></td>
 				<td><?=$year1['description']?></td>
-				<td><?=$year1['no_units']?></td>
+				<td><?=$year1_unit?></td>
 			</tr>	
 		<?php endforeach; ?>
 		<tr>
 			<th colspan="2">TOTAL UNITS</th>
-			<th><?=$year1_unit?></th>
+			<th><?=$year1_total?></th>
 		</tr>
 	</tbody>
 	<!-- <thead>
