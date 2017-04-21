@@ -642,6 +642,7 @@
                     <div class="singCourse_content">
                     <h3 class="singCourse_title">Downloadable Files</a></h3>
                     <p>Here are some documents / forms to help you out for your admission with us.</p>
+                  
                     </div>
                   </div>
                 </div>
@@ -657,6 +658,11 @@
                           </div>
             
                             <div class="modal-body">
+                              <ol >
+                              <?php foreach ($get_downloads as $downloads): ?>
+                                <li style="text-align: justify;"><a href="<?=site_url('downloads/'). $downloads['file_name']?>"><?=$downloads['file_description']?> </a></li><br>
+                              <?php endforeach ?>
+                              </ol> 
                             </div>
             
                             <div class="modal-footer">

@@ -53,6 +53,9 @@ $route['default_controller'] ='CupWebsite/index';
 $route['about'] ='CupWebsite/about';
 $route['academic'] ='CupWebsite/academic';
 $route['admission'] ='CupWebsite/admission';
+
+$route['downloads/(:any)'] ='CupWebsite/download/$1';
+
 $route['studentlife'] ='CupWebsite/studentlife';
 
 $route['gallery'] ='CupWebsite/gallery';

@@ -43,10 +43,22 @@ class CupWebsite extends CI_Controller{
 	public function admission()
 	{
 		$data['title']="Admissions";
+
+		$data['get_downloads'] = $this->gallery->get_downloadables();
+
 		$this->load->view('main/template/header',$data);
 		$this->load->view('main/template/js');
 		$this->load->view('main/admission/index');
 		$this->load->view('main/template/footer');
+	}
+
+	public function download($filename = NULL) {
+	    // load download helder
+	    $this->load->helper('download');
+	    // read file contents
+	    $data = file_get_contents(base_url().'/uploads/forms/'.$filename);
+
+	    force_download($filename, $data);
 	}
 
 	public function studentlife()

@@ -27,6 +27,11 @@ class CUPGallery_model extends CI_Model
 		return false;
 	}
 
+	public function	get_downloadables(){
+		$query	= $this->db->get('files');
+		return	$query->result_array();	
+	}		
+
 	function count_images()
     {
       return $this->db->count_all('gallery_images');
