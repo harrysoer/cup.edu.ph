@@ -129,10 +129,10 @@ $route['do/index']  			=  'portal_do/index';
 $route['do/courses']  			=  'portal_do/courses';
 $route['do/courses/add']  			=  'portal_do/addCourse';
 
-$route['do/curriculum']			=  'portal_do/view_curriculum';
-$route['do/curriculum/(:any)']	=  'portal_do/view_curriculum/$1';
+$route['do/curriculums/(:any)']				=  'portal_do/list_curriculums/$1';
+$route['do/curriculum/(:any)/(:any)']	=  'portal_do/view_curriculum/$1/$cu';
 
-$route['do/subjects/add/(:any)'] =  'portal_do/addSubjects/$1';
+$route['do/subjects/add/(:any)/(:any)'] =  'portal_do/addSubjects/$1/$cu';
 
 $route['do/schedules'] 		    =  'portal_do/index';
 $route['do/professors']		    =  'portal_do/index';

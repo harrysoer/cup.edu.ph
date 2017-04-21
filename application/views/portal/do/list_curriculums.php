@@ -17,24 +17,20 @@
 <br>
 <h2>Courses List</h2>
 
-<a href="<?=site_url('do/courses/add')?>">ADD Course</a>
+<a href="<?=site_url('do/courses/add')?>">ADD Curriculum</a>
 	<table >
 		<thead>
 			<tr>
-				<th>Courses</th>
-				<th>Abbriviation</th>
-				<th>Years</th>
+				<th>Curriculum Name</th>
 				<th>Action</th>
 			</tr>
 		</thead>
 		<tbody>
 
-			<?php foreach ($get_courses as $course): ?>
+			<?php foreach ($get_curriculum as $curriculum): ?>
 				<tr>
-					<th><?=$course['course_name']?></th>
-					<th><?=$course['abbrv']?></th>
-					<th><?=$course['years']?></th>
-					<th><a href="<?=site_url('do/curriculums/').$course['course_id']?>">view curriculum</a></th>
+					<th><?=$curriculum['curriculum_name']?></th>
+					<th><a href="<?=site_url('do/curriculum/').$this->uri->segment(3).'/'.$curriculum['curriculum_id']?>">view curriculum</a></th>
 				</tr>
 			<?php endforeach; ?>
 		</tbody>

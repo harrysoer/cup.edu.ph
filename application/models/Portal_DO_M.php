@@ -76,45 +76,84 @@ class Portal_DO_M extends CI_Model {
 		return   $this->db->insert('portal_subjects', $data);
 	}
 
-	public function get_curriculum($id=0){
+	public	function list_curriculums(){
+		$college_dept = $this->session->college_dept;
+		$id = $this->uri->segment(3);
+		$query = $this->db->get_where('portal_curriculums', array('college_dept' => $college_dept ,  ));
+		return $query->result_array();
+
+	}
+
+	public function get_curriculum($id=null, $cu=null){
 			
 		$college_dept = $this->session->college_dept;
-		
+		$id = $this->uri->segment(3);
+		$cu = $this->uri->segment(4);
+
 		if ($id===0) {
 			$query = $this->db->get_where('portal_curriculums', array('college_dept' => $college_dept));
 	        return $query->result_array();
 		}
 
-		$query = $this->db->get_where('portal_curriculums', array('course_id' => $id, 'college_dept'=>$college_dept));
+		$query = $this->db->get_where('portal_curriculums', array('course_id' => $id, 'curriculum_id'=>$cu, 'college_dept'=>$college_dept));
         return $query->result_array();
 
 	}
 
-	public function get_year1(){
+	public function get_year1_1(){
 		$id = $this->uri->segment(3);
-		$query = $this->db->get_where('portal_subjects', array('course_id' => $id, 'year' => 1));
+		$curriculum = $this->uri->segment(4);
+		$query = $this->db->get_where('portal_subjects', array('course_id' => $id, 'curriculum_id' => $curriculum, 'year' => 1, 'sem' => 1));
 		return $query->result_array();
 	}
 
-	public function get_year2(){
+	public function get_year1_2(){
 		$id = $this->uri->segment(3);
-		$query = $this->db->get_where('portal_subjects', array('course_id' => $id, 'year' => 2));
+		$curriculum = $this->uri->segment(4);
+		$query = $this->db->get_where('portal_subjects', array('course_id' => $id, 'curriculum_id' => $curriculum, 'year' => 1, 'sem' => 2));
 		return $query->result_array();
 	}
 
-	public function get_year3(){
+	public function get_year2_1(){
 		$id = $this->uri->segment(3);
-		if ($query = $this->db->get_where('portal_subjects', array('course_id' => $id, 'year' => 3))
-		) 
-		{
-			return $query->result_array();
-		}
-		return false;
+		$curriculum = $this->uri->segment(4);
+		$query = $this->db->get_where('portal_subjects', array('course_id' => $id, 'curriculum_id' => $curriculum, 'year' => 2, 'sem' => 1));
+		return $query->result_array();
 	}
 
-	public function get_year4(){
+	public function get_year2_2(){
 		$id = $this->uri->segment(3);
-		$query = $this->db->get_where('portal_subjects', array('course_id' => $id, 'year' => 4));
+		$curriculum = $this->uri->segment(4);
+		$query = $this->db->get_where('portal_subjects', array('course_id' => $id, 'curriculum_id' => $curriculum, 'year' => 2, 'sem' => 2));
+		return $query->result_array();
+	}
+
+	public function get_year3_1(){
+		$id = $this->uri->segment(3);
+		$curriculum = $this->uri->segment(4);
+		$query = $this->db->get_where('portal_subjects', array('course_id' => $id, 'curriculum_id' => $curriculum, 'year' => 3, 'sem' => 1));
+
+		return $query->result_array();
+	}
+
+	public function get_year3_2(){
+		$id = $this->uri->segment(3);
+		$curriculum = $this->uri->segment(4);
+		$query = $this->db->get_where('portal_subjects', array('course_id' => $id, 'curriculum_id' => $curriculum, 'year' => 3, 'sem' => 2));		
+		return $query->result_array();
+	}
+
+	public function get_year4_1(){
+		$id = $this->uri->segment(3);
+		$curriculum = $this->uri->segment(4);
+		$query = $this->db->get_where('portal_subjects', array('course_id' => $id, 'curriculum_id' => $curriculum, 'year' => 4, 'sem' => 1));
+		return $query->result_array();
+	}
+
+	public function get_year4_2(){
+		$id = $this->uri->segment(3);
+		$curriculum = $this->uri->segment(4);
+		$query = $this->db->get_where('portal_subjects', array('course_id' => $id, 'curriculum_id' => $curriculum, 'year' => 4, 'sem' => 2));
 		return $query->result_array();
 	}
 

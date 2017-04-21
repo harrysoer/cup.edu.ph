@@ -56,7 +56,7 @@ class Portal_DO extends CI_Controller {
 		}
 	}
 
-	public function addSubjects($id=0){
+	public function addSubjects($id=null, $cu=null){
 	
 		//validate form input
 		
@@ -101,12 +101,23 @@ class Portal_DO extends CI_Controller {
 		$this->load->view('portal/do/courses', $data);
 	}
 
-	public function view_curriculum($id=null)
+	
+	public function list_curriculums($id=null, $cu=null)
 	{
-		$data['get_year1'] = $this->do->get_year1();
-		$data['get_year2'] = $this->do->get_year2();
-		$data['get_year3'] = $this->do->get_year3();
-		$data['get_year4'] = $this->do->get_year4();
+		$data['get_curriculum'] = $this->do->list_curriculums();
+		$this->load->view('portal/do/list_curriculums', $data);
+	}
+
+	public function view_curriculum($id=null, $cu=null)
+	{
+		$data['get_year1_1'] = $this->do->get_year1_1();
+		$data['get_year1_2'] = $this->do->get_year1_2();
+		$data['get_year2_1'] = $this->do->get_year2_1();
+		$data['get_year2_2'] = $this->do->get_year2_2();
+		$data['get_year3_1'] = $this->do->get_year3_1();
+		$data['get_year3_2'] = $this->do->get_year3_2();
+		$data['get_year4_1'] = $this->do->get_year4_1();
+		$data['get_year4_2'] = $this->do->get_year4_2();
 		$this->load->view('portal/do/curriculum', $data);
 	}
 
