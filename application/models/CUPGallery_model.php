@@ -27,6 +27,58 @@ class CUPGallery_model extends CI_Model
 		return false;
 	}
 
+	public function get_slug($slug){
+        $offset = ($id-1)*$limit;
+        $this->db->order_by('id', 'DESC');
+		$query = $this->db->get( 'gallery_images', $limit, $offset );
+		
+		if ($query->num_rows() > 0) {
+			
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+
+			return $data;
+		}
+
+		return false;
+	}
+
+
+	public function get_albums($limit , $id){
+        $offset = ($id-1)*$limit;
+        $this->db->order_by('id', 'DESC');
+		$query = $this->db->get( 'gallery_images', $limit, $offset );
+		
+		if ($query->num_rows() > 0) {
+			
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+
+			return $data;
+		}
+
+		return false;
+	}
+
+	public function get_cover_albums($limit , $id){
+        $offset = ($id-1)*$limit;
+        $this->db->order_by('id', 'DESC');
+		$query = $this->db->get( 'gallery_images', $limit, $offset );
+		
+		if ($query->num_rows() > 0) {
+			
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+
+			return $data;
+		}
+
+		return false;
+	}
+
 	public function	get_downloadables(){
 		$query	= $this->db->get('files');
 		return	$query->result_array();	

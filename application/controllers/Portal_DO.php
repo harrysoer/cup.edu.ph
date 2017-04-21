@@ -57,9 +57,9 @@ class Portal_DO extends CI_Controller {
 	}
 
 	public function addSubjects($id=null, $cu=null){
-	
+		$url = $this->uri->segment(4) ;
+		$cu	= $this->uri->segment(5);
 		//validate form input
-		
 		$this->form_validation->set_rules( 'subject_id[]', 'Subject ID', 'trim|required|is_unique[portal_subjects.subj_code]', array('is_unique' => 'This Course Name already exists. Please choose another one.')); 
 		$this->form_validation->set_rules('description[]', 'Description', 'trim|required'); 
 		$this->form_validation->set_rules('units[]', 'Number of Units', 'trim|required'); 
@@ -67,7 +67,7 @@ class Portal_DO extends CI_Controller {
 		$this->form_validation->set_rules('year[]', 'Year', 'trim|required|numeric|min_length[1]');
 
 		if($this->form_validation->run() == false){
-			$this->load->view('portal/do/add_subject', array('url' => $this->uri->segment(4)));
+			$this->load->view('portal/do/add_subject', array('url' => $url , 'cu' => $cu  ));
 		}
 		else{
 			$limit = $this->input->post('count');	
@@ -85,7 +85,7 @@ class Portal_DO extends CI_Controller {
 
 			} while ($count<$limit);
 			
-			redirect('do/courses','refresh');
+			redirect('do/curriculum/'.$url.'/'.$cu ,'refresh');
 		}
 	}
 

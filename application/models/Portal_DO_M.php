@@ -62,6 +62,7 @@ class Portal_DO_M extends CI_Model {
 
 	public function add_subjects($subject_id, $description, $units, $sem, $year){
 		$course_id	=$this->uri->segment(4);
+		$curriculum_id = $this->uri->segment(5);
 		 $data = array(
             'subj_code'   => $subject_id,
             'description' => $description,
@@ -70,7 +71,7 @@ class Portal_DO_M extends CI_Model {
             'year' 	 	  => $year,
             'college_dept'=> $this->session->college_dept,
             'course_id'	  => $course_id	,
-           
+           	'curriculum_id' => $curriculum_id	,
         );
 
 		return   $this->db->insert('portal_subjects', $data);

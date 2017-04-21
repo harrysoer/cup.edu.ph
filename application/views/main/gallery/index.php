@@ -115,10 +115,17 @@
           <div class="col-lg-8 col-md-8 col-sm-8">
             <div id="gallerySLide" class="gallery_area">
               <?php foreach ($get_imgs as $images): ?>
+                <?php if ($images->filen_name==false):
+                  
+                 ?>
+                  
+                <?php else: ?>
+                  
                 <a href="<?=base_url('uploads/gallery/').$images->file_name;?>" title="<?= $images->album_name;?>" style="width: 227px;">
                   <img class="gallery_img" src="<?=base_url('uploads/gallery/').$images->file_name?>" alt="img" />
                   <span class="view_btn">View</span>
                 </a>
+              <?php endif ?>
               <?php endforeach?>
             </div>
                 <div class="col-lg-12 col-md-12 col-sm-12"><?=$pages?></div>  

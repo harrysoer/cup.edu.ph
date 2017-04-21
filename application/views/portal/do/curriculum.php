@@ -63,7 +63,7 @@
 				<th colspan="3"><?=$year1_2['year']?>st Year</th>
 			</tr>
 			<tr>
-				<th colspan="3"><?=$year1_2['sem']?>nd Year</th>
+				<th colspan="3"><?=$year1_2['sem']?>nd Sem</th>
 			</tr>
 			<tr>
 				<th>Course Code</th>
@@ -145,7 +145,7 @@
 				<th colspan="3"><?=$year2_2['year']?>nd Year</th>
 			</tr>
 			<tr>
-				<th colspan="3"><?=$year2_2['sem']?>nd Year</th>
+				<th colspan="3"><?=$year2_2['sem']?>nd Sem</th>
 			</tr>
 			<tr>
 				<th>Course Code</th>
@@ -225,7 +225,7 @@
 				<th colspan="3"><?=$year3_2['year']?>rd Year</th>
 			</tr>
 			<tr>
-				<th colspan="3"><?=$year3_2['sem']?>nd Year</th>
+				<th colspan="3"><?=$year3_2['sem']?>nd Sem</th>
 			</tr>
 			<tr>
 				<th>Course Code</th>
@@ -305,7 +305,7 @@
 				<th colspan="3"><?=$year3_2['year']?>rd Year</th>
 			</tr>
 			<tr>
-				<th colspan="3"><?=$year3_2['sem']?>nd Year</th>
+				<th colspan="3"><?=$year3_2['sem']?>nd Sem</th>
 			</tr>
 			<tr>
 				<th>Course Code</th>

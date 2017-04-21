@@ -72,32 +72,39 @@ class CupWebsite extends CI_Controller{
 
 	public function gallery()
 	{
-		$config = array();
-		$config['base_url'] 	= site_url('gallery');
-		$config['total_rows'] 	= $this->gallery->count_images();
-		$config['per_page'] 	= 15;
-		$config["uri_segment"]  = 2;
-		$config['use_page_numbers'] = TRUE;
-
-		$this->pagination->initialize($config);
-
-		if($this->uri->segment(2)){
-			$page = ($this->uri->segment(2)) ;
+		$slug = $this->uri->segment(2);
+		if ($this->gallery->count_images($slug)) {
+			# code...
 		}
-
 		else{
-			$page = 1;
+			
+			$config = array();
+			$config['base_url'] 	= site_url('gallery');
+			$config['total_rows'] 	= $this->gallery->count_images();
+			$config['per_page'] 	= 15;
+			$config["uri_segment"]  = 2;
+			$config['use_page_numbers'] = TRUE;
+	
+			$this->pagination->initialize($config);
+	
+			if($this->uri->segment(2)){
+				$page = ($this->uri->segment(2)) ;
+			}
+	
+			else{
+				$page = 1;
+			}
+	
+			$data['pages'] 		=   $this->pagination->create_links();
+			$data['title'] 		=  "AboutUs/Gallery";	
+			$data['get_imgs']	=  $this->gallery->get_images($config["per_page"], $page);
+	
+			$this->load->view('main/template/header',$data);
+			$this->load->view('main/template/js');
+			$this->load->view('main/gallery/index',$data);
+			$this->load->view('main/template/footer');
 		}
-
-		$data['pages'] 		=   $this->pagination->create_links();
-		$data['title'] 		=  "AboutUs/Gallery";	
-		$data['get_imgs']	=  $this->gallery->get_images($config["per_page"], $page);
-
-		$this->load->view('main/template/header',$data);
-		$this->load->view('main/template/js');
-		$this->load->view('main/gallery/index',$data);
-		$this->load->view('main/template/footer');
-	}
+	}	
 
 	public function news()
 	{

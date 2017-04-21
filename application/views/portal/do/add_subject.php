@@ -67,7 +67,7 @@
 			</div>
 	<?php endif; ?>
 
-	<?=form_open('do/subjects/add/'.$url)?>
+	<?=form_open('do/subjects/add/'.$url.'/'.$cu)?>
 	<fieldset>
 	<legend><h2>Add Courses/Subjects</h2></legend>
 	
