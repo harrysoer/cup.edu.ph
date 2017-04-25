@@ -123,7 +123,7 @@
                   <div class="single_blog">
                     <div class="blogimg_container">
                       <a>
-                        <img src="<?=base_url('assets/for_main/img/ab.jpg');?>"/>   
+                        <img src="<?=base_url('assets/for_main/img/ab.jpg');?>" style="max-height: 510px;"/>   
                       </a>
                     </div>
                     <h2 class="blog_title">C.U.P. Through the Years...</h2>

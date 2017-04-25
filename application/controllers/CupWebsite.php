@@ -66,38 +66,66 @@ class CupWebsite extends CI_Controller{
 		$data['title']="StudentLife";
 		$this->load->view('main/template/header',$data);
 		$this->load->view('main/template/js');
-		$this->load->view('main/studentLife/index');
+		$this->load->view('main/studentlife/index');
 		$this->load->view('main/template/footer');
 	}
 
 	public function gallery()
 	{
 		$slug = $this->uri->segment(2);
-		if ($this->gallery->count_images($slug)) {
-			# code...
-		}
-		else{
+		if ($this->gallery->get_slug($slug)) {
 			
 			$config = array();
-			$config['base_url'] 	= site_url('gallery');
+			$config['base_url'] 	= site_url('gallery/'.$slug.'/');
+			$config['first_url'] 	= 1;
 			$config['total_rows'] 	= $this->gallery->count_images();
+			$config['per_page'] 	= 9;
+			$config["uri_segment"]  = 3;
+			$config['use_page_numbers'] = TRUE;
+	
+			$this->pagination->initialize($config);
+			
+			
+			if( $this->uri->segment(3)){
+				$page = $this->uri->segment(3) ;
+			}
+			else{
+				$page=1;
+			}
+	
+			$data['pages'] 		=   $this->pagination->create_links();
+			$data['title'] 		=  "Gallery";	
+			$data['get_imgs']	=  $this->gallery->get_images($config["per_page"], $page, $slug);
+	
+			$this->load->view('main/template/header',$data);
+			$this->load->view('main/template/js');
+			$this->load->view('main/gallery/view_album',$data);
+			$this->load->view('main/template/footer');
+		}
+		else{
+
+			$config = array();
+			$config['base_url'] 	= site_url('gallery/');
+			$config['first_url'] 	= 1;
+			$config['total_rows'] 	= $this->gallery->count_albums();
 			$config['per_page'] 	= 15;
 			$config["uri_segment"]  = 2;
 			$config['use_page_numbers'] = TRUE;
 	
 			$this->pagination->initialize($config);
-	
-			if($this->uri->segment(2)){
-				$page = ($this->uri->segment(2)) ;
+			
+			
+			if( $this->uri->segment(2)){
+				$page = $this->uri->segment(2) ;
 			}
-	
 			else{
-				$page = 1;
+				$page=1;
 			}
+		
 	
 			$data['pages'] 		=   $this->pagination->create_links();
-			$data['title'] 		=  "AboutUs/Gallery";	
-			$data['get_imgs']	=  $this->gallery->get_images($config["per_page"], $page);
+			$data['title'] 		=  "Gallery";	
+			$data['get_album']	=  $this->gallery->get_albums();
 	
 			$this->load->view('main/template/header',$data);
 			$this->load->view('main/template/js');
@@ -268,4 +296,14 @@ class CupWebsite extends CI_Controller{
 		$this->load->view('main/studentlife/promise/index');
 		$this->load->view('main/template/footer');
 	}
+
+	public function calendar()
+	{
+		$data['title']="Academic Calendar";
+		$this->load->view('main/template/header',$data);
+		$this->load->view('main/template/js');
+		$this->load->view('main/academic/calendar/index');
+		$this->load->view('main/template/footer');
+	}
+	
 }

@@ -49,7 +49,7 @@ class Admin extends CI_Controller {
 
 	//Add, Delete, Update, and View Gallery
 
-	public function addAlbum($data=null){
+	public function addAlbum(){
 
         $this->form_validation->set_rules('album_name', 'Album Title', 'trim|required');
 
@@ -63,7 +63,7 @@ class Admin extends CI_Controller {
 		}
 		else
 		{
-			$album_name = $this->album->setAlbumName($data);
+			$album_name = $this->album->setAlbumName();
 			// redirect( site_url('admin/gallery/albums/upload'));
 			$this->uploadAlbum($album_name);
 		}
@@ -220,8 +220,7 @@ class Admin extends CI_Controller {
 			$link = NULL;#site_url('admin/form/revise-upload'.$forms->id); 
 
 			//add html for action
-			$row[] = '<a class="btn btn-sm btn-primary" href="'.$link.'" title="Edit")">
-					<i class="glyphicon glyphicon-pencil"></i> Edit</a>
+			$row[] = '
 				  <a class="btn btn-sm btn-danger " href="javascript:void(0)" title="Hapus" onclick="delete_person('."'".$forms->id."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
 		
 			$data[] = $row;

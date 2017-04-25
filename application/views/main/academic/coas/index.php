@@ -128,8 +128,13 @@
                   </li>
                   <li>
                     <div class="media">
-                      <div class="media-body">
-                       <a href="<?=site_url('/acadar');?>"><span class="glyphicon glyphicon-calendar fa-lg" style="padding-right: 48px; padding-left: 43px;"></span>Academic Calendar</a>
+                      <div class="media-left">
+                        <a href="#" class="news_img">
+                          <img alt="img" src="<?=base_url('assets/for_main/img/calendar.jpg');?>" class="media-object">
+                        </a>
+                      </div>
+                      <div class="media-body" style="padding-top: 17px;">
+                       <a href="<?=site_url('/acadcal');?>">Academic Calendar</a>
                       </div>
                     </div>
                   </li> 
@@ -173,8 +178,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Courses Offered
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 380px;"></i>
-                        
                     </a>
                 </h4>
             </div>
@@ -193,14 +196,112 @@
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     C.A.S Organization
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 354px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/college/d1.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> PROF. MARCUS GERONGA, MAEd</b></h5>
+                          <h5><i> Dean </i></h5>
+                        </div><br></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/d2.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> PROF. EROLL A. BEJA, LPT, MAEd</b></h5>
+                          <h5><i> Department Head, English </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/d3.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> ENGR. ROMMEL HERNANDEZ, MAEd</b></h5>
+                          <h5><i> Department Head, Mathematics </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/d4.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> PROF. ROSVIBETH ABLON, MAEd</b></h5>
+                          <h5><i> Department Head, Science </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/d5.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> PROF. HONEYLIZA POBLETE, MAEd</b></h5>
+                          <h5><i> Department Head, AHRM </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/d6.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> PROF. ELIGIA LOPENA, LPT, MAEd</b></h5>
+                          <h5><i> Department Head, Filipino </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/d7.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> DR. GLORIA Y. YAN, LPT, Ph.D.</b></h5>
+                          <h5><i> Department Head, Social / Behavioral Science </i></h5>
+                        </div></center>
+
+                        <center><div>
+                        <img src="<?=base_url('/assets/for_main/img/college/d8.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> PROF. ALAN BOLANGON, MAEd</b></h5>
+                          <h5><i> Department Head, BPG </i></h5>
+                        </div></center><br>
+
+                        <center><h5 style="padding-bottom: 20px;"><b> Members of the CAS Faculty </b></h5></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coas/1.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> AQUILINA REDO, LPT, MAEd</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coas/2.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> BENJAMIN QUILATAN, LPT, MAEd </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coas/3.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> EMMANUEL LUNA, MPG </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coas/4.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> LEAH GAY CABULISAN, MAEd </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coas/5.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> MARIFE MAGDATO, LPT, MAEd </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coas/6.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> MA. THERESA CAHINHINAN, MAEd</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coas/7.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> MARTHA DELA PAZ, MBA </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coas/8.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> MARTIN ELWOOD RIVERA, MAEd </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coas/9.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> MELVIN CRISOSTOMO, LPT, MAEd </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coas/10.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ENGR. SATURNINO JUNIO, MAEd</b></h5>
+                        </div></center>
+
                 </div>
             </div>
         </div>

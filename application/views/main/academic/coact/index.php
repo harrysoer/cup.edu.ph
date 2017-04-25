@@ -128,8 +128,13 @@
                   </li>
                   <li>
                     <div class="media">
-                      <div class="media-body">
-                       <a href="<?=site_url('/acadar');?>"><span class="glyphicon glyphicon-calendar fa-lg" style="padding-right: 48px; padding-left: 43px;"></span>Academic Calendar</a>
+                      <div class="media-left">
+                        <a href="#" class="news_img">
+                          <img alt="img" src="<?=base_url('assets/for_main/img/calendar.jpg');?>" class="media-object">
+                        </a>
+                      </div>
+                      <div class="media-body" style="padding-top: 17px;">
+                       <a href="<?=site_url('/calendar');?>">Academic Calendar</a>
                       </div>
                     </div>
                   </li> 
@@ -171,8 +176,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Courses Offered
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 380px;"></i>
-                        
                     </a>
                 </h4>
             </div>
@@ -191,14 +194,74 @@
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     C.O.A.C.T. Organization
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 319px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/college/a1.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> DR. MARIBEL R. GABUAT</b></h5>
+                          <h5><i> Dean </i></h5>
+                        </div><br>
+                      </center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/a2.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> PROF. CESAR CARREON </b></h5>
+                        <h5><i> Department Head, Computer Technology </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/a3.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> PROF. ELSIE C. CAMBA, Ed.D. </b></h5>
+                        <h5><i> Department Head, Office Administration </i></h5>
+                        </div></center>
+
+                        <center><h5 style="padding-top: 300px; padding-bottom: 20px;"><b> Members of the COACT Faculty </b></h5></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coact/1.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ROSEMARIE JUNIO, MAEd </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coact/2.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> MR. RONALD E. BAUTISTA </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coact/3.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ENGR. GYAN VICSON YAN </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coact/4.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> MR. PRIMITIVO ROSALES, LPT, MAEd </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coact/5.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> MS. GENALYN DELA CRUZ, MBA </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coact/6.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ALLAIN EDBERT VELASCO </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coact/7.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> NESTOR LAVIN </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coact/8.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ROGELIO JUNIO, MAEd</b></h5>
+                        </div></center>
+
+
                 </div>
             </div>
         </div>

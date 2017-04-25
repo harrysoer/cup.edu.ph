@@ -128,8 +128,13 @@
                   </li>
                   <li>
                     <div class="media">
-                      <div class="media-body">
-                       <a href="<?=site_url('/acadar');?>"><span class="glyphicon glyphicon-calendar fa-lg" style="padding-right: 48px; padding-left: 43px;"></span>Academic Calendar</a>
+                      <div class="media-left">
+                        <a href="#" class="news_img">
+                          <img alt="img" src="<?=base_url('assets/for_main/img/calendar.jpg');?>" class="media-object">
+                        </a>
+                      </div>
+                      <div class="media-body" style="padding-top: 17px;">
+                       <a href="<?=site_url('/acadcal');?>">Academic Calendar</a>
                       </div>
                     </div>
                   </li> 
@@ -196,7 +201,126 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/college/c1.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> DR. ANA MARIA V. BARBEITO, LPT, Ed.D.</b></h5>
+                          <h5><i> Dean </i></h5>
+                        </div><br>
+
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/college/c2.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> DR. ROSALINDA M. LLAMAS</b></h5>
+                          <h5><i> Department Head </i></h5>
+                        </div>
+                      </center><br>
+
+                      <center><h5 style="padding-bottom: 20px;"><b> Members of the CBA Faculty </b></h5></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/1.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ALICIA BENZON, MAEd </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/2.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ANITA ATIENZA, LPT, Ed.D. </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/3.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> BERNARDO RIVAS, LPT, Ed.D. </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/4.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ELVIRA IRENE RAMOS, LPT, Ph.D. </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/5.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ESTRELLITA PUTI-AN, LPT, Ed.D. </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/6.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> MELITONA BERNARDINO, LPT, Ed.D.</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/7.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> REMEDIOS BAL'ORO, LPT, Ed.D. </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/8.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> LURIDA RAMOS, LPT, Llb, Ed.D. </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/9.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> BENJAMIN LIM, LPT </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/10.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ERLINDA MIRANDA, MAEd</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/11.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ERNESTO LINA, MAEd</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/12.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> JERRY VILLANUEVA, LPT, MAEd </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cOED/13.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ERLITA VARGAS</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/14.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> GERTRUDES VILLALON, LPT, Ph.D.</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/15.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> RICO ACUÑA </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/16.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> JESUS ANSELO REYES</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/17.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ESTRELITA JAVILLONAR, Ph.D.</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/17.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ROSITA CREDO, LPT, Ed.D.</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/17.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> FRANCISCA BERNABE, MAEd</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/17.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> LENNY BALLESTEROS</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/coed/18.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ROLANDO SORIANO, LPT, Ed.D.</b></h5>
+                        </div></center>
                 </div>
             </div>
         </div>

@@ -128,11 +128,16 @@
                   </li>
                   <li>
                     <div class="media">
-                      <div class="media-body">
-                       <a href="<?=site_url('/acadar');?>"><span class="glyphicon glyphicon-calendar fa-lg" style="padding-right: 48px; padding-left: 43px;"></span>Academic Calendar</a>
+                      <div class="media-left">
+                        <a href="#" class="news_img">
+                          <img alt="img" src="<?=base_url('assets/for_main/img/calendar.jpg');?>" class="media-object">
+                        </a>
+                      </div>
+                      <div class="media-body" style="padding-top: 17px;">
+                       <a href="<?=site_url('/acadcal');?>">Academic Calendar</a>
                       </div>
                     </div>
-                  </li> 
+                  </li>  
                 </ul>
               </div>
             </div>
@@ -174,8 +179,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Courses Offered
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 380px;"></i>
-                        
                     </a>
                 </h4>
             </div>
@@ -184,6 +187,7 @@
                       <ol>
                       <li>  Bachelor of Science in Nursing</li><br>
                       <li>  Associate in Midwifery</li>
+                      </ol>
                 </div>
             </div>
         </div>
@@ -192,15 +196,98 @@
             <div class="panel-heading" role="tab" id="headingTwo">
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    C.N.M. Organization
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 354px;"></i>
-                        
+                    C.O.N.M. Organization
                     </a>
                 </h4>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/college/e1.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> IRIS CASTILLON, RN, RM, MAEd, MAN</b></h5>
+                          <h5><i> Dean </i></h5>
+                        </div><br>
+                      </center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/e2.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> MS. SUSAN ESPADON, RN, MAN </b></h5>
+                        <h5><i> Academic Coordinator </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/e3.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> MS. ARACELI FRANCISCO, RND, RN, MAN </b></h5>
+                        <h5><i> Clinical Coordinator </i></h5>
+                        </div></center>
+
+                        <center><h5 style="padding-bottom: 20px; padding-top: 300px;"><b> Members of the CBA Faculty </b></h5></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/conm/1.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ARIEL DELOS REYES, RN, MAN </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/conm/2.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> EMMY MACARAEG, RN, RM, MAN </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/conm/3.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> FLORILYN A. SOL, RN, MAN </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/conm/4.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> LAURO A. SANTOS, RN, MAN </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/conm/5.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> LEONILA O. BAQUIANO, RN, MAEd </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/conm/6.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> MARIA EPIFANIA THERESA S.J. TY, DMD, RN, MAEd</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/conm/7.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> PAUL B. OBISPO, RN, MAN </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/conm/8.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ROWENA G. VERSOZA, RN, MSN </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/conm/9.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> VIRGINIA PENALES, RN, MAN </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/conm/10.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> WILMA T. VILLANUEVA, RN</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/conm/11.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> MA. FELICIDAD MERCADO</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/conm/11.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> RUTH ANNE RECILE, RN, MSN </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/conm/12.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> RODERICK D. PADILLA, MD</b></h5>
+                        </div></center>
                 </div>
             </div>
         </div>

@@ -128,8 +128,13 @@
                   </li>
                   <li>
                     <div class="media">
-                      <div class="media-body">
-                       <a href="<?=site_url('/acadar');?>"><span class="glyphicon glyphicon-calendar fa-lg" style="padding-right: 48px; padding-left: 43px;"></span>Academic Calendar</a>
+                      <div class="media-left">
+                        <a href="#" class="news_img">
+                          <img alt="img" src="<?=base_url('assets/for_main/img/calendar.jpg');?>" class="media-object">
+                        </a>
+                      </div>
+                      <div class="media-body" style="padding-top: 17px;">
+                       <a href="<?=site_url('/acadcal');?>">Academic Calendar</a>
                       </div>
                     </div>
                   </li> 
@@ -169,8 +174,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Courses Offered
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 380px;"></i>
-                        
                     </a>
                 </h4>
             </div>
@@ -188,14 +191,112 @@
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     C.B.A. Organization
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 354px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/college/b1.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> DR. ROMULO NAVARRA, Llb, DPA</b></h5>
+                          <h5><i> Dean </i></h5>
+                        </div><br>
+                      </center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/b2.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> PROF. ELIZABETH B. UMALI, MAEd </b></h5>
+                        <h5><i> Department Head, Marketing Management </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/b3.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> PROF. EROL TULMOS, MBA </b></h5>
+                        <h5><i> Department Head, Operation Management </i></h5>
+                        </div></center>
+
+                        <center><h5 style="padding-top: 300px; padding-bottom: 20px;"><b> Members of the CBA Faculty </b></h5></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/1.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> EDWIN BERNAS, MBA </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/2.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ALEX BALANGON, MAEd </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/3.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> CLEOF T. CASTOR, LPT, MAEd </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/4.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ANSENCIA BRAVO, MPG </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/5.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> EDWIN MACARAIG, MAEd </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/6.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> GUILLERMO CASUNCAD, MBA, CPA </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/7.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> LEDOVINO A. MACAYAN, CPA, DPA </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/8.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ROBERTO TAMPIL, DPA, Ph.D. </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/9.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> REYNOSA SANTOS, MBA </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/10.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> FREDDIE N. TOMENIO, CPA, Llb</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/11.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ATTY. NICOLAS E. LAPUZ, CPA </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/12.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> RESEM PELIGRO, MBA, MPG, Llb </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/13.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ELENA TUBERA, MPG</b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/14.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> JOEY GOROSPE, CPA </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/15.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> ATTY. ZOSIMO CARTAGENA </b></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/cba/16.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> AMANDO PILAC</b></h5>
+                        </div></center>
                 </div>
             </div>
         </div>

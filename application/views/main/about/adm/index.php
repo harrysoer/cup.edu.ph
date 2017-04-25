@@ -1,4 +1,6 @@
- <body>    
+
+ <body>
+
 
     <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"></a>
@@ -134,14 +136,79 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     The Board of Regents
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 310px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/regents/1.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> HON. ANTONIO G. CALIXTO </b></h5>
+                        <h5><i> City Mayor </i></h5>
+                        <h5><i> Chairman of the Board </i></h5>
+                        </div><br>
+
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/regents/2.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> DR. CONCEPCION C. LIBUIT, LPT </b></h5>
+                        <h5><i> President, C.U.P. </i></h5>
+                        <h5><i> Vice Chairman of the Board </i></h5>
+                        </div></center><br>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/regents/3.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> PROF. MARCOS GERONGA, MAEd </b></h5>
+                        <h5><i> President, FASsCUP  </i></h5>
+                        <h5><i> Board Regent </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/regents/5.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> ATTY. SEVERO MADRONA, Jr., Ph.D., DPA </b></h5>
+                        <h5><i> Vice President for Legal Affairs, C.U.P.</i></h5>
+                        <h5><i> Board Regent </i></h5>
+                        </div></center><br><br>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/regents/4.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> MR. ALBERTO ALVINA </b></h5>
+                        <h5><i> Chairman, Committee on Education</i></h5>
+                        <h5><i> Board Regent </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/regents/10.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> MS. REYSIE ANNE POBLADOR </b></h5>
+                        <h5><i> President, CSC</i></h5>
+                        <h5><i> Board Regent </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/regents/8.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> REV. FR. CHRISTMAR L. DAGUNO </b></h5>
+                        <h5><i> Board Regent </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/regents/7.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> SISTER TEODORA B. JALEA, OSS</b></h5>
+                        <h5><i> Board Regent </i></h5>
+                        </div></center>
+
+                        <center><div>
+                        <img src="<?=base_url('/assets/for_main/img/regents/66.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> MR. RONALDO CRUZ</b></h5>
+                        <h5><i> Board Regent </i></h5>
+                        </div></center><br>
+
+                        <center><div>
+                        <img src="<?=base_url('/assets/for_main/img/regents/11.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> ATTY. VINALYN M. PATOT-BALURAN</b></h5>
+                        <h5><i> Board Secretary </i></h5>
+                        </div></center>
+
+                                              
                 </div>
             </div>
         </div>
@@ -151,14 +218,20 @@
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     Office of the President
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 302px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center><div>
+                      <img src="<?=base_url('/assets/for_main/img/oop1.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                      <h5><b> DR. CONCEPCION C. LIBUIT, LPT </b></h5>
+                      <h5><i> President </i></h5>
+                      </div> <br>
+                      <div>
+                      <h5><b> MR. CRISS CULLER </b></h5>
+                      <h5><i> Executive Secretary </i></h5>
+                      </div></center>
                 </div>
             </div>
         </div>
@@ -168,14 +241,20 @@
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                     Office of the Executive Vice President
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 173px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <center><div>
+                      <img src="<?=base_url('/assets/for_main/img/vpaa.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                      <h5><b> DR. ROSANIE F. ESTUCHE, LPT </b></h5>
+                      <h5><i> Executive Vice President </i></h5>
+                      </div> <br>
+                      <div>
+                      <h5><b> MRS. NORMA LIZA D. LENTIJAS</b></h5>
+                      <h5><i> Executive Secretary </i></h5>
+                      </div></center>
                 </div>
             </div>
         </div>
@@ -185,14 +264,25 @@
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
                     Office of the Vice President for Academic Affairs
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 80px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <center><div>
+                      <img src="<?=base_url('/assets/for_main/img/vpaa.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                      <h5><b> DR. ROSANIE F. ESTUCHE, LPT </b></h5>
+                      <h5><i> Vice President for Academic Affairs </i></h5>
+                      </div> <br>
+                      <div>
+                      <img src="<?=base_url('/assets/for_main/img/vpaa.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                      <h5><b> DR. ROSANIE F. ESTUCHE, LPT </b></h5>
+                      <h5><i> Associate Vice President for Academic Affairs (Acting) </i></h5>
+                      </div> <br>
+                      <div>
+                      <h5><b> MRS. NORMA LIZA D. LENTIJAS</b></h5>
+                      <h5><i> Executive Secretary </i></h5>
+                      </div></center>
                 </div>
             </div>
         </div>
@@ -203,14 +293,20 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapse5">
                     Office of the Vice President for Administration
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 99px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center><div>
+                      <img src="<?=base_url('/assets/for_main/img/vpa.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                      <h5><b> PROF. MARTIN ELWOOD S. RIVERA, MAEd </b></h5>
+                      <h5><i> Vice President for Administration </i></h5>
+                      </div> <br>
+                      <div>
+                      <h5><b> MR. CARLITO V. MARASIGAN, Jr.</b></h5>
+                      <h5><i> Executive Secretary </i></h5>
+                      </div></center>
                 </div>
             </div>
         </div>
@@ -220,14 +316,20 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="true" aria-controls="collapse6">
                     Office of the Vice President for Legal Affairs
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 118px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center><div>
+                      <img src="<?=base_url('/assets/for_main/img/vpl.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                      <h5><b> ATTY. SEVERO MADRONA, Jr., Ph.D., DPA</b></h5>
+                      <h5><i> Vice President for Legal Affairs </i></h5>
+                      </div> <br>
+                      <div>
+                      <h5><b> MS. JEAN DAVID</b></h5>
+                      <h5><i> Executive Secretary </i></h5>
+                      </div></center>
                 </div>
             </div>
         </div>
@@ -237,8 +339,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapse7">
                     University Organizational Chart
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 230px;"></i>
-                        
                     </a>
                 </h4>
             </div>
@@ -258,14 +358,30 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse15" aria-expanded="true" aria-controls="collapse15">
                     College of Office Administration and Computer Technology
-                        <i class="more-less glyphicon glyphicon-plus" style="margin-left: -8px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapse15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading15">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/college/a1.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> DR. MARIBEL R. GABUAT</b></h5>
+                          <h5><i> Dean </i></h5>
+                        </div><br>
+                      </center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/a2.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> PROF. CESAR CARREON </b></h5>
+                        <h5><i> Department Head, Computer Technology </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/a3.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> PROF. ELSIE C. CAMBA, Ed.D. </b></h5>
+                        <h5><i> Department Head, Office Administration </i></h5>
+                        </div></center>
                 </div>
             </div>
         </div>
@@ -275,14 +391,30 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="true" aria-controls="collapse8">
                     College of Business Administration
-                        <i class="more-less glyphicon glyphicon-plus" style="margin-left: 204px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/college/b1.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> DR. ROMULO NAVARRA, Llb, DPA</b></h5>
+                          <h5><i> Dean </i></h5>
+                        </div><br>
+                      </center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/b2.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> PROF. ELIZABETH B. UMALI, MAEd </b></h5>
+                        <h5><i> Department Head, Marketing Management </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/b3.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> PROF. EROL TULMOS, MBA </b></h5>
+                        <h5><i> Department Head, Operation Management </i></h5>
+                        </div></center>
                 </div>
             </div>
         </div>
@@ -292,14 +424,25 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="true" aria-controls="collapse9">
                     College of Education
-                        <i class="more-less glyphicon glyphicon-plus" style="margin-left: 323px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/college/c1.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> DR. ANA MARIA V. BARBEITO, LPT, Ed.D.</b></h5>
+                          <h5><i> Dean </i></h5>
+                        </div><br>
+
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/college/c2.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> DR. ROSALINDA M. LLAMAS</b></h5>
+                          <h5><i> Department Head </i></h5>
+                        </div>
+
+                      </center>
                 </div>
             </div>
         </div>
@@ -309,14 +452,66 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="true" aria-controls="collapse10">
                     College of Arts and Sciences
-                        <i class="more-less glyphicon glyphicon-plus" style="margin-left: 258px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/college/d1.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> PROF. MARCUS GERONGA, MAEd</b></h5>
+                          <h5><i> Dean </i></h5>
+                        </div><br></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/d2.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> PROF. EROLL A. BEJA, LPT, MAEd</b></h5>
+                          <h5><i> Department Head, English </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/d3.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> ENGR. ROMMEL HERNANDEZ, MAEd</b></h5>
+                          <h5><i> Department Head, Mathematics </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/d4.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> PROF. ROSVIBETH ABLON, MAEd</b></h5>
+                          <h5><i> Department Head, Science </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/d5.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> PROF. HONEYLIZA POBLETE, MAEd</b></h5>
+                          <h5><i> Department Head, AHRM </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/d6.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> PROF. ELIGIA LOPENA, LPT, MAEd</b></h5>
+                          <h5><i> Department Head, Filipino </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/d7.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> DR. GLORIA Y. YAN, LPT, Ph.D.</b></h5>
+                          <h5><i> Department Head, Social / Behavioral Science </i></h5>
+                        </div></center>
+
+                        <center><div>
+                        <img src="<?=base_url('/assets/for_main/img/college/d8.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> PROF. ALAN BOLANGON, MAEd</b></h5>
+                          <h5><i> Department Head, BPG </i></h5>
+                        </div></center><br>
+
+                        <center><div>
+                          <h5><b> MS. BETH BECAIL</b></h5>
+                          <h5><i> Secretary </i></h5>
+                        </div></center>  
+
+                      
                 </div>
             </div>
         </div>
@@ -326,14 +521,30 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="true" aria-controls="collapse11">
                     College of Nursing and Midwifery
-                        <i class="more-less glyphicon glyphicon-plus" style="margin-left: 215px;"></i>
-                        
                     </a>
                 </h4>
             </div>
             <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading11">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/college/e1.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> IRIS CASTILLON, RN, RM, MAEd, MAN</b></h5>
+                          <h5><i> Dean </i></h5>
+                        </div><br>
+                      </center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/e2.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> MS. SUSAN ESPADON, RN, MAN </b></h5>
+                        <h5><i> Academic Coordinator </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/college/e3.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> MS. ARACELI FRANCISCO, RND, RN, MAN </b></h5>
+                        <h5><i> Clinical Coordinator </i></h5>
+                        </div></center>
                 </div>
             </div>
         </div>
@@ -347,8 +558,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="true" aria-controls="collapse12">
                     Office of the Student Affairs
-                        <i class="more-less glyphicon glyphicon-plus" style="margin-left: 258px;"></i>
-                        
                     </a>
                 </h4>
             </div>
@@ -364,8 +573,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse13" aria-expanded="true" aria-controls="collapse13">
                     Office of the Registrar
-                        <i class="more-less glyphicon glyphicon-plus" style="margin-left: 308px;"></i>
-                        
                     </a>
                 </h4>
             </div>
@@ -381,8 +588,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse16" aria-expanded="true" aria-controls="collapse16">
                     Office of the Finance
-                        <i class="more-less glyphicon glyphicon-plus" style="margin-left: 320px;"></i>
-                        
                     </a>
                 </h4>
             </div>
@@ -398,8 +603,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse17" aria-expanded="true" aria-controls="collapse17">
                     Guidance Office
-                        <i class="more-less glyphicon glyphicon-plus" style="margin-left: 362px;"></i>
-                        
                     </a>
                 </h4>
             </div>
@@ -415,8 +618,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse18" aria-expanded="true" aria-controls="collapse18">
                     Campus Ministry
-                        <i class="more-less glyphicon glyphicon-plus" style="margin-left: 357px;"></i>
-                        
                     </a>
                 </h4>
             </div>
@@ -432,8 +633,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse19" aria-expanded="true" aria-controls="collapse19">
                     Community Extension
-                        <i class="more-less glyphicon glyphicon-plus" style="margin-left: 313px;"></i>
-                        
                     </a>
                 </h4>
             </div>
@@ -449,8 +648,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse21" aria-expanded="true" aria-controls="collapse21">
                     Property - Supply Office
-                        <i class="more-less glyphicon glyphicon-plus" style="margin-left: 292px;"></i>
-                        
                     </a>
                 </h4>
             </div>
@@ -466,8 +663,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse20" aria-expanded="true" aria-controls="collapse20">
                     Medical Clinic
-                        <i class="more-less glyphicon glyphicon-plus" style="margin-left: 382px;"></i>
-                        
                     </a>
                 </h4>
             </div>

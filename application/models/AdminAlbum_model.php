@@ -24,7 +24,7 @@ class adminAlbum_model extends CI_Model
 		unlink($path);	
 	}		
 
-	public function setAlbumName($data){
+	public function setAlbumName(){
 		$album_name=$this->input->post('album_name');
 		$slug = url_title($this->input->post('album_name'), 'dash', TRUE);
 

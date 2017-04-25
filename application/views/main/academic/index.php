@@ -80,7 +80,6 @@
                     </div>
                     <div class="singCourse_content">
                     <h3 class="singCourse_title"><a href="<?=site_url('/coact');?>">College of Office Administration and Computer Technology</a></h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                     </div>
                   </div>
                 </div>
@@ -95,8 +94,7 @@
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="<?=site_url('/cba');?>">College of Business Administration</a></h3>
-                    <br><p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <h3 class="singCourse_title"><a href="<?=site_url('/cba');?>">College of Business Administration</a></h3><br>
                     </div>
                   </div>
                 </div>
@@ -112,7 +110,6 @@
                     </div>
                     <div class="singCourse_content">
                     <h3 class="singCourse_title"><a href="<?=site_url('/coe');?>">College of Education</a></h3><br>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                     </div>
                   </div>
                 </div>
@@ -128,7 +125,6 @@
                     </div>
                     <div class="singCourse_content">
                     <h3 class="singCourse_title"><a href="<?=site_url('/coas');?>">College of Arts and Sciences</a></h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                     </div>
                   </div>
                 </div>
@@ -144,7 +140,6 @@
                     </div>
                     <div class="singCourse_content">
                     <h3 class="singCourse_title"><a href="<?=site_url('/conm');?>">College of Nursing and Midwifery</a></h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                     </div>
                   </div>
                 </div>
@@ -153,11 +148,11 @@
                     <div class="singCourse_imgarea">
                       <img src="<?=base_url('assets/for_main/img/calendar.jpg');?>" />                      
                       <div class="mask">                         
-                        <a href="course-single.html" class="course_more">View Calendar</a>
+                        <a href="<?=site_url('calendar')?>" class="course_more">View Calendar</a>
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="#"><center>Academic Calendar</center></a></h3>
+                    <h3 class="singCourse_title"><a href="<?=site_url('calendar')?>"><center>Academic Calendar</center></a></h3>
                     </div>
                   </div>
                 </div>

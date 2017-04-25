@@ -323,7 +323,7 @@ img{
 }
 .news_tab li:last-child{
   border-bottom: none;
-}
+} 
 .news_img {
   display: block;
   height: 70px;
@@ -343,6 +343,7 @@ img{
   -ms-transition: all 0.5s;
   transition: all 0.5s;
 }
+
 .feed_date{
   color: #ccc;
   font-style: italic;

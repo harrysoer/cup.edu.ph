@@ -208,6 +208,10 @@ Author URI : http://www.wpfreeware.com/
 .news_tab .media-body > a:hover {
   color: #fdcd3d;
 }
+.panel{
+  border-bottom: 3px solid #fdcd3d;
+}
+
 
 
 /*Header nav color*/

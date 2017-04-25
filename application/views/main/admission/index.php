@@ -660,7 +660,7 @@
                             <div class="modal-body">
                               <ol >
                               <?php foreach ($get_downloads as $downloads): ?>
-                                <li style="text-align: justify;"><a href="<?=site_url('downloads/'). $downloads['file_name']?>"><?=$downloads['file_description']?> </a></li><br>
+                                <li style="text-align: justify;"><a href="<?=site_url('downloads/'). $downloads['file_name']?>"><span class="glyphicon glyphicon-file fa-lg"></span><?=$downloads['file_description']?> </a></li><br>
                               <?php endforeach ?>
                               </ol> 
                             </div>

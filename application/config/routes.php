@@ -49,6 +49,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+
+//main website routes
 $route['default_controller'] ='CupWebsite/index';
 $route['about'] ='CupWebsite/about';
 $route['academic'] ='CupWebsite/academic';
@@ -60,6 +62,7 @@ $route['studentlife'] ='CupWebsite/studentlife';
 
 $route['gallery'] ='CupWebsite/gallery';
 $route['gallery/(:any)'] ='CupWebsite/gallery/$1';
+$route['gallery/(:any)/(:any)'] ='CupWebsite/gallery/$slug/$1';
 
 $route['news'] = 'CupWebsite/news';
 $route['news/(:any)'] = 'CupWebsite/read_news/$1';
@@ -79,7 +82,10 @@ $route['sts']='CupWebsite/sts';
 $route['ec']='CupWebsite/ec';
 $route['kgmaf']='CupWebsite/kgmaf';
 $route['promise']='CupWebsite/promise';
+$route['calendar']='CupWebsite/calendar';
 
+//portal routes
+$route['sportal']='StudentPortal/sportal';
 
 $route['logout']		  		 = 'admin/logout';
 $route['login']		  			 = 'admin_login/index';
