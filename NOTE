@@ -18,3 +18,12 @@ post_max_size=10000M
 
 
 extension=php_mysqli.dll
+
+
+[To enable zip.dll]
+
+download php_zip.dll download it from here(https://pecl.php.net/package/zip/1.13.4/windows)
+extract php_zip.dll to C:\xampp\php\ext
+edit php.ini and add a new line extension=php_zip.dll
+restart apache
+This should enable the zip module for you.
