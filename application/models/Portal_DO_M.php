@@ -99,12 +99,10 @@ class Portal_DO_M extends CI_Model {
 	public function delete_curriculum($cu){
 		if (isset($cu)) {
 			$this->db->where('curriculum_id', $cu);
-			$this->db->delete('portal_subjects');
-			continue;
+			$this->db->delete('portal_curriculums');
 		}
-
 		$this->db->where('curriculum_id', $cu);
-		return	$this->db->delete('portal_curriculums');
+		$this->db->delete('portal_subjects');
 
 	}
 

@@ -37,8 +37,8 @@
 
             <div class="form-signin" style="opacity:1; margin-top: -30px;">
                <!-- show the error here, sana katulad din sa buhay ko -->
-	            <?php if (isset($error)) : ?>
-					<div class="col-md-12">
+	            <?php /*$error="wrong shit";*/ if (isset($error)) : ?>
+					<div class="col-md-12 col-lg-12 col-sm-12">
 						<div class="alert alert-danger" role="alert">
 							<?= $error; ?>
 							<?//= $idNumber;?>

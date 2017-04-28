@@ -26,7 +26,8 @@ class Portal_DO_login extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('portal/do/login');
+		$data['name'] = "Dean's Office";
+		$this->load->view('portal/other_login', $data);	
 	}
 
 	public function login()
@@ -45,7 +46,7 @@ class Portal_DO_login extends CI_Controller {
 		}
 		else{
 			$data['error'] = 'Wrong username or password.';
-			$this->load->view('portal/do/login', $data);
+			$this->load->view('portal/dportal/other_login', $data);
 		}
 	}
 

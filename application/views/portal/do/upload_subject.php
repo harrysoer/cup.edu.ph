@@ -27,20 +27,20 @@
         </div>
         </div>
     <?php endif; ?>
-    <?=form_open_multipart('admin/admission/forms/submit')?>
+    <?=form_open_multipart('Portal_DO/upload_subject')?>
         <div role="form" class="form-horizontal">
-            <label><h4>File</h4></label>
+            <label><h4>File Description</h4></label>            
             <div class="form-group">
                 <div class="col-sm-6">
-                    <input type="file" name="userFile" class="form-control" accept="application/pdf, .pdf" required>
+                    <input type="file" name="userFile" class="form-control" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" required>
                 </div>
             </div>
-            <label><h4>File Description</h4></label>
+            <!-- <label><h4>File Description</h4></label>
             <div class="form-group">
                 <div class="col-sm-7">
                     <input type="text" name="file_description" class="form-control" placeholder="File Description" required>  
                 </div>
-            </div>
+            </div> -->
         </div>
         <input class="btn btn-sm btn-primary" style="margin-top:1rem;" type="submit" name="submit" value="submit" />
     </form>

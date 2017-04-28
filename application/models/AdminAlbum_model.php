@@ -117,10 +117,6 @@ class adminAlbum_model extends CI_Model
 			$this->db->where('slug', $slug);
 			$this->db->delete($this->table);
 		}
-
-		$this->db->where('slug', $slug);
-		$this->db->delete('gallery_images');
-		
 	}
 
 
