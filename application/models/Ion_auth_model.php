@@ -256,10 +256,14 @@ class Ion_auth_model extends CI_Model
 	        ->row();
 
 	   if ($user) {
+	   		 $query = $this->db->get_where('school_years', array('active' => 1));
+		   	 $year = $query->row();
+
 	         $logindata = [
 	             'first_name' => $user->first_name,
 	             'last_name'  => $user->last_name,
-	           
+	             'school_year'=> $year->school_year,
+	             'sem'        => $year->sem,
 	         ];
 	         $this->session
 	              ->set_userdata($logindata);

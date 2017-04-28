@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://192.168.254.128/cup.edu.ph';
+// $config['base_url'] = 'http://cup.edu.ph';
 
 /*
 |--------------------------------------------------------------------------

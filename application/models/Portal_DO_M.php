@@ -36,7 +36,7 @@ class Portal_DO_M extends CI_Model {
 	   }
 	   else {
 	         return false;
-   }
+   		}
 	}
 	
 
