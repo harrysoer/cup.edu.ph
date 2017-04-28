@@ -44,7 +44,7 @@
 
 		Dropzone.autoDiscover = true;
 		var file= new Dropzone(".dropzone",{
-			url: "http://localhost/cup.edu.ph/index.php/admin/upload_images",
+			url: "<?=site_url('admin/upload_images')?>",
 			maxFilesize: 100000,  // maximum size to uplaod 
             dictFileTooBig: "file is too big",
 			method:"post",
@@ -71,7 +71,7 @@ file.on("removedfile",function(a){
 	$.ajax({
 		type:"post",
 		data:{token:token},
-		url: 'http://localhost/cup.edu.ph/index.php/admin/delete_uploaded_images',
+		url: "<?=site_url('admin/delete_uploaded_images')?>",
 		cache:false,
 		dataType: 'json',
 		success: function(res){
