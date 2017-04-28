@@ -12,21 +12,12 @@
 	        <div class="carousel-inner">
 	            <div class="item active">
 	                <img src="<?= base_url('assets/for_portal/images/login-portal/carousel1.jpg')?>" class="img-responsive" alt="First slide">
-	                <div class="carousel-caption">
-	                    <p> Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-	                </div>
 	            </div>
 	            <div class="item">
 	                <img src="<?= base_url('assets/for_portal/images/login-portal/image3.jpg')?>" class="img-responsive" alt="Second slide">
-	                <div class="carousel-caption">
-	                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-	                </div>
 	            </div>
 	            <div class="item">
 	                <img src="<?= base_url('assets/for_portal/images/login-portal/image1.jpg')?>" class="img-responsive" alt="Third slide">
-	                <div class="carousel-caption">	
-	                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-	                </div>
 	            </div>
 	        </div>
 	        <a class="left carousel-control" href="#carousel-one" data-slide="prev" style="z-index: 1;"><span class="glyphicon glyphicon-chevron-left"></span></a>
@@ -42,11 +33,9 @@
 			
 
 	      	<div class="card card-container">
-			<!-- <img id="profile-img"  style="z-index:-1;"  src="<//?= base_url('assets/images/login-portal/logo.png')?>" /> -->
+			<center><img id="profile-img" src="<?= base_url('assets/for_portal/images/login-portal/logo.png')?>" style="max-width: 210px; max-height: 210px; margin-top: -130px; margin-left: 10px;"/></center>
 
-            <p id="profile-name" class="profile-name-card"></p>
-
-            <div class="form-signin" style="opacity:1">
+            <div class="form-signin" style="opacity:1; margin-top: -30px;">
                <!-- show the error here, sana katulad din sa buhay ko -->
 	            <?php if (isset($error)) : ?>
 					<div class="col-md-12">
@@ -80,7 +69,7 @@
 		                <span id="reauth-email" class="reauth-email"></span>
 		                <input type="text" name="idNumber" id="inputEmail" class="form-control" placeholder="ID Number" required autofocus >
 		                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-		                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+		                <button class="btn btn-lg btn-success btn-block btn-signin" type="submit">Sign in</button>
 		            </div>
 		            </form><!-- /form -->
             </div>

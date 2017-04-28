@@ -83,9 +83,29 @@ $route['ec']='CupWebsite/ec';
 $route['kgmaf']='CupWebsite/kgmaf';
 $route['promise']='CupWebsite/promise';
 $route['calendar']='CupWebsite/calendar';
+$route['pdf']='CupWebsite/pdf';
 
 //portal routes
 $route['sportal']='StudentPortal/sportal';
+$route['info']='StudentPortal/info';
+$route['grades']='StudentPortal/grades';
+$route['error1']='StudentPortal/error1';
+$route['schedules']='StudentPortal/schedules';
+$route['curriculum']='StudentPortal/curriculum';
+$route['forum2']='StudentPortal/forum2';
+
+//do portal routes
+$route['dportal']='StudentPortal/dportal';
+$route['forum3']='StudentPortal/forum3';
+$route['addsubject']='StudentPortal/addsubject';
+$route['viewsched']='StudentPortal/viewsched';
+
+//faculty portal routes
+$route['fportal']='StudentPortal/fportal';
+$route['forum4']='StudentPortal/forum4';
+$route['classes']='StudentPortal/classes';
+$route['viewclass']='StudentPortal/viewclass';
+
 
 $route['logout']		  		 = 'admin/logout';
 $route['login']		  			 = 'admin_login/index';
@@ -126,17 +146,18 @@ $route['forum/post/(:any)'] 		   =  'forum/read_post';
 $route['forum/(:any)/(:any)']  =  'admin_portal/student';
 
 //DO ROUTES
-
 $route['do/login']		  			 = 'portal_do_login/index';
 $route['do/logout']		  			 = 'portal_do/logout';
 $route['do/login/status']			 = 'portal_do_login/login';
-$route['do/index']  			=  'portal_do/index';
+$route['do/index']  				 =  'portal_do/index';
 
-$route['do/courses']  			=  'portal_do/courses';
-$route['do/courses/add']  			=  'portal_do/addCourse';
+$route['do/courses']  				 =  'portal_do/courses';
+$route['do/courses/add']  			 =  'portal_do/addCourse';
 
-$route['do/curriculums/(:any)']				=  'portal_do/list_curriculums/$1';
+$route['do/curriculums/(:any)']			=  'portal_do/list_curriculums/$1';
 $route['do/curriculum/(:any)/(:any)']	=  'portal_do/view_curriculum/$1/$cu';
+$route['do/curriculums/add/(:any)']			=  'portal_do/add_curriculums/$1';
+$route['do/curriculum/delete/(:any)/(:any)'] =  'portal_do/delete_curriculum/$1/$cu';
 
 $route['do/subjects/add/(:any)/(:any)'] =  'portal_do/addSubjects/$1/$cu';
 

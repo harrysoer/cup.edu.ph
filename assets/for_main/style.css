@@ -326,8 +326,8 @@ img{
 } 
 .news_img {
   display: block;
-  height: 70px;
-  width: 100px;
+  height: 50px;
+  width: 80px;
 }
 .news_img>img{
   width: 100%;

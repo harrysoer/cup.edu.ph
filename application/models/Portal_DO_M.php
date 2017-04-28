@@ -82,6 +82,29 @@ class Portal_DO_M extends CI_Model {
 		$id = $this->uri->segment(3);
 		$query = $this->db->get_where('portal_curriculums', array('college_dept' => $college_dept ,  ));
 		return $query->result_array();
+	}
+
+	public	function add_curriculum(){
+		$course_id	=$this->uri->segment(4);
+		$curriculum_id = $this->uri->segment(5);
+		 $data = array(
+            'course_id'	  => $course_id	,
+            'curriculum_name' => $subject_id,
+            'college_dept'=> $this->session->college_dept,
+        );
+
+		return   $this->db->insert('portal_curriculums', $data);
+	}
+
+	public function delete_curriculum($cu){
+		if (isset($cu)) {
+			$this->db->where('curriculum_id', $cu);
+			$this->db->delete('portal_subjects');
+			continue;
+		}
+
+		$this->db->where('curriculum_id', $cu);
+		return	$this->db->delete('portal_curriculums');
 
 	}
 

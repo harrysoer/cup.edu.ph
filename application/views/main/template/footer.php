@@ -38,9 +38,11 @@
               <div class="single_footer_widget">
              <h3 style="padding-top: 10px;">Connect with Us</h3>
                 <ul class="footer_social">
-                  <li><a data-toggle="tooltip" data-placement="top" title="Facebook" class="soc_tooltip" href="#"><i class="fa fa-facebook" style="padding-right: 10px;" padding-left: 30px;""></i></a></li>
-                  <li><a data-toggle="tooltip" data-placement="top" title="Twitter" class="soc_tooltip"  href="#"><i class="fa fa-twitter" style="padding-right: 10px;"></i></a></li>
-                  <li><a data-toggle="tooltip" data-placement="top" title="Google+" class="soc_tooltip"  href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a data-toggle="tooltip" data-placement="top" title="Facebook" class="soc_tooltip" href="https://web.facebook.com/CityUniversityofPasay.C.U.P/"><i class="fa fa-facebook fa-lg" style="padding-right: 10px;" padding-left: 30px;""></i></a></li>
+
+                  <li><a data-toggle="tooltip" data-placement="top" title="Twitter" class="soc_tooltip"  href="https://twitter.com/PasayPIO"><i class="fa fa-twitter fa-lg" style="padding-right: 10px;"></i></a></li>
+
+                  <li><a data-toggle="tooltip" data-placement="top" title="Instagram" class="soc_tooltip"  href="https://www.instagram.com/explore/locations/296546652/city-university-of-pasay-cup-former-pamantasan-ng-lungsod-ng-pasay-plp/"><i class="fa fa-instagram fa-lg"></i></a></li>
                 </ul>
                 </div>
                 </div>

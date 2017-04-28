@@ -86,6 +86,12 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/gallery/listAlbums',$album_name);
 	}
 
+	public function ajax_deleteAlbum($id)
+	{
+		$this->album->deleteAlbum_by_id($id);
+		echo json_encode(array("status" => TRUE));
+	}
+
 	//for mini gallery in admin side
 	public function listImages($id=null){
 		$slug = $this->uri->segment(4);
@@ -176,7 +182,7 @@ class Admin extends CI_Controller {
 
 			//add html for action
 			$row[] = '<a class="btn btn-sm btn-primary" href="'.$link.'" title="Edit")">
-					<i class="glyphicon"></i>View</a>';
+					<i class="glyphicon"></i>View</a> <a class="btn btn-sm btn-danger " href="javascript:void(0)" title="Hapus" onclick="delete_person('."'".$album_name->slug."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
 		
 			$data[] = $row;
 		}

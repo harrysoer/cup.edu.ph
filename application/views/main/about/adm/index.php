@@ -334,20 +334,6 @@
             </div>
         </div>
 
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="heading6">
-                <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapse7">
-                    University Organizational Chart
-                    </a>
-                </h4>
-            </div>
-            <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
-                <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-            </div>
-        </div>
 
         <br>
         <h2 class="blog_title">University Colleges</h2>
@@ -380,8 +366,16 @@
                         <div class="col-lg-6 col-md-6 col-sm-6"><center>
                         <img src="<?=base_url('/assets/for_main/img/college/a3.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
                         <h5><b> PROF. ELSIE C. CAMBA, Ed.D. </b></h5>
-                        <h5><i> Department Head, Office Administration </i></h5>
+                        <h5><i> Department Head, Office Administration </i></h5><br><br>
                         </div></center>
+                        
+                        <center>
+                        <div>
+                          <h5><b> MA. MERCEDES I. GANDIA</b></h5>
+                          <h5><i> Secretary </i></h5>
+                        </div><br>
+                      </center>
+                        
                 </div>
             </div>
         </div>
@@ -563,7 +557,15 @@
             </div>
             <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading12">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center><div>
+                      <img src="<?=base_url('/assets/for_main/img/others/osa.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                      <h5><b> PROF. MELVIN M. CRISOSTOMO </b></h5>
+                      <h5><i> Dean </i></h5>
+                      </div> <br>
+                      <div>
+                      <h5><b> ELMA R. ANABO </b></h5>
+                      <h5><i> Executive Secretary </i></h5>
+                      </div></center>
                 </div>
             </div>
         </div>
@@ -578,7 +580,53 @@
             </div>
             <div id="collapse13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading13">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/others/reg.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> CLEOFE T. CASTOR, LPT, MAEd</b></h5>
+                          <h5><i> Head </i></h5>
+                        </div><br></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                          <h5><b> JOYCE ANNE OFDI</b></h5>
+                          <h5><i> Evaluator, BSE / BEED </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                          <h5><b> JHERWIN DOCULAN</b></h5>
+                          <h5><i> Evaluator, BSBA / MM </i></h5><br>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                          <h5><b> MARIA DONNA SARON</b></h5>
+                          <h5><i> Evaluator, BSBA / OM </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                          <h5><b> RAYMON RAYMUNDO</b></h5>
+                          <h5><i> Evaluator, BPG / AHRM </i></h5><br>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                          <h5><b> ARMIE OBILLO </b></h5>
+                          <h5><i> Evaluator, BSN / MID </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                          <h5><b> MAYLAINE MONTILLA </b></h5>
+                          <h5><i> Evaluator, BSOA </i></h5><br>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                          <h5><b> JOJO DANDOY</b></h5>
+                          <h5><i> Encoder </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                          <h5><b> ARJAY FUNA</b></h5>
+                          <h5><i> Encoder </i></h5><BR>
+                        </div></center>
+
                 </div>
             </div>
         </div>
@@ -593,8 +641,38 @@
             </div>
             <div id="collapse16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading16">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
+                       <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/others/finance.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> DR. LEDOVINO A. MACAYAN, CPA, DPA</b></h5>
+                          <h5><i> OIC - Finance Officer </i></h5>
+                        </div><br></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                          <h5><b> MARIA MARJORIE CASTILLO</b></h5>
+                          <h5><i> Payroll </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                          <h5><b> VANESSA MIÑEQUE</b></h5>
+                          <h5><i> Payroll </i></h5><br>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                          <h5><b> CATHERINE M. SUMALDE</b></h5>
+                          <h5><i> Cashier </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                          <h5><b> EVANGELINE D. SUÑGA</b></h5>
+                          <h5><i> Cashier </i></h5><br>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                          <h5><b> LOVELYN C. FERNANDO</b></h5>
+                          <h5><i> Cashier </i></h5>
+                        </div></center>
+                        </div>
             </div>
         </div>
 
@@ -608,7 +686,75 @@
             </div>
             <div id="collapse17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading17">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/guidance/1.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> DR. MELITONA BERNARDINO, LPT</b></h5>
+                          <h5><i> Director </i></h5>
+                        </div><br>
+                      </center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/guidance/2.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> MARTIN ELWOOD S. RIVERA, MAEd</b></h5>
+                        <h5><i> Admission Officer </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/guidance/3.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> MELVIN CRISOSTOMO, LPT, MAEd</b></h5>
+                        <h5><i> Career Placement Officer</i></h5><BR>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/guidance/4.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> EMMAUEL LUNA, MPG</b></h5>
+                        <h5><i> Faculty </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/guidance/5.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> EROL TULMOS, MBA</b></h5>
+                        <h5><i> Faculty</i></h5><Br>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/guidance/6.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> ANSENCIA BRAVO, MPG</b></h5>
+                        <h5><i> Faculty </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/guidance/7.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> ROSALINDA REGALA, MAEd</b></h5>
+                        <h5><i> Faculty</i></h5><BR>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/guidance/8.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> ROWENA REMOROZA, LPT, MAEd</b></h5>
+                        <h5><i> Faculty </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/guidance/9.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> ERLINDA VARGAS</b></h5>
+                        <h5><i> Faculty</i></h5><BR>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/guidance/10.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> JOSEFINA Y. LAYCO</b></h5>
+                        <h5><i> Guidance Staff </i></h5>
+                        </div></center>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
+                        <img src="<?=base_url('/assets/for_main/img/guidance/10.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                        <h5><b> CHARISA L. PANAMAN</b></h5>
+                        <h5><i> Guidance Staff</i></h5>
+                        </div></center>
+
+
                 </div>
             </div>
         </div>
@@ -623,7 +769,12 @@
             </div>
             <div id="collapse18" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading18">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/others/campus.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> ROWENA R. REMOROZA, LPT, MAEd</b></h5>
+                          <h5><i> Head </i></h5>
+                        </div><br></center>
                 </div>
             </div>
         </div>
@@ -638,7 +789,12 @@
             </div>
             <div id="collapse19" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading19">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/others/comm.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> EROLL A. BEJA, LPT, MAEd</b></h5>
+                          <h5><i> Head </i></h5>
+                        </div><br></center>
                 </div>
             </div>
         </div>
@@ -653,7 +809,12 @@
             </div>
             <div id="collapse21" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading21">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/others/prop.jpg');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> SUSAN D. IGNACIO</b></h5>
+                          <h5><i> Property - Supply Custodian </i></h5>
+                        </div><br></center>
                 </div>
             </div>
         </div>
@@ -668,7 +829,19 @@
             </div>
             <div id="collapse20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading20">
                 <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/others/doc.png');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> ROMER TY, MD</b></h5>
+                          <h5><i> School Physician </i></h5>
+                        </div><br></center>
+
+                        <center>
+                        <div>
+                        <img src="<?=base_url('/assets/for_main/img/others/nurse.png');?>" class="img-thumbnail" style="max-height: 200px; max-width: 200px;" />
+                          <h5><b> JOBELLE P. TRINIDAD, RN</b></h5>
+                          <h5><i> School Nurse </i></h5>
+                        </div><br></center>
                 </div>
             </div>
         </div>

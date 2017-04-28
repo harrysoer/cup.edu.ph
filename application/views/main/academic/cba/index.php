@@ -134,7 +134,7 @@
                         </a>
                       </div>
                       <div class="media-body" style="padding-top: 17px;">
-                       <a href="<?=site_url('/acadcal');?>">Academic Calendar</a>
+                       <a href="<?=site_url('/calendar');?>">Academic Calendar</a>
                       </div>
                     </div>
                   </li> 
@@ -284,18 +284,14 @@
                         </div></center>
 
                         <div class="col-lg-6 col-md-6 col-sm-6"><center>
-                        <img src="<?=base_url('/assets/for_main/img/cba/14.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
-                        <h5><b> JOEY GOROSPE, CPA </b></h5>
-                        </div></center>
-
-                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
-                        <img src="<?=base_url('/assets/for_main/img/cba/15.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
-                        <h5><b> ATTY. ZOSIMO CARTAGENA </b></h5>
-                        </div></center>
-
-                        <div class="col-lg-6 col-md-6 col-sm-6"><center>
                         <img src="<?=base_url('/assets/for_main/img/cba/16.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
                         <h5><b> AMANDO PILAC</b></h5>
+                        </div></center>
+
+                        <center><div>
+                        <img src="<?=base_url('/assets/for_main/img/cba/14.jpg');?>" class="img-thumbnail" style="max-height: 150px; max-width: 150px;" />
+                        <h5><b> JOEY GOROSPE, CPA </b></h5>
+                        <h5><i> Secretary</i></h5>
                         </div></center>
                 </div>
             </div>

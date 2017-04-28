@@ -121,7 +121,7 @@
                 </a>
               <?php endforeach?>
             </div>
-                <div class="col-lg-12 col-md-12 col-sm-12"><button><?=$pages?></button></div>  
+                <div class="col-lg-12 col-md-12 col-sm-12"><?=$pages?></div>  
           </div>
         </div>
       </div>

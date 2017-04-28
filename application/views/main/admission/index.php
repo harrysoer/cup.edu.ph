@@ -103,7 +103,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     New Students and Tranferees Requirements
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 130px;"></i>
                     </a>
                 </h4>
             </div>
@@ -132,7 +131,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
                     Old Students
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 368px;"></i>
                     </a>
                 </h4>
             </div>
@@ -154,7 +152,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
                     Second Course Applicants
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 268px;"></i>
                     </a>
                 </h4>
             </div>
@@ -260,7 +257,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
                     Academic Scholars
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 350px;"></i>
                     </a>
                 </h4>
             </div>
@@ -289,7 +285,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapse5">
                     Non-Academic Scholars
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 312px;"></i>
                     </a>
                 </h4>
             </div>
@@ -358,7 +353,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="true" aria-controls="collapse11">
                     Adding, Changing, and Dropping of Subjects
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 150px;"></i>
                     </a>
                 </h4>
             </div>
@@ -381,7 +375,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="true" aria-controls="collapse12">
                     Cross Enrollment
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 359px;"></i>
                     </a>
                 </h4>
             </div>
@@ -403,7 +396,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse17" aria-expanded="true" aria-controls="collapse17">
                     Shifting to Another Course
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 286px;"></i>
                     </a>
                 </h4>
             </div>
@@ -424,7 +416,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse13" aria-expanded="true" aria-controls="collapse13">
                     Applying for Lost COM
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 315px;"></i>
                     </a>
                 </h4>
             </div>
@@ -449,7 +440,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse14" aria-expanded="true" aria-controls="collapse14">
                     Examinations
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 388px;"></i>
                     </a>
                 </h4>
             </div>
@@ -471,7 +461,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse15" aria-expanded="true" aria-controls="collapse15">
                     Filing a Promissory Note
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 303px;"></i>
                     </a>
                 </h4>
             </div>
@@ -492,7 +481,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse16" aria-expanded="true" aria-controls="collapse16">
                     Claiming of Graded Class Cards
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 250px;"></i>
                     </a>
                 </h4>
             </div>
@@ -521,7 +509,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse18" aria-expanded="true" aria-controls="collapse18">
                     Leave of Absence (LOA)
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 307px;"></i>
                     </a>
                 </h4>
             </div>
@@ -541,7 +528,6 @@
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse19" aria-expanded="true" aria-controls="collapse19">
                     Applying for Identification Card
-                        <i class="more-less glyphicon glyphicon-plus" style="padding-left: 248px;"></i>
                     </a>
                 </h4>
             </div>
@@ -658,11 +644,13 @@
                           </div>
             
                             <div class="modal-body">
-                              <ol >
+                              <div class="downloadable">
+                              <ol>
                               <?php foreach ($get_downloads as $downloads): ?>
-                                <li style="text-align: justify;"><a href="<?=site_url('downloads/'). $downloads['file_name']?>"><span class="glyphicon glyphicon-file fa-lg"></span><?=$downloads['file_description']?> </a></li><br>
+                                <li style="text-align: justify;"><a href="<?=site_url('downloads/'). $downloads['file_name']?>"><span class="glyphicon glyphicon-file fa-lg" style="margin-right: 3px; margin-left: 3px;"></span><?=$downloads['file_description']?> </a></li><br>
                               <?php endforeach ?>
-                              </ol> 
+                              </ol>
+                              </div>
                             </div>
             
                             <div class="modal-footer">

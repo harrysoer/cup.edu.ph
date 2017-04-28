@@ -134,7 +134,7 @@
                         </a>
                       </div>
                       <div class="media-body" style="padding-top: 17px;">
-                       <a href="<?=site_url('/acadcal');?>">Academic Calendar</a>
+                       <a href="<?=site_url('/calendar');?>">Academic Calendar</a>
                       </div>
                     </div>
                   </li>  

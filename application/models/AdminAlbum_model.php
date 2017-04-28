@@ -111,10 +111,16 @@ class adminAlbum_model extends CI_Model
 		return $this->db->count_all_results();
 	}
 
-	public function deleteAlbum_by_id($id)
+	public function deleteAlbum_by_id($slug)
 	{	
-		$this->db->where('id', $id);
-		$this->db->delete($this->table);
+		if (isset($slug)) {
+			$this->db->where('slug', $slug);
+			$this->db->delete($this->table);
+		}
+
+		$this->db->where('slug', $slug);
+		$this->db->delete('gallery_images');
+		
 	}
 
 

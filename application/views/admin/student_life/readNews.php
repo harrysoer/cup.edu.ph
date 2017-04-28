@@ -10,7 +10,9 @@
 
 </head>
 <body>
-	<div class="container">
+	<div class="container" style="padding-top: 3rem;">
+
+	<a type="button" class="btn btn-info" href="<?=site_url('admin/news/list')?>"><i class="fa fa-backward"></i>Return</a>
 		<?php
 		echo '<center><h2>'.$news_item['title'].'</h2></center><br>';
 		echo '<center><h2>'.$news_item['author'].'</h2></center><br>';

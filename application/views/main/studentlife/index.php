@@ -646,7 +646,7 @@
                     <div class="singCourse_imgarea">
                       <img src="<?=base_url('assets/for_main/img/manual.png');?>" />                      
                       <div class="mask">                         
-                        <a href="<?=site_url('/promise');?>" class="course_more">View More</a>
+                        <a href="<?=site_url('/pdf');?>" class="course_more" target="_blank">View More</a>
                       </div>
                     </div>
                     <div class="singCourse_content">

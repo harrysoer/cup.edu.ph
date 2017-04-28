@@ -69,7 +69,7 @@
                    <div class="slider_caption">
                     <br><br><br><br><h2>City University of Pasay</h2>
                     <p>A Premier, Globally Competitive and Value-laden Institute - connecting, transforming, and trancending for academic excellence.</p>
-                    <a class="slider_btn" href="#">Know More</a>
+                    <a class="slider_btn" href="<?=site_url('/about');?>">Know More</a>
                   </div>
                   </li>
                 <!-- Start single slider-->
@@ -78,7 +78,7 @@
                    <div class="slider_caption slider_right_caption">
                     <br><br><br><br><h2>Better Education Environment</h2>
                     <p>Nurturing, Inspiring and Empowering Future Leaders.</p>
-                    <a class="slider_btn" href="#">Know More</a>
+                    <a class="slider_btn" href="<?=site_url('/about');?>">Know More</a>
                   </div>
                 </li>
                 <!-- Start single slider-->
@@ -87,7 +87,7 @@
                    <div class="slider_caption">
                     <br><br><br><br><h2>Find out you in better way</h2>
                     <p>See yourself in a value-laden institute with ensured quality and competitive education for a brighter future in your career.</p>
-                    <a class="slider_btn" href="#">Know More</a>
+                    <a class="slider_btn" href="<?=site_url('/about');?>">Know More</a>
                   </div>
                 </li>
               </ul>

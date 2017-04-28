@@ -160,11 +160,11 @@ function reload_table()
 function delete_person(id)
 {
     
-    if(confirm('Are you sure delete this data?'))
+    if(confirm('Are you sure to DELETE this whole album?'))
     {
         // ajax delete data to database
         $.ajax({
-            url : "<?php echo site_url('admin/ajax_deleteForm')?>/"+id,
+            url : "<?php echo site_url('admin/ajax_deleteAlbum')?>/"+id,
             type: "POST",
             dataType: "JSON",
             success: function(data)

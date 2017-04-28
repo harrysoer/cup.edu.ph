@@ -306,4 +306,9 @@ class CupWebsite extends CI_Controller{
 		$this->load->view('main/template/footer');
 	}
 	
+	public function pdf()
+	{
+		$data['title']="Student Manual";
+		$this->load->view('main/studentlife/pdfviewer/index');
+	}
 }

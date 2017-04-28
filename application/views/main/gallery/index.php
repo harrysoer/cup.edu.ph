@@ -114,9 +114,9 @@
 
           <div class="col-lg-8 col-md-8 col-sm-8">
             <div id="gallerySLide" class="gallery_area">
-                <ul >
+                <ul class="gallery-content">
               <?php foreach ($get_album as $album): ?>                  
-                   <li><a href="<?=site_url('gallery/').$album['slug'].'/1'?>"><span class="glyphicon glyphicon-picture fa-4x"></span><h3><?=$album['album_name']?></h3></a></li>
+                   <a href="<?=site_url('gallery/').$album['slug'].'/1'?>"><span class="glyphicon glyphicon-picture fa-4x" style="text-align: center;"></span><h3><?=$album['album_name']?></h3></a>
               <?php endforeach?>
                 </ul>
             </div>

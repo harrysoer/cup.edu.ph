@@ -34,6 +34,46 @@ class Portal_DO extends CI_Controller {
 
 	}
 
+	public function index()
+	{
+		$data['get_courses'] = $this->do->get_courses();
+		$this->load->view('portal/do/index', $data);
+	}
+
+	public function courses()
+	{
+		$data['get_courses'] = $this->do->get_courses();
+		$this->load->view('portal/do/courses', $data);
+	}
+	
+	public function list_curriculums($id=null, $cu=null)
+	{
+		$data['get_curriculum'] = $this->do->list_curriculums();
+		$this->load->view('portal/do/list_curriculums', $data);
+	}
+
+	public function delete_curriculum($id=null, $cu=null)
+	{
+		$url = $this->uri->segment(4) ;
+		$cu	= $this->uri->segment(5);
+		$this->do->delete_curriculum($cu);
+
+		redirect(site_url('do/curriculums/'.$url ,'refresh'));
+	}
+
+	public function view_curriculum($id=null, $cu=null)
+	{
+		$data['get_year1_1'] = $this->do->get_year1_1();
+		$data['get_year1_2'] = $this->do->get_year1_2();
+		$data['get_year2_1'] = $this->do->get_year2_1();
+		$data['get_year2_2'] = $this->do->get_year2_2();
+		$data['get_year3_1'] = $this->do->get_year3_1();
+		$data['get_year3_2'] = $this->do->get_year3_2();
+		$data['get_year4_1'] = $this->do->get_year4_1();
+		$data['get_year4_2'] = $this->do->get_year4_2();
+		$this->load->view('portal/do/curriculum', $data);
+	}
+
 
 	public function addCourse(){
 	
@@ -89,38 +129,48 @@ class Portal_DO extends CI_Controller {
 		}
 	}
 
-	public function index()
-	{
-		$data['get_courses'] = $this->do->get_courses();
-		$this->load->view('portal/do/index', $data);
-	}
+	public function upload_subject(){
+		$url = $this->uri->segment(4) ;
+		$cu	= $this->uri->segment(5);
 
-	public function courses()
-	{
-		$data['get_courses'] = $this->do->get_courses();
-		$this->load->view('portal/do/courses', $data);
-	}
+		$config['upload_path'] 		= './uploads/subjects/';
+		$config['allowed_types']	= 'xls|xlsx';
 
-	
-	public function list_curriculums($id=null, $cu=null)
-	{
-		$data['get_curriculum'] = $this->do->list_curriculums();
-		$this->load->view('portal/do/list_curriculums', $data);
-	}
+		$this->upload->initialize($config);
 
-	public function view_curriculum($id=null, $cu=null)
-	{
-		$data['get_year1_1'] = $this->do->get_year1_1();
-		$data['get_year1_2'] = $this->do->get_year1_2();
-		$data['get_year2_1'] = $this->do->get_year2_1();
-		$data['get_year2_2'] = $this->do->get_year2_2();
-		$data['get_year3_1'] = $this->do->get_year3_1();
-		$data['get_year3_2'] = $this->do->get_year3_2();
-		$data['get_year4_1'] = $this->do->get_year4_1();
-		$data['get_year4_2'] = $this->do->get_year4_2();
-		$this->load->view('portal/do/curriculum', $data);
-	}
+		if (!$this->upload->do_upload('userFile'))
+		{		
+            $data = array('error' => $this->upload->display_errors());
+		
+			$this->load->view('portal/do/upload_subject', $data);
+		}
+		else
+		{
+			$file_name = $this->upload->data('file_name');
 
+			$file = './uploads/subjects/'.$file_name;
+			//load the excel library
+			$this->load->library('excel');
+			$objReader = PHPExcel_IOFactory::createReader('Excel2007');
+			$objReader->setReadDataOnly(TRUE);
+			$excelReader = PHPExcel_IOFactory::createReaderForFile($file);
+			$excelObj = $excelReader->load($file);
+			$worksheet = $excelObj->getSheet(0);
+			$lastRow = $worksheet->getHighestRow();
+			
+			//NILOOP MO DITO YUNG CELLS SA EXCEL FILE
+			for ($row = 3; $row <= $lastRow; $row++) {
+				$cellA = $worksheet->getCell('A'.$row)->getValue();
+				$cellB = $worksheet->getCell('B'.$row)->getValue();
+				$cellC = $worksheet->getCell('C'.$row)->getValue();
+				$cellD = $worksheet->getCell('D'.$row)->getValue();
+				$cellE = $worksheet->getCell('E'.$row)->getValue();
+				$this->do->add_subjects($cellA ,$cellB ,$cellC ,$cellD ,$cellE );
+			}
+		
+			redirect(site_url('do/curriculum/'.$url.'/'.$cu ,'refresh'));
+		}
+	}
 }
 
 /* End of file portal_DO.php */
