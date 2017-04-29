@@ -13,33 +13,34 @@
     </head>
     <body>
         <div id="loginbox">            
-            <?php if (isset($error)) : ?>
-                <div class="col-md-12">
-                    <div class="alert alert-danger" role="alert">
-                        <?= $error ?>
-                    </div>
-                </div>
-            <?php endif; ?>
-
+            
             <?=form_open('do/login/status')?>
-				 <div class="control-group normal_text"> <h3><?=$name?> Login</h3></div>
+				<div class="control-group normal_text"> <h3><?=$name?> Login</h3></div>
+                <?php if (isset($error)) : ?>
+                    <div class="col-md-12 col-sm-12 col-lg-12">
+                        <div class="alert alert-danger" role="alert"><b>
+                            <?= $error ?>
+                        </b></div>
+                    </div>
+                <?php endif; ?>
+
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on bg_lg"><i class="icon-user"> </i></span><input type="text" placeholder="Username"  required/>
+                            <span class="add-on bg_lg"><i class="icon-user"> </i></span><input name="username" type="text" placeholder="Username"  required/>
                         </div>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on bg_ly"><i class="icon-lock"></i></span><input type="password" placeholder="Password" required/>
+                            <span class="add-on bg_ly"><i class="icon-lock"></i></span><input name="password" type="password" placeholder="Password" required/>
                         </div>
                     </div>
                 </div>
                 <div class="form-actions">
                     <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Lost password?</a></span>
-                    <span class="pull-right"><a type="submit"  class="btn btn-success" /> Login</a></span>
+                    <span class="pull-right"><input type="submit"  class="btn btn-success" value="Login" /> </input></span>
                 </div>
             </form>
             <form id="recoverform" action="#" class="form-vertical">

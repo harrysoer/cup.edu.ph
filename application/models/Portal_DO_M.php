@@ -28,7 +28,8 @@ class Portal_DO_M extends CI_Model {
 	             'first_name' => $user->first_name,
 	             'last_name' => $user->last_name,
 	             'college_dept' => $user->college_dept,
-	         	  'school_year'		=> $year->school_year,
+	         	 'school_year'		=> $year->school_year,
+	         	 'sem'		=> $year->sem,
 	         ];
 	         $this->session
 	              ->set_userdata($logindata);

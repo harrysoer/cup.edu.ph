@@ -95,10 +95,26 @@ $route['curriculum']='StudentPortal/curriculum';
 $route['forum2']='StudentPortal/forum2';
 
 //do portal routes
-$route['dportal']='StudentPortal/dportal';
+// $route['dportal']='StudentPortal/dportal';
 $route['forum3']='StudentPortal/forum3';
 $route['addsubject']='StudentPortal/addsubject';
 $route['viewsched']='StudentPortal/viewsched';
+
+//gelo's routes for do
+$route['dportal/login']		  			 = 'portal_do_login/index';
+$route['do/logout']		  			 = 'portal_do/logout';
+$route['do/login/status']			 = 'portal_do_login/login';
+$route['dportal']  				 =  'portal_do/index';
+
+$route['dportal/course']  				 =  'portal_do/courses';
+$route['dportal/courses/add']  			 =  'portal_do/addCourse';
+
+$route['dportal/curriculums/(:any)']			=  'portal_do/list_curriculums/$1';
+$route['dportal/curriculum/(:any)/(:any)']	=  'portal_do/view_curriculum/$1/$cu';
+$route['dportal/curriculums/add/(:any)']			=  'portal_do/add_curriculums/$1';
+$route['dportal/curriculum/delete/(:any)/(:any)'] =  'portal_do/delete_curriculum/$1/$cu';
+
+
 
 //faculty portal routes
 $route['fportal']='StudentPortal/fportal';
@@ -146,18 +162,7 @@ $route['forum/post/(:any)'] 		   =  'forum/read_post';
 $route['forum/(:any)/(:any)']  =  'admin_portal/student';
 
 //DO ROUTES
-$route['do/login']		  			 = 'portal_do_login/index';
-$route['do/logout']		  			 = 'portal_do/logout';
-$route['do/login/status']			 = 'portal_do_login/login';
-$route['do/index']  				 =  'portal_do/index';
 
-$route['do/courses']  				 =  'portal_do/courses';
-$route['do/courses/add']  			 =  'portal_do/addCourse';
-
-$route['do/curriculums/(:any)']			=  'portal_do/list_curriculums/$1';
-$route['do/curriculum/(:any)/(:any)']	=  'portal_do/view_curriculum/$1/$cu';
-$route['do/curriculums/add/(:any)']			=  'portal_do/add_curriculums/$1';
-$route['do/curriculum/delete/(:any)/(:any)'] =  'portal_do/delete_curriculum/$1/$cu';
 
 $route['do/subjects/add/(:any)/(:any)'] =  'portal_do/addSubjects/$1/$cu';
 

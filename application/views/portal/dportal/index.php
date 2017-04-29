@@ -1,28 +1,8 @@
-
-<body>
-
-<!--Header-part-->
-<div id="header">
-  <h1><a href="<?=site_url('/dportal');?>">Student Portal</a></h1>
-</div>
-<!--close-Header-part--> 
-
-
-<!--top-Header-menu-->
-<div id="user-nav" class="navbar navbar-inverse">
-  <ul class="nav">
-    <li  class="dropdown" id="profile-messages" ><a><i class="icon icon-user"></i>  <span class="text">User: Dean's Office</span></a>
-    </li>
-    <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
-  </ul>
-</div>
-<!--close-top-Header-menu-->
-
 <!--sidebar-menu-->
 <div id="sidebar">
   <ul>
     <li class="active"><a href="<?=site_url('/dportal');?>"><i class="icon icon-home"></i> <span>HOME</span></a> </li>
-
+    <li><a href="<?=site_url('/dportal/course');?>"><i class="icon icon-th-list"></i> <span>Courses</span></a> </li>
     <li data-toggle="collapse" data-target="#products" class="collapsed"><a href="#"><i class="icon icon-calendar"></i> <span>CLASS SCHEDULES</span></a> </li>
     <ul class="sub-menu collapse" id="products" style="text-align: left; font-size: 13px;">
       <li><a href="<?=site_url('/addsubject');?>">Add Subject</a></li>
@@ -39,7 +19,7 @@
 <!--breadcrumbs-->
   <div id="content-header">
     <div id="breadcrumb">
-    <a href="<?=site_url('/sportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a>
+    <a href="<?=site_url('/dportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a>
     </div>
   </div>
 <!--End-breadcrumbs-->
@@ -49,15 +29,17 @@
   <div class="row-fluid">
     <div class="span12">
     <div class="widgetbox">
-      <center><img src="<?=base_url('/assets/for_sportal/img/logo2.png');?>" style="margin-top: 50px; min-width: 100px; min-height: 100px;" /></center>
+      <center><img src="<?=base_url('/assets/for_sportal/img/logo2.png');?>" style="margin-top: 1rem; min-width: 100px; min-height: 100px;" /></center>
     </div>
     <div class="home-title">
       <center><h1 style="letter-spacing: 3px; color: #4a7f43; font-family: Old English Text MT;">City University of Pasay</h1></center><br><br>
-      <center><h1 style="letter-spacing: 5px;">WELCOME, Harry Angelo Soer</h1></center>
+      <center><h1 style="letter-spacing: 5px;">WELCOME,<?=$this->session->first_name." ".$this->session->last_name?></h1></center>
       <br><br>
+      <center><h2 style="letter-spacing: 5px;">Current Sem &amp; Year:</h2></center>
+      <center><h2 style="letter-spacing: 5px;"><?=$this->session->sem.", ".$this->session->school_year?></h2></center>
       <hr style="width: 70%; height: 5px; margin-left: auto; margin-right: auto; border-color: #666; border-style: inset;">
-      <br><br><br><br>
-      <center><h4 style="font-family: Script MT Bold; color: #fdc726;">"A Premier, Globally Competitive and Value-laden<br>Institute - connecting, transforming, and trancending for academic excellence."</h4></center>
+      <br><br>
+      <center><h4 style="font-family: Script MT Bold; color:  #808000;">"A Premier, Globally Competitive and Value-laden<br>Institute - connecting, transforming, and trancending for academic excellence."</h4></center>
     </div>
     </div>
   </div>

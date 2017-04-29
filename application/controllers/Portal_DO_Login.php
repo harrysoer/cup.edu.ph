@@ -17,7 +17,7 @@ class Portal_DO_login extends CI_Controller {
 		if ($this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
-			redirect('do/index','refresh',301);
+			redirect('dportal','refresh',301);
 		}
 
 	}
@@ -42,11 +42,12 @@ class Portal_DO_login extends CI_Controller {
 
 		if($this->ion_auth->login($username, $pass, $remember)){
 			$this->do->get_college_dept($username);
-			redirect('do/index','refresh');
+			redirect('dportal','refresh');
 		}
 		else{
+			$data['name'] = "Dean's Office";
 			$data['error'] = 'Wrong username or password.';
-			$this->load->view('portal/dportal/other_login', $data);
+			$this->load->view('portal/other_login', $data);
 		}
 	}
 

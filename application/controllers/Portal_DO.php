@@ -18,38 +18,55 @@ class Portal_DO extends CI_Controller {
 		$group='Deans_Office';
 		if (!$this->ion_auth->in_group($group))
 		{
-			$this->session->set_flashdata('message', 'You must be an admin to view this page');
+			$this->session->set_flashdata('message', 'You must be a DO(Dean\'s Office) to view this page');
 			echo "false group";
 		}
 		if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
-			redirect('do/login', 'refresh', 301);
+			redirect('dportal/login', 'refresh', 301);
 		}
 	}
 
 	public function logout(){
 		$logout=$this->ion_auth->logout();
-		redirect('do/login','refresh',301);
+		redirect('dportal/login','refresh',301);
 
 	}
 
 	public function index()
 	{
-		$data['get_courses'] = $this->do->get_courses();
-		$this->load->view('portal/do/index', $data);
+		$data['title']="DO Portal";
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/index');
+		$this->load->view('portal/dportal/template/footer');
+		$this->load->view('portal/dportal/template/js');
 	}
 
 	public function courses()
 	{
 		$data['get_courses'] = $this->do->get_courses();
-		$this->load->view('portal/do/courses', $data);
+		$data['title']="DO Portal";
+
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/course/index', $data);
+		$this->load->view('portal/dportal/template/footer');
+		$this->load->view('portal/dportal/template/js');
 	}
 	
 	public function list_curriculums($id=null, $cu=null)
 	{
 		$data['get_curriculum'] = $this->do->list_curriculums();
-		$this->load->view('portal/do/list_curriculums', $data);
+
+		$data['title']="DO Portal";
+
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/curriculum/index', $data);
+		$this->load->view('portal/dportal/template/footer');
+		$this->load->view('portal/dportal/template/js');
 	}
 
 	public function delete_curriculum($id=null, $cu=null)
@@ -71,7 +88,12 @@ class Portal_DO extends CI_Controller {
 		$data['get_year3_2'] = $this->do->get_year3_2();
 		$data['get_year4_1'] = $this->do->get_year4_1();
 		$data['get_year4_2'] = $this->do->get_year4_2();
-		$this->load->view('portal/do/curriculum', $data);
+
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/curriculum/list_subjects', $data);
+		$this->load->view('portal/dportal/template/footer');
+		$this->load->view('portal/dportal/template/js');
 	}
 
 
