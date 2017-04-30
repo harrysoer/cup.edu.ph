@@ -15,9 +15,14 @@
 
 <style>
 	
-	td{
-		text-align:center;
+	tr td:nth-child(odd) {
+    text-align: center;
 	}
+	
+	tr td:nth-child(5) {
+	    text-align: right;
+	}
+	t
 </style>
 
 </head>

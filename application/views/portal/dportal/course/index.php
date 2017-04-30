@@ -38,10 +38,9 @@
 <tbody>
 <tr><td>
 <div class="dropdown" style="padding-top: 15px; padding-left: 10px;">
-  <a class="btn btn-success" href>Add Course</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-
-  </ul>
+  <a class="btn btn-success" href="<?=site_url('dportal/courses/add')?>">Add Course</a>
+  <a class="btn btn-danger" id="other" href="<?=site_url('dportal/courses/add')?>">Other Actions</a>
+ 
 </div>
 </td></tr>
 </tbody>

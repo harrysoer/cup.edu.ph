@@ -106,7 +106,15 @@ class Portal_DO extends CI_Controller {
 		$this->form_validation->set_rules('abbrv', 'Abbriviation', 'trim|required'); 
 
 		if($this->form_validation->run() === false){
-			$this->load->view('portal/do/add_course');
+
+			$data['title']="DO Portal";
+
+			$this->load->view('portal/dportal/template/header',$data);
+			$this->load->view('portal/dportal/template/menuBar');
+			$this->load->view('portal/dportal/course/add-course', $data);
+			$this->load->view('portal/dportal/template/footer');
+			$this->load->view('portal/dportal/template/js');
+
 		}
 		else{
 			$course = $this->input->post('course') ;

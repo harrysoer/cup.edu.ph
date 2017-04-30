@@ -20,7 +20,7 @@
   <div id="content-header">
     <div id="breadcrumb">
     <a href="<?=site_url('/dportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a>
-    <a href="<?=site_url('/addsubject');?>" title="Go to Home" class="tip-bottom"> Curriculum</a>
+    <a title="Go to Home" class="tip-bottom"> Curriculum</a>
     </div>
   </div>
 <!--End-breadcrumbs-->
@@ -38,10 +38,8 @@
 <tbody>
 <tr><td>
 <div class="dropdown" style="padding-top: 15px; padding-left: 10px;">
-  <a class="btn btn-success" href>Add Subjects</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-
-  </ul>
+  <a class="btn btn-info" href="<?=site_url('dportal/curriculums/').$this->uri->segment(3)?>"><i class=" icon-backward">&nbsp;&nbsp;</i>Return</a>
+  <a class="btn btn-success" href=>Add Subjects</a>
 </div>
 </td></tr>
 </tbody>
@@ -379,8 +377,11 @@
   $(".dropdown-menu li a").click(function(){
   $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
   $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+
+  $("td").css("text-align", "center");
 });
 </script>
+
 
     
 

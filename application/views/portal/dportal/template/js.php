@@ -21,6 +21,9 @@
 <script src="<?=base_url('assets/for_sportal/js/matrix.tables.js');?>"></script> 
 
 <script type="text/javascript">
+  //for hover 
+    $('#other').popover({title: "What is this?", content: "<span style=\"color:blue;\">EDIT</span> or <span style=\"color:red;\">DELETE</span> a course in your list", trigger: "hover"}); 
+
   // This function is called from the pop-up menus to transfer to
   // a different page. Ignore if the value returned is a null string:
   function goPage (newURL) {
@@ -43,6 +46,10 @@
 function resetMenu() {
    document.gomenu.selector.selectedIndex = 2;
 }
+</script>
+
+<script type="text/javascript">
+  
 </script>
 </body>
 </html>
