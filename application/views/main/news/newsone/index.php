@@ -70,10 +70,10 @@
                     <!-- End events slider -->
                     <h2 class="blog_title"><?=$news_item['title']?></h2>
                     <div class="blog_commentbox">
-                      <p><i class="fa fa-calendar"></i>Date Published: <?=$news_item['dates']?></p>
-                      <p><i class="fa fa-user"></i>Author: <?=$news_item['author']?></p>                      
+                      <p style="margin-left: -10rem;"><i class="fa fa-calendar"></i>Date Published: <?=$news_item['dates']?></p>
+                      <p style="margin-left: -8rem;"><i class="fa fa-user"></i>Author: <?=$news_item['author']?></p>
                     </div>
-                    <div>
+                    <div style="padding-top: 5rem;">
                       <?=$news_item['text']?>
                     </div>
                   </div>

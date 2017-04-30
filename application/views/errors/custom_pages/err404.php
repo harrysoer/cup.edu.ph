@@ -44,18 +44,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </head>
     <body>
 
-    	<div class="text-center" style="padding-top: 15rem;">
-            <h1 style="	font-size: 5rem; z-index: 1;" ><?php echo $heading; ?></h1>
+        <div class="text-center" style="padding-top: 15rem;">
                 <div class="ex-page-content text-center">
-                    <h2 class="font-light"><?php echo $message; ?></h2><br>
-                    <h2 class="font-light">Internal Server Error.</h2><br>
-                    <p>Why not try refreshing your page?<!--  or you can contact <a href="#">support --></a></p>
-                
+                    <h1 style=" z-index: 1;" >404</h1>
+                    <h2 class="font-light">Page Not Found</h2><br>
                     <a class="btn btn-success waves-effect waves-light" href="<?=site_url('')?>"><i class="fa fa-angle-left"></i> Back to C.U.P. Main Page</a>
-            	</div>
+                </div>
         </div>
         
-    	<script>
+        <script>
             var resizefunc = [];
         </script>
         <script src="<?=base_url('assetes/for_admin/js/jquery.min.js')?>"></script>
@@ -72,6 +69,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <!-- CUSTOM JS -->
         <script src="js/jquery.app.js"></script>
-	
-	</body>
+    
+    </body>
 </html>

@@ -12,9 +12,9 @@ class StudentPortal extends CI_Controller {
 	{
 		$data['title']="Student Portal";
 		$this->load->view('portal/sportal/template/header',$data);
-		$this->load->view('portal/sportal/template/js');
 		$this->load->view('portal/sportal/index');
 		$this->load->view('portal/sportal/template/footer');
+		$this->load->view('portal/sportal/template/js');
 	}
 
 	public function info()

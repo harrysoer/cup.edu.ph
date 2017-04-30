@@ -178,5 +178,5 @@ $route['portal/forum/(:any)']='forum/index';
 
 $route['register']='portal/register';
 //$route['default_controller'] = 'welcome';
-$route['404_override'] = '';
+$route['404_override'] = 'customError';
 $route['translate_uri_dashes'] = FALSE;

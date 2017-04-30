@@ -18,8 +18,7 @@ class Portal_DO extends CI_Controller {
 		$group='Deans_Office';
 		if (!$this->ion_auth->in_group($group))
 		{
-			$this->session->set_flashdata('message', 'You must be a DO(Dean\'s Office) to view this page');
-			echo "false group";
+			return show_error('You must logged in as a Dean\'s Office Account to view this page.');
 		}
 		if (!$this->ion_auth->logged_in())
 		{
