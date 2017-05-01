@@ -81,7 +81,7 @@ class Portal_DO_M extends CI_Model {
 	public	function list_curriculums(){
 		$college_dept = $this->session->college_dept;
 		$id = $this->uri->segment(3);
-		$query = $this->db->get_where('portal_curriculums', array('college_dept' => $college_dept ,  ));
+		$query = $this->db->get_where('portal_curriculums', array('college_dept' => $college_dept , 'course_id' => $id  ));
 		return $query->result_array();
 	}
 
@@ -95,7 +95,12 @@ class Portal_DO_M extends CI_Model {
         );
 
 		if($this->db->insert('portal_curriculums', $data)){
-			return $this->db->select_max('id');
+			$this->db->select_max('curriculum_id');
+			$query = $this->db->get('portal_curriculums');
+			$row = $query->row();
+			
+			$id = $row->curriculum_id;
+			return $id;
 		}
 	}
 

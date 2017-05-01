@@ -147,7 +147,7 @@ class Portal_DO extends CI_Controller {
 			$abbrv = $this->input->post('abbrv') ;
 			
 			$this->do->add_course($course, $years ,$abbrv);
-			redirect('do/courses','refresh');
+			redirect('dportal/courses','refresh');
 		}
 	}
 
@@ -191,20 +191,34 @@ class Portal_DO extends CI_Controller {
 		}
 	}
 
+	public function upload_view(){
+		$data['title']="Dean's Office";	
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/addsubject/upload-subject');
+		$this->load->view('portal/dportal/template/footer');
+		$this->load->view('portal/dportal/template/js');
+	}
+
 	public function upload_subject(){
 		$url = $this->uri->segment(4) ;
 		$cu	= $this->uri->segment(5);
 
 		$config['upload_path'] 		= './uploads/subjects/';
-		$config['allowed_types']	= 'xls|xlsx';
+		$config['allowed_types']	= '*';
 
 		$this->upload->initialize($config);
 
-		if (!$this->upload->do_upload('userFile'))
-		{		
+		if (!$this->upload->do_upload('ang_file'))
+		{	
+			$data['title']="Dean's Office";	
             $data = array('error' => $this->upload->display_errors());
 		
-			$this->load->view('portal/do/upload_subject', $data);
+			$this->load->view('portal/dportal/template/header',$data);
+			$this->load->view('portal/dportal/template/menuBar');
+			$this->load->view('portal/dportal/addsubject/upload-subject',$data);
+			$this->load->view('portal/dportal/template/footer');
+			$this->load->view('portal/dportal/template/js');
 		}
 		else
 		{
@@ -230,8 +244,8 @@ class Portal_DO extends CI_Controller {
 				$this->do->add_subjects($cellA ,$cellB ,$cellC ,$cellD ,$cellE );
 			}
 		
-			redirect(site_url('do/curriculum/'.$url.'/'.$cu ,'refresh'));
 		}
+			redirect('dportal/curriculum/'.$url.'/'.$cu ,'refresh');
 	}
 }
 

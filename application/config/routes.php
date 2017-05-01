@@ -109,6 +109,8 @@ $route['dportal']  				 =  'portal_do/index';
 $route['dportal/course']  				 =  'portal_do/courses';
 $route['dportal/courses/add']  			 =  'portal_do/addCourse';
 $route['dportal/subjects/add/(:any)/(:any)'] =  'portal_do/addSubjects/$1/$cu';
+$route['dportal/subjects/upload/(:any)/(:any)'] = 'portal_do/upload_view/$1/$cu';
+$route['dportal/subjects/submit/(:any)/(:any)'] = 'portal_do/upload_subject/$1/$cu';
 
 
 $route['dportal/curriculums/(:any)']			=  'portal_do/list_curriculums/$1';

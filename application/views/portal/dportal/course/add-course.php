@@ -42,7 +42,7 @@
               <div class="control-group">
                 <label class="control-label">Name Of Course</label>
                 <div class="controls">
-                  <input type="text" id="course" name="course" required="">
+                  <input type="text" id="course" name="course" required="" class="span9 m-wrap">
                 </div>
               </div>
               <div class="control-group">

@@ -1,3 +1,4 @@
+<script src="<?=base_url('assets/for_sportal/js/jquery.min.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/excanvas.min.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/jquery.ui.custom.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/bootstrap.min.js');?>"></script> 

@@ -1,3 +1,59 @@
+<script
+  src="https://code.jquery.com/jquery-3.2.0.js"
+  integrity="sha256-wPFJNIFlVY49B+CuAIrDr932XSb6Jk3J1M22M3E2ylQ="
+  crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+        var counter = 2;
+
+        $("#addButton").click(function () {
+
+      if(counter>10){
+                alert("Only 10 subjects/courses are allowed to add at a time");
+                return false;
+      }
+
+      var newTextBoxDiv = $(document.createElement('div'))
+           .attr("id", 'TextBoxDiv' + counter);
+
+      newTextBoxDiv.empty().append(
+        '<div class="controls controls-row">'+
+                '<input type="text" style="width:10rem; margin-left:-5rem;" class="span3 m-wrap" id="textbox'+counter+'" name="subject_id[]" placeholder="Subject/Course Code" required="">'+
+                '<input type="text" class="span4 m-wrap" id="textbox'+counter+'" name="description[]" placeholder="Description" required="">'+
+                '<input type="text" class="span2 m-wrap" id="textbox'+counter+'" name="units[]" placeholder="No. of Units" required="">'+
+                '<input type="text" class="span1 m-wrap" id="textbox'+counter+'" name="sem[]" placeholder="Sem." required="">'+
+                '<input type="text" class="span1 m-wrap" id="textbox'+counter+'" name="year[]" placeholder="Year" required="">'+
+              '</div>'+
+                '<input type="hidden" id="hide" name="count" value="'+counter+'" required="">'
+        );
+
+      newTextBoxDiv.appendTo("#TextBoxesGroup");
+
+
+      counter++;
+         });
+
+         $("#removeButton").click(function () {
+      if(counter==1){
+              alert("No more textbox to remove");
+              return false;
+           }
+
+      counter--;
+
+            $("#TextBoxDiv" + counter).remove();
+
+         });
+     });
+
+
+</script>
+
+
+
 <!--sidebar-menu-->
 <div id="sidebar">
   <ul>
@@ -28,8 +84,10 @@
             <h5>Add Subject Form</h5>
           </div>
           <div class="widget-content nopadding">
-        
             <?=form_open('dportal/subjects/add/'.$this->uri->segment(4).'/'.$this->uri->segment(5),'class="form-horizontal" ')?>
+            <div class="form-actions"><!--add textboxes-->
+              <a type="button" href="<?=site_url('dportal/subjects/upload/').$this->uri->segment(4).'/'.$this->uri->segment(5)?>"  value="Upload Subjects" class="btn btn-info  " id="info_upload">Upload</a>
+            </div>
               <?php if (validation_errors()) : ?>
                 <div class="col-md-12">
                   <div class="alert alert-danger" role="alert">
@@ -39,12 +97,6 @@
                   </div>
                 </div>
               <?php endif; ?>
-              <div class="form-actions">
-                <input type="submit" name="Add Course" class="btn btn-success"> <a href="<?=site_url('/dportal/course')?>" class="btn btn-danger" onclick="confirm('Are you sure to Cancel?')">Cancel</a>
-
-                  <input type="button" value="Add More Course/Subject" id="addButton">
-                   <input type='button' value='Remove Button' id='removeButton'>
-              </div>
               <div id="TextBoxesGroup">
               <div id="TextBoxDiv1">
                 <div class="controls controls-row">
@@ -57,13 +109,15 @@
                 </div>
               </div>
               </div>
-              <div class="form-actions">
-                <input type="submit" name="Add Course" class="btn btn-success"> <a href="<?=site_url('/dportal/course')?>" class="btn btn-danger" onclick="confirm('Are you sure to Cancel?')">Cancel</a>
-
-                  <input type="button" value="Add More Course/Subject" id="addButton">
-                   <input type='button' value='Remove Button' id='removeButton'>
+              <div class="form-actions"><!--add textboxes-->
+                <input type="button" style="background-color:#cce0ff; " value="Add More Course/Subject" class="btn btn-default" id="addButton">
+                <input type='button' value='Remove Button' class="btn btn-danger" id='removeButton'>
               </div>
-            </form>
+              <div class="form-actions">
+                <input type="submit" name="Add Course" class="btn btn-success"> 
+                <a href="<?=site_url('/dportal/curriculum/').$this->uri->segment(4).'/'.$this->uri->segment(5)?>" class="btn btn-danger" onclick="confirm('Are you sure to Cancel?')">Cancel</a>
+              </div>
+            <?= form_close()?>
           </div>
         </div>
       </div>
@@ -79,6 +133,11 @@
 
 
 
-
+<script type="text/javascript">
+  $(".dropdown-menu li a").click(function(){
+  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+});
+</script>
 
 
