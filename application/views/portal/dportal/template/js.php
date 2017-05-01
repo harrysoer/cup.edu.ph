@@ -1,5 +1,4 @@
 <script src="<?=base_url('assets/for_sportal/js/excanvas.min.js');?>"></script> 
-<script src="<?=base_url('assets/for_sportal/js/jquery.min.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/jquery.ui.custom.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/bootstrap.min.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/jquery.flot.min.js');?>"></script> 
@@ -59,48 +58,12 @@ function resetMenu() {
 </script>
 
 <script type="text/javascript">
-    $(document).ready(function(){
-
-        var counter = 2;
-
-        $("#addButton").click(function () {
-
-      if(counter>10){
-                alert("Only 10 subjects/courses are allowed to add at a time");
-                return false;
-      }
-
-      var newTextBoxDiv = $(document.createElement('div'))
-           .attr("id", 'TextBoxDiv' + counter);
-
-      newTextBoxDiv.after().html(
-        '<input type="text" name="subject_id[]" id="textbox' + counter + '" placeholder="Subject/Course Code" required="" > '+
-        '<input type="text" name="description[]" id="textbox' + counter + '" placeholder="Description" required="" > '+
-        '<input type="text" name="units[]" id="textbox' + counter + '" placeholder="No. of Units" required=""> '+
-        '<input type="text" name="sem[]" id="textbox' + counter + '" placeholder="Semester" required=""> '+
-        '<input type="text" name="year[]" id="textbox' + counter + '" placeholder="Year" required=""><br>'+
-        '<input type="hidden" name="count" id="textbox' + counter + '" name="count" value="'+counter+'" required=""><br>'
-        );
-
-      newTextBoxDiv.appendTo("#TextBoxesGroup");
-
-
-      counter++;
-         });
-
-         $("#removeButton").click(function () {
-      if(counter==1){
-              alert("No more textbox to remove");
-              return false;
-           }
-
-      counter--;
-
-            $("#TextBoxDiv" + counter).remove();
-
-         });
-
-    });
+  $(".dropdown-menu li a").click(function(){
+  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+});
 </script>
+
+    
 </body>
 </html>

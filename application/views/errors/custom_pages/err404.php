@@ -44,10 +44,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </head>
     <body>
 
-        <div class="text-center" style="padding-top: 15rem;">
+        <div class="text-center" style="padding-top: 10rem;">
                 <div class="ex-page-content text-center">
+                <img src="<?=base_url('/assets/for_sportal/img/logo2.png');?>" style=" width: 14rem; height: 14rem;" />
                     <h1 style=" z-index: 1;" >404</h1>
-                    <h2 class="font-light">Page Not Found</h2><br>
+                    <h2 class="font-light">Sorry, page not found</h2><br>
                     <a class="btn btn-success waves-effect waves-light" href="<?=site_url('')?>"><i class="fa fa-angle-left"></i> Back to C.U.P. Main Page</a>
                 </div>
         </div>

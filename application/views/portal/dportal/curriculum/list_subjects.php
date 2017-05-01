@@ -39,7 +39,7 @@
 <tr><td>
 <div class="dropdown" style="padding-top: 15px; padding-left: 10px;">
   <a class="btn btn-info" href="<?=site_url('dportal/curriculums/').$this->uri->segment(3)?>"><i class=" icon-backward">&nbsp;&nbsp;</i>Return</a>
-  <a class="btn btn-success" href=>Add Subjects</a>
+  <a class="btn btn-success" href="<?=site_url('dportal/subjects/add/'.$this->uri->segment(3).'/'.$this->uri->segment(4))?>">Add Subjects</a>
 </div>
 </td></tr>
 </tbody>
@@ -76,10 +76,13 @@
         <td><?=$year1_1_unit?></td>
       </tr> 
     <?php endforeach; ?>
-    <tr>
-      <th colspan="2">TOTAL UNITS</th>
-      <th><?=$year1_1_total?></th>
-    </tr>
+    <?php foreach ($get_year1_2 as $year1_2): ?>
+      <tr>
+        <th colspan="2">TOTAL UNITS</th>
+        <th><?=$year1_1_total?></th>
+      </tr>
+    <?php break; ?>
+    <?php endforeach; ?>
   </tbody>
   
 <!-- 2nd sem -->
@@ -285,7 +288,7 @@
 
 <!-- 4th year 1st sem -->
   <thead>
-    <?php foreach ($get_year4_1 as $year3_1): ?>
+    <?php foreach ($get_year4_1 as $year4_1): ?>
       <tr>
         <th colspan="3"><?=$year4_1['year']?>th Year</th>
       </tr>
@@ -326,37 +329,37 @@
   
 <!-- 2nd sem -->
   <thead>
-    <?php foreach ($get_year3_2 as $year3_2): ?>
+    <?php foreach ($get_year4_2 as $year4_2): ?>
       <tr>
-        <th colspan="3"><?=$year3_2['year']?>rd Year</th>
+        <th colspan="3"><?=$year4_2['year']?>th Year</th>
       </tr>
       <tr>
-        <th colspan="3"><?=$year3_2['sem']?>nd Sem</th>
+        <th colspan="3"><?=$year4_2['sem']?>nd Sem</th>
       </tr>
       <tr>
         <th>Course Code</th>
         <th>Description</th>
         <th>Units</th>
       </tr>
-      <?php  $year3_2_total = 0; break;?>
+      <?php  $year4_2_total = 0; break;?>
     <?php endforeach; ?>  
   </thead>
   <tbody>
-    <?php foreach ($get_year3_2 as $year3_2): $year3_2_unit=+$year3_2['no_units']; ?>
+    <?php foreach ($get_year4_2 as $year4_2): $year4_2_unit=+$year4_2['no_units']; ?>
       <?php   
-          $year3_2_unit = $year3_2['no_units'];
-          $year3_2_total += $year3_2_unit ;   
+          $year4_2_unit = $year4_2['no_units'];
+          $year4_2_total += $year4_2_unit ;   
       ?>
       <tr>
-        <td><?=$year3_2['subj_code']?></td>
-        <td><?=$year3_2['description']?></td>
-        <td><?=$year3_2_unit?></td>
+        <td><?=$year4_2['subj_code']?></td>
+        <td><?=$year4_2['description']?></td>
+        <td><?=$year4_2_unit?></td>
       </tr> 
     <?php endforeach; ?>
-    <?php foreach ($get_year3_2 as $year3_2): ?>
+    <?php foreach ($get_year4_2 as $year3_2): ?>
       <tr>
         <th colspan="2">TOTAL UNITS</th>
-        <th><?=$year3_2_total?></th>
+        <th><?=$year4_2_total?></th>
       </tr>
     <?php break; ?>
     <?php endforeach; ?>

@@ -16,19 +16,20 @@ class Portal_DO extends CI_Controller {
 		$this->lang->load('auth');
 
 		$group='Deans_Office';
-		if (!$this->ion_auth->in_group($group))
-		{
-			return show_error('You must logged in as a Dean\'s Office Account to view this page.');
-		}
 		if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
 			redirect('dportal/login', 'refresh', 301);
 		}
+		elseif (!$this->ion_auth->in_group($group))
+		{
+			return show_error('You must logged in as a Dean\'s Office Account to view this page.');
+		}
+		
 	}
 
 	public function logout(){
-		$logout=$this->ion_auth->logout();
+		$this->ion_auth->logout();
 		redirect('dportal/login','refresh',301);
 
 	}
@@ -66,6 +67,31 @@ class Portal_DO extends CI_Controller {
 		$this->load->view('portal/dportal/curriculum/index', $data);
 		$this->load->view('portal/dportal/template/footer');
 		$this->load->view('portal/dportal/template/js');
+	}
+
+	public function addCurriculum(){
+	
+		//validate form input
+		
+		$this->form_validation->set_rules( 'curriculum_name', 'Curriculum', 'trim|required|is_unique[portal_curriculums.curriculum_name]', array('is_unique' => 'This Curriculum Name already exists. Please choose another one.')); 
+
+		if($this->form_validation->run() === false){
+
+			$data['title']="DO Portal";
+
+			$this->load->view('portal/dportal/template/header',$data);
+			$this->load->view('portal/dportal/template/menuBar');
+			$this->load->view('portal/dportal/curriculum/add-curriculum', $data);
+			$this->load->view('portal/dportal/template/footer');
+			$this->load->view('portal/dportal/template/js');
+
+		}
+		else{
+			$curriculum_name = $this->input->post('curriculum_name') ;
+			
+			$id = $this->do->add_curriculum($curriculum_name);
+			redirect('dportal/subjects/add/'.$this->uri->segment(4).'/'.$id ,'refresh');
+		}
 	}
 
 	public function delete_curriculum($id=null, $cu=null)
@@ -136,25 +162,32 @@ class Portal_DO extends CI_Controller {
 		$this->form_validation->set_rules('year[]', 'Year', 'trim|required|numeric|min_length[1]');
 
 		if($this->form_validation->run() == false){
-			$this->load->view('portal/do/add_subject', array('url' => $url , 'cu' => $cu  ));
+			$data['title']="DO Portal";
+
+			$this->load->view('portal/dportal/template/header',$data);
+			$this->load->view('portal/dportal/template/menuBar');
+			$this->load->view('portal/dportal/addsubject/index', array('url' => $url , 'cu' => $cu  ));
+			$this->load->view('portal/dportal/template/footer');
+			$this->load->view('portal/dportal/template/js');
 		}
 		else{
 			$limit = $this->input->post('count');	
-			$count = 0;
 		
-			do {
+			for ($count=0; $count < $limit ; $count++) { 
+
 				$subject_id = $this->input->post('subject_id['.$count.']') ;
 				$description = $this->input->post('description['.$count.']') ;
 				$units = $this->input->post('units['.$count.']') ;
 				$sem = $this->input->post('sem['.$count.']') ;
 				$year = $this->input->post('year['.$count.']') ;
 
-				$this->do->add_subjects($subject_id, $description, $units, $sem, $year);
-				$count++;
+				if(!$this->do->add_subjects($subject_id, $description, $units, $sem, $year)){
+					break;
+				}				
 
-			} while ($count<$limit);
+			} 
 			
-			redirect('do/curriculum/'.$url.'/'.$cu ,'refresh');
+			redirect('dportal/curriculum/'.$url.'/'.$cu ,'refresh');
 		}
 	}
 

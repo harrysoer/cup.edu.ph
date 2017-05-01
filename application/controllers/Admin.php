@@ -27,14 +27,13 @@ class Admin extends CI_Controller {
 		}
 		if (!$this->ion_auth->is_admin())
 		{
-			$this->session->set_flashdata('message', 'You must be an admin to view this page');
-			redirect('');
+			return show_error('Sorry, you must logged in as an Admin to view this page');
 		}
 	}
 
 	public function logout(){
-		$logout=$this->ion_auth->logout();
-		redirect('login','refresh',301);
+		$this->ion_auth->logout();
+		redirect('login','refresh');
 
 	}
 

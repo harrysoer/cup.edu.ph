@@ -108,10 +108,12 @@ $route['dportal']  				 =  'portal_do/index';
 
 $route['dportal/course']  				 =  'portal_do/courses';
 $route['dportal/courses/add']  			 =  'portal_do/addCourse';
+$route['dportal/subjects/add/(:any)/(:any)'] =  'portal_do/addSubjects/$1/$cu';
+
 
 $route['dportal/curriculums/(:any)']			=  'portal_do/list_curriculums/$1';
 $route['dportal/curriculum/(:any)/(:any)']	=  'portal_do/view_curriculum/$1/$cu';
-$route['dportal/curriculums/add/(:any)']			=  'portal_do/add_curriculums/$1';
+$route['dportal/curriculums/add/(:any)']			=  'portal_do/addCurriculum/$1';
 $route['dportal/curriculum/delete/(:any)/(:any)'] =  'portal_do/delete_curriculum/$1/$cu';
 
 
@@ -164,7 +166,6 @@ $route['forum/(:any)/(:any)']  =  'admin_portal/student';
 //DO ROUTES
 
 
-$route['do/subjects/add/(:any)/(:any)'] =  'portal_do/addSubjects/$1/$cu';
 
 $route['do/schedules'] 		    =  'portal_do/index';
 $route['do/professors']		    =  'portal_do/index';

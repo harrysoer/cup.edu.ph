@@ -39,7 +39,7 @@
 <tr><td>
 <div class="dropdown" style="padding-top: 15px; padding-left: 10px;">
   <a class="btn btn-info" href="<?=site_url('dportal/course')?>"><i class=" icon-backward">&nbsp;&nbsp;</i>Return</a>
-  <a class="btn btn-success" href>Add Curriculum</a>
+  <a class="btn btn-success" href="<?=site_url('dportal/curriculums/add/').$this->uri->segment(3)?>">Add Curriculum</a>
   
 </div>
 </td></tr>

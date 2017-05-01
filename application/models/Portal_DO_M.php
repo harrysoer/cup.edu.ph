@@ -85,16 +85,18 @@ class Portal_DO_M extends CI_Model {
 		return $query->result_array();
 	}
 
-	public	function add_curriculum(){
+	public	function add_curriculum($curriculum_name){
 		$course_id	=$this->uri->segment(4);
-		$curriculum_id = $this->uri->segment(5);
-		 $data = array(
+		
+		$data = array(
             'course_id'	  => $course_id	,
-            'curriculum_name' => $subject_id,
+            'curriculum_name' => $curriculum_name,
             'college_dept'=> $this->session->college_dept,
         );
 
-		return   $this->db->insert('portal_curriculums', $data);
+		if($this->db->insert('portal_curriculums', $data)){
+			return $this->db->select_max('id');
+		}
 	}
 
 	public function delete_curriculum($cu){

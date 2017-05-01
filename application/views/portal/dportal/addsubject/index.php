@@ -2,8 +2,8 @@
 <div id="sidebar">
   <ul>
     <li><a href="<?=site_url('/dportal');?>"><i class="icon icon-home"></i> <span>HOME</span></a> </li>
-
-    <li data-toggle="collapse" data-target="#products" class="collapsed active"><a href="#"><i class="icon icon-calendar"></i> <span>CLASS SCHEDULES</span></a></li>
+    <li class="active"><a href="<?=site_url('/dportal/course');?>"><i class="icon icon-th-list"></i> <span>Courses</span></a>
+    <li data-toggle="collapse" data-target="#products" class="collapsed"><a href="#"><i class="icon icon-calendar"></i> <span>CLASS SCHEDULES</span></a></li>
     <ul class="sub-menu collapse" id="products" style="text-align: left; font-size: 13px;">
       <li><a href="<?=site_url('/addsubject');?>">Add Schedule</a></li>
       <li><a href="<?=site_url('/viewsched');?>">Manage Schedules</a></li>
@@ -14,90 +14,68 @@
 </div>
 <!--sidebar-menu-->
 
-<!--main-container-part-->
-<div id="content">
-<!--breadcrumbs-->
-  <div id="content-header">
-    <div id="breadcrumb">
-    <a href="<?=site_url('/dportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a>
-    <a href="<?=site_url('/addsubject');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Add Schedule</a>
-    </div>
-  </div>
-<!--End-breadcrumbs-->
-
 <!--Content-->
-  <div class="container-fluid">
-  <div class="row-fluid">
+<div id="content">
+  <div id="content-header">
+    <div id="breadcrumb"> <a href="<?=site_url('/dportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a >Curriculum</a> <a>Subject</a> <a href="#" class="current">Add</a> </div>
+    <h1>Add Subject</h1>
+  </div>
+  <div class="container-fluid"><hr>
+    <div class="row-fluid">
       <div class="span12">
         <div class="widget-box">
-          <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
-            <h5><B>ADD SUBJECT SCHEDULE</B></h5>
+          <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
+            <h5>Add Subject Form</h5>
           </div>
           <div class="widget-content nopadding">
-<table>
-<tbody>
-<tr><td>
-<div class="dropdown" style="padding-top: 15px; padding-left: 10px;">
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Select Course:
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#" data-value="B.S. in Office Administration">B.S. in Office Administration</a></li>
-    <li><a href="#" data-value="Assc. in Computer Technology">Assc. in Computer Technology</a></li>
-    <li><a href="#" data-value="B.S. in Public Governance">B.S. in Public Governance</a></li>
-    <li><a href="#" data-value="Assc. in Hotel & Restaurant Management">Assc. in Hotel & Restaurant Management</a></li>
-    <li><a href="#" data-value="B.S. in Business Administration">B.S. in Business Administration</a></li>
-    <li><a href="#" data-value="B.S. in Elementary Education">B.S. in Elementary Education</a></li>
-    <li><a href="#" data-value="B.S. in Secondary Education">B.S. in Secondary Education</a></li>
-    <li><a href="#" data-value="B.S. in Nursing">B.S. in Nursing</a></li>
-    <li><a href="#" data-value="Assc. in Midwifery">Assc. in Midwifery</a></li>
+        
+            <?=form_open('dportal/subjects/add/'.$this->uri->segment(4).'/'.$this->uri->segment(5),'class="form-horizontal" ')?>
+              <?php if (validation_errors()) : ?>
+                <div class="col-md-12">
+                  <div class="alert alert-danger" role="alert">
+                    <ul>
+                    <li><?= validation_errors() ?></li>
+                    </ul>
+                  </div>
+                </div>
+              <?php endif; ?>
+              <div class="form-actions">
+                <input type="submit" name="Add Course" class="btn btn-success"> <a href="<?=site_url('/dportal/course')?>" class="btn btn-danger" onclick="confirm('Are you sure to Cancel?')">Cancel</a>
 
-  </ul>
+                  <input type="button" value="Add More Course/Subject" id="addButton">
+                   <input type='button' value='Remove Button' id='removeButton'>
+              </div>
+              <div id="TextBoxesGroup">
+              <div id="TextBoxDiv1">
+                <div class="controls controls-row">
+                  <input type="text" style="width:10rem; margin-left:-5rem;" class="span3 m-wrap" name="subject_id[]"   placeholder="Subject/Course Code" required="">
+                  <input type="text" class="span4 m-wrap" id="description1" name="description[]" placeholder="Description" required="">
+                  <input type="text" class="span2 m-wrap" id="units1" name="units[]" placeholder="No. of Units" required="">
+                  <input type="text" class="span1 m-wrap" id="sem1" name="sem[]" placeholder="Sem." required="">
+                  <input type="text" class="span1 m-wrap" id="year1" name="year[]" placeholder="Year" required="">
+                  <input type="hidden" id="hide" name="count" value="1" required="">
+                </div>
+              </div>
+              </div>
+              <div class="form-actions">
+                <input type="submit" name="Add Course" class="btn btn-success"> <a href="<?=site_url('/dportal/course')?>" class="btn btn-danger" onclick="confirm('Are you sure to Cancel?')">Cancel</a>
+
+                  <input type="button" value="Add More Course/Subject" id="addButton">
+                   <input type='button' value='Remove Button' id='removeButton'>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
 </div>
-</td></tr>
-</tbody>
-</table><br>
-
-<table class="table table-bordered table-striped" style="font-size: 13px; table-layout: fixed; text-align: center;">
-<thead>
-<tr>
-  <th style="width: 10%;">SUBJECT CODE</th>
-  <th style="width: 50%;">SUBJECT DESCRIPTION</th>
-  <th style="width: 20%;">DAY/S</th>
-  <th style="width: 20%;">TIME</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td style="text-align: center;">CSC 217</td>
-<td style="text-align: center;">Introduction to Internet & Basic Web Design</td>
-<td style="text-align: center;">Monday / Thursday</td>
-<td style="text-align: center;">9:00 - 11:00</td>
-</tr>
-</tbody>
-</table>
-
-    </div><br>
-    <button class="btn btn-danger pull-right" style="width: 80px; margin-left: 10px;">Cancel</button>&nbsp;&nbsp;
-    <button class="btn btn-success pull-right" style="width: 80px;">Save</button>
-  </div>
-  </div>
-  </div>
-  </div>
   <!--End of Content-->
 
 </div>
 
-<script type="text/javascript">
-  $(".dropdown-menu li a").click(function(){
-  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
-  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
-});
-</script>
 
-    
 
 
 
