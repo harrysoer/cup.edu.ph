@@ -17,15 +17,23 @@ class Forum extends CI_Controller {
 		if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
-			redirect('login', 'refresh', 301);
+			return show_error('You must log in first to view this page.');
 		}
 	}
 
 	public function index()
-	{
+	{	
+		$data['title']="UNIVERSITY FORUM";
 		$data['get_posts'] = $this->forum->get_post();
+		if ($this->ion_auth->in_group('Deans_Office'))
+		{	
+			$this->load->view('portal/dportal/template/header',$data);
+			$this->load->view('portal/dportal/template/menuBar');
+			$this->load->view('portal/dportal/forum/index',$data);
+			$this->load->view('portal/dportal/template/footer');
+			$this->load->view('portal/dportal/template/js');
+		}
 
-		$this->load->view('portal/forum/index',$data);
 	}
 
 	public function read_post($id=null)
@@ -38,7 +46,21 @@ class Forum extends CI_Controller {
 
 		if ($this->form_validation->run() === FALSE)
         {
-			$this->load->view('portal/forum/view_post',$data);
+			if ($this->ion_auth->in_group('Deans_Office'))
+			{	
+				$this->load->view('portal/dportal/template/header',$data);
+				$this->load->view('portal/dportal/template/menuBar');
+				$this->load->view('portal/dportal/forum/view_post',$data);
+				$this->load->view('portal/dportal/template/footer');
+				$this->load->view('portal/dportal/template/js');
+			}
+			elseif($this->ion_auth->in_group('Student'))
+			{
+
+			}
+			elseif ($this->ion_auth->in_group('Professor')) {
+
+			}
 		}
 		else
 		{
@@ -48,11 +70,25 @@ class Forum extends CI_Controller {
 	}
 
 	public function create_post(){
-		$this->form_validation->set_rules('title', 'Title', 'required');
+		$this->form_validation->set_rules('title', 'Title', 'trim|required|max_length[40]|min_length[5]');
         
         if ($this->form_validation->run() === FALSE)
         {
-			$this->load->view('portal/forum/create');
+        	if ($this->ion_auth->in_group('Deans_Office'))
+			{	
+				$this->load->view('portal/dportal/template/header',$data);
+				$this->load->view('portal/dportal/template/menuBar');
+				$this->load->view('portal/dportal/forum/index',$data);
+				$this->load->view('portal/dportal/template/footer');
+				$this->load->view('portal/dportal/template/js');
+			}
+			elseif($this->ion_auth->in_group('Student'))
+			{
+
+			}
+			elseif ($this->ion_auth->in_group('Professor')) {
+
+			}
 		}
 		else
 		{

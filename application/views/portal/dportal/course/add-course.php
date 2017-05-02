@@ -58,7 +58,7 @@
                 </div>
               </div>
               <div class="form-actions">
-                <input type="submit" name="Add Course" class="btn btn-success"> <a href="<?=site_url('/dportal/course')?>" class="btn btn-danger" onclick="confirm('Are you sure to Cancel?')">Cancel</a>
+                <input type="submit" name="Add Course" class="btn btn-success"> <a href="<?=site_url('/dportal/course')?>" class="btn btn-danger" onclick="return confirm('Are you sure to Cancel?')">Cancel</a>
               </div>
             </form>
           </div>

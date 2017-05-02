@@ -86,6 +86,8 @@ $route['calendar']='CupWebsite/calendar';
 $route['pdf']='CupWebsite/pdf';
 
 //portal routes
+$route['portal']='portal/login';
+
 $route['sportal']='StudentPortal/sportal';
 $route['info']='StudentPortal/info';
 $route['grades']='StudentPortal/grades';
@@ -95,8 +97,6 @@ $route['curriculum']='StudentPortal/curriculum';
 $route['forum2']='StudentPortal/forum2';
 
 //do portal routes
-// $route['dportal']='StudentPortal/dportal';
-$route['forum3']='StudentPortal/forum3';
 $route['addsubject']='StudentPortal/addsubject';
 $route['viewsched']='StudentPortal/viewsched';
 
@@ -105,6 +105,7 @@ $route['dportal/login']		  			 = 'portal_do_login/index';
 $route['do/logout']		  			 = 'portal_do/logout';
 $route['do/login/status']			 = 'portal_do_login/login';
 $route['dportal']  				 =  'portal_do/index';
+$route['forum3']=	'portal_do/forum3';
 
 $route['dportal/course']  				 =  'portal_do/courses';
 $route['dportal/courses/add']  			 =  'portal_do/addCourse';
@@ -112,13 +113,10 @@ $route['dportal/subjects/add/(:any)/(:any)'] =  'portal_do/addSubjects/$1/$cu';
 $route['dportal/subjects/upload/(:any)/(:any)'] = 'portal_do/upload_view/$1/$cu';
 $route['dportal/subjects/submit/(:any)/(:any)'] = 'portal_do/upload_subject/$1/$cu';
 
-
 $route['dportal/curriculums/(:any)']			=  'portal_do/list_curriculums/$1';
 $route['dportal/curriculum/(:any)/(:any)']	=  'portal_do/view_curriculum/$1/$cu';
 $route['dportal/curriculums/add/(:any)']			=  'portal_do/addCurriculum/$1';
 $route['dportal/curriculum/delete/(:any)/(:any)'] =  'portal_do/delete_curriculum/$1/$cu';
-
-
 
 //faculty portal routes
 $route['fportal']='StudentPortal/fportal';
@@ -126,7 +124,14 @@ $route['forum4']='StudentPortal/forum4';
 $route['classes']='StudentPortal/classes';
 $route['viewclass']='StudentPortal/viewclass';
 
+//forum routes
+$route['forum']		  		   =  'forum/index';
+$route['forum/create']		   =  'forum/create_post';
+$route['forum/post/(:any)']	   =  'forum/read_post';
+$route['forum/(:any)/(:any)']  =  'admin_portal/student';
 
+
+//admin routes
 $route['logout']		  		 = 'admin/logout';
 $route['login']		  			 = 'admin_login/index';
 $route['login/status']			 = 'admin_login/login';
@@ -160,26 +165,5 @@ $route['admin/portal/deans_office']	= 'admin_portal/do';
 $route['admin/portal/do/add']	= 'admin_portal/add_do';
 $route['admin/portal/do/delete/(:any)']	= 'admin_portal/delete_do/$1';
 
-$route['forum']		  		   =  'forum/index';
-$route['forum/create']		   =  'forum/create_post';
-$route['forum/post/(:any)'] 		   =  'forum/read_post';
-$route['forum/(:any)/(:any)']  =  'admin_portal/student';
-
-//DO ROUTES
-
-
-
-$route['do/schedules'] 		    =  'portal_do/index';
-$route['do/professors']		    =  'portal_do/index';
-$route['do/students']			=  'portal_do/index';
-
-
-$route['portal']='portal/login';
-
-$route['portal/forum']='forum/index';
-$route['portal/forum/(:any)']='forum/index';
-
-$route['register']='portal/register';
-//$route['default_controller'] = 'welcome';
 $route['404_override'] = 'customError';
 $route['translate_uri_dashes'] = FALSE;

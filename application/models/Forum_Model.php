@@ -13,7 +13,7 @@ class Forum_Model extends CI_Model {
 		if ($id === FALSE)
         {
             // $query = $this->db->query('SELECT * FROM news ORDER	BY	dates DESC;');
-            $this->db->order_by('dates', 'DESC');
+            $this->db->order_by('id_posts', 'DESC');
             $query=$this->db->get('forum_posts');
             return $query->result_array();
         }

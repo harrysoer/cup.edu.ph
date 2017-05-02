@@ -115,7 +115,7 @@
               </div>
               <div class="form-actions">
                 <input type="submit" name="Add Course" class="btn btn-success"> 
-                <a href="<?=site_url('/dportal/curriculum/').$this->uri->segment(4).'/'.$this->uri->segment(5)?>" class="btn btn-danger" onclick="confirm('Are you sure to Cancel?')">Cancel</a>
+                <a href="<?=site_url('/dportal/curriculum/').$this->uri->segment(4).'/'.$this->uri->segment(5)?>" class="btn btn-danger" onclick="return confirm('Are you sure to Cancel?')">Cancel</a>
               </div>
             <?= form_close()?>
           </div>

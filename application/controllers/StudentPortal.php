@@ -95,8 +95,9 @@ class StudentPortal extends CI_Controller {
 	{
 		$data['title']="Add Schedule";
 		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
 		$this->load->view('portal/dportal/template/js');
-		$this->load->view('portal/dportal/addsubject/index');
+		$this->load->view('portal/dportal/addsched/index');
 		$this->load->view('portal/dportal/template/footer');
 	}
 

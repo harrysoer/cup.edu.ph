@@ -28,6 +28,10 @@ class Portal_DO extends CI_Controller {
 		
 	}
 
+	public function forum3(){
+		redirect('forum','refresh');
+	}
+
 	public function logout(){
 		$this->ion_auth->logout();
 		redirect('dportal/login','refresh',301);
@@ -56,6 +60,32 @@ class Portal_DO extends CI_Controller {
 		$this->load->view('portal/dportal/template/js');
 	}
 	
+	//scheds
+	public function addSched()
+	{
+		//validate form input
+		$this->form_validation->set_rules('section_name', 'Section Name', 'trim|required'); 
+
+		if($this->form_validation->run() === false){
+
+			$data['title']="DO Portal";
+
+			$this->load->view('portal/dportal/template/header',$data);
+			$this->load->view('portal/dportal/template/menuBar');
+			$this->load->view('portal/dportal/template/js');
+			$this->load->view('portal/dportal/addsched/index', $data);
+			$this->load->view('portal/dportal/template/footer');
+
+		}
+		else{
+			$section_name = $this->input->post('section_name') ;
+			
+			$id = $this->do->add_section($curriculum_name);
+			redirect('dportal/subjects/add/'.$this->uri->segment(4).'/'.$id ,'refresh');
+		}
+	}
+
+	//curriculums
 	public function list_curriculums($id=null, $cu=null)
 	{
 		$data['get_curriculum'] = $this->do->list_curriculums();
@@ -72,7 +102,6 @@ class Portal_DO extends CI_Controller {
 	public function addCurriculum(){
 	
 		//validate form input
-		
 		$this->form_validation->set_rules( 'curriculum_name', 'Curriculum', 'trim|required|is_unique[portal_curriculums.curriculum_name]', array('is_unique' => 'This Curriculum Name already exists. Please choose another one.')); 
 
 		if($this->form_validation->run() === false){

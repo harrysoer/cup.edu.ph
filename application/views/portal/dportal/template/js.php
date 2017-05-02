@@ -19,6 +19,9 @@
 <script src="<?=base_url('assets/for_sportal/js/matrix.popover.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/jquery.dataTables.min.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/matrix.tables.js');?>"></script> 
+<script src="<?=base_url('assets/for_sportal/js/wysihtml5-0.3.0.js');?>"></script> 
+<script src="<?=base_url('assets/for_sportal/js/bootstrap-wysihtml5.js');?>"></script> 
+
 
 <script type="text/javascript">
   $(".dropdown-menu li a").click(function(){
@@ -65,6 +68,9 @@ function resetMenu() {
 });
 </script>
 
-    
+<script>
+  $('.textarea_editor').wysihtml5();
+</script>
+
 </body>
 </html>
