@@ -50,7 +50,7 @@
 					
 					<td>
 						<a type="button"  class="btn btn-info">Edit <span class="glyphicon glyphicon-pencil" ></span></a>
-						<a type="button" onclick="confirm('delete this user?')" href="<?=site_url('admin/portal/do/delete/').$do['username']?>" class="btn btn-danger">Delete <span class="glyphicon glyphicon-trash" ></span></a>
+						<a type="button" onclick="confirm('delete this user?')" href="<?=site_url('admin/portal/do/delete/').$do['id']?>" class="btn btn-danger">Delete <span class="glyphicon glyphicon-trash" ></span></a>
 					</td>
 				</tr>
 			<?php endforeach ?>

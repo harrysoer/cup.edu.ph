@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://192.168.254.128/cup.edu.ph';
+$config['base_url'] = 'http://localhost/cup.edu.ph';
 // $config['base_url'] = 'http://cup.edu.ph';
 
 /*

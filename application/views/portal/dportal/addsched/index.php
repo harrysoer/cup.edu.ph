@@ -44,17 +44,19 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#" data-value="B.S. in Office Administration">B.S. in Office Administration</a></li>
-    <li><a href="#" data-value="Assc. in Computer Technology">Assc. in Computer Technology</a></li>
-    <li><a href="#" data-value="B.S. in Public Governance">B.S. in Public Governance</a></li>
-    <li><a href="#" data-value="Assc. in Hotel & Restaurant Management">Assc. in Hotel & Restaurant Management</a></li>
-    <li><a href="#" data-value="B.S. in Business Administration">B.S. in Business Administration</a></li>
-    <li><a href="#" data-value="B.S. in Elementary Education">B.S. in Elementary Education</a></li>
-    <li><a href="#" data-value="B.S. in Secondary Education">B.S. in Secondary Education</a></li>
-    <li><a href="#" data-value="B.S. in Nursing">B.S. in Nursing</a></li>
-    <li><a href="#" data-value="Assc. in Midwifery">Assc. in Midwifery</a></li>
+    <li><a href="#" value="B.S. in Office Administration">B.S. in Office Administration</a></li>
+    <li><a href="#" value="Assc. in Computer Technology">Assc. in Computer Technology</a></li>
+    <li><a href="#" value="B.S. in Public Governance">B.S. in Public Governance</a></li>
+    <li><a href="#" value="Assc. in Hotel & Restaurant Management">Assc. in Hotel &amp; Restaurant Management</a></li>
+    <li><a href="#" value="B.S. in Business Administration">B.S. in Business Administration</a></li>
+    <li><a href="#" value="B.S. in Elementary Education">B.S. in Elementary Education</a></li>
+    <li><a href="#" value="B.S. in Secondary Education">B.S. in Secondary Education</a></li>
+    <li><a href="#" value="B.S. in Nursing">B.S. in Nursing</a></li>
+    <li><a href="#" value="Assc. in Midwifery">Assc. in Midwifery</a></li>
 
   </ul>
+        <button class="btn btn-success " style="width: 80px;">Next</button>
+
 </div>
 </td></tr>
 </tbody>
@@ -82,8 +84,7 @@
  -->
     </div><br>
     <div class="form-actions">
-        <button class="btn btn-danger pull-right" style="width: 80px; margin-left: 10px;">Cancel</button>&nbsp;&nbsp;
-        <button class="btn btn-success pull-right" style="width: 80px;">Save</button>
+        <button class="btn btn-danger " style="width: 80px; margin-left: 10px;">Cancel</button>&nbsp;&nbsp;
     </div>
   </div>
   </div>

@@ -66,7 +66,7 @@ class Admin_Portal_M extends CI_Model {
 	public function delete_do($username){
 		$tables = array('do_accounts', 'users');
 
-		$this->db->where('username', $username);
+		$this->db->where('id', $username);
 		$this->db->delete($tables);
 
 

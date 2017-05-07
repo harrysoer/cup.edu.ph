@@ -1,78 +1,66 @@
  <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 ?>
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
-        <meta name="author" content="Coderthemes">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Database Error</title>
+<style type="text/css">
 
-        <link rel="shortcut icon" href="images/favicon_1.ico">
+::selection { background-color: #E13300; color: white; }
+::-moz-selection { background-color: #E13300; color: white; }
 
-        <title>CUP | ERROR</title>
+body {
+    background-color: #fff;
+    margin: 40px;
+    font: 13px/20px normal Helvetica, Arial, sans-serif;
+    color: #4F5155;
+}
 
-        <!-- Base Css Files -->
-        <link href="<?=base_url('assets/for_admin/css/bootstrap.min.css')?>" rel="stylesheet" />
+a {
+    color: #003399;
+    background-color: transparent;
+    font-weight: normal;
+}
 
-        <!-- Font Icons -->
-        <link href="<?=base_url('assets/for_admin/assets/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet" />
-        <link href="<?=base_url('assets/for_admin/assets/ionicon/css/ionicons.min.css')?>" rel="stylesheet" />
-        <link href="<?=base_url('assets/for_admin/css/material-design-iconic-font.min.css')?>" rel="stylesheet">
+h1 {
+    color: #444;
+    background-color: transparent;
+    border-bottom: 1px solid #D0D0D0;
+    font-size: 19px;
+    font-weight: normal;
+    margin: 0 0 14px 0;
+    padding: 14px 15px 10px 15px;
+}
 
-        <!-- animate css -->
-        <link href="<?=base_url('assets/for_admin/css/animate.css')?>" rel="stylesheet" />
+code {
+    font-family: Consolas, Monaco, Courier New, Courier, monospace;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    border: 1px solid #D0D0D0;
+    color: #002166;
+    display: block;
+    margin: 14px 0 14px 0;
+    padding: 12px 10px 12px 10px;
+}
 
-        <!-- Waves-effect -->
-        <link href="<?=base_url('assets/for_admin/css/waves-effect.css')?>" rel="stylesheet">
+#container {
+    margin: 10px;
+    border: 1px solid #D0D0D0;
+    box-shadow: 0 0 8px #D0D0D0;
+}
 
-        <!-- Custom Files -->
-        <link href="<?=base_url('assets/for_admin/css/helper.css')?>" rel="stylesheet" type="text/css" />
-        <link href="<?=base_url('assets/for_admin/css/style.css')?>" rel="stylesheet" type="text/css" />
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
-        <script src="js/modernizr.min.js"></script>
-        
-    </head>
-    <body>
-
-    	<div class="text-center" style="padding-top: 13rem;">
-    		<img src="<?=base_url('/assets/for_sportal/img/logo2.png');?>" style=" width: 14rem; height: 14rem;" />
-            <h1 style="	font-size: 5rem; z-index: 1;" ><?php echo $heading; ?></h1>
-                <div class="ex-page-content text-center">
-                    <h2 class="font-light"><?php echo $message; ?></h2><br>
-                    <h2 class="font-light">Internal Server Error.</h2><br>
-                    <p>Why not try refreshing your page or clear your browser's cookies?<!--  or you can contact <a href="#">support --></a></p>
-                
-                    <a class="btn btn-success waves-effect waves-light" href="<?=site_url('')?>"><i class="fa fa-angle-left"></i> Back to C.U.P. Main Page</a>
-            	</div>
-        </div>
-        
-    	<script>
-            var resizefunc = [];
-        </script>
-        <script src="<?=base_url('assetes/for_admin/js/jquery.min.js')?>"></script>
-        <script src="<?=base_url('assetes/for_admin/js/bootstrap.min.js')?>"></script>
-        <script src="<?=base_url('assetes/for_admin/js/waves.js')?>"></script>
-        <script src="<?=base_url('assetes/for_admin/js/wow.min.js')?>"></script>
-        <script src="<?=base_url('assetes/for_admin/js/jquery.nicescroll.js')?>" type="text/javascript"></script>
-        <script src="<?=base_url('assetes/for_admin/js/jquery.scrollTo.min.js')?>"></script>
-        <script src="<?=base_url('assetes/for_admin/assets/jquery-detectmobile/detect.js')?>"></script>
-        <script src="<?=base_url('assetes/for_admin/assets/fastclick/fastclick.js')?>"></script>
-        <script src="<?=base_url('assetes/for_admin/assets/jquery-slimscroll/jquery.slimscroll.js')?>"></script>
-        <script src="<?=base_url('assetes/for_admin/assets/jquery-blockui/jquery.blockUI.js')?>"></script>
-
-
-        <!-- CUSTOM JS -->
-        <script src="js/jquery.app.js"></script>
-	
-	</body>
+p {
+    margin: 12px 15px 12px 15px;
+}
+</style>
+</head>
+<body>
+    <div id="container">
+        <h1><?php echo $heading; ?></h1>
+        <?php echo $message; ?>
+    </div>
+</body>
 </html>
