@@ -3,7 +3,7 @@
 <div id="sidebar">
   <ul>
     <li><a href="<?=site_url('/dportal');?>"><i class="icon icon-home"></i> <span>HOME</span></a> </li>
-
+    <li class><a href="<?=site_url('/dportal/course');?>"><i class="icon icon-th-list"></i> <span>Courses</span></a> </li>
     <li data-toggle="collapse" data-target="#products" class="collapsed active"><a href="#"><i class="icon icon-calendar"></i> <span>CLASS SCHEDULES</span></a></li>
     <ul class="sub-menu collapse" id="products" style="text-align: left; font-size: 13px;">
       <li><a href="<?=site_url('/addsubject');?>">Add Schedule</a></li>
@@ -35,32 +35,35 @@
             <h5><B>ADD SUBJECT SCHEDULE</B></h5>
           </div>
           <div class="widget-content nopadding">
+<?=form_open()?>
 <table>
 <tbody>
-<tr><td>
-<div class="dropdown" style="padding-top: 15px; padding-left: 10px;">
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+<tr ><td style="padding-top: 25px; padding-left: 10px;" >
+<!-- <div class="dropdown" >
+  <button class="btn btn-default dropdown-toggle"  style="width:40rem;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Select Course:
     <span class="caret"></span>
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#" value="B.S. in Office Administration">B.S. in Office Administration</a></li>
-    <li><a href="#" value="Assc. in Computer Technology">Assc. in Computer Technology</a></li>
-    <li><a href="#" value="B.S. in Public Governance">B.S. in Public Governance</a></li>
-    <li><a href="#" value="Assc. in Hotel & Restaurant Management">Assc. in Hotel &amp; Restaurant Management</a></li>
-    <li><a href="#" value="B.S. in Business Administration">B.S. in Business Administration</a></li>
-    <li><a href="#" value="B.S. in Elementary Education">B.S. in Elementary Education</a></li>
-    <li><a href="#" value="B.S. in Secondary Education">B.S. in Secondary Education</a></li>
-    <li><a href="#" value="B.S. in Nursing">B.S. in Nursing</a></li>
-    <li><a href="#" value="Assc. in Midwifery">Assc. in Midwifery</a></li>
-
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1"">
+      <?//php foreach ($get_courses as $course): ?>
+            <li><a href="#" name="course_name" value="<?//=$course['course_name']?>"><?//=$course['course_name']?></a></li>
+    <?//php endforeach ?>
   </ul>
-        <button class="btn btn-success " style="width: 80px;">Next</button>
 
-</div>
-</td></tr>
+</div> -->
+<select name="course_name" id="input" class="form-control" required="required" style="width: 40rem">
+    <option>-----Select One-----</option>
+     <?php foreach ($get_courses as $course): ?>
+      <option value="<?=$course['course_name']?>"><?=$course['course_name']?></option>
+    <?php endforeach ?>
+</select>
+</td>
+<td style="padding-top: 15px; padding-left: 10px;"><button class="btn btn-success " style="width: 80px;">Next</button></td>
+</tr>
 </tbody>
-</table><br>
+</table>
+</form>
+<br>
 
 <!-- <table class="table table-bordered table-striped" style="font-size: 13px; table-layout: fixed; text-align: center;">
 <thead>
@@ -84,7 +87,7 @@
  -->
     </div><br>
     <div class="form-actions">
-        <button class="btn btn-danger " style="width: 80px; margin-left: 10px;">Cancel</button>&nbsp;&nbsp;
+      <a href="<?=site_url('viewsched')?>" class="btn btn-danger" onclick="return confirm('Are you sure to Cancel?')">Cancel</a> &nbsp;&nbsp;
     </div>
   </div>
   </div>

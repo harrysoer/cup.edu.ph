@@ -2,7 +2,7 @@
 <html lang="en">
     
 <head>
-        <title>Matrix Admin</title><meta charset="UTF-8" />
+        <title>Portal</title><meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="<?=base_url('assets/for_sportal/css/bootstrap.min.css')?>" />
 		<link rel="stylesheet" href="<?=base_url('assets/for_sportal/css/bootstrap-responsive.min.css')?>" />

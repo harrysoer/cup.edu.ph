@@ -40,6 +40,7 @@
 <div class="dropdown" style="padding-top: 15px; padding-left: 10px;">
   <a class="btn btn-info" href="<?=site_url('dportal/curriculums/').$this->uri->segment(3)?>"><i class=" icon-backward">&nbsp;&nbsp;</i>Return</a>
   <a class="btn btn-success" href="<?=site_url('dportal/subjects/add/'.$this->uri->segment(3).'/'.$this->uri->segment(4))?>">Add Subjects</a>
+  <a class="btn btn-danger" id="other" href="<?=site_url('dportal/courses/edit/'.$this->uri->segment(3).'/'.$this->uri->segment(4))?>">Other Actions</a>
 </div>
 </td></tr>
 </tbody>

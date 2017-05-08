@@ -35,7 +35,7 @@
 <script type="text/javascript">
 
   //for hover 
-    $('#other').popover({title: "What is this?", content: "<span style=\"color:blue;\">EDIT</span> or <span style=\"color:red;\">DELETE</span> a course in your list", trigger: "hover"}); 
+    $('#other').popover({title: "What is this?", content: "<span style=\"color:blue;\">EDIT</span> or <span style=\"color:red;\">DELETE</span> some items", trigger: "hover"}); 
 
   // This function is called from the pop-up menus to transfer to
   // a different page. Ignore if the value returned is a null string:

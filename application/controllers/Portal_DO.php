@@ -70,6 +70,7 @@ class Portal_DO extends CI_Controller {
 
 			$data['title']="DO Portal";
 
+			$data['get_courses'] = $this->do->get_courses();
 			$this->load->view('portal/dportal/template/header',$data);
 			$this->load->view('portal/dportal/template/menuBar');
 			$this->load->view('portal/dportal/template/js');
@@ -78,11 +79,16 @@ class Portal_DO extends CI_Controller {
 
 		}
 		else{
-			$section_name = $this->input->post('section_name') ;
-			
-			$id = $this->do->add_section($curriculum_name);
-			redirect('dportal/subjects/add/'.$this->uri->segment(4).'/'.$id ,'refresh');
+			$course = $this->input->post('course_name');
+			$this->add_section($course);
+			redirect('viewsched','refresh');
 		}
+	}
+
+	function add_section($course)
+	{
+		$id = $this->do->add_section($curriculum_name);
+
 	}
 
 	//curriculums
