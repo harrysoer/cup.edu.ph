@@ -35,7 +35,7 @@
             <h5><B>View Schedule</B></h5>
           </div>
           <div class="widget-content nopadding">
-<?=form_open()?>
+<?=form_open('dportal/viewsections/'.$this->uri->segment(3))?>
 <table>
 <tbody>
 <tr ><td style="padding-top: 25px; padding-left: 10px;" >
@@ -51,10 +51,10 @@
   </ul>
 
 </div> -->
-<select name="course_name" id="input" class="form-control" required="required" style="width: 40rem">
+<select name="section_name" id="input" class="form-control" required="required" style="width: 40rem">
     <option>-----Select Section-----</option>
-     <?php foreach ($get_courses as $course): ?>
-      <option value="<?=$course['course_id']?>"><?=$course['course_name']?></option>
+     <?php foreach ($get_section as $section): ?>
+      <option value="<?=$section['section']?>"><?=$section['section']?></option>
     <?php endforeach ?>
 </select>
 </td>

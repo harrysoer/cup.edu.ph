@@ -8,6 +8,24 @@ class Portal_DO_M extends CI_Model {
 		parent::__construct();
 	}
 	
+	public function get_sections()
+	{
+		$college_dept = $this->session->college_dept;
+		$course = $this->uri->segment(3);
+
+		$query = $this->db->query('SELECT MIN(id) AS id,section FROM portal_schedules WHERE college_dept= "'.$college_dept.'" AND course_id="'.$course.'" GROUP BY section');
+
+		return $query->result_array();
+	}
+
+	public function get_schedules()
+	{
+		$course = $this->uri->segment(3);
+		$section_name = $this->uri->segment(4);
+		$college_dept = $this->session->college_dept;
+		$query = $this->db->get_where('portal_schedules', array('course_id' => $course, 'section' => $section_name, 'college_dept'=> $college_dept));
+		return $query->result_array();
+	}
 
 	public function get_college_dept($username){
 		$user = $this->db
@@ -40,7 +58,20 @@ class Portal_DO_M extends CI_Model {
    		}
 	}
 	
+	public function insert_sched($cellA, $cellB, $cellC, $cellD, $year, $section, $course_id){
+		$data = array(
+            'year'   => $year,
+            'subject_code' => $cellA,
+            'description' => $cellB,
+            'days' 	 	  => $cellC,
+            'time' 	 	  => $cellD,
+            'section'	  => $section,
+            'college_dept'=> $this->session->college_dept,
+            'course_id'	  => $course_id	,
+        );
 
+		return   $this->db->insert('portal_schedules', $data);
+	}
 	
 	public function get_courses(){
 		$college_dept = $this->session->college_dept;

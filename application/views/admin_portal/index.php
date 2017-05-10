@@ -10,12 +10,9 @@
 <body>
 
 <div class="container-fluid">
-
+<center><h1>Temporary UI</h1></center>
 	<div class="list-group">
 		<a href="<?=site_url('admin/portal/school_year')?>" class="list-group-item">School Year</a>
-		<a href="<?=site_url('admin/portal/add_course')?>" class="list-group-item">Add Course</a>
-		<a href="<?=site_url('admin/portal/students')?>" class="list-group-item">Register student</a>
-		<a href="<?=site_url('admin/portal/professors')?>" class="list-group-item">Register prof</a>
 		<a href="<?=site_url('admin/portal/deans_office')?>" class="list-group-item">Register DO</a>
 	</div>
 

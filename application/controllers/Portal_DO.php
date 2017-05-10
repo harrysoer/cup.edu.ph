@@ -3,6 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Portal_DO extends CI_Controller {
 
+	public function test(){
+		
+	}
 
 	public function __construct()
 	{
@@ -60,11 +63,66 @@ class Portal_DO extends CI_Controller {
 		$this->load->view('portal/dportal/template/js');
 	}
 	
-	//scheds
-	public function addSched()
+	//view scheds
+	public function viewsched()
+	{
+		//validate form input
+		$this->form_validation->set_rules('course_name', 'Section Name', 'trim|required'); 
+
+		if($this->form_validation->run() === false){
+
+		$data['title']="Manage Schedule";
+		$data['get_courses'] = $this->do->get_courses();
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/template/js');
+		$this->load->view('portal/dportal/viewsched/index');
+		$this->load->view('portal/dportal/template/footer');
+		}
+		else{
+			$course = $this->input->post('course_name');
+			redirect('dportal/viewsections/'.$course,'refresh');
+		}
+	}
+
+	public function view_sections()
 	{
 		//validate form input
 		$this->form_validation->set_rules('section_name', 'Section Name', 'trim|required'); 
+
+		if($this->form_validation->run() === false){
+
+		$data['title']="Manage Schedule";
+		$data['get_section'] = $this->do->get_sections();
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/template/js');
+		$this->load->view('portal/dportal/viewsched/view-section');
+		$this->load->view('portal/dportal/template/footer');
+		}
+		else{
+			$section_name = $this->input->post('section_name');
+			$course = $this->uri->segment(3);
+			redirect('dportal/viewschedules/'.$course.'/'.$section_name,'refresh');
+		}
+	}
+
+	public function view_schedules()
+	{
+		$data['title']="Manage Schedule";
+		$data['get_schedules'] = $this->do->get_schedules();
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/template/js');
+		$this->load->view('portal/dportal/viewsched/view-sched',$data);
+		$this->load->view('portal/dportal/template/footer');
+	}
+
+	//add scheds
+	public function addSched()
+	{
+		//validate form input
+		$this->form_validation->set_rules('course_name', 'Section Name', 'trim|required'); 
 
 		if($this->form_validation->run() === false){
 
@@ -80,16 +138,88 @@ class Portal_DO extends CI_Controller {
 		}
 		else{
 			$course = $this->input->post('course_name');
-			$this->add_section($course);
-			redirect('viewsched','refresh');
+			redirect('dportal/sched/upload/'.$course,'refresh');
 		}
 	}
 
-	function add_section($course)
+	function upload_sched_view()
 	{
-		$id = $this->do->add_section($curriculum_name);
+		$data['title']="Dean's Office";	
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/addsched/upload-sched');
+		$this->load->view('portal/dportal/template/footer');
+		$this->load->view('portal/dportal/template/js');
 
 	}
+
+	public function upload_sched(){
+
+		$course_id = $this->uri->segment(4);
+
+		$config['upload_path'] 		= './uploads/scheds/';
+		$config['allowed_types']	= '*';
+
+		$this->upload->initialize($config);
+
+		if (!$this->upload->do_upload('sched_file'))
+		{	
+			$data['title']="Dean's Office";	
+            $data = array('error' => $this->upload->display_errors());
+		
+			$this->load->view('portal/dportal/template/header',$data);
+			$this->load->view('portal/dportal/template/menuBar');
+			$this->load->view('portal/dportal/addsched/upload-sched');
+			$this->load->view('portal/dportal/template/footer');
+			$this->load->view('portal/dportal/template/js');
+		}
+		else
+		{
+			$file_name = $this->upload->data('file_name');
+
+			$file = './uploads/scheds/'.$file_name;
+			//load the excel library
+			$this->load->library('excel');
+			$objReader = PHPExcel_IOFactory::createReader('Excel2007');
+			$objReader->setReadDataOnly(TRUE);
+			$excelReader = PHPExcel_IOFactory::createReaderForFile($file);
+			$excelObj = $excelReader->load($file);
+			$worksheet = $excelObj->getSheet(0);
+			$lastRow = $worksheet->getHighestRow();
+			
+			//NILOOP MO DITO YUNG CELLS SA EXCEL FILE
+			for ($row = 2; $row <= $lastRow; $row++) {
+				$cellA = $worksheet->getCell('A'.$row)->getValue();
+				$cellB = $worksheet->getCell('B'.$row)->getValue();
+				$cellC = $worksheet->getCell('C'.$row)->getValue();
+				$cellD = $worksheet->getCell('D'.$row)->getValue();
+
+				switch ($cellA) {
+					case 'Year:':
+							$string = $cellB;
+							preg_match_all('!\d!', $string, $matches);
+							$year = (int)implode('',$matches[0]);
+						break;
+
+					case 'Section:':
+							$section = $cellB;
+						break;
+
+					case ' ':
+					case null:
+					case 'Subjcode':
+						break;
+
+					default:
+						$this->do->insert_sched($cellA, $cellB, $cellC, $cellD, $year, $section, $course_id); 
+						break;
+				}
+			}
+		
+		}
+			redirect('viewsched' ,'refresh');
+	}
+
 
 	//curriculums
 	public function list_curriculums($id=null, $cu=null)

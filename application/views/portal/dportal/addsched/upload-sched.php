@@ -18,7 +18,7 @@
 <!--Content-->
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="<?=site_url('/dportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a >Curriculum</a> <a>Subject</a> <a href="#" class="current">Add</a> </div>
+    <div id="breadcrumb"> <a href="<?=site_url('/dportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a><a>Schedules</a> <a href="#" class="current">Add</a> </div>
     <h1>Add Schedule</h1>
   </div>
   <div class="container-fluid"><hr>
@@ -29,11 +29,10 @@
             <h5>Upload Schedule</h5>
           </div>
           <div class="widget-content nopadding">
-            <?=form_open_multipart('dportal/subjects/submit/'.$this->uri->segment(4).'/'.$this->uri->segment(5),'class="form-horizontal" ')?>
+            <?=form_open_multipart('dportal/sched/submit/'.$this->uri->segment(4),'class="form-horizontal" ')?>
                <?php if (isset($error)) : ?>
                    <div class="col-md-12">
                       <div class="alert alert-danger" role="alert">
-                      <H5>ERROR:</H5>
                           <ul>
                               <li><?= $error?></li>
                           </ul>
@@ -43,7 +42,7 @@
                <div class="control-group">
                 <label class="control-label"><b>Excel File:</b></label>
                 <div class="controls">
-                   <input type="file" name="ang_file" class="form-control" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" required>
+                   <input type="file" name="sched_file" class="form-control" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" required>
                 </div>
               </div>
               <div class="form-actions">

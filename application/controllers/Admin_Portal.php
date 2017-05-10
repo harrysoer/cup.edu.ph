@@ -79,14 +79,14 @@ class Admin_Portal extends CI_Controller {
 	}
 
 	public function delete_do($username=null){
-		$username = $this->uri->segment(5);
     
         if (empty($username))
         {
             show_404();
         }
 	                
-	    $this->portal->delete_do($username);        
+	    $id = $this->portal->delete_do(); 
+	    $this->ion_auth->delete_user($id);       
 	    redirect( site_url('admin/portal/deans_office'),'refresh');       
 	}
 
@@ -111,7 +111,7 @@ class Admin_Portal extends CI_Controller {
 			$college_dept = $this->input->post('college_dept') ;
 			$group		  = array('4'); //deans_office group id
 
-			$this->ion_auth->register($username, $password, $email='none', $additional_data ='none', $group);
+			$this->ion_auth->register($username, $password, $email=$username, $additional_data ='none', $group);
 			$this->portal->set_do($username ,$first_name ,$last_name  ,$college_dept);
 			redirect('admin/portal/deans_office','refresh');
 		}

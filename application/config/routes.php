@@ -97,9 +97,7 @@ $route['curriculum']='StudentPortal/curriculum';
 $route['forum2']='StudentPortal/forum2';
 
 //do portal routes
-$route['viewsched']='StudentPortal/viewsched';
 
-//gelo's routes for do
 $route['dportal/login']		  			 = 'portal_do_login/index';
 $route['do/logout']		  			 = 'portal_do/logout';
 $route['do/login/status']			 = 'portal_do_login/login';
@@ -107,7 +105,13 @@ $route['dportal']  				 =  'portal_do/index';
 $route['forum3']=	'portal_do/forum3';
 
 //scheds
-$route['addsubject']='portal_do/addSched';
+$route['viewsched']='portal_do/viewsched';
+$route['dportal/viewsections/(:any)']='portal_do/view_sections/$1';
+$route['dportal/viewschedules/(:any)/(:any)']='portal_do/view_schedules/$1/$id';
+
+$route['addsubject'] = 'portal_do/addSched';
+$route['dportal/sched/upload/(:any)'] = 'portal_do/upload_sched_view/$1';
+$route['dportal/sched/submit/(:any)'] = 'portal_do/upload_sched/$1';
 
 $route['dportal/course']  				 =  'portal_do/courses';
 $route['dportal/courses/add']  			 =  'portal_do/addCourse';

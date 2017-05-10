@@ -63,11 +63,21 @@ class Admin_Portal_M extends CI_Model {
         return $this->db->insert('do_accounts', $data);
 	}
 
-	public function delete_do($username){
-		$tables = array('do_accounts', 'users');
+	public function delete_do(){
+	$id = $this->uri->segment(5);
 
-		$this->db->where('id', $username);
-		$this->db->delete($tables);
+	$query = $this->db->query("SELECT * FROM do_accounts WHERE id=$id");
+	$row = $query->row();
+	if (isset($row)) {
+		$username = $row->username;	
+		if (isset($username)) {
+			$this->db->where('id', $id);
+			$this->db->delete('do_accounts');
+			$query =  $this->db->query("SELECT id FROM users WHERE username='".$username."'");
+			$username = $query->row();
+			return $username->id;
+		}
+	}
 
 
 	}

@@ -54,7 +54,7 @@
 <select name="course_name" id="input" class="form-control" required="required" style="width: 40rem">
     <option>-----Select One-----</option>
      <?php foreach ($get_courses as $course): ?>
-      <option value="<?=$course['course_name']?>"><?=$course['course_name']?></option>
+      <option value="<?=$course['course_id']?>"><?=$course['course_name']?></option>
     <?php endforeach ?>
 </select>
 </td>
@@ -87,7 +87,7 @@
  -->
     </div><br>
     <div class="form-actions">
-      <a href="<?=site_url('viewsched')?>" class="btn btn-danger" onclick="return confirm('Are you sure to Cancel?')">Cancel</a> &nbsp;&nbsp;
+      <a href="<?=site_url('dportal')?>" class="btn btn-danger" onclick="return confirm('Are you sure to Cancel?')">Cancel</a> &nbsp;&nbsp;
     </div>
   </div>
   </div>

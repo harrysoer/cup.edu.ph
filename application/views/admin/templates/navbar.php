@@ -46,16 +46,18 @@
                                 </ul>
                             </li>
                         </ul>
+                        <li>
+                        
                     </li>
-
-
-                    <li class="has_sub">
-                        <a href="<?=site_url('admin/news/list')?>" class="waves-effect"><i class="md md-school"></i><span>Portal</span><span class="pull-right"><i class="md md-add"></i></span></a>
-                        <ul style="">
-                            <li><a href="<?=site_url('admin/news/create')?>"><span>Create</span></a></li>
-                            <li><a ><span>View</span></a></li>
-                        </ul>
+                    <li>
+                        <a href="<?=site_url('admin/portal')?>" class="waves-effect"><i class="md md-school"></i><span>Portal</span><span class="pull-right"><i class="md md-add"></i></span></a>
                     </li>
+                    <!-- <li class="has_sub"> -->
+                        <!-- <ul style=""> -->
+                            <!-- <li><a href="<?=site_url('admin/portal')?>"><span>Create</span></a></li> -->
+                            <!-- <li><a ><span>View</span></a></li> -->
+                        <!-- </ul> -->
+                    <!-- </li> -->
                 </ul>
                 <div class="clearfix"></div>
             </div>
