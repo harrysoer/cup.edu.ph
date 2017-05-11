@@ -9,7 +9,8 @@
       <li><a href="<?=site_url('/addsubject');?>">Add Schedule</a></li>
       <li><a href="<?=site_url('/viewsched');?>">Manage Schedules</a></li>
     </ul>
-
+    <li class><a href="<?=site_url('/dportal/faculty');?>"><i class="icon icon-user-md"></i> <span>Faculty</span></a> </li>
+    <li class><a href="<?=site_url('/dportal/students');?>"><i class="icon icon-user"></i> <span>Students</span></a> </li>
     <li><a href="<?=site_url('/forum3');?>"><i class="icon icon-comments-alt"></i> <span>UNIVERSITY FORUM</span></a></li>
   </ul>
 </div>
@@ -52,7 +53,7 @@
 
 </div> -->
 <select name="course_name" id="input" class="form-control" required="required" style="width: 40rem">
-    <option>-----Select Section-----</option>
+    <option>-----Select Course-----</option>
      <?php foreach ($get_courses as $course): ?>
       <option value="<?=$course['course_id']?>"><?=$course['course_name']?></option>
     <?php endforeach ?>

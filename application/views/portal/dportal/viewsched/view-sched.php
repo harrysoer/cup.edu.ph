@@ -9,7 +9,8 @@
       <li><a href="<?=site_url('/addsubject');?>">Add Schedule</a></li>
       <li><a href="<?=site_url('/viewsched');?>">Manage Schedules</a></li>
     </ul>
-
+    <li class><a href="<?=site_url('/dportal/faculty');?>"><i class="icon icon-user-md"></i> <span>Faculty</span></a> </li>
+    <li class><a href="<?=site_url('/dportal/students');?>"><i class="icon icon-user"></i> <span>Students</span></a> </li>
     <li><a href="<?=site_url('/forum3');?>"><i class="icon icon-comments-alt"></i> <span>UNIVERSITY FORUM</span></a></li>
   </ul>
 </div>
@@ -20,7 +21,7 @@
 <!--breadcrumbs-->
   <div id="content-header">
     <div id="breadcrumb">
-    <a href="<?=site_url('/sportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a>
+    <a href="<?=site_url('/dportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a>
     <a href="<?=site_url('/addsubject');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Manage Schedules</a>
     </div>
   </div>
@@ -61,7 +62,7 @@
 <td style="text-align: center;"><?=$schedules['time']?></td>
 <td style="text-align: center;">
     <button class="btn btn-success btn-mini" style="width: 80px;">Change</button>
-    <button class="btn btn-danger btn-mini" style="width: 80px;">Delete</button>
+    <a class="btn btn-danger btn-mini" href="<?=site_url('dportal/delete/'.$this->uri->segment(3).'/'.$this->uri->segment(4).'/'.$schedules['id'])?>" onclick="return confirm('are you sure to delete this?')" style="width: 80px;">Delete</a>
 </td>
 </tr>
 <?php endforeach ?>

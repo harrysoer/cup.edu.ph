@@ -86,8 +86,4 @@ file.on("removedfile",function(a){
 </script>
 
 
-    <footer class="footer text-right">
-        2015 © Moltran.
-    </footer>
-
 </div>

@@ -3385,3 +3385,122 @@ div.dataTables_info {
     width: 1170px;
   }
 }
+.single_blog_archive {
+  background-color: #fff;
+  display: inline;
+  float: left;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  width: 100%;
+}
+.blog_title {
+  display: block;
+  margin-bottom: 7px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  padding: 0 15px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.blog_title a:hover{
+  text-decoration: none;
+  outline: none;
+}
+.blog_commentbox{
+  float: left;
+  display: inline;
+  width: 100%;
+  padding: 0px 15px;
+}
+.blog_commentbox > p {
+  color: #888;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: normal;
+  margin-right: 5px;
+  border-right: 2px solid #ccc;
+  padding-right: 5px;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.blog_commentbox :last-child{
+  border-right: none;
+}
+.blog_commentbox > p i{
+  margin-right: 5px;
+}
+.blog_commentbox>a{
+  color: #888;
+  font-size: 15px;
+  font-weight: normal;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.blog_commentbox>a i{
+  margin-right: 5px;
+}
+.blog_summary {
+  color: #9b9b9b;
+  line-height: 18px;
+  margin: 10px 5px 10px 0;
+  padding: 0 15px;
+}
+.blog_readmore{
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  outline: none;
+  color: #9b9b9b;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 15px;
+  float: right;
+}
+.blog_readmore:hover,.blog_readmore:focus{
+  text-decoration: none;
+  outline: none;
+}
+.blog_readmore::before,
+.blog_readmore::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.blog_readmore::before {
+  margin-right: 10px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.blog_readmore::after {
+  margin-left: 10px;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+.blog_readmore:hover::before,
+.blog_readmore:hover::after,
+.blog_readmore:focus::before,
+.blog_readmore:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+

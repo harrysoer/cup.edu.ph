@@ -33,6 +33,14 @@ class Forum extends CI_Controller {
 			$this->load->view('portal/dportal/template/footer');
 			$this->load->view('portal/dportal/template/js');
 		}
+		elseif($this->ion_auth->is_admin())
+		{
+			$this->load->view('admin/templates/header');
+			$this->load->view('admin/templates/navbar');		
+			$this->load->view('admin/forum/index', $data);
+			$this->load->view('admin/templates/scripts');
+			$this->load->view('admin/templates/closer');
+		}
 
 	}
 
@@ -60,6 +68,14 @@ class Forum extends CI_Controller {
 			}
 			elseif ($this->ion_auth->in_group('Professor')) {
 
+			}
+			elseif($this->ion_auth->is_admin())
+			{
+				$this->load->view('admin/templates/header');
+				$this->load->view('admin/templates/navbar');		
+				$this->load->view('admin/forum/view_post', $data);
+				$this->load->view('admin/templates/scripts');
+				$this->load->view('admin/templates/closer');
 			}
 		}
 		else

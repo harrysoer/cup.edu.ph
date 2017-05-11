@@ -30,6 +30,33 @@
 </script>
 
 <script type="text/javascript">
+  $("#password_validate").validate({
+    rules:{
+      pwd:{
+        required: true,
+        minlength:6,
+        maxlength:20
+      },
+      pwd2:{
+        required:true,
+        minlength:6,
+        maxlength:20,
+        equalTo:"#pwd"
+      }
+    },
+    errorClass: "help-inline",
+    errorElement: "span",
+    highlight:function(element, errorClass, validClass) {
+      $(element).parents('.control-group').addClass('error');
+    },
+    unhighlight: function(element, errorClass, validClass) {
+      $(element).parents('.control-group').removeClass('error');
+      $(element).parents('.control-group').addClass('success');
+    }
+  });
+</script>
+
+<script type="text/javascript">
   $(".dropdown-menu li a").click(function(){
   $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
   $(this).parents(".dropdown").find('.btn').val($(this).data('value'));

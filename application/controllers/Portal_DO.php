@@ -51,6 +51,17 @@ class Portal_DO extends CI_Controller {
 		$this->load->view('portal/dportal/template/js');
 	}
 
+	public function addFaculty()
+	{
+		$data['title']="DO Portal";
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/faculty/addFaculty');
+		$this->load->view('portal/dportal/template/footer');
+		$this->load->view('portal/dportal/template/js');
+	}
+
+	//courses
 	public function courses()
 	{
 		$data['get_courses'] = $this->do->get_courses();
@@ -116,6 +127,21 @@ class Portal_DO extends CI_Controller {
 		$this->load->view('portal/dportal/template/js');
 		$this->load->view('portal/dportal/viewsched/view-sched',$data);
 		$this->load->view('portal/dportal/template/footer');
+	
+	}
+
+	//delete specific class
+	public function delete_s_class()
+	{
+		$course = $this->uri->segment(3);
+		$section_name = $this->uri->segment(4);
+		$id = $this->uri->segment(5);
+		if ($this->do->delete_class($course, $section_name, $id)) {
+			redirect('dportal/viewschedules/'.$course.'/'.$section_name);
+		}
+		else{
+			echo 'error';
+		}
 	}
 
 	//add scheds
@@ -399,7 +425,6 @@ class Portal_DO extends CI_Controller {
 			$worksheet = $excelObj->getSheet(0);
 			$lastRow = $worksheet->getHighestRow();
 			
-			//NILOOP MO DITO YUNG CELLS SA EXCEL FILE
 			for ($row = 3; $row <= $lastRow; $row++) {
 				$cellA = $worksheet->getCell('A'.$row)->getValue();
 				$cellB = $worksheet->getCell('B'.$row)->getValue();

@@ -97,17 +97,23 @@ $route['curriculum']='StudentPortal/curriculum';
 $route['forum2']='StudentPortal/forum2';
 
 //do portal routes
+$route['dportal/login']  = 'portal_do_login/index';
+$route['do/logout'] = 'portal_do/logout';
+$route['do/login/status'] = 'portal_do_login/login';
+$route['dportal']  =  'portal_do/index';
+$route['forum3'] = 'portal_do/forum3';
 
-$route['dportal/login']		  			 = 'portal_do_login/index';
-$route['do/logout']		  			 = 'portal_do/logout';
-$route['do/login/status']			 = 'portal_do_login/login';
-$route['dportal']  				 =  'portal_do/index';
-$route['forum3']=	'portal_do/forum3';
+//register faculty 
+$route['dportal/faculty'] = 'portal_do/faculty';
+$route['dportal/faculty/add'] = 'portal_do/addFaculty';
+
 
 //scheds
 $route['viewsched']='portal_do/viewsched';
 $route['dportal/viewsections/(:any)']='portal_do/view_sections/$1';
-$route['dportal/viewschedules/(:any)/(:any)']='portal_do/view_schedules/$1/$id';
+$route['dportal/viewschedules/(:any)/(:any)'] = 'portal_do/view_schedules/$1/$id';
+ 
+$route['dportal/delete/(:any)/(:any)/(:any)'] = 'portal_do/delete_s_class/$1/$id/$s';
 
 $route['addsubject'] = 'portal_do/addSched';
 $route['dportal/sched/upload/(:any)'] = 'portal_do/upload_sched_view/$1';
@@ -119,9 +125,9 @@ $route['dportal/subjects/add/(:any)/(:any)'] =  'portal_do/addSubjects/$1/$cu';
 $route['dportal/subjects/upload/(:any)/(:any)'] = 'portal_do/upload_view/$1/$cu';
 $route['dportal/subjects/submit/(:any)/(:any)'] = 'portal_do/upload_subject/$1/$cu';
 
-$route['dportal/curriculums/(:any)']			=  'portal_do/list_curriculums/$1';
-$route['dportal/curriculum/(:any)/(:any)']	=  'portal_do/view_curriculum/$1/$cu';
-$route['dportal/curriculums/add/(:any)']			=  'portal_do/addCurriculum/$1';
+$route['dportal/curriculums/(:any)'] =  'portal_do/list_curriculums/$1';
+$route['dportal/curriculum/(:any)/(:any)'] ='portal_do/view_curriculum/$1/$cu';
+$route['dportal/curriculums/add/(:any)'] =  'portal_do/addCurriculum/$1';
 $route['dportal/curriculum/delete/(:any)/(:any)'] =  'portal_do/delete_curriculum/$1/$cu';
 
 //faculty portal routes

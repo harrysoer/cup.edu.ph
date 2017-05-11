@@ -121,7 +121,7 @@ class Admin extends CI_Controller {
 		}	
 	}
 
-	//for ajax upload ito
+	//for ajax upload 
 	public function upload_images(){
 
 		$config['upload_path']   = "./uploads/gallery/";

@@ -9,7 +9,8 @@
       <li><a href="<?=site_url('/addsubject');?>">Add Schedule</a></li>
       <li><a href="<?=site_url('/viewsched');?>">Manage Schedules</a></li>
     </ul>
-
+    <li class><a href="<?=site_url('/dportal/faculty');?>"><i class="icon icon-user-md"></i> <span>Faculty</span></a> </li>
+    <li class><a href="<?=site_url('/dportal/students');?>"><i class="icon icon-user"></i> <span>Students</span></a> </li>
     <li><a href="<?=site_url('/forum3');?>"><i class="icon icon-comments-alt"></i> <span>UNIVERSITY FORUM</span></a></li>
   </ul>
 </div>

@@ -25,10 +25,10 @@
                     <li class="has_sub">
                         <a href="javascript:void(0);" class="waves-effect"><i class="md md-web"></i><span>C.U.P. Webpages</span><span class="pull-right"><i class="md md-add"></i></span></a>
                         <ul style="">
-                            <li href="">
+                            <!-- <li href="">
                                 <a href="javascript:void(0);" class="waves-effect"><span>Home Page</span> <span class="pull-right"></span></a>
                             </li>
-                            
+                             -->
                             <li>
                                 <a href="<?=site_url('admin/news/list')?>" class="waves-effect"><span>News Page</span><span class="pull-right"></span></a>
                             </li>
@@ -49,15 +49,13 @@
                         <li>
                         
                     </li>
-                    <li>
-                        <a href="<?=site_url('admin/portal')?>" class="waves-effect"><i class="md md-school"></i><span>Portal</span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <li class="has_sub">
+                        <a href="" class="waves-effect"><i class="md md-school"></i><span>Portal</span><span class="pull-right"><i class="md md-add"></i></span></a>
+                        <ul style="">
+                            <li><a href="<?=site_url('admin/portal')?>"><span>Deans Office</span></a></li>
+                            <li><a href="<?=site_url('forum')?>"><span>Forum</span></a></li>
+                        </ul>
                     </li>
-                    <!-- <li class="has_sub"> -->
-                        <!-- <ul style=""> -->
-                            <!-- <li><a href="<?=site_url('admin/portal')?>"><span>Create</span></a></li> -->
-                            <!-- <li><a ><span>View</span></a></li> -->
-                        <!-- </ul> -->
-                    <!-- </li> -->
                 </ul>
                 <div class="clearfix"></div>
             </div>

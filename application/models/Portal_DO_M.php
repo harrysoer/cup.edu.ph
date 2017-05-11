@@ -73,6 +73,17 @@ class Portal_DO_M extends CI_Model {
 		return   $this->db->insert('portal_schedules', $data);
 	}
 	
+	public function delete_class($course, $section_name, $id)
+	{	
+		$items = array(
+				'id' 		=> $id,
+				'course_id' => $course ,
+				'section'   => $section_name , 
+				);
+
+		return $this->db->delete('portal_schedules', $items);
+	}
+
 	public function get_courses(){
 		$college_dept = $this->session->college_dept;
 		$query 		  = $this->db->get_where('portal_courses', array('college_dept' => $college_dept));
