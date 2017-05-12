@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Portal_DO extends CI_Controller {
 
 	public function test(){
-		
+		$this->load->view('TEST/test');		
 	}
 
 	public function __construct()
@@ -12,6 +12,8 @@ class Portal_DO extends CI_Controller {
 		parent::__construct();
 		$this->load->library(array('ion_auth','form_validation'));
 		$this->load->model('portal_do_m', 'do');
+		$this->load->model('ListFaculty', 'do_ajax');
+		$this->load->model('ListStudents', 'stud_ajax');
 		$this->load->helper(array('url','language'));
 
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
@@ -35,6 +37,7 @@ class Portal_DO extends CI_Controller {
 		redirect('forum','refresh');
 	}
 
+
 	public function logout(){
 		$this->ion_auth->logout();
 		redirect('dportal/login','refresh',301);
@@ -51,15 +54,185 @@ class Portal_DO extends CI_Controller {
 		$this->load->view('portal/dportal/template/js');
 	}
 
-	public function addFaculty()
+	//students
+	public function students()
 	{
 		$data['title']="DO Portal";
 		$this->load->view('portal/dportal/template/header',$data);
 		$this->load->view('portal/dportal/template/menuBar');
-		$this->load->view('portal/dportal/faculty/addFaculty');
+		$this->load->view('portal/dportal/faculty/ajaxList');
+		$this->load->view('portal/dportal/students/student');
 		$this->load->view('portal/dportal/template/footer');
-		$this->load->view('portal/dportal/template/js');
 	}
+
+	public function addStudent()
+	{	
+		$this->form_validation->set_rules( 'id', 'ID Number', 'trim|required|is_unique[students_informations.id]', array('is_unique' => 'This id Number already exists. Please choose another one.')); 
+		$this->form_validation->set_rules('first_name', 'First Name', 'trim|required'); 
+		$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
+		$this->form_validation->set_rules('mi', 'Last Name', 'trim|required');
+
+		if ($this->form_validation->run() === FALSE) {
+			$data['title']="DO Portal";
+			$this->load->view('portal/dportal/template/header',$data);
+			$this->load->view('portal/dportal/template/menuBar');
+			$this->load->view('portal/dportal/students/addStudent');
+			$this->load->view('portal/dportal/template/footer');
+			$this->load->view('portal/dportal/template/js');
+		} 
+		else 
+		{
+			$username 	= $this->input->post('id');
+			$first_name = $this->input->post('first_name'); 
+			$mi 		= $this->input->post('mi');
+			$last_name  = $this->input->post('last_name');
+			$password  	= $id;
+			$college_dept = $this->session->college_dept; 
+			$group		  = array('6'); //deans_office group id
+
+			$this->ion_auth->register($username, $password, $email=$username, $additional_data ='none', $group);
+			$this->do_ajax->registerFaculty($username, $first_name, $mi, $last_name, $college_dept);
+			redirect('dportal/students','refresh');
+		}
+	}
+
+	//student ajax
+	public function ajax_listStudents()
+	{
+		$list = $this->stud_ajax->get_datatablesStudents();
+		$data = array();
+		$no = $_POST['start'];
+		foreach ($list as $student) {
+			$no++;
+			$row = array();
+			
+			$row[] = $student->id;
+			$row[] = $student->first_name;
+			$row[] = $student->last_name;
+			$row[] = $student->course;
+			$row[] = $student->year;
+			$row[] = $student->section;
+			$row[] = $student->status;
+
+			$enruld = $student->enrolled;
+			switch ($enruld) {
+				case 1:
+					$sagot = 'yes';
+					break;
+				
+				default:
+					$sagot = 'no';
+					break;
+			}
+
+			$row[] = $sagot;
+
+			$link = site_url('dportal/student/view/'.$student->id); 
+
+			//add html for action
+			$row[] = '<center><a class="btn btn-sm btn-primary" href="'.$link.'" title="View")">
+					<i class="glyphicon glyphicon-pencil"></i> View</a>
+				  <a class="btn btn-sm btn-danger " href="javascript:void(0)" title="Hapus" onclick="delete_person('."'".$student->id."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a></center>';
+		
+			$data[] = $row;
+		}
+
+		$output = array(
+						"draw" => $_POST['draw'],
+						"recordsTotal" => $this->stud_ajax->count_all(),
+						"recordsFiltered" => $this->stud_ajax->count_filtered(),
+						"data" => $data,
+				);
+		//output to json format
+		echo json_encode($output);
+	}
+
+	//faculty
+	public function addFaculty()
+	{	
+		$this->form_validation->set_rules( 'id', 'ID Number', 'trim|required|is_unique[faculty_users.username]', array('is_unique' => 'This username already exists. Please choose another one.')); 
+		$this->form_validation->set_rules('first_name', 'First Name', 'trim|required'); 
+		$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
+		$this->form_validation->set_rules('mi', 'Last Name', 'trim|required');
+
+		if ($this->form_validation->run() === FALSE) {
+			$data['title']="DO Portal";
+			$this->load->view('portal/dportal/template/header',$data);
+			$this->load->view('portal/dportal/template/menuBar');
+			$this->load->view('portal/dportal/faculty/addFaculty');
+			$this->load->view('portal/dportal/template/footer');
+			$this->load->view('portal/dportal/template/js');
+		} 
+		else 
+		{
+			$username 	= $this->input->post('id');
+			//Sanitize
+			$string = $username;
+			preg_match_all('!\d!', $string, $matches);
+			$id = (int)implode('',$matches[0]);
+
+			$first_name = $this->input->post('first_name'); 
+			$mi 		= $this->input->post('mi');
+			$last_name  = $this->input->post('last_name');
+			$password  	= $id;
+			$college_dept = $this->session->college_dept; 
+			$group		  = array('6'); //deans_office group id
+
+			$this->ion_auth->register($username, $password, $email=$username, $additional_data ='none', $group);
+			$this->do_ajax->registerFaculty($username, $first_name, $mi, $last_name, $college_dept);
+			redirect('dportal/faculty','refresh');
+		}
+	}
+
+	public function faculty()
+	{
+		$data['title']="DO Portal";
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/faculty/ajaxList');
+		$this->load->view('portal/dportal/faculty/faculty');
+		$this->load->view('portal/dportal/template/footer');
+	}
+
+	//ajax datatable
+	public function ajax_listFaculty()
+	{
+		$list = $this->do_ajax->get_datatablesFaculty();
+		$data = array();
+		$no = $_POST['start'];
+		foreach ($list as $faculty) {
+			$no++;
+			$row = array();
+			$username = $faculty->username;
+			$string = $username;
+			preg_match_all('!\d!', $string, $matches);
+			$id = (int)implode('',$matches[0]);
+			
+			$row[] = $id;
+			$row[] = $faculty->first_name;
+			$row[] = $faculty->mi;
+			$row[] = $faculty->last_name;
+
+			$link = site_url('dportal/faculty/view/'.$faculty->id); 
+
+			//add html for action
+			$row[] = '<center><a class="btn btn-sm btn-primary" href="'.$link.'" title="View")">
+					<i class="glyphicon glyphicon-pencil"></i> View</a>
+				  <a class="btn btn-sm btn-danger " href="javascript:void(0)" title="Hapus" onclick="delete_person('."'".$faculty->id."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a></center>';
+		
+			$data[] = $row;
+		}
+
+		$output = array(
+						"draw" => $_POST['draw'],
+						"recordsTotal" => $this->do_ajax->count_all(),
+						"recordsFiltered" => $this->do_ajax->count_filtered(),
+						"data" => $data,
+				);
+		//output to json format
+		echo json_encode($output);
+	}
+
 
 	//courses
 	public function courses()

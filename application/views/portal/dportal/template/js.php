@@ -1,7 +1,9 @@
+
+
 <script src="<?=base_url('assets/for_sportal/js/jquery.min.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/excanvas.min.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/jquery.ui.custom.js');?>"></script> 
-<script src="<?=base_url('assets/for_sportal/js/bootstrap.min.js');?>"></script> 
+<script src="<?=base_url('assets/for_sportal/js/bootstrap.min.js')?>"></script>
 <script src="<?=base_url('assets/for_sportal/js/jquery.flot.min.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/jquery.flot.resize.min.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/jquery.peity.min.js');?>"></script> 
@@ -17,17 +19,10 @@
 <script src="<?=base_url('assets/for_sportal/js/jquery.uniform.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/select2.min.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/matrix.popover.js');?>"></script> 
-<script src="<?=base_url('assets/for_sportal/js/jquery.dataTables.min.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/matrix.tables.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/wysihtml5-0.3.0.js');?>"></script> 
 <script src="<?=base_url('assets/for_sportal/js/bootstrap-wysihtml5.js');?>"></script> 
 
-<script type="text/javascript">
-  $document.ready(function(){
-
-   $("#sidebar ul").append("<li><a href="<?=site_url('/dportal');?>"><i class="icon icon-home"></i> <span>HOME</span></a> </li>");
-  });
-</script>
 
 <script type="text/javascript">
   $("#password_validate").validate({

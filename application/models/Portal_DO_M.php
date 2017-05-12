@@ -8,6 +8,7 @@ class Portal_DO_M extends CI_Model {
 		parent::__construct();
 	}
 	
+
 	public function get_sections()
 	{
 		$college_dept = $this->session->college_dept;
@@ -27,6 +28,7 @@ class Portal_DO_M extends CI_Model {
 		return $query->result_array();
 	}
 
+	//setting the session
 	public function get_college_dept($username){
 		$user = $this->db
 	        ->select("first_name, last_name, college_dept")

@@ -88,13 +88,6 @@ $route['pdf']='CupWebsite/pdf';
 //portal routes
 $route['portal']='portal/login';
 
-$route['sportal']='StudentPortal/sportal';
-$route['info']='StudentPortal/info';
-$route['grades']='StudentPortal/grades';
-$route['error1']='StudentPortal/error1';
-$route['schedules']='StudentPortal/schedules';
-$route['curriculum']='StudentPortal/curriculum';
-$route['forum2']='StudentPortal/forum2';
 
 //do portal routes
 $route['dportal/login']  = 'portal_do_login/index';
@@ -107,6 +100,9 @@ $route['forum3'] = 'portal_do/forum3';
 $route['dportal/faculty'] = 'portal_do/faculty';
 $route['dportal/faculty/add'] = 'portal_do/addFaculty';
 
+//students
+$route['dportal/students'] = 'portal_do/students';
+$route['dportal/students/add'] = 'portal_do/addStudent';
 
 //scheds
 $route['viewsched']='portal_do/viewsched';
@@ -129,6 +125,15 @@ $route['dportal/curriculums/(:any)'] =  'portal_do/list_curriculums/$1';
 $route['dportal/curriculum/(:any)/(:any)'] ='portal_do/view_curriculum/$1/$cu';
 $route['dportal/curriculums/add/(:any)'] =  'portal_do/addCurriculum/$1';
 $route['dportal/curriculum/delete/(:any)/(:any)'] =  'portal_do/delete_curriculum/$1/$cu';
+
+//student routes
+$route['sportal']='StudentPortal/sportal';
+$route['info']='StudentPortal/info';
+$route['grades']='StudentPortal/grades';
+$route['error1']='StudentPortal/error1';
+$route['schedules']='StudentPortal/schedules';
+$route['curriculum']='StudentPortal/curriculum';
+$route['forum2']='StudentPortal/forum2';
 
 //faculty portal routes
 $route['fportal']='StudentPortal/fportal';

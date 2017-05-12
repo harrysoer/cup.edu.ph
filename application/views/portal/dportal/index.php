@@ -35,7 +35,8 @@
     <div class="home-title">
       <center><h1 style="letter-spacing: 3px; color: #4a7f43; font-family: Old English Text MT;">City University of Pasay</h1></center><br><br>
       <center><h1 style="letter-spacing: 5px;">WELCOME,<?=$this->session->first_name." ".$this->session->last_name?></h1></center>
-      <br><br>
+      <br>
+      <center><h2 style="letter-spacing: 5px;">-<?=$this->session->college_dept?>-</h2></center>
       <center><h2 style="letter-spacing: 5px;">Current Sem &amp; Year:</h2></center>
       <center><h2 style="letter-spacing: 5px;"><?=$this->session->sem.", ".$this->session->school_year?></h2></center>
       <hr style="width: 70%; height: 5px; margin-left: auto; margin-right: auto; border-color: #666; border-style: inset;">

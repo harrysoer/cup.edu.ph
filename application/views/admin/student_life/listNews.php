@@ -50,10 +50,6 @@
                                
                 </div> <!-- content -->
 
-                <footer class="footer text-right">
-                    2015 © Moltran.
-                </footer>
-
             </div>
 
             <!-- MODAL -->
@@ -88,9 +84,6 @@
  
         <!-- Examples -->
         <script src="<?=base_url('assets/for_admin/assets/magnific-popup/magnific-popup.js')?>"></script>
-        
-
-        <script src="<?php //echo base_url('assets/for_admin/data-table/jquery/jquery-2.1.4.min.js')?>"></script>
         <script src="<?php echo base_url('assets/for_admin/data-table/datatables/js/jquery.dataTables.min.js')?>"></script>
         <script src="<?php echo base_url('assets/for_admin/data-table/datatables/js/dataTables.bootstrap.js')?>"></script>
 

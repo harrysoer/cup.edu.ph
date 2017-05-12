@@ -111,8 +111,6 @@ class Admin extends CI_Controller {
 	            show_404();
 	        }
 	                
-	        // $news_item = $this->news_model->get_news_by_id($id);
-	        
 	        $this->album->delete_Image($id);        
 	        redirect( site_url('admin/gallery/view/'.$slug),'refresh');       
 		}

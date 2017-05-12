@@ -73,42 +73,42 @@ class StudentPortal extends CI_Controller {
 
 
 
-	public function dportal()
-	{
-		$data['title']="Student Portal";
-		$this->load->view('portal/dportal/template/header',$data);
-		$this->load->view('portal/dportal/template/js');
-		$this->load->view('portal/dportal/index');
-		$this->load->view('portal/dportal/template/footer');
-	}
+	// public function dportal()
+	// {
+	// 	$data['title']="Student Portal";
+	// 	$this->load->view('portal/dportal/template/header',$data);
+	// 	$this->load->view('portal/dportal/template/js');
+	// 	$this->load->view('portal/dportal/index');
+	// 	$this->load->view('portal/dportal/template/footer');
+	// }
 
-	public function forum3()
-	{
-		$data['title']="UNIVERSITY FORUM";
-		$this->load->view('portal/dportal/template/header',$data);
-		$this->load->view('portal/dportal/template/js');
-		$this->load->view('portal/dportal/forum/index');
-		$this->load->view('portal/dportal/template/footer');
-	}
+	// public function forum3()
+	// {
+	// 	$data['title']="UNIVERSITY FORUM";
+	// 	$this->load->view('portal/dportal/template/header',$data);
+	// 	$this->load->view('portal/dportal/template/js');
+	// 	$this->load->view('portal/dportal/forum/index');
+	// 	$this->load->view('portal/dportal/template/footer');
+	// }
 
-	public function addsubject()
-	{
-		$data['title']="Add Schedule";
-		$this->load->view('portal/dportal/template/header',$data);
-		$this->load->view('portal/dportal/template/menuBar');
-		$this->load->view('portal/dportal/template/js');
-		$this->load->view('portal/dportal/addsched/index');
-		$this->load->view('portal/dportal/template/footer');
-	}
+	// public function addsubject()
+	// {
+	// 	$data['title']="Add Schedule";
+	// 	$this->load->view('portal/dportal/template/header',$data);
+	// 	$this->load->view('portal/dportal/template/menuBar');
+	// 	$this->load->view('portal/dportal/template/js');
+	// 	$this->load->view('portal/dportal/addsched/index');
+	// 	$this->load->view('portal/dportal/template/footer');
+	// }
 
-	public function viewsched()
-	{
-		$data['title']="Manage Schedule";
-		$this->load->view('portal/dportal/template/header',$data);
-		$this->load->view('portal/dportal/template/js');
-		$this->load->view('portal/dportal/viewsched/index');
-		$this->load->view('portal/dportal/template/footer');
-	}
+	// public function viewsched()
+	// {
+	// 	$data['title']="Manage Schedule";
+	// 	$this->load->view('portal/dportal/template/header',$data);
+	// 	$this->load->view('portal/dportal/template/js');
+	// 	$this->load->view('portal/dportal/viewsched/index');
+	// 	$this->load->view('portal/dportal/template/footer');
+	// }
 
 	public function fportal()
 	{

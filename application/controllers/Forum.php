@@ -87,6 +87,7 @@ class Forum extends CI_Controller {
 
 	public function create_post(){
 		$this->form_validation->set_rules('title', 'Title', 'trim|required|max_length[40]|min_length[5]');
+		$data['title']="UNIVERSITY FORUM";
         
         if ($this->form_validation->run() === FALSE)
         {
@@ -94,7 +95,7 @@ class Forum extends CI_Controller {
 			{	
 				$this->load->view('portal/dportal/template/header',$data);
 				$this->load->view('portal/dportal/template/menuBar');
-				$this->load->view('portal/dportal/forum/index',$data);
+				$this->load->view('portal/dportal/forum/create',$data);
 				$this->load->view('portal/dportal/template/footer');
 				$this->load->view('portal/dportal/template/js');
 			}
