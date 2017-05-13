@@ -21,16 +21,23 @@ class ListFaculty extends CI_Model {
         return $this->db->insert('faculty_users', $data);
 	}
 
+	public	function get_specific($id)
+	{
+		$query = $this->db->get_where('faculty_users', array('faculty_id' => $id));
+        return $query->result_array();
+	}
+
 	var $table = 'faculty_users';
 	var $column_order = array('username', 'first_name ','mi','last_name', null); //set column field database for datatable orderable
 	var $column_search = array('username', 'first_name ','mi','last_name'); //set column field database for datatable searchable
-	var $order = array('id' => 'desc'); // default order 
+	var $order = array('faculty_id' => 'desc'); // default order 
 
 	private function _get_datatables_query()
 	{
 		
+		$cd = $this->session->college_dept;
 		$this->db->from($this->table);
-
+		$this->db->where('college_dept', $cd);
 		$i = 0;
 	
 		foreach ($this->column_search as $item) // loop column 

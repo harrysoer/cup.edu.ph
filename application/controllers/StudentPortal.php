@@ -10,7 +10,7 @@ class StudentPortal extends CI_Controller {
 
 	public function sportal()
 	{
-		$data['title']="Student Portal";
+		$data['title']="Faculty Portal";
 		$this->load->view('portal/sportal/template/header',$data);
 		$this->load->view('portal/sportal/index');
 		$this->load->view('portal/sportal/template/footer');
@@ -110,41 +110,41 @@ class StudentPortal extends CI_Controller {
 	// 	$this->load->view('portal/dportal/template/footer');
 	// }
 
-	public function fportal()
-	{
-		$data['title']="Student Portal";
-		$this->load->view('portal/fportal/template/header',$data);
-		$this->load->view('portal/fportal/template/js');
-		$this->load->view('portal/fportal/index');
-		$this->load->view('portal/fportal/template/footer');
-	}
+	// public function fportal()
+	// {
+	// 	$data['title']="Faculty Portal";
+	// 	$this->load->view('portal/fportal/template/header',$data);
+	// 	$this->load->view('portal/fportal/template/js');
+	// 	$this->load->view('portal/fportal/index');
+	// 	$this->load->view('portal/fportal/template/footer');
+	// }
 
-	public function forum4()
-	{
-		$data['title']="UNIVERSITY FORUM";
-		$this->load->view('portal/fportal/template/header',$data);
-		$this->load->view('portal/fportal/template/js');
-		$this->load->view('portal/fportal/forum/index');
-		$this->load->view('portal/fportal/template/footer');
-	}
+	// public function forum4()
+	// {
+	// 	$data['title']="UNIVERSITY FORUM";
+	// 	$this->load->view('portal/fportal/template/header',$data);
+	// 	$this->load->view('portal/fportal/template/js');
+	// 	$this->load->view('portal/fportal/forum/index');
+	// 	$this->load->view('portal/fportal/template/footer');
+	// }
 
-	public function classes()
-	{
-		$data['title']="UNIVERSITY FORUM";
-		$this->load->view('portal/fportal/template/header',$data);
-		$this->load->view('portal/fportal/template/js');
-		$this->load->view('portal/fportal/classes/index');
-		$this->load->view('portal/fportal/template/footer');
-	}
+	// public function classes()
+	// {
+	// 	$data['title']="UNIVERSITY FORUM";
+	// 	$this->load->view('portal/fportal/template/header',$data);
+	// 	$this->load->view('portal/fportal/template/js');
+	// 	$this->load->view('portal/fportal/classes/index');
+	// 	$this->load->view('portal/fportal/template/footer');
+	// }
 
-	public function viewclass()
-	{
-		$data['title']="UNIVERSITY FORUM";
-		$this->load->view('portal/fportal/template/header',$data);
-		$this->load->view('portal/fportal/template/js');
-		$this->load->view('portal/fportal/viewclass/index');
-		$this->load->view('portal/fportal/template/footer');
-	}
+	// public function viewclass()
+	// {
+	// 	$data['title']="UNIVERSITY FORUM";
+	// 	$this->load->view('portal/fportal/template/header',$data);
+	// 	$this->load->view('portal/fportal/template/js');
+	// 	$this->load->view('portal/fportal/viewclass/index');
+	// 	$this->load->view('portal/fportal/template/footer');
+	// }
 
 
 

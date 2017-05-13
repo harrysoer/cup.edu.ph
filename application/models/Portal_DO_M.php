@@ -8,13 +8,63 @@ class Portal_DO_M extends CI_Model {
 		parent::__construct();
 	}
 	
+	public function get_coursename($id)
+	{
+		$query = $this->db->get_where('portal_courses', array('course_id' => $id , ));
+		$row = $query->row();
 
-	public function get_sections()
+		if (isset($row))
+		{
+	        return $row->course_name;
+		}
+	}
+
+	public function registerStudent($username, $first_name, $mi, $last_name, $course, $college_dept)
+	{
+		$data = array(
+           'id'     => $username,
+ 		   'first_name'	  => $first_name,
+ 		   'middle_initial'=> $mi,
+ 		   'last_name'	  => $last_name,
+ 		   'course'		  => $course,
+ 		   'college_dept' => $college_dept,
+            
+        );
+
+        return $this->db->insert('students_informations', $data);
+	}
+
+	public function registerSection($id, $section_id, $course_id)
+	{
+
+		$string = $section_id;
+		preg_match_all('!\d!', $string, $matches);
+		$year = (int)implode('',$matches[0]);
+		
+		$data = array(
+            'section' => $section_id,
+            'year'	=> $year
+        );
+
+        $this->db->where('id', $id);
+        return $this->db->update('students_informations', $data);
+	}
+
+	//faculty sched
+	public function get_assigned()
+	{	
+		$course = $this->uri->segment(3);
+		$section_name = $this->uri->segment(4);
+		$college_dept = $this->session->college_dept;
+		$query = $this->db->get_where('portal_schedules', array('course_id' => $course, 'section' => $section_name, 'college_dept'=> $college_dept));
+		return $query->result_array();
+	}
+
+	public function get_sections($course)
 	{
 		$college_dept = $this->session->college_dept;
-		$course = $this->uri->segment(3);
 
-		$query = $this->db->query('SELECT MIN(id) AS id,section FROM portal_schedules WHERE college_dept= "'.$college_dept.'" AND course_id="'.$course.'" GROUP BY section');
+		$query = $this->db->query('SELECT MIN(id_sched) AS id_sched,section FROM portal_schedules WHERE college_dept= "'.$college_dept.'" AND course_id="'.$course.'" GROUP BY section');
 
 		return $query->result_array();
 	}
@@ -78,7 +128,7 @@ class Portal_DO_M extends CI_Model {
 	public function delete_class($course, $section_name, $id)
 	{	
 		$items = array(
-				'id' 		=> $id,
+				'id_sched' 		=> $id,
 				'course_id' => $course ,
 				'section'   => $section_name , 
 				);

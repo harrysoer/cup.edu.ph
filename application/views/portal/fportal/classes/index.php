@@ -1,23 +1,4 @@
 
-<body>
-
-<!--Header-part-->
-<div id="header">
-  <h1><a href="dashboard.html">Student Portal</a></h1>
-</div>
-<!--close-Header-part--> 
-
-
-<!--top-Header-menu-->
-<div id="user-nav" class="navbar navbar-inverse">
-  <ul class="nav">
-    <li  class="dropdown" id="profile-messages" ><a><i class="icon icon-user"></i>  <span class="text">User: Faculty</span></a>
-    </li>
-    <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
-  </ul>
-</div>
-<!--close-top-Header-menu-->
-
 <!--sidebar-menu-->
 <div id="sidebar">
   <ul>
@@ -29,7 +10,7 @@
       <li><a href="<?=site_url('/classes');?>">Manage Class Grades</a></li>
       <li><a href="<?=site_url('/viewclass');?>">View Class Schedules</a></li>
       </ul>
-
+    
     <li><a href="<?=site_url('/forum4');?>"><i class="icon icon-comments-alt"></i> <span>UNIVERSITY FORUM</span></a></li>
   </ul>
 </div>
@@ -40,7 +21,7 @@
 <!--breadcrumbs-->
   <div id="content-header">
     <div id="breadcrumb">
-    <a href="<?=site_url('/sportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+    <a href="<?=site_url('/fportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
     <a href="<?=site_url('/schedules');?>" title="Go to Home" class="tip-bottom"><i class="icon-star"></i> My Class Grades</a>
     </div>
   </div>
@@ -52,7 +33,7 @@
       <div class="span12">
         <div class="widget-box">
           <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
-            <h5><B>CLASSES & GRADES</B></h5>
+            <h5><B>CLASSES &amp; GRADES</B></h5>
           </div>
           <div class="widget-content nopadding">
 <table>

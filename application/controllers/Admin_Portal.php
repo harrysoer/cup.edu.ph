@@ -75,7 +75,11 @@ class Admin_Portal extends CI_Controller {
 	public function do(){
 
 		$data['get_do'] = $this->portal->get_do();
+		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/navbar');
 		$this->load->view('admin_portal/do/do',$data);
+		$this->load->view('admin/templates/scripts');
+		$this->load->view('admin/templates/closer');
 	}
 
 	public function delete_do($username=null){
@@ -101,7 +105,11 @@ class Admin_Portal extends CI_Controller {
 		$this->form_validation->set_rules('college_dept', 'College Depratment', 'trim|required'); 
 
 		if($this->form_validation->run() === false){
+			$this->load->view('admin/templates/header');
+			$this->load->view('admin/templates/navbar');	
 			$this->load->view('admin_portal/do/add_do');
+			$this->load->view('admin/templates/scripts');
+			$this->load->view('admin/templates/closer');
 		}
 		else{
 			$username     = $this->input->post('username') ;

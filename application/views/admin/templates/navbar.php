@@ -52,7 +52,7 @@
                     <li class="has_sub">
                         <a href="" class="waves-effect"><i class="md md-school"></i><span>Portal</span><span class="pull-right"><i class="md md-add"></i></span></a>
                         <ul style="">
-                            <li><a href="<?=site_url('admin/portal')?>"><span>Deans Office</span></a></li>
+                            <li><a href="<?=site_url('admin/portal/deans_office')?>"><span>Deans Office</span></a></li>
                             <li><a href="<?=site_url('forum')?>"><span>Forum</span></a></li>
                         </ul>
                     </li>

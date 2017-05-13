@@ -24,6 +24,7 @@
     <a href="<?=site_url('/dportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a>
     <a href="<?=site_url('/addsubject');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Manage Schedules</a>
     </div>
+    <h5>View Schedules</h5>
   </div>
 <!--End-breadcrumbs-->
 
@@ -62,7 +63,7 @@
 <td style="text-align: center;"><?=$schedules['time']?></td>
 <td style="text-align: center;">
     <button class="btn btn-success btn-mini" style="width: 80px;">Change</button>
-    <a class="btn btn-danger btn-mini" href="<?=site_url('dportal/delete/'.$this->uri->segment(3).'/'.$this->uri->segment(4).'/'.$schedules['id'])?>" onclick="return confirm('are you sure to delete this?')" style="width: 80px;">Delete</a>
+    <a class="btn btn-danger btn-mini" href="<?=site_url('dportal/delete/'.$this->uri->segment(3).'/'.$this->uri->segment(4).'/'.$schedules['id_sched'])?>" onclick="return confirm('are you sure to delete this?')" style="width: 80px;">Delete</a>
 </td>
 </tr>
 <?php endforeach ?>

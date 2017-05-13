@@ -19,7 +19,7 @@
 <!--main-container-part-->
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="<?=site_url('/dportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Courses</a> <a href="#" class="current">Add</a> </div>
+    <div id="breadcrumb"> <a href="<?=site_url('/dportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">Add</a> </div>
     <h1>Add Student Account</h1>
   </div>
   <div class="container-fluid"><hr>
@@ -57,15 +57,28 @@
                 <div class="controls">
                   <input type="text"  id="mi" name="mi" required="" class="span4 m-wrap">
                 </div>
-              </div><div class="control-group">
+              </div>
+              <div class="control-group">
                 <label class="control-label" for="last_name">Last Name</label>
                 <div class="controls">
                   <input type="text"  id="last_name" name="last_name" required="" class="span4 m-wrap">
                 </div>
               </div>
-              <div class="form-actions">
-                <input type="submit" name="Add Course" class="btn btn-success"> <a href="<?=site_url('dportal/students')?>" class="btn btn-danger" onclick="return confirm('Are you sure to Cancel?')">Cancel</a>
+              <div class="control-group">
+                <label class="control-label" for="last_name">Course</label>
+                <div class="controls">
+                  <select name="course" id="input" class="form-control" required="required" style="width: 40rem">
+                      <option>-----Select Course-----</option>
+                       <?php foreach ($get_courses as $course): ?>
+                        <option value="<?=$course['course_id']?>"><?=$course['course_name']?></option>
+                      <?php endforeach ?>
+                  </select>
+                </div>
               </div>
+              <div class="form-actions">
+                <input type="submit" value="Next" class="btn btn-success"> <a href="<?=site_url('dportal/students')?>" class="btn btn-danger" onclick="return confirm('Are you sure to Cancel?')">Cancel</a>
+              </div>
+              <bs3form
             </form>
           </div>
         </div>

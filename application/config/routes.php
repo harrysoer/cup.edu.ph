@@ -88,7 +88,6 @@ $route['pdf']='CupWebsite/pdf';
 //portal routes
 $route['portal']='portal/login';
 
-
 //do portal routes
 $route['dportal/login']  = 'portal_do_login/index';
 $route['do/logout'] = 'portal_do/logout';
@@ -99,10 +98,13 @@ $route['forum3'] = 'portal_do/forum3';
 //register faculty 
 $route['dportal/faculty'] = 'portal_do/faculty';
 $route['dportal/faculty/add'] = 'portal_do/addFaculty';
+$route['dportal/faculty/view/(:any)'] = 'portal_do/viewFaculty/$1';
+
 
 //students
 $route['dportal/students'] = 'portal_do/students';
 $route['dportal/students/add'] = 'portal_do/addStudent';
+$route['dportal/students/section/(:any)/(:any)'] = 'portal_do/finalizRegistration/$id/$1';
 
 //scheds
 $route['viewsched']='portal_do/viewsched';
@@ -136,10 +138,12 @@ $route['curriculum']='StudentPortal/curriculum';
 $route['forum2']='StudentPortal/forum2';
 
 //faculty portal routes
-$route['fportal']='StudentPortal/fportal';
-$route['forum4']='StudentPortal/forum4';
-$route['classes']='StudentPortal/classes';
-$route['viewclass']='StudentPortal/viewclass';
+$route['fportal/login']='Portal_Prof_Login/index';
+$route['fportal/login/status']='Portal_Prof_Login/login';
+$route['fportal']='Portal_Prof/index';
+$route['classes']='Portal_Prof/classes';
+$route['viewclass']='Portal_Prof/viewclass';
+$route['forum4']='Portal_Prof/forum4';
 
 //forum routes
 $route['forum']		  		   =  'forum/index';

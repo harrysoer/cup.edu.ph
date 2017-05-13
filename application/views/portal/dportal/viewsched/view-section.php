@@ -24,6 +24,8 @@
     <a href="<?=site_url('/dportal');?>" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a>
     <a  class="tip-bottom"><i class="icon-calendar"></i> View Schedule</a>
     </div>
+    <h5>View Schedules</h5>
+    
   </div>
 <!--End-breadcrumbs-->
 

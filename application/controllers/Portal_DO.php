@@ -71,9 +71,12 @@ class Portal_DO extends CI_Controller {
 		$this->form_validation->set_rules('first_name', 'First Name', 'trim|required'); 
 		$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
 		$this->form_validation->set_rules('mi', 'Last Name', 'trim|required');
+		$this->form_validation->set_rules('course', 'Course', 'trim|required'); 
+
 
 		if ($this->form_validation->run() === FALSE) {
 			$data['title']="DO Portal";
+			$data['get_courses'] = $this->do->get_courses();
 			$this->load->view('portal/dportal/template/header',$data);
 			$this->load->view('portal/dportal/template/menuBar');
 			$this->load->view('portal/dportal/students/addStudent');
@@ -82,17 +85,55 @@ class Portal_DO extends CI_Controller {
 		} 
 		else 
 		{
+			$id = $this->input->post('course');
+
 			$username 	= $this->input->post('id');
 			$first_name = $this->input->post('first_name'); 
 			$mi 		= $this->input->post('mi');
 			$last_name  = $this->input->post('last_name');
-			$password  	= $id;
+			$password  	= $username;
 			$college_dept = $this->session->college_dept; 
 			$group		  = array('6'); //deans_office group id
-
+			$course 	= $this->do->get_coursename($id) ;
+			
 			$this->ion_auth->register($username, $password, $email=$username, $additional_data ='none', $group);
-			$this->do_ajax->registerFaculty($username, $first_name, $mi, $last_name, $college_dept);
+			$this->do->registerStudent(
+							$username, 
+							$first_name, 
+							$mi, 
+							$last_name,
+							$course, 
+							$college_dept 
+							);
+			
+			redirect('dportal/students/section/'.$id.'/'.$username,'refresh');
+		}
+	}
+
+
+	function finalizRegistration()
+	{
+		$course_id = $this->uri->segment(4);
+		$id = $this->uri->segment(5);
+		$data['get_section'] = $this->do->get_sections($course_id);
+		$data['title']="DO Portal";
+		$this->form_validation->set_rules('section_name', 'Section', 'trim|required'); 
+
+		if($this->form_validation->run() === false){
+			$this->load->view('portal/dportal/template/header',$data);
+			$this->load->view('portal/dportal/template/menuBar');
+			$this->load->view('portal/dportal/students/final', $data);
+			$this->load->view('portal/dportal/template/footer');
+			$this->load->view('portal/dportal/template/js');
+		}
+		else
+		{
+			$section = $this->input->post('section_name');
+
+			$this->do->registerSection($id, $section, $course_id);
+			
 			redirect('dportal/students','refresh');
+			
 		}
 	}
 
@@ -112,20 +153,20 @@ class Portal_DO extends CI_Controller {
 			$row[] = $student->course;
 			$row[] = $student->year;
 			$row[] = $student->section;
-			$row[] = $student->status;
+			// $row[] = $student->status;
 
-			$enruld = $student->enrolled;
-			switch ($enruld) {
-				case 1:
-					$sagot = 'yes';
-					break;
+			// $enruld = $student->enrolled;
+			// switch ($enruld) {
+			// 	case 1:
+			// 		$sagot = 'yes';
+			// 		break;
 				
-				default:
-					$sagot = 'no';
-					break;
-			}
+			// 	default:
+			// 		$sagot = 'no';
+			// 		break;
+			// }
 
-			$row[] = $sagot;
+			// $row[] = $sagot;
 
 			$link = site_url('dportal/student/view/'.$student->id); 
 
@@ -184,6 +225,19 @@ class Portal_DO extends CI_Controller {
 		}
 	}
 
+	public function viewFaculty()
+	{
+		$id = $this->uri->segment(4);
+		$data['title']="DO Portal";
+		$data['get_schedules'] = $this->do->get_assigned();
+		$data['get_info'] = $this->do_ajax->get_specific($id);
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/faculty/ajaxList');
+		$this->load->view('portal/dportal/faculty/view',$data);
+		$this->load->view('portal/dportal/template/footer');
+	}
+
 	public function faculty()
 	{
 		$data['title']="DO Portal";
@@ -194,6 +248,7 @@ class Portal_DO extends CI_Controller {
 		$this->load->view('portal/dportal/template/footer');
 	}
 
+	
 	//ajax datatable
 	public function ajax_listFaculty()
 	{
@@ -213,12 +268,12 @@ class Portal_DO extends CI_Controller {
 			$row[] = $faculty->mi;
 			$row[] = $faculty->last_name;
 
-			$link = site_url('dportal/faculty/view/'.$faculty->id); 
+			$link = site_url('dportal/faculty/view/'.$faculty->faculty_id); 
 
 			//add html for action
 			$row[] = '<center><a class="btn btn-sm btn-primary" href="'.$link.'" title="View")">
 					<i class="glyphicon glyphicon-pencil"></i> View</a>
-				  <a class="btn btn-sm btn-danger " href="javascript:void(0)" title="Hapus" onclick="delete_person('."'".$faculty->id."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a></center>';
+				  <a class="btn btn-sm btn-danger " href="javascript:void(0)" title="Hapus" onclick="delete_person('."'".$faculty->faculty_id."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a></center>';
 		
 			$data[] = $row;
 		}
@@ -246,12 +301,12 @@ class Portal_DO extends CI_Controller {
 		$this->load->view('portal/dportal/template/footer');
 		$this->load->view('portal/dportal/template/js');
 	}
-	
+
 	//view scheds
 	public function viewsched()
 	{
 		//validate form input
-		$this->form_validation->set_rules('course_name', 'Section Name', 'trim|required'); 
+		$this->form_validation->set_rules('course_name', 'Select Course', 'trim|required'); 
 
 		if($this->form_validation->run() === false){
 
@@ -271,13 +326,14 @@ class Portal_DO extends CI_Controller {
 
 	public function view_sections()
 	{
+		$course = $this->uri->segment(3);
 		//validate form input
 		$this->form_validation->set_rules('section_name', 'Section Name', 'trim|required'); 
 
 		if($this->form_validation->run() === false){
 
 		$data['title']="Manage Schedule";
-		$data['get_section'] = $this->do->get_sections();
+		$data['get_section'] = $this->do->get_sections($course);
 		$this->load->view('portal/dportal/template/header',$data);
 		$this->load->view('portal/dportal/template/menuBar');
 		$this->load->view('portal/dportal/template/js');
@@ -511,7 +567,7 @@ class Portal_DO extends CI_Controller {
 			$abbrv = $this->input->post('abbrv') ;
 			
 			$this->do->add_course($course, $years ,$abbrv);
-			redirect('dportal/courses','refresh');
+			redirect('dportal/course','refresh');
 		}
 	}
 

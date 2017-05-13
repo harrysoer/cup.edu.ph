@@ -7,23 +7,13 @@ class ListStudents extends CI_Model {
 		parent:: __construct();
 	}
 
-	public function registerStudent($username, $first_name, $mi, $last_name, $college_dept)
-	{
-		$data = array(
-           'username'     => $username,
- 		   'first_name'	  => $first_name,
- 		   'mi'			  => $mi,
- 		   'last_name'	  => $last_name,
- 		   'college_dept' => $college_dept,
-            
-        );
-
-        return $this->db->insert('faculty_users', $data);
-	}
+	
 
 	var $table = 'students_informations';
-	var $column_order = array('id', 'first_name ','last_name','course', 'year', 'section', 'status', 'enrolled', null); //set column field database for datatable orderable
-	var $column_search = array('id', 'first_name ','last_name','course', 'year', 'section', 'status', 'enrolled',); //set column field database for datatable searchable
+	// var $column_order = array('id', 'first_name ','last_name','course', 'year', 'section', 'status', 'enrolled', null); //set column field database for datatable orderable
+	var $column_order = array('id', 'first_name ','last_name','course', 'year', 'section', null); //set column field database for datatable orderable
+	// var $column_search = array('id', 'first_name ','last_name','course', 'year', 'section', 'status', 'enrolled',); //set column field database for datatable searchable
+	var $column_search = array('id', 'first_name ','last_name','course', 'year', 'section',); //set column field database for datatable searchable
 	var $order = array('id' => 'desc'); // default order 
 
 	private function _get_datatables_query()

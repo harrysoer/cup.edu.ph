@@ -33,6 +33,24 @@ class Forum extends CI_Controller {
 			$this->load->view('portal/dportal/template/footer');
 			$this->load->view('portal/dportal/template/js');
 		}
+		elseif($this->ion_auth->in_group('Professor'))
+		{
+			$this->load->view('portal/fportal/template/header');
+			$this->load->view('portal/fportal/template/js');
+			$this->load->view('portal/fportal/template/menubar');		
+			$this->load->view('portal/fportal/forum/index', $data);
+			$this->load->view('portal/fportal/template/footer');
+			
+		}
+		elseif($this->ion_auth->in_group('Student'))
+		{
+			$this->load->view('portal/sportal/template/header');
+			$this->load->view('portal/dportal/template/js');
+			$this->load->view('portal/sportal/template/menubar');		
+			$this->load->view('portal/sportal/forum/index', $data);
+			$this->load->view('portal/fportal/template/footer');
+
+		}
 		elseif($this->ion_auth->is_admin())
 		{
 			$this->load->view('admin/templates/header');
@@ -64,9 +82,19 @@ class Forum extends CI_Controller {
 			}
 			elseif($this->ion_auth->in_group('Student'))
 			{
+				$this->load->view('portal/sportal/template/header',$data);
+				$this->load->view('portal/sportal/template/menubar');
+				$this->load->view('portal/sportal/forum/view_post',$data);
+				$this->load->view('portal/sportal/template/footer');
+				$this->load->view('portal/sportal/template/js');
 
 			}
 			elseif ($this->ion_auth->in_group('Professor')) {
+				$this->load->view('portal/fportal/template/header',$data);
+				$this->load->view('portal/fportal/template/menubar');
+				$this->load->view('portal/fportal/forum/view_post',$data);
+				$this->load->view('portal/fportal/template/footer');
+				$this->load->view('portal/fportal/template/js');
 
 			}
 			elseif($this->ion_auth->is_admin())
@@ -101,9 +129,19 @@ class Forum extends CI_Controller {
 			}
 			elseif($this->ion_auth->in_group('Student'))
 			{
-
+				$this->load->view('portal/sportal/template/header',$data);
+				$this->load->view('portal/sportal/template/js');
+				$this->load->view('portal/sportal/template/menubar');
+				$this->load->view('portal/sportal/forum/create',$data);
+				$this->load->view('portal/sportal/template/footer');
 			}
-			elseif ($this->ion_auth->in_group('Professor')) {
+			elseif ($this->ion_auth->in_group('Professor')) 
+			{
+				$this->load->view('portal/fportal/template/header',$data);
+				$this->load->view('portal/fportal/template/js');
+				$this->load->view('portal/fportal/template/menubar');
+				$this->load->view('portal/fportal/forum/create',$data);
+				$this->load->view('portal/fportal/template/footer');
 
 			}
 		}

@@ -46,8 +46,6 @@ table, th, td {
                   <th>Course</th>
                   <th>Year</th>
                   <th>Section</th>
-                  <th>Status</th>
-                  <th>Enrolled?</th>
                   <th>Actions</th>
                 </tr>
               </thead>
@@ -62,8 +60,6 @@ table, th, td {
                   <th>Course</th>
                   <th>Year</th>
                   <th>Section</th>
-                  <th>Status</th>
-                  <th>Enrolled?</th>
                   <th>Actions</th>
                 </tr>
               </tfoot>
