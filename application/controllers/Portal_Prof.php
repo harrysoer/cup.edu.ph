@@ -26,6 +26,13 @@ class Portal_Prof extends CI_Controller {
 
 	}
 
+
+	public function logout(){
+		$this->ion_auth->logout();
+		redirect('fportal/login','refresh',301);
+
+	}
+
 	public function index()
 	{
 		$data['title']="Faculty Portal";

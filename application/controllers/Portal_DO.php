@@ -37,7 +37,6 @@ class Portal_DO extends CI_Controller {
 		redirect('forum','refresh');
 	}
 
-
 	public function logout(){
 		$this->ion_auth->logout();
 		redirect('dportal/login','refresh',301);

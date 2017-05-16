@@ -3,9 +3,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class StudentPortal extends CI_Controller {
 
-	public function index()
+	public function __construct()
 	{
-		
+		parent::__construct();
+		$this->load->library('form_validation');
+        $this->load->model('portal_student_model');
+
+		$this->load->model('Ion_auth_model');
+		$this->lang->load('auth');
+		$this->load->library(array('ion_auth','form_validation'));
+		$this->load->helper(array('url','language'));
+
+		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
+
+		if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('portal/login','refresh',301);
+		}
+
+	}
+
+	public function logout(){
+		$this->ion_auth->logout();
+		redirect('portal','refresh',301);
+
 	}
 
 	public function sportal()
@@ -22,6 +44,7 @@ class StudentPortal extends CI_Controller {
 		$data['title']="My INFO";
 		$this->load->view('portal/sportal/template/header',$data);
 		$this->load->view('portal/sportal/template/js');
+		$this->load->view('portal/fportal/template/menubar');
 		$this->load->view('portal/sportal/info/index');
 		$this->load->view('portal/sportal/template/footer');
 	}
@@ -31,6 +54,7 @@ class StudentPortal extends CI_Controller {
 		$data['title']="My GRADES";
 		$this->load->view('portal/sportal/template/header',$data);
 		$this->load->view('portal/sportal/template/js');
+		$this->load->view('portal/fportal/template/menubar');
 		$this->load->view('portal/sportal/grades/index');
 		$this->load->view('portal/sportal/template/footer');
 	}
@@ -49,6 +73,7 @@ class StudentPortal extends CI_Controller {
 		$data['title']="My SCHEDULES";
 		$this->load->view('portal/sportal/template/header',$data);
 		$this->load->view('portal/sportal/template/js');
+		$this->load->view('portal/fportal/template/menubar');
 		$this->load->view('portal/sportal/schedule/index');
 		$this->load->view('portal/sportal/template/footer');
 	}
@@ -58,17 +83,14 @@ class StudentPortal extends CI_Controller {
 		$data['title']="COURSE CURRICULUM";
 		$this->load->view('portal/sportal/template/header',$data);
 		$this->load->view('portal/sportal/template/js');
+		$this->load->view('portal/fportal/template/menubar');
 		$this->load->view('portal/sportal/curriculum/index');
 		$this->load->view('portal/sportal/template/footer');
 	}
 
 	public function forum2()
 	{
-		$data['title']="UNIVERSITY FORUM";
-		$this->load->view('portal/sportal/template/header',$data);
-		$this->load->view('portal/sportal/template/js');
-		$this->load->view('portal/sportal/forum/index');
-		$this->load->view('portal/sportal/template/footer');
+		redirect('forum');
 	}
 
 

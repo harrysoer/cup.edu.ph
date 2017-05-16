@@ -37,24 +37,13 @@
 
             <div class="form-signin" style="opacity:1; margin-top: -30px;">
                <!-- show the error here, sana katulad din sa buhay ko -->
-	            <?php /*$error="wrong shit";*/ if (isset($error)) : ?>
-					<div class="col-md-12 col-lg-12 col-sm-12">
-						<div class="alert alert-danger" role="alert">
-							<?= $error; ?>
-							<?//= $idNumber;?>
-							<?//= $password;?>
-						</div>
-					</div>
-				<?php endif; ?>
-
-				<!-- temporary parang buhay ko lang -->
-				<?php if (isset($success)):?>
-					<div class="col-md-12">
-						<div class="aler alert-success" role="alert">
-							<?= $success;?>
-						</div>
-					</div>
-				<?php endif;?>
+	             <?php if (isset($error)) : ?>
+                    <div class="col-md-12 col-sm-12 col-lg-12">
+                        <div class="alert alert-danger" role="alert"><b>
+                            <?= $error ?>
+                        </b></div>
+                    </div>
+                <?php endif; ?>
 
                 <?php if (validation_errors()) : ?>
 					<div class="col-md-12">
@@ -64,7 +53,7 @@
 					</div>
 				<?php endif; ?>
 
-            		<?= form_open();?>
+            		<?= form_open('Portal/index');?>
             		<div style="margin-top:30px; position:relative;">
 		                <span id="reauth-email" class="reauth-email"></span>
 		                <input type="text" name="idNumber" id="inputEmail" class="form-control" placeholder="ID Number" required autofocus >

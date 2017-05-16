@@ -7,110 +7,57 @@ class Portal extends CI_Controller{
 	{
 		parent::__construct();
 		$this->load->library('form_validation');
-        $this->load->model('portal_student_model');
+        $this->load->model('portal_student_model', 'student');
+
+		$this->load->model('Ion_auth_model');
+		$this->lang->load('auth');
+		$this->load->library(array('ion_auth','form_validation'));
+		$this->load->helper(array('url','language'));
+
+		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
+
+		if ($this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('sportal','refresh',301);
+		}
+
 	}
 
 	//trial and error for the form load library in the contruct
-	//TEMPORARY(REGISTER PAGE)
-	public function register()
-	{	
-		$data = new stdClass();
-
-		// load form helper and validation library
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-		
-		// setting up the Validation rules
-		$this->form_validation->set_rules('idNumber','ID number', 'required');
-		$this->form_validation->set_rules('password','Password','required');
-		$this->form_validation->set_rules('firstName','First Name','required');
-		$this->form_validation->set_rules('middleName','Middle Name','required');
-		$this->form_validation->set_rules('lastName','Last Name','required');
-		$this->form_validation->set_rules('course','Course','required');
-		$this->form_validation->set_rules('year','Year','required');
-
-
-		if ($this->form_validation->run()===false){
-			$this->load->view('portal/templates2/header');
-			$this->load->view('portal/register');
-			$this->load->view('portal/templates2/footer');
-		}else{
-			$idNumber 	=  $this->input->post('idNumber');
-			$password 	= $this->input->post('password');
-			$firstName 	= $this->input->post('firstName');
-			$middleName = $this->input->post('middleName');
-			$lastName 	= $this->input->post('lastName');
-			$course 	= $this->input->post('course');
-			$year 		= $this->input->post('year');
-
-			if ($this->portal_student_model->addStudent($idNumber, $password, $firstName, $middleName, $lastName, $course, $year)){
-				$this->load->view('portal/templates1/header');
-				$this->load->view('portal/success');
-				$this->load->view('portal/templates1/footer');
-			}else{
-
-				// user creation failed, this should never happen
-				$data->error = 'There was a problem creating your new account. Please try again.';
-				
-				// send error to the view
-				$this->load->view('header');
-				$this->load->view('user/register/register', $data);
-				$this->load->view('footer');
-			}
-
-		}
-	}
-
-	//login page
-	public function login()
-	{	
-		// load form helper and validation library
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-		
-		// setting up the Validation rules
-		$this->form_validation->set_rules('idNumber','ID number', 'required');
-		$this->form_validation->set_rules('password','Password','required');
-		
-		//chinecheck if nirun ang form function library
-		if ($this->form_validation->run()==FALSE){
-		
-			$this->load->view('portal/templates/header');
-			$this->load->view('portal/login');
-			$this->load->view('portal/templates/footer');
-		}else{
-
-			//set variables na nanggaling sa form login page
-			$idNumber = $this->input->post('idNumber');
-			$password = $this->input->post('password');
-
-			if ($this->portal_student_model->resolve_user_login($idNumber, $password)){
-
-				//setting the variables para sa mga sessions
-				//$fname = $this->user_model->get_name_from_id_number($idNumber);	
-
-				//success ang pag pasok
-				$this->load->view('portal/templates/header');
-				$this->load->view('portal/login_success');
-				$this->load->view('portal/templates/footer');
 	
-			}else{
+	public function login()
+	{
 
-				//palpak ang login
-				$error='Wrong ID number and password';
-				$data['error']=$error;
-				$data['idNumber']=$idNumber;
-				$data['password']=$password;
+		$this->load->view('portal/templates/header');
+		$this->load->view('portal/login');
+		$this->load->view('portal/templates/footer');
+	}
 
-				//sinend kung alin ang kapalpakan, parang buhay ko
-				$this->load->view('portal/templates/header');
-				$this->load->view('portal/login', $data);
-				$this->load->view('portal/templates/footer');
+	public function index()
+	{	
+		$data = array();
+		$username = $this->input->post('idNumber') ;
+		$pass = $this->input->post('password') ;
+		$remember = NULL;
+		//validate form input
+		$this->form_validation->set_rules($username, str_replace(':', '', $this->lang->line('login_identity_label')), 'required');
+		$this->form_validation->set_rules($pass, str_replace(':', '', $this->lang->line('login_password_label')), 'required');
 
-			}
-
+		if($this->ion_auth->login($username, $pass, $remember)){
+			$this->student->get_college_dept($username);
+			redirect('sportal','refresh');
+		}
+		else{
+			$data['name'] = "Dean's Office";
+			$data['error'] = 'Wrong username or password.';
+			
+			$this->load->view('portal/templates/header');
+			$this->load->view('portal/login', $data);
+			$this->load->view('portal/templates/footer');
 		}
 	}
+	
 
 	
 
