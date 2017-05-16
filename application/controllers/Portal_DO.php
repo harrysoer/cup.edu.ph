@@ -92,7 +92,7 @@ class Portal_DO extends CI_Controller {
 			$last_name  = $this->input->post('last_name');
 			$password  	= $username;
 			$college_dept = $this->session->college_dept; 
-			$group		  = array('6'); //deans_office group id
+			$group		  = array('5'); //students group id
 			$course 	= $this->do->get_coursename($id) ;
 			
 			$this->ion_auth->register($username, $password, $email=$username, $additional_data ='none', $group);
