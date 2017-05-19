@@ -4,12 +4,12 @@
   <ul>
     <li><a href="<?=site_url('/dportal');?>"><i class="icon icon-home"></i> <span>HOME</span></a> </li>
     <li class><a href="<?=site_url('/dportal/course');?>"><i class="icon icon-th-list"></i> <span>Courses</span></a> </li>
-    <li data-toggle="collapse" data-target="#products" class="collapsed active"><a href="#"><i class="icon icon-calendar"></i> <span>CLASS SCHEDULES</span></a></li>
+    <li data-toggle="collapse" data-target="#products" class="collapsed "><a href="#"><i class="icon icon-calendar"></i> <span>CLASS SCHEDULES</span></a></li>
     <ul class="sub-menu collapse" id="products" style="text-align: left; font-size: 13px;">
       <li><a href="<?=site_url('/addsubject');?>">Add Schedule</a></li>
       <li><a href="<?=site_url('/viewsched');?>">Manage Schedules</a></li>
     </ul>
-    <li class><a href="<?=site_url('/dportal/faculty');?>"><i class="icon icon-user-md"></i> <span>Faculty</span></a> </li>
+    <li class="active"><a href="<?=site_url('/dportal/faculty');?>"><i class="icon icon-user-md"></i> <span>Faculty</span></a> </li>
     <li class><a href="<?=site_url('/dportal/students');?>"><i class="icon icon-user"></i> <span>Students</span></a> </li>
     <li><a href="<?=site_url('/forum3');?>"><i class="icon icon-comments-alt"></i> <span>UNIVERSITY FORUM</span></a></li>
   </ul>

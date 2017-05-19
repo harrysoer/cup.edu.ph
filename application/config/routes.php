@@ -100,13 +100,19 @@ $route['dportal/faculty'] = 'portal_do/faculty';
 $route['dportal/faculty/add'] = 'portal_do/addFaculty';
 $route['dportal/faculty/view/(:any)'] = 'portal_do/viewFaculty/$1';
 
+$route['dportal/assign/select-course/(:any)']='portal_do/selectCourse/$id';
+$route['dportal/assign/select-section/(:any)/(:any)']='portal_do/viewSections/$id/$1';
+$route['dportal/assign/(:any)/(:any)/(:any)'] = 'portal_do/assignSched/$id/$1/$id_2';
+$route['dportal/set/(:any)/(:any)'] = 'portal_do/setAssign/$id/$1';
 
-//students
+ 
+
+//students dportal
 $route['dportal/students'] = 'portal_do/students';
 $route['dportal/students/add'] = 'portal_do/addStudent';
 $route['dportal/students/section/(:any)/(:any)'] = 'portal_do/finalizRegistration/$id/$1';
 
-//scheds
+//scheds dportal
 $route['viewsched']='portal_do/viewsched';
 $route['dportal/viewsections/(:any)']='portal_do/view_sections/$1';
 $route['dportal/viewschedules/(:any)/(:any)'] = 'portal_do/view_schedules/$1/$id';

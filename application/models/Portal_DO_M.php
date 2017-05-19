@@ -8,6 +8,29 @@ class Portal_DO_M extends CI_Model {
 		parent::__construct();
 	}
 	
+	//assign schedule
+	public function setAssignSched($faculty_id, $id_sched)
+	{	
+
+		$data = array(
+			'faculty_id' => $faculty_id,
+			'id_sched'   => $id_sched,
+			);
+		return $this->db->insert('portal_schedules_assigned', $data);
+	}
+
+	//info
+	public function get_specific($id)
+	{
+		$this->db->select('*');
+		$this->db->from('portal_schedules_assigned');
+		$this->db->join('portal_schedules', 'portal_schedules_assigned.id_sched = portal_schedules.id_sched');
+		$this->db->where('portal_schedules_assigned.faculty_id', $id);
+		
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+
 	public function get_coursename($id)
 	{
 		$query = $this->db->get_where('portal_courses', array('course_id' => $id , ));
@@ -69,10 +92,8 @@ class Portal_DO_M extends CI_Model {
 		return $query->result_array();
 	}
 
-	public function get_schedules()
+	public function get_schedules($course , $section_name)
 	{
-		$course = $this->uri->segment(3);
-		$section_name = $this->uri->segment(4);
 		$college_dept = $this->session->college_dept;
 		$query = $this->db->get_where('portal_schedules', array('course_id' => $course, 'section' => $section_name, 'college_dept'=> $college_dept));
 		return $query->result_array();

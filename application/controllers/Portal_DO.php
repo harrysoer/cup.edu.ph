@@ -224,12 +224,84 @@ class Portal_DO extends CI_Controller {
 		}
 	}
 
+	public function viewSections()
+	{
+		$id = $this->uri->segment(4);
+		$course = $this->uri->segment(5);
+		//validate form input
+		$this->form_validation->set_rules('section_name', 'Section Name', 'trim|required'); 
+
+		if($this->form_validation->run() === false){
+
+		$data['title']="Manage Schedule";
+		$data['get_section'] = $this->do->get_sections($course);
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/template/js');
+		$this->load->view('portal/dportal/faculty/list-section');
+		$this->load->view('portal/dportal/template/footer');
+		}
+		else{
+			$section_name = $this->input->post('section_name');
+			
+
+			redirect('dportal/assign/'.$id.'/'.$course.'/'.$section_name,'refresh');
+		}
+	}
+
+	public function selectCourse()
+	{
+		$id=$this->uri->segment(4);
+		//validate form input
+		$this->form_validation->set_rules('course_name', 'Select Course', 'trim|required'); 
+
+		if($this->form_validation->run() === false){
+
+		$data['title']="Manage Schedule";
+		$data['get_courses'] = $this->do->get_courses();
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/template/js');
+		$this->load->view('portal/dportal/faculty/list-course', $data);
+		$this->load->view('portal/dportal/template/footer');
+		}
+		else{
+			$course = $this->input->post('course_name');
+			redirect('dportal/assign/select-section/'.$id.'/'.$course,'refresh');
+		}
+	}
+
+	public function setAssign()
+	{	
+		$id = $this->uri->segment(3);
+		$id_sched = $this->uri->segment(4);
+
+		$this->do->setAssignSched($id, $id_sched);
+
+		redirect('dportal/faculty/view/'.$id,'refresh');
+	}
+
+	public function assignSched()
+	{
+		$course = $this->uri->segment(4);
+		$section_name = $this->uri->segment(5);
+
+		$data['title']="Manage Schedule";
+		$data['get_schedules'] = $this->do->get_schedules($course,$section_name);
+		$this->load->view('portal/dportal/template/header',$data);
+		$this->load->view('portal/dportal/template/menuBar');
+		$this->load->view('portal/dportal/template/js');
+		$this->load->view('portal/dportal/faculty/list-sched',$data);
+		$this->load->view('portal/dportal/template/footer');
+	
+	}
+
 	public function viewFaculty()
 	{
 		$id = $this->uri->segment(4);
 		$data['title']="DO Portal";
-		$data['get_schedules'] = $this->do->get_assigned();
 		$data['get_info'] = $this->do_ajax->get_specific($id);
+		$data['get_schedules'] = $this->do->get_specific($id);
 		$this->load->view('portal/dportal/template/header',$data);
 		$this->load->view('portal/dportal/template/menuBar');
 		$this->load->view('portal/dportal/faculty/ajaxList');
@@ -347,7 +419,10 @@ class Portal_DO extends CI_Controller {
 	}
 
 	public function view_schedules()
-	{
+	{	
+
+		$course = $this->uri->segment(3);
+		$section_name = $this->uri->segment(4);
 		$data['title']="Manage Schedule";
 		$data['get_schedules'] = $this->do->get_schedules();
 		$this->load->view('portal/dportal/template/header',$data);

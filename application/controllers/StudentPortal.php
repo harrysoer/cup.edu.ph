@@ -16,10 +16,15 @@ class StudentPortal extends CI_Controller {
 
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 
+		$group = 'Student';
 		if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
 			redirect('portal/login','refresh',301);
+		}	
+		elseif (!$this->ion_auth->in_group($group))
+		{
+			return show_error('You must logged in as a Dean\'s Office Account to view this page.');
 		}
 
 	}
@@ -44,7 +49,7 @@ class StudentPortal extends CI_Controller {
 		$data['title']="My INFO";
 		$this->load->view('portal/sportal/template/header',$data);
 		$this->load->view('portal/sportal/template/js');
-		$this->load->view('portal/fportal/template/menubar');
+		$this->load->view('portal/sportal/template/menubar');
 		$this->load->view('portal/sportal/info/index');
 		$this->load->view('portal/sportal/template/footer');
 	}
@@ -54,7 +59,7 @@ class StudentPortal extends CI_Controller {
 		$data['title']="My GRADES";
 		$this->load->view('portal/sportal/template/header',$data);
 		$this->load->view('portal/sportal/template/js');
-		$this->load->view('portal/fportal/template/menubar');
+		$this->load->view('portal/sportal/template/menubar');
 		$this->load->view('portal/sportal/grades/index');
 		$this->load->view('portal/sportal/template/footer');
 	}
@@ -73,7 +78,7 @@ class StudentPortal extends CI_Controller {
 		$data['title']="My SCHEDULES";
 		$this->load->view('portal/sportal/template/header',$data);
 		$this->load->view('portal/sportal/template/js');
-		$this->load->view('portal/fportal/template/menubar');
+		$this->load->view('portal/sportal/template/menubar');
 		$this->load->view('portal/sportal/schedule/index');
 		$this->load->view('portal/sportal/template/footer');
 	}
@@ -83,7 +88,7 @@ class StudentPortal extends CI_Controller {
 		$data['title']="COURSE CURRICULUM";
 		$this->load->view('portal/sportal/template/header',$data);
 		$this->load->view('portal/sportal/template/js');
-		$this->load->view('portal/fportal/template/menubar');
+		$this->load->view('portal/sportal/template/menubar');
 		$this->load->view('portal/sportal/curriculum/index');
 		$this->load->view('portal/sportal/template/footer');
 	}
@@ -92,83 +97,6 @@ class StudentPortal extends CI_Controller {
 	{
 		redirect('forum');
 	}
-
-
-
-	// public function dportal()
-	// {
-	// 	$data['title']="Student Portal";
-	// 	$this->load->view('portal/dportal/template/header',$data);
-	// 	$this->load->view('portal/dportal/template/js');
-	// 	$this->load->view('portal/dportal/index');
-	// 	$this->load->view('portal/dportal/template/footer');
-	// }
-
-	// public function forum3()
-	// {
-	// 	$data['title']="UNIVERSITY FORUM";
-	// 	$this->load->view('portal/dportal/template/header',$data);
-	// 	$this->load->view('portal/dportal/template/js');
-	// 	$this->load->view('portal/dportal/forum/index');
-	// 	$this->load->view('portal/dportal/template/footer');
-	// }
-
-	// public function addsubject()
-	// {
-	// 	$data['title']="Add Schedule";
-	// 	$this->load->view('portal/dportal/template/header',$data);
-	// 	$this->load->view('portal/dportal/template/menuBar');
-	// 	$this->load->view('portal/dportal/template/js');
-	// 	$this->load->view('portal/dportal/addsched/index');
-	// 	$this->load->view('portal/dportal/template/footer');
-	// }
-
-	// public function viewsched()
-	// {
-	// 	$data['title']="Manage Schedule";
-	// 	$this->load->view('portal/dportal/template/header',$data);
-	// 	$this->load->view('portal/dportal/template/js');
-	// 	$this->load->view('portal/dportal/viewsched/index');
-	// 	$this->load->view('portal/dportal/template/footer');
-	// }
-
-	// public function fportal()
-	// {
-	// 	$data['title']="Faculty Portal";
-	// 	$this->load->view('portal/fportal/template/header',$data);
-	// 	$this->load->view('portal/fportal/template/js');
-	// 	$this->load->view('portal/fportal/index');
-	// 	$this->load->view('portal/fportal/template/footer');
-	// }
-
-	// public function forum4()
-	// {
-	// 	$data['title']="UNIVERSITY FORUM";
-	// 	$this->load->view('portal/fportal/template/header',$data);
-	// 	$this->load->view('portal/fportal/template/js');
-	// 	$this->load->view('portal/fportal/forum/index');
-	// 	$this->load->view('portal/fportal/template/footer');
-	// }
-
-	// public function classes()
-	// {
-	// 	$data['title']="UNIVERSITY FORUM";
-	// 	$this->load->view('portal/fportal/template/header',$data);
-	// 	$this->load->view('portal/fportal/template/js');
-	// 	$this->load->view('portal/fportal/classes/index');
-	// 	$this->load->view('portal/fportal/template/footer');
-	// }
-
-	// public function viewclass()
-	// {
-	// 	$data['title']="UNIVERSITY FORUM";
-	// 	$this->load->view('portal/fportal/template/header',$data);
-	// 	$this->load->view('portal/fportal/template/js');
-	// 	$this->load->view('portal/fportal/viewclass/index');
-	// 	$this->load->view('portal/fportal/template/footer');
-	// }
-
-
 
 
 }

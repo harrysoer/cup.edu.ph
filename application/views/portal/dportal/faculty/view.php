@@ -52,7 +52,7 @@
               <?php endforeach ?>
               <div class="form-actions">
               <a href="<?=site_url('dportal/faculty')?>" class="btn btn-info" onclick="return confirm('Are you sure to Cancel?')">Return</a>
-                <a name="Add Course" href="<?=site_url('')?>" class="btn btn-success">Assign schedule</a> 
+                <a name="Add Course" href="<?=site_url('dportal/assign/select-course/'.$this->uri->segment(4))?>" class="btn btn-success">Assign schedule</a> 
               </div>
             </form>
           </div>
